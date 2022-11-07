@@ -10,309 +10,480 @@ const cursos = [
     //Primeiro curso contendo só uma turma.
     nome: "HTML e CSS",
     descricao: "Aprenda a cria websites com HTML e CSS!",
-    duracao: "6 meses",
-    valor: 1000
+    duracao: "1 mês",
+    valor: 500
 },
 {
     //Segundo curso contendo duas turmas.
     nome: "JavaScript",
     descricao: "Aprenda a linguagem de progamação mais utilizada no mundo!",
-    duracao: "6 meses",
-    valor: 1500
+    duracao: "2 meses",
+    valor: 900
 },
 {
     //Terceiro curso contendo duas turmas.
     nome: "APIs REST",
     descricao: "Quer aprender arquitetura de software? temos um curso para você!",
     duracao: "6 meses",
-    valor: 1500
+    valor: 2000
 }];
 
 //Array Objeto das turmas.
 const turmas = [
 {
-    //Turma HTML e CSS.
-    nome: "Berners",
+    //Primeira turma HTML e CSS.
+    nome: "Curie",
     curso: "HTML e CSS",
-    inicio: "22/08/2022",
-    termino: "22/02/2023",
-    numalunos: 5,
-    periodo: "6 meses",
+    inicio: "15/09/2022",
+    termino: "15/10/2022",
+    numalunos: 180,
+    periodo: "Noturno",
+    conclusao: true
+},
+{
+    //Segunda turma HTML e CSS.
+    nome: "Zhenyi",
+    curso: "HTML e CSS",
+    inicio: "01/11/2022",
+    termino: "01/01/2023",
+    numalunos: 80,
+    periodo: "Integral",
     conclusao: false
 },
 {
+    //Terceira turma HTML e CSS.
+    nome: "Clarke",
+    curso: "HTML e CSS",
+    inicio: "04/07/2022",
+    termino: "04/09/2023",
+    numalunos: 200,
+    periodo: "Noturno",
+    conclusao: true
+},
+{
     //Primeira turma JavaScript.
-    nome: "Lee",
-    curso: "JavaScript1",
-    inicio: "22/08/2022",
-    termino: "22/02/2023",
-    numalunos: 5,
-    periodo: "6 meses",
+    nome: "Hipátia",
+    curso: "JavaScript",
+    inicio: "30/11/2022",
+    termino: "30/01/2023",
+    numalunos: 150,
+    periodo: "Noturno",
     conclusao: false
 },
 {
     //Segunda turma JavaScript.
-    nome: "Eich",
-    curso: "JavaScript2",
-    inicio: "22/02/2022",
-    termino: "22/08/2022",
-    numalunos: 5,
-    periodo: "6 meses",
-    conclusao: true
+    nome: "Sibyla",
+    curso: "JavaScript",
+    inicio: "30/10/2022",
+    termino: "30/12/2022",
+    numalunos: 200,
+    periodo: "Integral",
+    conclusao: false
 },
 {
     //Primeira turma API's REST.
-    nome: "Rossun",
-    curso: "APIs REST1",
-    inicio: "22/12/2022",
-    termino: "22/05/2023",
-    numalunos: 5,
-    periodo: "6 meses",
+    nome: "Blackwell",
+    curso: "APIs REST",
+    inicio: "20/03/2022",
+    termino: "20/06/2023",
+    numalunos: 100,
+    periodo: "Integral",
+    conclusao: true
+},
+{
+    //Segunda turma APIs REST.
+    nome: "Burnell",
+    curso: "APIs REST",
+    inicio: "18/10/2022",
+    termino: "18/04/2023",
+    numalunos: 90,
+    periodo: "Integral",
     conclusao: false
 },
 {
-    //Segunda turma API's REST.
-    nome: "King",
-    curso: "APIs REST2",
-    inicio: "22/01/2022",
-    termino: "22/06/2023",
-    numalunos: 5,
-    periodo: "6 meses",
-    conclusao: false
+    //Terceira turma API's REST.
+    nome: "Elion",
+    curso: "APIs REST",
+    inicio: "12/01/2022",
+    termino: "12/06/2022",
+    numalunos: 200,
+    periodo: "Noturno",
+    conclusao: true
 }];
 
 //Array Objetos dos estudantes.
 const estudantes = [
 {
-    //Turma de HTML e CSS
-    nome: "João",
-    turma: "Berners",
+    //Primeira turma de HTML e CSS
+    nome: "Lucas Breia",
+    turma: "Curie",
     curso: "HTML e CSS",
-    valor: 1000,
-    numParcelas: 4,
+    valor: 500,
+    numParcelas: 2,
     desconto: 0,
     parcelas: 250
 },
 {
-    nome: "Maria",
-    turma: "Berners",
+    nome: "Maria Francisca",
+    turma: "Curie",
     curso: "HTML e CSS",
-    valor: 1000,
-    numParcelas: 2,
+    valor: 500,
+    numParcelas: 0,
     desconto: 0.2,
     parcelas: 500
 },
 {
-    nome: "Matheus",
-    turma: "Berners",
+    nome: "Matheus Aguiar",
+    turma: "Curie",
     curso: "HTML e CSS",
-    valor: 1000,
+    valor: 500,
     numParcelas: 4,
     desconto: 0,
-    parcelas: 250
+    parcelas: 125
 },
 {
-    nome: "Bruna",
-    turma: "Berners",
+    nome: "Bruna Lopes",
+    turma: "Curie",
     curso: "HTML e CSS",
-    valor: 1000,
-    numParcelas: 4,
-    desconto: 0,
-    parcelas: 250
-},
-{
-    nome: "Gilvan",
-    turma: "Berners",
-    curso: "HTML e CSS",
-    valor: 1000,
-    numParcelas: 4,
-    desconto: 0,
-    parcelas: 250
-},
-{
-    //Primeira turma JavaScript
-    nome: "Lucas",
-    turma: "Lee",
-    curso: "JavaScript1",
-    valor: 1500,
-    numParcelas: 6,
-    desconto: 0,
-    parcelas: 250
-},
-{
-    nome: "Rosy",
-    turma: "Lee",
-    curso: "JavaScript1",
-    valor: 1500,
-    numParcelas: 2,
+    valor: 500,
+    numParcelas: 0,
     desconto: 0.2,
-    parcelas: 750
+    parcelas: 500
 },
 {
-    nome: "Rodrigo",
-    turma: "Lee",
-    curso: "JavaScript1",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Gilvan Epitácio",
+    turma: "Curie",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 125
+},
+{
+    //Segunda turma de HTML e CSS
+    nome: "Lashana Lynch",
+    turma: "Zhenyi",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 0,
+    desconto: 0.2,
+    parcelas: 500
+},
+{
+    nome: "Maria Antônia",
+    turma: "Zhenyi",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 2,
     desconto: 0,
     parcelas: 250
 },
 {
-    nome: "Letíca",
-    turma: "Lee",
+    nome: "Matheus Henrique",
+    turma: "Zhenyi",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 125
+},
+{
+    nome: "Bruna Lorena",
+    turma: "Zhenyi",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 125
+},
+{
+    nome: "Heleno Breia",
+    turma: "Zhenyi",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 125
+},
+{
+    //Terceira turma de HTML e CSS
+    nome: "Tatiana Blaser",
+    turma: "Clarke",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 0,
+    desconto: 0.2,
+    parcelas: 500
+},
+{
+    nome: "Julia Antônia",
+    turma: "Clarke",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 2,
+    desconto: 0,
+    parcelas: 250
+},
+{
+    nome: "Marcos Henrique",
+    turma: "Clarke",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 125
+},
+{
+    nome: "Monique Lorena",
+    turma: "Clarke",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 125
+},
+{
+    nome: "Diego Breia",
+    turma: "Clarke",
+    curso: "HTML e CSS",
+    valor: 500,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 125
+},
+{
+    //Primeira turma de JavaScript
+    nome: "Chris Evans",
+    turma: "Hipátia",
     curso: "JavaScript",
-    valor: 1500,
-    numParcelas: 6,
+    valor: 900,
+    numParcelas: 9,
     desconto: 0,
-    parcelas: 250
+    parcelas: 100
 },
 {
-    nome: "Roger",
-    turma: "Lee",
-    curso: "JavaScript1",
-    valor: 1500,
-    numParcelas: 6,
-    desconto: 0,
-    parcelas: 250
-},
-{
-    //Segunda turma JavaScript.
-    nome: "Miguel",
-    turma: "Eich",
-    curso: "JavaScript2",
-    valor: 1500,
-    numParcelas: 6,
-    desconto: 0,
-    parcelas: 250
-},
-{
-    nome: "Nathan",
-    turma: "Eich",
-    curso: "JavaScript2",
-    valor: 1500,
+    nome: "Janete Antônia",
+    turma: "Hipátia",
+    curso: "JavaScript",
+    valor: 900,
     numParcelas: 2,
-    desconto: 0.2,
-    parcelas: 750
-},
-{
-    nome: "Josy",
-    turma: "Eich",
-    curso: "JavaScript2",
-    valor: 1500,
-    numParcelas: 6,
     desconto: 0,
-    parcelas: 250
+    parcelas: 450
 },
 {
-    nome: "Victor",
-    turma: "Eich",
-    curso: "JavaScript2",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Lucas Henrique",
+    turma: "Hipátia",
+    curso: "JavaScript",
+    valor: 900,
+    numParcelas: 3,
     desconto: 0,
-    parcelas: 250
+    parcelas: 300
 },
 {
-    nome: "Luan",
-    turma: "Eich",
-    curso: "JavaScript2",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Karen Lorena",
+    turma: "Hipátia",
+    curso: "JavaScript",
+    valor: 900,
+    numParcelas: 4,
     desconto: 0,
-    parcelas: 250
+    parcelas: 225
 },
 {
-    //Primeira turma API's REST
-    nome: "Jonathan",
-    turma: "Rossun",
-    curso: "APIs REST1",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Eliana Breia",
+    turma: "Hipátia",
+    curso: "JavaScript",
+    valor: 900,
+    numParcelas: 4,
     desconto: 0,
-    parcelas: 250
+    parcelas: 225
 },
 {
-    nome: "Tadeu",
-    turma: "Rossun",
-    curso: "APIs REST1",
-    valor: 1500,
+    //Segunda turma de JavaScript
+    nome: "Tony Stark",
+    turma: "Sibyla",
+    curso: "JavaScript",
+    valor: 900,
+    numParcelas: 9,
+    desconto: 0,
+    parcelas: 100
+},
+{
+    nome: "Soraya Antônia",
+    turma: "Sibyla",
+    curso: "JavaScript",
+    valor: 900,
     numParcelas: 2,
-    desconto: 0.2,
-    parcelas: 750
-},
-{
-    nome: "Miriam",
-    turma: "Rossun",
-    curso: "APIs REST1",
-    valor: 1500,
-    numParcelas: 6,
     desconto: 0,
-    parcelas: 250
+    parcelas: 450
 },
 {
-    nome: "Tatiana",
-    turma: "Rossun",
-    curso: "APIs REST1",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Thiago Henrique",
+    turma: "Sibyla",
+    curso: "JavaScript",
+    valor: 900,
+    numParcelas: 3,
     desconto: 0,
-    parcelas: 250
+    parcelas: 300
 },
 {
-    nome: "Eduardo",
-    turma: "Rossun",
-    curso: "APIs REST1",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Manu Lorena",
+    turma: "Sibyla",
+    curso: "JavaScript",
+    valor: 900,
+    numParcelas: 4,
     desconto: 0,
-    parcelas: 250
+    parcelas: 225
 },
 {
-    //Segunda turma API's REST.
-    nome: "Leonardo",
-    turma: "King",
-    curso: "APIS REST2",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Talita Breia",
+    turma: "Sibyla",
+    curso: "JavaScript",
+    valor: 900,
+    numParcelas: 4,
     desconto: 0,
-    parcelas: 250
+    parcelas: 225
 },
 {
-    nome: "Mariana",
-    turma: "King",
-    curso: "APIs REST2",
-    valor: 1500,
+    //Primeira turma de APIs REST
+    nome: "Halle Berry",
+    turma: "Burnell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 500
+},
+{
+    nome: "Luana Antônia",
+    turma: "Burnell",
+    curso: "APIs REST",
+    valor: 2000,
     numParcelas: 2,
+    desconto: 0,
+    parcelas: 1000
+},
+{
+    nome: "Luan Henrique",
+    turma: "Burnell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 500
+},
+{
+    nome: "Karen Lorena",
+    turma: "Burnell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 0,
     desconto: 0.2,
-    parcelas: 750
+    parcelas: 2000
 },
 {
-    nome: "Aline",
-    turma: "King",
-    curso: "APIs REST2",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Elisa Breia",
+    turma: "Burnell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
     desconto: 0,
-    parcelas: 250
+    parcelas: 500
 },
 {
-    nome: "Cinthia",
-    turma: "King",
-    curso: "APIs REST2",
-    valor: 1500,
-    numParcelas: 6,
+    //Segunda turma de APIs REST
+    nome: "Ronaldo de Assis",
+    turma: "Blackwell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
     desconto: 0,
-    parcelas: 250
+    parcelas: 500
 },
 {
-    nome: "Joana",
-    turma: "King",
-    curso: "APIs REST2",
-    valor: 1500,
-    numParcelas: 6,
+    nome: "Fred Mércury",
+    turma: "Blackwell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 2,
     desconto: 0,
-    parcelas: 250
+    parcelas: 1000
+},
+{
+    nome: "Luis Gustavo",
+    turma: "Blackwell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 500
+},
+{
+    nome: "Michael Jackson",
+    turma: "Blackwell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 0,
+    desconto: 0.2,
+    parcelas: 2000
+},
+{
+    nome: "Neymar Júnior",
+    turma: "Blackwell",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 500
+},
+{
+    //Terceira turma de APIs REST
+    nome: "Lionel Messi",
+    turma: "Elion",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 500
+},
+{
+    nome: "Cristiano Ronaldo",
+    turma: "Elion",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 2,
+    desconto: 0,
+    parcelas: 1000
+},
+{
+    nome: "Tom Holland",
+    turma: "Elion",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 500
+},
+{
+    nome: "Tom Cruise",
+    turma: "Elion",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 0,
+    desconto: 0.2,
+    parcelas: 2000
+},
+{
+    nome: "Billie Eilish",
+    turma: "Elion",
+    curso: "APIs REST",
+    valor: 2000,
+    numParcelas: 4,
+    desconto: 0,
+    parcelas: 500
 }];
+
+
+
 
 
 
