@@ -1,15 +1,11 @@
 //começando o projeto introduzindo Arrays.
 
-// const cursos = ["HTML e CSS", "JavaScript", "APIs REST"];
-// const turmas = ["HC1", "JS1", "JS2", "REST1", "REST2"];
-// const estudantes = ["João", "Ana", "Bruna"];
-
 //Array Objeto dos cursos.
 const cursos = [
 {
     //Primeiro curso contendo só uma turma.
     nome: "HTML e CSS",
-    descricao: "Aprenda a cria websites com HTML e CSS!",
+    descricao: "Aprenda a criar websites com HTML e CSS!",
     duracao: "1 mês",
     valor: 500
 },
@@ -120,7 +116,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 2,
-    desconto: 0,
+    desconto: true,
     parcelas: 250
 },
 {
@@ -129,7 +125,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 0,
-    desconto: 0.2,
+    desconto: true,
     parcelas: 500
 },
 {
@@ -138,7 +134,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 125
 },
 {
@@ -147,7 +143,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 0,
-    desconto: 0.2,
+    desconto: true,
     parcelas: 500
 },
 {
@@ -156,7 +152,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 125
 },
 {
@@ -166,7 +162,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 0,
-    desconto: 0.2,
+    desconto: true,
     parcelas: 500
 },
 {
@@ -175,7 +171,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 2,
-    desconto: 0,
+    desconto: true,
     parcelas: 250
 },
 {
@@ -184,7 +180,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 125
 },
 {
@@ -193,7 +189,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 125
 },
 {
@@ -202,7 +198,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 125
 },
 {
@@ -212,7 +208,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 0,
-    desconto: 0.2,
+    desconto: true,
     parcelas: 500
 },
 {
@@ -221,7 +217,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 2,
-    desconto: 0,
+    desconto: true,
     parcelas: 250
 },
 {
@@ -230,7 +226,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 125
 },
 {
@@ -239,7 +235,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 125
 },
 {
@@ -248,7 +244,7 @@ const estudantes = [
     curso: "HTML e CSS",
     valor: 500,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 125
 },
 {
@@ -258,7 +254,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 9,
-    desconto: 0,
+    desconto: false,
     parcelas: 100
 },
 {
@@ -267,7 +263,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 2,
-    desconto: 0,
+    desconto: true,
     parcelas: 450
 },
 {
@@ -276,7 +272,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 3,
-    desconto: 0,
+    desconto: false,
     parcelas: 300
 },
 {
@@ -285,7 +281,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 225
 },
 {
@@ -294,7 +290,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 225
 },
 {
@@ -304,7 +300,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 9,
-    desconto: 0,
+    desconto: false,
     parcelas: 100
 },
 {
@@ -313,7 +309,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 2,
-    desconto: 0,
+    desconto: true,
     parcelas: 450
 },
 {
@@ -322,7 +318,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 3,
-    desconto: 0,
+    desconto: false,
     parcelas: 300
 },
 {
@@ -331,7 +327,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 225
 },
 {
@@ -340,7 +336,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 225
 },
 {
@@ -350,7 +346,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 },
 {
@@ -359,7 +355,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 2,
-    desconto: 0,
+    desconto: true,
     parcelas: 1000
 },
 {
@@ -368,7 +364,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 },
 {
@@ -377,7 +373,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 0,
-    desconto: 0.2,
+    desconto: true,
     parcelas: 2000
 },
 {
@@ -386,7 +382,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 },
 {
@@ -396,7 +392,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 },
 {
@@ -405,7 +401,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 2,
-    desconto: 0,
+    desconto: true,
     parcelas: 1000
 },
 {
@@ -414,7 +410,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 },
 {
@@ -423,7 +419,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 0,
-    desconto: 0.2,
+    desconto: true,
     parcelas: 2000
 },
 {
@@ -432,7 +428,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 },
 {
@@ -442,7 +438,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 },
 {
@@ -451,7 +447,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 2,
-    desconto: 0,
+    desconto: true,
     parcelas: 1000
 },
 {
@@ -460,7 +456,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 },
 {
@@ -469,7 +465,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 0,
-    desconto: 0.2,
+    desconto: true,
     parcelas: 2000
 },
 {
@@ -478,7 +474,7 @@ const estudantes = [
     curso: "APIs REST",
     valor: 2000,
     numParcelas: 4,
-    desconto: 0,
+    desconto: false,
     parcelas: 500
 }];
 
