@@ -140,15 +140,21 @@ const estudantes = [
 
 function parcelarCurso(parcelas) {
     //const parcelas = estudantes[2].nParcelas 
-    if(parcelas <= 2 ){
+    if(parcelas <= 2 && parcelas >= 1 ){
         desconto = cursos[1].valor - (cursos[1].valor * 0.2)
         return `O valor do curso ${cursos[1].curso} e de R$${cursos[1].valor}. A vista R$${desconto} ou em 2x de R$${desconto/2}. Foi concedido desconto de 20% `
         
         
-    }else{
+    }else if(parcelas > 2 && parcelas < 9){
         return `O curso ${cursos[1].curso} ficou no valor de R$${cursos[1].valor}. Em ate 8x de R$${cursos[1].valor/8}`
+    
+    }else if(parcelas >= 9 ) {
+        return `Parcelas maximas em 8x`
+    
+    }else{
+        return `Digite um valor valido de parcelas !`
     }
 };
-console.log(parcelarCurso(3));
+console.log(parcelarCurso(4));
 
 
