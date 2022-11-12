@@ -1,11 +1,11 @@
 //PRIMEIRA SEMANA
 
 //const turmas = ["HC1", "JS1", "JS2", "REST1", "REST2"]  //criado um array turmas
-//const estudantes = ["Gabo", "Maurício", "Leonildio", "Anna Catarina"]  //criado um array estudantes
+//const estudantes = ["Gabo", "Maurício", "Leonildo", "Anna Catarina"]  //criado um array estudantes
 //const cursos = ["HTML e CSS", "JavaScript", "APIs REST" ]  //criado um array para os cursos
 
 
-//SEGUNDA SEMANA
+//SEGUNDA SEMANA (OBJETOS)
 
 const turmas = [
 {
@@ -85,19 +85,19 @@ const turmas = [
 const cursos = [
 {
     curso: "HTML e CSS",
-    descricao: "",  //completar esse
+    descricao: "Venha aprender HTML e CSS começando do zero!!!",
     duracao: "1 mês",
     valor: 500
 },
 {
     curso: "JavaScript",
-    descricao: , //completar esse
+    descricao: "Que tal um curso de JavaScript para começar a sua carreira de dev? Vem com a gente!!", //completar esse
     duracao: "2 meses",
     valor: 900
 },
 {
     curso: "APIsRest",
-    descricao: , //completar esse
+    descricao: "Vem aprender APIsRest para dar um up no seu currículo!", //completar esse
     duracao: "6 meses",
     valor: 2000
 }
@@ -132,3 +132,21 @@ const estudantes = [
     parcelas: 500
 }
 ]
+
+//TERCEIRA SEMANA (CONDICIONAIS)
+
+function parcelarCurso(nParcelas, valor, curso){
+if(nParcelas === 1 || nParcelas === 2){
+    valorDesconto = .2 * valor
+    valorComDesconto = valor - valorDesconto
+    valorParcelasComDesconto = valorComDesconto / nParcelas
+    
+    console.log(`O curso de ${curso} tem um valor total de R$${valor.toFixed(2)}. Mas você ganhou um desconto de 20%, que equivale a R$${valorDesconto.toFixed(2)}. Então seu curso custará um total de R$${valorComDesconto.toFixed(2)}, em ${nParcelas}x de R${valorParcelasComDesconto.toFixed(2)}.`)
+}else{
+    valorParcelasSemDesconto = valor / nParcelas
+    console.log(`Seu curso de ${curso} sairá em R$${valor.toFixed(2)}, pago em ${nParcelas}x de R$${valorParcelasSemDesconto.toFixed(2)}`)
+}
+}
+
+parcelarCurso(2, cursos[1].valor, cursos[1].curso)
+parcelarCurso(4, cursos[0].valor, cursos[0].curso)
