@@ -142,3 +142,5 @@ console.log(parcelarCurso(5));     //Chamando a função com a quantidade da par
 //assunto laço
 //Sistema de busca
 
+c
+
