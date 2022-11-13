@@ -155,6 +155,6 @@ function parcelarCurso(parcelas) {
         return `Digite um valor valido de parcelas !`
     }
 };
-console.log(parcelarCurso(4));
+console.log(parcelarCurso(9));
 
 
