@@ -1,8 +1,9 @@
-const cursos = [{
-    nome: "HTML e CSS",
-    descricao:"",
-    duracao:"1 mês",
-    valor: 500
+const cursos = [
+    {
+        nome: "HTML e CSS",
+        descricao:"",
+        duracao:"1 mês",
+        valor: 500
     },
     {
         nome: "JavaScript",
@@ -21,8 +22,8 @@ const turmas = [
     {
         turma:"Hipátia",
         curso: "JavaScript", 
-        inicio: "30/11/2022" ,
-        termino: "30/01/2023" ,
+        inicio: new Date("2022,11,30") ,
+        termino: new Date ("2022,01,30") ,
         numeroDeAlunos: 150,
         periodo: "Noturno",
         concluida: false
@@ -32,8 +33,8 @@ const turmas = [
     {
         turma:"Sibyla",
         curso: "JavaScript", 
-        inicio: "30/10/2022" ,
-        termino: "30/12/2022" ,
+        inicio: new Date("2022-10-30") ,
+        termino: new Date("2022-12-30") ,
         numeroDeAlunos: 200,
         periodo: "Integral",
         concluida: false
@@ -41,8 +42,8 @@ const turmas = [
     {
         turma:"Curie",
         curso: "HTML e CSS", 
-        inicio: "15/09/2022" ,
-        termino: "15/10/2022" ,
+        inicio: new Date ("2022-09-15") ,
+        termino: new Date("2022-10-15") ,
         numeroDeAlunos: 180,
         periodo: "Noturno",
         concluida: true
@@ -50,8 +51,8 @@ const turmas = [
     {
         turma:"Zhenyi",
         curso: "HTML e CSS", 
-        inicio: "01/11/2022" ,
-        termino: "01/01/2023" ,
+        inicio: new Date("2022-11-01") ,
+        termino: new Date("202-01-01") ,
         numeroDeAlunos: 80,
         periodo: "integral",
         concluida: false
@@ -59,8 +60,8 @@ const turmas = [
     {
         turma:"Clarke",
         curso: "HTML e CSS", 
-        inicio: "04/07/2022" ,
-        termino: "04/09/2022" ,
+        inicio: new Date("2022-07-04") ,
+        termino: new Date("2022-09-04") ,
         numeroDeAlunos: 200,
         periodo: "Noturno",
         concluida: true
@@ -68,8 +69,8 @@ const turmas = [
     {
         turma:"Blackwell",
         curso: "APIsRes", 
-        inicio: "20/03/2022" ,
-        termino: "20/06/2023" ,
+        inicio: new Date("2022-03-20") ,
+        termino: new Date("2023-06-20") ,
         numeroDeAlunos: 100,
         periodo: "integral",
         concluida: true
@@ -77,8 +78,8 @@ const turmas = [
     {
         turma:"Elion",
         curso: "APIsRes", 
-        inicio: "12/01/2022" ,
-        termino: "12/06/2022" ,
+        inicio: new Date ("2022-01-12") ,
+        termino: new Date("2022-06-12") ,
         numeroDeAlunos: 200,
         periodo: "Noturno",
         concluida: true
@@ -86,8 +87,8 @@ const turmas = [
     {
         turma:"Burnell",
         curso: "APIsRes", 
-        inicio: "18/10/2022" ,
-        termino: "18/04/2023" ,
+        inicio: new Date("2022-10-18") ,
+        termino: new Date("2023-04-18") ,
         numeroDeAlunos: 90,
         periodo: "integral",
         concluida: false
@@ -118,15 +119,24 @@ const estudantes = [
         turma: "Zhenyi",
         curso: "HTML e CSS",
         valor:  "500",
-        nParcelas: 0,
+        nParcelas: 1,
         desconto: true,
-        parcelas: 0
+        parcelas: 500
     }
 ];
-
-
-console.log(cursos)
+   function parcelarCursos(parcela){
+    if(parcela <= 2){
+        const desc = 0.2
+       const par= cursos[2].valor * desc
+        console.log(`O curso ${cursos[1].nome} ficou no valor total R$ ${par}. Em ${estudantes[2].nParcelas}x de R$ ${par}. Foi concedido desconto de 20% `) 
+    }else{
+        console.log(`O curso ${cursos[1].nome} ficou no valor total de R$ ${estudantes[0].valor}. Em ${estudantes[0].nParcelas}x de R$ ${estudantes[0].parcelas} `)
+    }
+}
 console.log(turmas)
-console.log(estudantes)
+parcelarCursos(estudantes[0].nParcelas)
+parcelarCursos(estudantes[2].nParcelas)
+
+
 
 
