@@ -135,7 +135,8 @@ const estudantes = [
 
 //TERCEIRA SEMANA (CONDICIONAIS)
 
-function parcelarCurso(nParcelas, valor, curso){
+/* //Função parcelarCurso sem ser alterada (só com a parte de condicionais mais simples)
+const parcelarCurso=(nParcelas, valor, curso)=>{
 if(nParcelas === 1 || nParcelas === 2){
     valorDesconto = .2 * valor
     valorComDesconto = valor - valorDesconto
@@ -149,4 +150,191 @@ if(nParcelas === 1 || nParcelas === 2){
 }
 
 parcelarCurso(2, cursos[1].valor, cursos[1].curso)
-parcelarCurso(4, cursos[0].valor, cursos[0].curso)
+parcelarCurso(4, cursos[0].valor, cursos[0].curso) 
+*/
+
+const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
+    let valorTotal = 0 
+    let valorDesconto = 0
+    let valorComDesconto = 0
+    let valorParcelasComDesconto = 0
+    
+    if(nParcelas === 1 || nParcelas === 2){
+        switch (carrinhoCursos.length){
+            case 1: 
+            for(let index in carrinhoCursos){
+                valorTotal += carrinhoCursos[index]
+                };
+                valorDesconto = .2 * valorTotal;
+                valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
+                valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+               
+                console.log(`O curso de ${cursos} ficou no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20%.`);
+                break
+
+            case 2:
+                for(let index in carrinhoCursos){
+                valorTotal += carrinhoCursos[index]
+                };
+                valorDesconto = valorTotal*.3;
+                valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
+                valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+                
+                console.log(`Os cursos de ${cursos} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
+                break
+
+            case 3:
+                for(let index in carrinhoCursos){
+                    valorTotal += carrinhoCursos[index]
+                };
+                valorDesconto = valorTotal*.3;
+                valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
+                valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+
+                console.log(`Os cursos de ${cursos} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
+                break
+
+            default:
+                console.log('Confira os cursos solicitados.');
+                break           
+    }
+    console.log
+    }else{
+        switch(carrinhoCursos.length){
+            case 1:
+                for(let index in carrinhoCursos){
+                    valorTotal += carrinhoCursos[index]
+                    };
+                    console.log(`O curso de ${cursos} ficou no valor total de R$${valorTotal}. Não há desconto para ser aplicado.`);
+                    break
+                
+        case 2:
+            for(let index in carrinhoCursos){
+                valorTotal += carrinhoCursos[index]
+            };
+            valorDesconto = valorTotal * .1;
+            valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
+            valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+
+            console.log(`Os cursos de ${cursos} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 10% sobre o valor total.`);
+            break
+                
+        case 3:
+            for(let index in carrinhoCursos){
+                valorTotal += carrinhoCursos[index]
+            };
+            valorDesconto = valorTotal * .15;
+            valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
+            valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+
+            console.log(`Os cursos de ${cursos} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% sobre o valor total.`);
+            break
+
+            default:
+                console.log('Confira os cursos solicitados.');
+                break   
+        }
+    }
+} 
+
+
+const arrCursos = [900, 2000]
+parcelarCurso("JavaScript, APIsRest", arrCursos, 2)  
+
+const arrCursos2 = [500, 900, 200]
+parcelarCurso("HTML e CSS, JavaScript, APIsRest", arrCursos2, 1)
+
+
+//QUARTA SEMANA (LAÇOS)
+
+const buscarCurso=(nomeCurso)=>{
+    for(let index in cursos){
+        for(let element of cursos[index].curso){
+            if(cursos[index].curso = nomeCurso){
+                //console.log(cursos[index]) --> pode apagar
+                return cursos[index]
+            }
+        }
+    }  
+}
+
+/*
+//Teste da função buscarCurso
+buscarCurso('JavaScript')
+buscarCurso("APIsRest")
+*/
+ 
+const buscarTurma=(nomeTurma)=>{
+    for(let index in turmas){
+        for(let element of turmas[index].turma){
+            if(turmas[index].turma = nomeTurma){
+                //console.log(turmas[index]) --> pode apagar
+                return turmas[index]
+            }
+        }
+    }
+} 
+
+/* 
+//Teste da função
+buscarTurma('Hipátia') 
+*/
+
+const buscarEstudante=(nomeEstudante)=>{
+    for(let index in estudantes){
+        for(let element of estudantes[index].estudante){
+            if(estudantes[index].estudante = nomeEstudante){
+                //console.log(estudantes[index]) --> pode apagr
+                return estudantes[index]
+            }
+        }
+    }
+}
+
+/* 
+//Teste da função
+buscarEstudante('Chis Evans') 
+*/
+
+
+const matricular=(nomeAluno, turmaAluno, cursoAluno)=>{
+        const novoAluno = {
+        estudante: nomeAluno,
+        turma: turmaAluno,
+        curso: cursoAluno
+    }
+    estudantes.push(novoAluno)
+    console.log(`Aluno Matriculado\nNome: ${nomeAluno}\nCurso: ${cursoAluno}\nTurma: ${turmaAluno}`)
+}
+
+/* 
+//Teste da chamada da função
+matricular('julia', 'Hipátia', 'JavaScript')
+*/
+
+const arr = [0, 1, 2]
+
+switch(arr.length){
+    case (arr.length> 1):
+        console.log('sim');
+        break
+    default:
+        console.log('não')
+}
+
+
+/* Dá pra fazer assim, mas não é a proposta do negócio 
+//let estudantesAtualizada
+const matricular=(alunoNovo)=>{
+     estudantes = [...estudantes, alunoNovo]
+    console.log(estudantes)
+    return estudantes
+}
+
+*/
+
+
+//console.log(estudantesAtualizada)
+/* 
+const estudantesAtualizada = [...estudantes]
+console.log(estudantesAtualizada) */
