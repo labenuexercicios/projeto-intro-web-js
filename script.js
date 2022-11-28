@@ -5,7 +5,7 @@
 //const cursos = ["HTML e CSS", "JavaScript", "APIs REST" ]  //criado um array para os cursos
 
 
-//SEGUNDA SEMANA (OBJETOS)
+//------------------------//
 
 const turmas = [
 {
@@ -91,13 +91,13 @@ const cursos = [
 },
 {
     curso: "JavaScript",
-    descricao: "Que tal um curso de JavaScript para começar a sua carreira de dev? Vem com a gente!!", //completar esse
+    descricao: "Que tal um curso de JavaScript para começar a sua carreira de dev? Vem com a gente!!", 
     duracao: "2 meses",
     valor: 900
 },
 {
     curso: "APIsRest",
-    descricao: "Vem aprender APIsRest para dar um up no seu currículo!", //completar esse
+    descricao: "Vem aprender APIsRest para dar um up no seu currículo!", 
     duracao: "6 meses",
     valor: 2000
 }
@@ -110,7 +110,7 @@ const estudantes = [
     curso: "JavaScript",
     valor: 900,
     nParcelas: 9,
-    desconto: false, //booleano
+    desconto: false, 
     parcelas: 100
 },
 {
@@ -133,26 +133,41 @@ const estudantes = [
 }
 ]
 
-//TERCEIRA SEMANA (CONDICIONAIS)
-
-/* //Função parcelarCurso sem ser alterada (só com a parte de condicionais mais simples)
-const parcelarCurso=(nParcelas, valor, curso)=>{
-if(nParcelas === 1 || nParcelas === 2){
-    valorDesconto = .2 * valor
-    valorComDesconto = valor - valorDesconto
-    valorParcelasComDesconto = valorComDesconto / nParcelas
+const buscarCurso=(nomeCurso)=>{
+    const cursoSelecionado = []
+    for(let strings of nomeCurso){
+        for(let index in cursos){
+            for(let element of cursos[index].curso){
+                if(cursos[index].curso.toLowerCase() === strings.toLowerCase()){
+                    cursoSelecionado.push(cursos[index])                             
+                }
+            }
+        } 
+    } 
     
-    console.log(`O curso de ${curso} tem um valor total de R$${valor.toFixed(2)}. Mas você ganhou um desconto de 20%, que equivale a R$${valorDesconto.toFixed(2)}. Então seu curso custará um total de R$${valorComDesconto.toFixed(2)}, em ${nParcelas}x de R${valorParcelasComDesconto.toFixed(2)}.`)
-}else{
-    valorParcelasSemDesconto = valor / nParcelas
-    console.log(`Seu curso de ${curso} sairá em R$${valor.toFixed(2)}, pago em ${nParcelas}x de R$${valorParcelasSemDesconto.toFixed(2)}`)
-}
+    const cursoSelecionadoFiltrado = cursoSelecionado.filter((objeto, i)=> cursoSelecionado.indexOf(objeto)=== i);
+    //console.log(cursoSelecionadoFiltrado) //--> pode apagar
+    return cursoSelecionadoFiltrado 
+    //na função cursoSelecionado.filter((objeto, i)=> cursoSelecionado.indexOf(objeto)=== i), o indexOf vai retornar o index do objeto no momento em que ele aparece pela primeira vez, na segunda vez pra frente em que ele aparece, ele retorna um resultado falso no valor de -1. O i é um contador, comaça no zero e vai seguindo, aí quando o valor desse contador for igual ao índice da primeira vez que o objeto aparece a condição indexOf() === i é satisfeita, então o objeto é salvo
 }
 
-parcelarCurso(2, cursos[1].valor, cursos[1].curso)
-parcelarCurso(4, cursos[0].valor, cursos[0].curso) 
-*/
+//buscarCurso(["APIsRest", 'javascript', 'html e css'])
 
+
+const acrescentaCurso=(nomeCurso, callback)=>{
+    const carrinhoCursos = []
+    const arrCursosSelecionados = callback(nomeCurso)
+    for(let index in arrCursosSelecionados){
+        carrinhoCursos.push(arrCursosSelecionados[index].valor)
+    }
+    console.log(carrinhoCursos)
+    return carrinhoCursos
+}
+
+
+//acrescentaCurso(['javascript', 'html e css'], buscarCurso)
+
+ 
 const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
     let valorTotal = 0 
     let valorDesconto = 0
@@ -162,9 +177,7 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
     if(nParcelas === 1 || nParcelas === 2){
         switch (carrinhoCursos.length){
             case 1: 
-            for(let index in carrinhoCursos){
-                valorTotal += carrinhoCursos[index]
-                };
+                valorTotal = carrinhoCursos[0]
                 valorDesconto = .2 * valorTotal;
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
@@ -176,6 +189,7 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
                 for(let index in carrinhoCursos){
                 valorTotal += carrinhoCursos[index]
                 };
+ 
                 valorDesconto = valorTotal*.3;
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
@@ -197,8 +211,7 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
             default:
                 console.log('Confira os cursos solicitados.');
                 break           
-    }
-    console.log
+        }
     }else{
         switch(carrinhoCursos.length){
             case 1:
@@ -237,68 +250,82 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
     }
 } 
 
-
-const arrCursos = [900, 2000]
+/* 
+const arrCursos = [900, 200]
 parcelarCurso("JavaScript, APIsRest", arrCursos, 2)  
 
 const arrCursos2 = [500, 900, 200]
 parcelarCurso("HTML e CSS, JavaScript, APIsRest", arrCursos2, 1)
+*/
 
 
-//QUARTA SEMANA (LAÇOS)
+const buscarTurma = (nomeTurma)=>{
+    const retornaTurma =  turmas.filter((element)=> element.turma.toLowerCase() === nomeTurma.toLowerCase())
 
-const buscarCurso=(nomeCurso)=>{
-    for(let index in cursos){
-        for(let element of cursos[index].curso){
-            if(cursos[index].curso = nomeCurso){
-                //console.log(cursos[index]) --> pode apagar
-                return cursos[index]
-            }
-        }
-    }  
+    retornaTurma.length > 0?
+    console.log(retornaTurma):console.log('Turma não encontrada!')
 }
 
 /*
-//Teste da função buscarCurso
-buscarCurso('JavaScript')
-buscarCurso("APIsRest")
-*/
- 
-const buscarTurma=(nomeTurma)=>{
-    for(let index in turmas){
-        for(let element of turmas[index].turma){
-            if(turmas[index].turma = nomeTurma){
-                //console.log(turmas[index]) --> pode apagar
-                return turmas[index]
-            }
-        }
-    }
-} 
-
-/* 
 //Teste da função
+buscarTurma('curie')
+buscarTurma('currrie')
 buscarTurma('Hipátia') 
+buscarTurma('HIPÁTIA') 
 */
 
 const buscarEstudante=(nomeEstudante)=>{
     for(let index in estudantes){
         for(let element of estudantes[index].estudante){
-            if(estudantes[index].estudante = nomeEstudante){
-                //console.log(estudantes[index]) --> pode apagr
+            if(estudantes[index].estudante.toLowerCase() === nomeEstudante.toLowerCase()){
+                //console.log(estudantes[index]) //--> pode apagr
                 return estudantes[index]
             }
         }
     }
 }
 
+
+const retornarEstudante=(nomeEstudante)=>{
+
+    const retornoEstudante = estudantes.filter(element =>
+        element.estudante.toLowerCase().indexOf(nomeEstudante.toLowerCase())> -1)
+
+        retornoEstudante.length>0?
+        console.log(retornoEstudante) : console.log('Aluno não encontrado')
+}
+
+/* 
+//Teste para chamar função
+retornarEstudante('ha')
+*/
+
 /* 
 //Teste da função
-buscarEstudante('Chis Evans') 
-*/
+buscarEstudante('Chris Evans') 
+buscarEstudante('ChRis EVAns') 
+buscarEstudante('halle berry')
+ */
+const relatorioEstudante=(nomeEstudante, callback)=>{
+    const relatorio = {
+        aluno: callback(nomeEstudante).estudante,
+        turma: callback(nomeEstudante).turma,
+        curso: callback(nomeEstudante).curso,
+        valorTotal: callback(nomeEstudante).valor,
+        valorParcelas: callback(nomeEstudante).parcelas,
+        nParcelas: callback(nomeEstudante).nParcelas
+    }
+    console.log(`Aluno: ${relatorio.aluno}\nTurma: ${relatorio.turma}\nCurso: ${relatorio.curso}\nValor Toral: ${relatorio.valorTotal}\nValor Parcelas: ${relatorio.valorParcelas}\nNº Parcelas: ${relatorio.nParcelas}`)
+    return 
+}
+
+relatorioEstudante('halle berry', buscarEstudante)
+
+
 
 
 const matricular=(nomeAluno, turmaAluno, cursoAluno)=>{
-        const novoAluno = {
+    const novoAluno = {
         estudante: nomeAluno,
         turma: turmaAluno,
         curso: cursoAluno
@@ -309,32 +336,7 @@ const matricular=(nomeAluno, turmaAluno, cursoAluno)=>{
 
 /* 
 //Teste da chamada da função
-matricular('julia', 'Hipátia', 'JavaScript')
-*/
-
-const arr = [0, 1, 2]
-
-switch(arr.length){
-    case (arr.length> 1):
-        console.log('sim');
-        break
-    default:
-        console.log('não')
-}
-
-
-/* Dá pra fazer assim, mas não é a proposta do negócio 
-//let estudantesAtualizada
-const matricular=(alunoNovo)=>{
-     estudantes = [...estudantes, alunoNovo]
-    console.log(estudantes)
-    return estudantes
-}
-
+matricular('Júlia Borges', 'Hipátia', 'JavaScript')
 */
 
 
-//console.log(estudantesAtualizada)
-/* 
-const estudantesAtualizada = [...estudantes]
-console.log(estudantesAtualizada) */
