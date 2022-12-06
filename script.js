@@ -133,30 +133,26 @@ const estudantes = [
 }
 ]
 
-const buscarCurso=(nomeCurso)=>{
-    const cursoSelecionado = []
-    for(let strings of nomeCurso){
-        for(let index in cursos){
-            for(let element of cursos[index].curso){
-                if(cursos[index].curso.toLowerCase() === strings.toLowerCase()){
-                    cursoSelecionado.push(cursos[index])                             
-                }
-            }
-        } 
-    } 
-    
-    const cursoSelecionadoFiltrado = cursoSelecionado.filter((objeto, i)=> cursoSelecionado.indexOf(objeto)=== i);
-    //console.log(cursoSelecionadoFiltrado) //--> pode apagar
-    return cursoSelecionadoFiltrado 
-    //na função cursoSelecionado.filter((objeto, i)=> cursoSelecionado.indexOf(objeto)=== i), o indexOf vai retornar o index do objeto no momento em que ele aparece pela primeira vez, na segunda vez pra frente em que ele aparece, ele retorna um resultado falso no valor de -1. O i é um contador, comaça no zero e vai seguindo, aí quando o valor desse contador for igual ao índice da primeira vez que o objeto aparece a condição indexOf() === i é satisfeita, então o objeto é salvo
+
+const buscarCurso2=(nomeCurso)=>{
+ 
+    const index = cursos.findIndex(element=> element.curso.toLowerCase().indexOf(nomeCurso.toLowerCase())>-1)
+        
+    typeof index == 'number'?
+    console.log(cursos[index]) : console.log('Curso não encontrado')
+    return cursos[index]
+
 }
 
-//buscarCurso(["APIsRest", 'javascript', 'html e css'])
+
+//buscarCurso('Java')
+//buscarCurso('xxxxx')
+
 
 
 const acrescentaCurso=(nomeCurso, callback)=>{
     const carrinhoCursos = []
-    const arrCursosSelecionados = callback(nomeCurso)
+    const arrCursosSelecionados = [callback(nomeCurso)]
     for(let index in arrCursosSelecionados){
         carrinhoCursos.push(arrCursosSelecionados[index].valor)
     }
@@ -165,7 +161,7 @@ const acrescentaCurso=(nomeCurso, callback)=>{
 }
 
 
-//acrescentaCurso(['javascript', 'html e css'], buscarCurso)
+//acrescentaCurso('javascript', buscarCurso2)
 
  
 const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
@@ -274,30 +270,22 @@ buscarTurma('Hipátia')
 buscarTurma('HIPÁTIA') 
 */
 
+
+
 const buscarEstudante=(nomeEstudante)=>{
-    for(let index in estudantes){
-        for(let element of estudantes[index].estudante){
-            if(estudantes[index].estudante.toLowerCase() === nomeEstudante.toLowerCase()){
-                //console.log(estudantes[index]) //--> pode apagr
-                return estudantes[index]
-            }
-        }
-    }
-}
-
-
-const retornarEstudante=(nomeEstudante)=>{
 
     const retornoEstudante = estudantes.filter(element =>
         element.estudante.toLowerCase().indexOf(nomeEstudante.toLowerCase())> -1)
 
         retornoEstudante.length>0?
-        console.log(retornoEstudante) : console.log('Aluno não encontrado')
+        console.log(retornoEstudante[0]) : console.log('Aluno não encontrado')
+        return retornoEstudante[0]
+
 }
 
 /* 
 //Teste para chamar função
-retornarEstudante('ha')
+buscarEstudante('ha')
 */
 
 /* 
@@ -306,22 +294,23 @@ buscarEstudante('Chris Evans')
 buscarEstudante('ChRis EVAns') 
 buscarEstudante('halle berry')
  */
+
 const relatorioEstudante=(nomeEstudante, callback)=>{
+    const dadosEstudantes = callback(nomeEstudante)
+    
     const relatorio = {
-        aluno: callback(nomeEstudante).estudante,
-        turma: callback(nomeEstudante).turma,
-        curso: callback(nomeEstudante).curso,
-        valorTotal: callback(nomeEstudante).valor,
-        valorParcelas: callback(nomeEstudante).parcelas,
-        nParcelas: callback(nomeEstudante).nParcelas
+        aluno: dadosEstudantes.estudante,
+        turma: dadosEstudantes.turma,
+        curso: dadosEstudantes.curso,
+        valorTotal: dadosEstudantes.valor,
+        valorParcelas: dadosEstudantes.parcelas,
+        nParcelas: dadosEstudantes.nParcelas
     }
     console.log(`Aluno: ${relatorio.aluno}\nTurma: ${relatorio.turma}\nCurso: ${relatorio.curso}\nValor Toral: ${relatorio.valorTotal}\nValor Parcelas: ${relatorio.valorParcelas}\nNº Parcelas: ${relatorio.nParcelas}`)
     return 
-}
+} 
 
-relatorioEstudante('halle berry', buscarEstudante)
-
-
+//relatorioEstudante('halle berry', buscarEstudante)
 
 
 const matricular=(nomeAluno, turmaAluno, cursoAluno)=>{
