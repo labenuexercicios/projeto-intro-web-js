@@ -1,0 +1,51 @@
+header {
+    background-color: #FBFBFB;
+    position: absolute;
+    width: 120rem;
+    height: 9.375rem ;
+}
+
+#logo {
+    position: absolute;
+    width: 21.813rem;
+    height: 4.688rem;
+    left: 15.938rem;
+    top: 2.438rem;
+}
+
+.menu{
+    position: absolute;
+    right: 20em;
+    top: 2.5em;
+}
+
+.menu__list{
+    color: #0E0E0E;
+    font-size: 1.5em;
+    font-weight: 700;
+    list-style: none;
+    line-height: 2.25em;
+    display: flex;
+}
+
+li:active {
+    margin-right: 1.25em ;
+    height: 2.25em;
+    text-decoration-line: underline;
+}
+
+.menu__home{
+    width: 4.625em;
+}
+
+.menu__curso{
+    width: 5.4375em;
+}
+
+.menu__cont{
+    width: 6.3125em;
+}
+
+.menu__adm {
+    width: 7.625em;
+}
