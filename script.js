@@ -19,7 +19,7 @@ const cursos = [
     {
         //Terceiro curso contendo duas turmas.
         curso: "APIs REST",
-        descricao: "Quer aprender arquitetura de software? temos um curso para você!",
+        descricao: "Quer aprender arquitetura de software? - temos um curso para você!",
         duracao: "6 meses",
         valor: 2000
     }
@@ -490,6 +490,7 @@ const parcelarCurso = (parcela) =>{
         let descParcela = desconto / parcela
 
         console.log(`O curso ${cursos[1].curso} ficou num total de R$ ${desconto}. Em ${parcela}x de R$ ${descParcela.toFixed(2)}. Foi concedido um desconto de 20%.`)
+
     }else if(parcela > 2 && parcela <= 12){
         let valorBruto = cursoEscolhido.valor
         let valorParcela = valorBruto / parcela 
@@ -499,7 +500,7 @@ const parcelarCurso = (parcela) =>{
 }
 parcelarCurso(1)
 
-//Função de buscar cursos, turmas e estudantes.
+//Funções de buscar cursos, turmas e estudantes.
 
 //Função BUSCAR CURSOS.
 const buscarCurso = (nomeCurso) =>{
@@ -514,8 +515,8 @@ const buscarCurso = (nomeCurso) =>{
 console.log(buscarCurso("javascript"))
 
 //Função BUSCAR TURMAS.
-const buscarTurma= (nomeTurma) =>{
-    const filtrarTurma = turmas.filter(turmaProcurada => turmaProcurada.turma.toLocaleLowerCase() === nomeTurma.toLocaleLowerCase())
+const buscarTurma = (nomeTurma) =>{
+    const filtrarTurma = turmas.filter(turmaProcurada => turmaProcurada.turma.toLowerCase() === nomeTurma.toLowerCase())
 
     filtrarTurma.length > 0 ? console.log(filtrarTurma) : console.log('Turma não encontrada.')
 }
@@ -523,17 +524,44 @@ buscarTurma("sibyla")
 
 //Função BUSCAR ESTUDANTES.
 const buscarEstudantes = (nomeEstudantes) =>{
-    
-    for(i = 0; i < estudantes.length; i++){
-        if(estudantes[i].estudante.toLowerCase().includes(nomeEstudantes.toLowerCase()) !== false){
-            return estudantes[i]
-        }
+
+    //criando a função buscarEstudante com for..of e includes.es
+    // let resultEstudante;
+
+    // for (let estudante of estudantes) {
+    //     if (estudante.estudante.toLowerCase().includes(nomeEstudantes.toLowerCase())) {
+    //         resultEstudante = estudante
+    //     }
+    // }
+    // if (resultEstudante) {
+    //     return resultEstudante
+    // } else {
+    //     return `Estudante não encontrado.`
+    // }
+           
+    //Criando a função buscarEstudante com for.
+    // for(i = 0; i < estudantes.length; i++){
+    //     if(estudantes[i].estudante.toLowerCase().includes(nomeEstudantes.toLowerCase()) !== false){
+    //         return estudantes[i]
+    //     }
+    // }
+    // return 'Aluno não encontrado.'
+
+    //Criando a função buscarEstudante com o filter e inlcudes.
+    const estudanteFilter = estudantes.filter((item) =>{
+        return item.estudante.toLowerCase().includes(nomeEstudantes.toLowerCase())
+    })
+
+    if (estudanteFilter.length < 1 ){
+        return `Estudante não encontrado.`
+    }else{
+        return estudanteFilter
     }
-    return 'Aluno não encontrado.'
+
 }
 console.log(buscarEstudantes("lu"))
 
-//Função para matricula.
+//Função para matricular.
 const matricular = (nome, curso, turma, nParcelas) =>{
      
     // let i = 0
@@ -569,10 +597,25 @@ const matricular = (nome, curso, turma, nParcelas) =>{
 matricular('Justin Bieber', 'JavaScript', 'Hipátia', 2)
 console.log(estudantes)
 
+
+//ADICONANDO VALORES NO ARRAY.
+const carrinhoCursos = []
+
+const adicionarValoresNoArray = (buscarCurso) =>{
+    const valorCurso = buscarCurso.valor
+    carrinhoCursos.push(valorCurso)
+
+    return carrinhoCursos
+}
+adicionarValoresNoArray(buscarCurso('javascript'))
+adicionarValoresNoArray(buscarCurso('html e css'))
+adicionarValoresNoArray(buscarCurso('apis rest'))
+console.log(carrinhoCursos)
+
 //Função para parcelar curso.
 //USANDO SWITCH CASE, FOR E IF
-const parcelarTotalCursos = (nParcelas) =>{
-    const carrinhoCursos = [500, 900, 2000]
+const parcelarTotalCursos = (carrinhoCursos, nParcelas) =>{
+    // const carrinhoCursos = [500, 900, 2000]
     let valorTotalSoma = 0
     let desconto = 0
 
@@ -630,25 +673,25 @@ const parcelarTotalCursos = (nParcelas) =>{
         console.log(`O valor do pagamento é de: R$ ${descUmCurso} com 20% de desconto, parcelado em ${nParcelas}X de ${valorParcelaSemDesc.toFixed(2)}`)
     }
 }
-parcelarTotalCursos(1)
+parcelarTotalCursos(carrinhoCursos, 1)
 
 //ADICONANDO VALORES NO ARRAY.
-const carrinhoCursos = []
+// const carrinhoCursos = []
 
-const adicionarValoresNoArray = (buscarCurso) =>{
-    const valorCurso = buscarCurso.valor
-    carrinhoCursos.push(valorCurso)
+// const adicionarValoresNoArray = (buscarCurso) =>{
+//     const valorCurso = buscarCurso.valor
+//     carrinhoCursos.push(valorCurso)
 
-    return carrinhoCursos
-}
-adicionarValoresNoArray(buscarCurso('javascript'))
-adicionarValoresNoArray(buscarCurso('html e css'))
-adicionarValoresNoArray(buscarCurso('apis rest'))
-console.log(carrinhoCursos)
+//     return carrinhoCursos
+// }
+// adicionarValoresNoArray(buscarCurso('javascript'))
+// adicionarValoresNoArray(buscarCurso('html e css'))
+// adicionarValoresNoArray(buscarCurso('apis rest'))
+// console.log(carrinhoCursos)
 
 //Relatório do aluno.
 const relatorioEstudante = (estudante) =>{
     return `Relatório do Aluno:\n Aluno: ${estudante.estudante}\n Turma: ${estudante.turma}\n Curso: ${estudante.curso}\n Valor Total: ${estudante.valor}\n Valor Parcela: ${estudante.parcelas}\n Nº de Parcelas: ${estudante.numParcelas}`
 
 }
-console.log(relatorioEstudante(buscarEstudantes('chris evans')))
+console.log(relatorioEstudante(buscarEstudantes('lucas breia')))
