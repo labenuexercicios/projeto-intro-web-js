@@ -1,14 +1,108 @@
 main{
-    background-color: #8a2be2;
-    height: 80vh;
+    width: 100%;
 
 }
 
-.cursos{
+.link__whatsaap{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 79.16px;
+    height: 79.86px;
+
+}
+
+.courses{
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    background-image: url(./mideas/background-hero.png);
+    background-repeat: no-repeat;
+    background-color: #f5c75a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    /* width: 4.8125em;
-    height: 120em;
-    left: 120em;
-    top: 9.5em; */
-
+    
 }
+
+.courses__text > h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 5.625rem;
+    margin-top: 13.75rem;
+} 
+
+.courses__text > p{
+    font-size: 2.125rem;
+    font-weight: 400;
+    line-height: 3.188rem;
+    font-style: normal;
+}
+
+
+.courses__btn{
+    background-color:  #0E0E0E; 
+    height: 8.22vh;
+    width: 23.4375vw;
+    margin-bottom: 13.813rem;
+    margin-top: 7.188rem;
+    border-radius: 9px;
+}
+
+.courses__link{
+    color: #FBFBFB;
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem;
+}
+
+
+main section a {
+    color: #FBFBFB;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+main section a:hover {
+    text-decoration: none;
+}
+
+.about__us{
+    background-color: #0E0E0E;
+    color:#FBFBFB ;
+    text-align: center;
+    padding-top: 4.938rem;
+}
+
+
+.about__us--title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 3.75rem;
+    padding-bottom: 2.75rem;
+}
+
+.about__us--subtitle {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 2.5em;
+    text-align:center;
+}
+
+
+section:nth-child(3) >h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    
+}
+
+

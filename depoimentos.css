@@ -1,0 +1,48 @@
+.depositions {
+    background-color: #0E0E0E;
+    color:#FBFBFB ;
+    text-align: center;
+    padding-top: 10.938em;
+    padding-bottom: 11.438rem;
+}
+
+.depositions__title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3.75rem;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.depositions__cards{
+    margin-top: 2.75rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 1.875rem;
+    justify-content: center;
+}
+
+.depositions__cards--itens {
+    background-color:#FBFBFB ;
+    color: #0E0E0E;
+    border-radius: 10px;
+    width: 330px;
+    height: 392px;
+
+}
+
+.depositions__cards--itens > img {
+    margin-bottom: 3.813rem;
+    margin-top: 2.063rem;
+}
+
+.depositions__cards--itens > p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: start;
+    padding: 0 2.005rem ;
+    padding-bottom: 1.625rem;
+}
