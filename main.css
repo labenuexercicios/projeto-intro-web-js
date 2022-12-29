@@ -5,12 +5,12 @@ main{
 
 .link__whatsaap{
     position: fixed;
-    bottom: 20px;
-    right: 30px;
-    width: 79.16px;
-    height: 79.86px;
-
+    bottom: 1.25rem;
+    right: 1.875rem;
+    width: 4.122vw;
+    height: 8.31vh;
 }
+
 
 .courses{
     width: 100%;

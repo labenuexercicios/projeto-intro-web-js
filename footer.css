@@ -6,15 +6,13 @@ footer {
 
 .footer__logo{
     display: flex;
-    padding-left: 7rem;
-    padding-top: 2rem;
-    padding-bottom: 3.313rem;
+    padding: 2rem 7rem 3.313rem;
 } 
 
 
 iframe{
-    width: 449px;
-    height: 269px;
+    width: 23.38vw;
+    height: 27.99vh;
     border: 2px solid #000;
 }
 
@@ -92,7 +90,7 @@ iframe{
     font-size: 1rem;
 }
 
-.footer__adm-link:hover{
+.footer__adm--link:hover{
     text-decoration: none;
 }
 

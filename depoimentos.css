@@ -18,7 +18,7 @@
 .depositions__cards{
     margin-top: 2.75rem;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, auto);
     grid-column-gap: 1.875rem;
     justify-content: center;
 }
@@ -27,8 +27,8 @@
     background-color:#FBFBFB ;
     color: #0E0E0E;
     border-radius: 10px;
-    width: 330px;
-    height: 392px;
+    width: 17.187vw;
+    height: 40.79vh;
 
 }
 
