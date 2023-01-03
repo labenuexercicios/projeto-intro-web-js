@@ -1,0 +1,39 @@
+header {
+    background-color: #FBFBFB;
+    width: 120rem;
+    height: 9.375rem ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    width: 21.813rem;
+    height: 4.688rem;
+}
+
+.menu{
+    right: 20rem;
+    top: 2.5rem;
+}
+
+.menu__list{
+    font-size: 1.5em;
+    font-weight: 700;
+    list-style: none;
+    line-height: 2.25em;
+    display: flex;
+}
+
+
+.menu__links{
+    color: #0E0E0E;
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
