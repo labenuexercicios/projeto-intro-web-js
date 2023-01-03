@@ -11,8 +11,6 @@
     font-weight: 700;
     line-height: 3.75rem;
     font-family: 'Poppins', sans-serif;
-
-
 }
 
 .depositions__cards{
@@ -29,7 +27,6 @@
     border-radius: 10px;
     width: 17.187vw;
     height: 40.79vh;
-
 }
 
 .depositions__cards--itens > img {
