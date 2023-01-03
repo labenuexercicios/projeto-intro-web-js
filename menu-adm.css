@@ -1,11 +1,10 @@
+main{
+    width: 100%; 
+}
+
 .menu-list{
     display: flex;
     border-bottom: 2px solid #0E0E0E;
-}
-
-main{
-    width: 100%;
-    
 }
 
 .menu-list__courses{

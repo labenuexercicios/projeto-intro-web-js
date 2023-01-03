@@ -16,10 +16,10 @@ input::placeholder{
 }
 
 .menu-classes-search{
-    width: 20.625rem;
-    height: 2.688rem;
+    width: 23.43vw;
+    height: 4.47vh;
     padding-left:1.313rem ;
-    /* color: #D1D1D1; */
+
 }
 
 .menu-classes__btn{
@@ -28,8 +28,8 @@ input::placeholder{
     font-size: 1.25rem;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
-    width: 6.25rem;
-    height: 2.95rem;
+    width: 6.25vw;
+    height: 4.86vh;
     cursor: pointer;
 }
 
