@@ -12,15 +12,7 @@ body{
     --corDestaque: #F6C34A;
 }
 
-.center{
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 2%;
-
-}
-
-
-/* Trabalhando no header com flexbox */
+/* Trabalhando no Header */
 header{
     width: 15%;
     height: 10vh;
@@ -33,7 +25,6 @@ header{
     display: flex;
     align-items: center;
     width: 100%;
-
 }
 
 .controles{
@@ -73,54 +64,87 @@ header{
     width: 100%;
 }
 
-/* Estilizando a Main */
+/* Trabalhando na Main */
 main{
-    width: 100%;
-    background-image: url('/LabEscola/background-hero.png');
-    background-color: var(--corDestaque);
-}
-
-/* bloco 1 */
-.bloco1{
-    width: 100%;
-    height: calc(100vh - 72px);
+    width: 100vw;
+    height: 100vh;
+    background-color: #0E0E0E;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    
 }
 
-.titulo-um{
-    font-size: 50px;
+/* TRABALHANDO NA SECTION E NO FORMULÁRIO */
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 45px;
+    background: #F0F0F0;
+    border-radius: 10px;
+    width: 30vw;
+    box-shadow: rgba(222, 219, 219, 0.15) 1.95px 1.95px 2.6px;
+}
+
+section h2{
+    color: #0E0E0E;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+section form{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 750px;
-    margin-bottom: 12px;
+    height: 50vh;
 }
 
-.sub-titulo{
-    font-size: 30px;
-    width: 100%;
-    max-width: 832px;
-    margin-bottom: 50px;
-    font-weight: 100px;
+form label{
+    color: #0E0E0E;
+    font-size: 1rem;
+    margin-bottom: 4px;
 }
 
-.botao-central{
-    background-color: #000;
-    color: #fff;
-    padding: 15px 50px;
-    border-radius: 9px;
-    box-shadow: 0px 0px 10px black;
-    position: relative;
-    top: 50px;
-
-    text-decoration: none;
+form input{
+    padding: 1rem;
+    outline: none;
+    border: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+    transition: all 0.5s;
 }
 
-.botao-central:hover{
-    background-color: rgb(26, 25, 25);
+form input:focus{
+    border-radius: 16px;
+}
 
+form textarea{
+    padding: 1rem;
+    outline: none;
+    border: 0;
+    margin-bottom: 30px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+form textarea:focus{
+    border-radius: 16px;
+}
+
+form button{
+    padding: 1rem;
+    background-color: var(--corDestaque);
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+
+form button:hover{
+    background-color: #e3b54b;
 }
 
 /* botão wpp */
@@ -156,78 +180,6 @@ main{
     animation-iteration-count: infinite;
     z-index: 1;
     cursor: pointer;
-}
-
-/* bloco 2 */
-.bloco2{
-    background-color: #000;
-    width: 100%;
-    color: #fff;
-    padding: 35px 0;
-    display: flex;
-}
-
-.texto{
-    width: 100%;
-    height: 50vh;
-}
-
-.titulo-h2{
-    font-size: 2em;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.bloco2 p{
-    width: 80%;
-    margin: 20px auto;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-}
-
-/* Depoimentos */
-.depoimentos{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.container-card{
-    width: 85%;
-    margin: 5em 8em 5em;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.card{
-    width: 80%;
-    height: 50vh;
-    background-color: #fff;
-    color: #000;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 30px 0 10px 0;
-}
-
-.card img{
-    width: 10vw;
-    height: 20vh;
-    border-radius: 50%;
-    border: 5px solid var(--corDestaque);
-}
-
-.card p{
-    width: 270px;
-    font-size: 14px;
-    line-height: 25px;
-    font-weight: 400;
-    text-align: center;
 }
 
 /* Footer */
