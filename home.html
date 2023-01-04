@@ -5,31 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    
-</head>
-<body>
     <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"><!-- esse aqui é o link Google Fonts da fonte que está no Figma -->
+    <link rel="stylesheet" href="home.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    
     
     <header>
-        <!--tem que colocar o logo aqui-->
+        <a href="./home.html">
+            <img src="./midias/logo.png" alt="LabEscola logo" id="logo">
+        </a>
         <nav>
-
+            <ul id="lista-header">
+                <li class="links-header"><a href="./home.html" style="text-decoration: none;">Home</a></li>
+                <li class="links-header"><a href="./cursos.html" style="text-decoration: none;">Cursos</a></li>
+                <li class="links-header"><a href="./contato.html" style="text-decoration: none;">Contato</a></li>
+                <li class="links-header"><a href="./adm.html" style="text-decoration: none;">Área ADM</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
+       
         <section>
+            <h1 class="primeiro-bloco"> Descubra o novo ensino!</h1>
+            <p class="primeiro-bloco">Aprenda de verdade, no seu tempo, no seu ritmo!</p>
+            <button type="button">
+                <a href="./cursos.html" style="text-decoration: none;">Conheça nossos cursos</a>
+            </button>
+            
         </section>
 
         <section>
+            <h2 id="sobre">Sobre Nós</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque est laboriosam eligendi aliquam perspiciatis aspernatur facere praesentium numquam animi temporibus, sed necessitatibus recusandae ullam dolor porro delectus alias labore laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel excepturi at provident cum hic vero doloribus reiciendis cupiditate, nesciunt laborum consequatur mollitia officia ratione fugit, ea tempora fuga alias? Quasi!</p>
         </section>
 
         <section>
+            <h2>Depoimentos</h2>
+            <span class= "depoimentos" id="depoimento1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, facilis dolores id voluptatibus velit tenetur dolorum quaerat odio nobis deleniti blanditiis doloribus mollitia aliquam! Aut, consequuntur consectetur? Minima, nisi necessitatibus.</span>
+            <span class= "depoimentos" id="depoimento2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia esse voluptates, fuga quasi vitae error tenetur nihil consequatur necessitatibus minus quod maxime repellendus, incidunt corporis iure ducimus culpa beatae unde.</span>
+            <span class= "depoimentos" id="depoimento3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam eos, omnis soluta, quaerat voluptates accusamus facilis voluptatum deserunt, perspiciatis tenetur dolores? Facere ad voluptatibus similique officiis voluptate doloremque. </span>
+            <span class= "depoimentos" id="depoimento4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae, ratione eius sequi perferendis tempore magni eum alias ab eligendi molestias minima, odit ipsa nesciunt eveniet totam enim? Nesciunt, delectus.</span>
+            
         </section>
-
+        <!-- Colocar o link de whatsapp em algum lugar -->
     </main>
 
     <footer>
+
+        <a href="./home.html">
+            <img src="./midias/logo-footer.png" alt="Logo footer" id="logo-footer">
+        </a>
+
+        <h3 class="titulo-mapa-footer">Endereço</h3>
+        <a id="mapa" target="_blank" href="https://www.google.com.br/maps/place/R.+Pais+Leme,+215+-+Pinheiros,+S%C3%A3o+Paulo+-+SP,+05424-150/@-23.5685757,-46.6991529,18z/data=!3m1!4b1!4m5!3m4!1s0x94ce57a7c7ace4c3:0x586759cab9b5c95a!8m2!3d-23.5685772!4d-46.6985022?hl=pt-BR">
+        <img src="./midias/endereco.png" alt="endereco-mapa" id="endereco-mapa">
+        </a>
+        <p id="endereco">R. Pais Leme, 215. CEP 05.424-150 - Pinheiros</p>
+        
+            
+        <h3 id="titulo-links-footer">Links</h3>
+            <ul id="lista-links-footer">
+                <li class="links-footer"><a href="./home.html">Home</a></li>
+                <li class="links-footer"><a href="./cursos.html">Cursos</a></li>
+                <li class="links-footer">Blog</li>
+                <li class="links-footer"><a href="./contato.html">Fale Conosco</a></li>
+                <li class="links-footer">Termos e condições</li>
+                <li class="links-footer">Política de privacidade</li>
+                <li class="links-footer">FAQ</li>
+            </ul>
+        
+               
+        <h3 id="titulo-redes-sociais">Redes sociais</h3>
+            <ul id="redes-sociais">
+                <li class="links-redes"><a target="_blank" href="https://twitter.com/">
+                    <img src="./midias/icones/icon-twitter.png" alt="twitter" id="icon-twitter">
+                </a></li>
+                <li class="links-redes"><a target="_blank" href="https://linkedin.com">
+                    <img src="./midias/icones/icon-linkedin.png" alt="linkedin" id="icon-linkedin">
+                </a></li>
+                <li class="links-redes"><a target="_blank" href="https://facebook.com">
+                    <img src="./midias/icones/icon-fb.png" alt="facebook" id="icon-facebook">
+                </a></li>
+                <li class="links-redes"><a target="_blank" href="https://intagram.com">
+                    <img src="./midias/icones/icon-ig.png" alt="instagram" id="icon-ig">
+                </a></li>
+            </ul>
+        
+            
+        <h3 class="area-restrita-titulo">Área restrita</h3>          
+            <ul id="areas-internas">
+                <li class="links-internos">Área administrativa</li>
+                <li class="links-internos">Espaço do aluno</li>
+            </ul>
     </footer>
 </body>
 </html>

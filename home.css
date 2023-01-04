@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+
+header{
+    background-color: #FBFBFB;
+    padding: 0 5em;
+}
+
+#lista-header{
+   position: absolute;
+   float: right;
+   right: 4em;
+   top: 1.2em;
+   padding: 0 3em;
+   
+}
+
+.links-header{
+    list-style: none;
+    display: inline-block;
+    margin: 0 3.2em;
+    text-decoration: none;
+    font-size: 18px;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.links-header > a{
+    color: #0E0E0E;
+}
+
+.links-header:active{
+    color: #0E0E0E;
+    text-decoration: underline;
+}
+
+main{
+    height: 100vh;
+    background-color: aqua;
+    
+
+}
+
+main section:nth-child(1){
+    height: 73vh;
+    background-image: url(./midias/background-home.png);
+    background-color: #F6C34A;
+    font-family:'Poppins', sans-serif;
+    font-style: normal; 
+    text-align: center;
+    padding-top: 5em;
+    
+}
+
+h1.primeiro-bloco{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 90px;
+ /*    position: absolute;
+    left: 4em; */
+}
+
+p.primeiro-bloco{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 51px;
+    padding-bottom: 2em;
+   /*  position: absolute;
+    left: 4em; */
+}
+
+button{
+    background-color: #0E0E0E;
+    width: 450px;
+    height: 75px;
+    left: 735px;
+    top: 629px;
+    border-radius: 9px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+
+}
+
+button > a{
+    color: #FBFBFB;
+}
+
+button:active{
+    background-color: #FBFBFB;
+    color: #0E0E0E;
+}
+
+button:active > a{
+    color: #0E0E0E;
+}
+
+
+main section:nth-child(2){
+    background-color: #0E0E0E;
+    color: white;
+    height: 38vh;
+}
+
+h2{
+    /* text-align: center; */
+    padding-left: 15.5em;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    padding-top: 1em;
+    justify-content: center;
+}
+
+#sobre-nos{
+    padding-left: 16em;
+
+   
+}
+
+main section:nth-child(2) > p{
+    color: #FBFBFB;
+    text-align: justify;
+    padding: 2em 12em;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+main section:nth-child(3){
+    background-color: #0E0E0E;
+    color: white;
+    height: 83vh;
+    padding-left: ;
+}
+
+.depoimentos{
+    display: inline-block;
+    width: 20vw;
+    height: 60vh;
+    /* text-align: center; */
+    margin: 2em;
+    padding-left: 2em;
+    padding-top: 7em;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+}
+     
+#depoimento1{
+    padding: 19em 2em 2em 2em;
+    margin: 2em;
+    background-color: #FBFBFB;
+    border-radius: 2%;
+    color: #0E0E0E;
+    position: absolute;
+    left: 6em;
+    background-image: url(./midias/Ellipse\ 1.png);
+    background-repeat: no-repeat;
+    background-position: 7em 5em ;
+}
+
+#depoimento2{
+    padding-left: em;
+    padding: 19em 2em 2em 2em;
+    background-color: #FBFBFB;
+    border-radius: 2%;
+    color: #0E0E0E; 
+    position: absolute;
+    left: 31.5em;
+    background-image: url(./midias/Ellipse\ 2.png);
+    background-repeat: no-repeat;
+    background-position: 7em 5em;
+}
+
+#depoimento3{
+    padding-left: em;
+    padding: 19em 2em 4em 2em;
+    background-color: #FBFBFB;
+    border-radius: 2%;
+    color: #0E0E0E;
+    position: absolute;
+    left: 57em;
+    background-image: url(./midias/Ellipse\ 3.png);
+    background-repeat: no-repeat;
+    background-position: 7em 5em;
+}
+
+#depoimento4{
+    padding-left: em;
+    padding: 19em 2em 2em 2em;
+    background-color: #FBFBFB;
+    border-radius: 2%;
+    color: #0E0E0E;
+    position: absolute;
+    right: 6.5em;
+    background-image: url(./midias/Ellipse\ 4.png);
+    background-repeat: no-repeat;
+    background-position: 7em 5em;
+} 
+
+
+footer{
+    background-color: #F6C34A;
+    position: relative; 
+    bottom: -11.8em;
+    width: 98.9vw;
+    height: 78vh;
+    margin-top: 30em; 
+    /* top: 65vh;
+    bottom: 5em;  */
+    padding: 1em 3em 3em 3em;
+    /* display: inline-block; */
+}
+
+#logo-footer{
+    padding-top: 2em;
+    padding-left: 3.8em;
+}
+
+h3{
+    color: #0E0E0E;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.titulo-mapa-footer{
+    position: relative;
+    top: .8em;
+    left: 3.3em;
+    color: orangered;
+}
+
+#mapa{
+    width: 1vw;
+    height: .2vh;
+    position: relative;
+    top: 1em;
+    left: 3.9em;
+    background-color: blue
+
+}
+
+#endereco{ /* o nome da rua debaixo do mapa */
+    padding-top: 2em;
+    position: relative;
+    left: 3.9em;
+}
+
+#titulo-links-footer{
+    position: relative;
+    float: right;
+    padding-left: 0;
+    bottom: 20.8em;
+    right: 39.7em;
+    background-color: rebeccapurple;
+}
+
+#lista-links-footer{
+    width: 13em;
+    background-color: #FBFBFB;
+    position: relative;
+    /* float: right;
+    bottom: 19.2em;
+    right: 34em; */
+    left: 36em;
+    bottom: 19.5em;
+
+}
+
+.links-footer{
+    list-style: none;
+    margin-bottom: 1.3em;
+    
+}
+
+#titulo-redes-sociais{
+    position: relative;
+    left: 43em;
+    bottom: 34.5em;
+}
+#redes-sociais{
+    width: 12em;
+    display: inline-block;
+    background-color: aqua;
+    position: relative;
+    left: 53.5em;
+    bottom: 43em;
+}
+
+.links-redes{
+    display: inline-block;
+    margin: .4em;
+}
+
+.area-restrita-titulo{
+    position: relative;
+    left: 60em;
+    bottom: 42.7em;
+}
+
+#areas-internas{
+    width: 10em;
+    margin-bottom: 1em;
+    background-color: maroon;
+    position: relative;
+    left: 75em;
+    bottom: 54.3em;
+}
+
+.links-internos{
+    list-style: none;
+    margin-bottom: 1.3em;
+    background-color: wheat;
+}
+
