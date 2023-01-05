@@ -1,6 +1,5 @@
 main{
     width: 100%;
-
 }
 
 .link__whatsaap{
@@ -49,6 +48,10 @@ main{
     margin-bottom: 13.813rem;
     margin-top: 7.188rem;
     border-radius: 9px;
+}
+
+.courses__btn:hover{
+    transform: scale(1.1);
 }
 
 .courses__link{

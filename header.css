@@ -1,15 +1,15 @@
 header {
     background-color: #FBFBFB;
-    width: 120rem;
-    height: 9.375rem ;
+    width: 100%;
+    height: 15.81vh ;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 #logo {
-    width: 21.813rem;
-    height: 4.688rem;
+    width: 18.1770vw;
+    height: 7.80vh;
 }
 
 .menu{
