@@ -12,41 +12,41 @@ body{
     --corDestaque: #F6C34A;
 }
 
-/* Trabalhando no Header */
+/* Trabalhando no header com flexbox */
 header{
-    width: 15%;
+    width: 100vw;
     height: 10vh;
-    align-items: center;
-    padding: 6px 0;
-    /* background-color: #FBFBFB; */
-}
-
-#barra-menu{
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    background-color: #FBFBFB;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+
 }
 
 .controles{
     display: flex;
     gap: 1em;
-    margin-left: 30em;
-    align-items: center;
-    text-align: center;
-    font-weight: 500;
+    margin-left: 20em;
+    font-weight: 600;
     
 }
 
 .logo{
     max-width: 100%;
-    margin-left: 10em;
+    margin-left: 1em;
 }
 
 .controles a{
     text-decoration: none;
     color: #0E0E0E;
-   /*  display: flex; */
-    /* border-bottom: 3px solid transparent; */
     width: 7vw;
 }
 
@@ -185,8 +185,8 @@ form button:hover{
 /* Footer */
 footer{
     background-color: var(--corDestaque);
-    width: 100%;
-    height: 574px;
+    width: 100vw;
+    height: 80vh;
 }
 
 .center{
@@ -195,11 +195,16 @@ footer{
     padding: 3% 3%;
 }
 
+#logo{
+    margin-top: 1em;
+    margin-right: 57em;
+}
+
 .container-footer{
     display: flex;
     justify-content: center;
     gap: 55px;
-    margin-top: 10px;
+    margin-top: 4em;
     
 }
 

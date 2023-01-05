@@ -12,49 +12,41 @@ body{
     --corDestaque: #F6C34A;
 }
 
-.center{
-    width: 85%;
-    margin: 0 auto;
-    padding: 0 2%;
-
-}
-
-
 /* Trabalhando no header com flexbox */
 header{
-    width: 15%;
+    width: 100vw;
     height: 10vh;
-    align-items: center;
-    padding: 6px 0;
-    /* background-color: #FBFBFB; */
-}
-
-#barra-menu{
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    background-color: #FBFBFB;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+
 }
 
 .controles{
     display: flex;
     gap: 1em;
-    margin-left: 30em;
-    align-items: center;
-    text-align: center;
-    font-weight: 500;
+    margin-left: 20em;
+    font-weight: 600;
     
 }
 
 .logo{
     max-width: 100%;
-    margin-left: 10em;
+    margin-left: 1em;
 }
 
 .controles a{
     text-decoration: none;
     color: #0E0E0E;
-   /*  display: flex; */
-    /* border-bottom: 3px solid transparent; */
     width: 7vw;
 }
 
@@ -74,33 +66,33 @@ header{
 
 /* Trabalhando na Main */
 main{
-    width: 100%;
+    width: 100vw;
     background-color: var(--corDestaque);
 }
 
 /* Trabalhando nos cards da Main */
 .bloco1{
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 72px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    
+    
 }
 
 .container-card{
-    width: 100%;
-   
+    width: 100vw;
     display: flex;
     justify-content: center;
     gap: 0.438em;
 }
 
 .card{
-    /* position: relative; */
-    width: 350px;
-    height: 350px;
+    width: 25vw;
+    height: 45vh;
     margin: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -118,9 +110,9 @@ main{
 
 .card p{
     width: 270px;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 25px;
-    font-weight: 400;
+    font-weight: 700px;
     text-align: center;
     margin-top: 40px;
 }
@@ -136,10 +128,8 @@ main{
     padding: 15px 75px;
     border-radius: 9px;
     box-shadow: 0px 0px 10px black;
-    position: relative;
-    top: 50px;
-    right: 5px;
-
+    display: flex;
+    margin-top: 7rem;
     text-decoration: none;
 }
 
@@ -185,18 +175,20 @@ main{
 
 /* Trabalhando na segunda parte - cards de modulos cursos */
 .bloco2{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: #0E0E0E;
     color: #FBFBFB;
     flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .container-card-modulos{
-    width: 100%;
+    width: 70vw;
+    height: 80vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -205,9 +197,8 @@ main{
 }
 
 .card-modulo{
-    /* position: relative; */
-    width: 900px;
-    height: 200px;
+    width: 60vw;
+    height: 70vh;
     margin-top: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -215,8 +206,8 @@ main{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
+    align-items: center;
+    justify-content: center;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
@@ -230,8 +221,8 @@ main{
 
 .titulo-modulos{
     font-size: 20px;
-    margin-top: 85px;
-    margin-left: 50px;
+    margin-top: 2.5em;
+    margin-right: 30em;
     display: flex;
     flex-direction: row;
 }
@@ -259,8 +250,8 @@ main{
 /* Footer */
 footer{
     background-color: var(--corDestaque);
-    width: 100%;
-    height: 574px;
+    width: 100vw;
+    height: 80vh;
 }
 
 .center{
@@ -269,11 +260,16 @@ footer{
     padding: 3% 3%;
 }
 
+#logo{
+    margin-top: 1em;
+    margin-right: 57em;
+}
+
 .container-footer{
     display: flex;
     justify-content: center;
     gap: 55px;
-    margin-top: 10px;
+    margin-top: 4em;
     
 }
 

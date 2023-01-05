@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+:root{
+    --corDestaque: #F6C34A;
+}
+
+/* Trabalhando no header com flexbox */
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBFBFB;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+.controles{
+    display: flex;
+    gap: 1em;
+    margin-left: 20em;
+    font-weight: 600;
+    
+}
+
+.logo{
+    max-width: 100%;
+    margin-left: 1em;
+}
+
+.controles a{
+    text-decoration: none;
+    color: #0E0E0E;
+    width: 7vw;
+}
+
+.controles a::after{
+    content: '';
+    display: block;
+    height: 0.55vh;
+    width: 0;
+    background: #00949C;
+    transition: all .5s;
+
+}
+
+.controles a:hover::after{
+    width: 100%;
+}
+
+/* Trabalhando na Main */
+main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+
+}
+
+.nav-main{
+    display: flex;
+    background-color: #0E0E0E;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.controles-nav-main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    
+}
+
+.controles-nav-main a{
+    text-decoration: none;
+    margin-top: 3rem;
+    color: #707070;
+}
+
+.section-buscar{
+    background-color: #F6C34A;
+    width: 80vw;
+}
