@@ -2,22 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
 }
-
 
 header{
     background-color: #FBFBFB;
-    padding: 0 5em;
-}
-
-#lista-header{
-   position: absolute;
-   float: right;
-   right: 4em;
-   top: 1.2em;
-   padding: 0 3em;
-   
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .links-header{
@@ -42,53 +35,48 @@ header{
 }
 
 main{
-    height: 100vh;
-    background-color: aqua;
-    
-
+    height: auto; 
+    display: flex;
+    flex-direction: column;
 }
 
 main section:nth-child(1){
-    height: 73vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
     background-image: url(./midias/background-home.png);
     background-color: #F6C34A;
+    color: #0E0E0E;
     font-family:'Poppins', sans-serif;
     font-style: normal; 
-    text-align: center;
-    padding-top: 5em;
-    
+    text-align: center; 
 }
 
 h1.primeiro-bloco{
     font-weight: 700;
     font-size: 45px;
     line-height: 90px;
- /*    position: absolute;
-    left: 4em; */
 }
 
 p.primeiro-bloco{
     font-weight: 400;
     font-size: 30px;
     line-height: 51px;
-    padding-bottom: 2em;
-   /*  position: absolute;
-    left: 4em; */
 }
 
 button{
     background-color: #0E0E0E;
-    width: 450px;
-    height: 75px;
-    left: 735px;
-    top: 629px;
+    width: 25%;
+    height: 15%;
+    margin-top: 2.5em;
     border-radius: 9px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
-
 }
 
 button > a{
@@ -104,29 +92,23 @@ button:active > a{
     color: #0E0E0E;
 }
 
-
 main section:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #0E0E0E;
     color: white;
-    height: 38vh;
+    height: 52vh;
+    margin-bottom: -2em;
 }
 
 h2{
-    /* text-align: center; */
-    padding-left: 15.5em;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 60px;
-    padding-top: 1em;
-    justify-content: center;
-}
-
-#sobre-nos{
-    padding-left: 16em;
-
-   
 }
 
 main section:nth-child(2) > p{
@@ -136,201 +118,184 @@ main section:nth-child(2) > p{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 36px;
 }
 
 main section:nth-child(3){
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    gap: 2em;
+    justify-content: center;
+    align-items: flex-start;
     background-color: #0E0E0E;
     color: white;
-    height: 83vh;
-    padding-left: ;
+    height: 85vh;
+    padding: 0 9em;
+}
+
+main section:nth-child(3)>h2{
+    grid-column: 1/5;
+    grid-row: 1/2;
+    justify-self: center;
+    margin-top: 2em;
+    /* padding: 0 10em; */
 }
 
 .depoimentos{
-    display: inline-block;
-    width: 20vw;
-    height: 60vh;
-    /* text-align: center; */
-    margin: 2em;
-    padding-left: 2em;
-    padding-top: 7em;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 2em 1em;
+}
+     
+#depoimento1{
+    width: 98%;
+    height: 100%;
+    background-color: #FBFBFB;
+    border-radius: 2%;
+    color: #0E0E0E;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2.5em 0;
+    text-align: left;
+}
+
+#depoimento2{
+    width: 98%;
+    height: 100%;
+    background-color: #FBFBFB;
+    border-radius: 2%;
+    color: #0E0E0E;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2.5em 0;
+    text-align: left;
+}
+
+#depoimento3{
+    width: 98%;
+    height: 100%;
+    background-color: #FBFBFB;
+    border-radius: 2%;
+    color: #0E0E0E;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2.5em 0;
+    text-align: left;
+}
+
+#depoimento4{
+    width: 98%;
+    height: 100%;
+    background-color: #FBFBFB;
+    border-radius: 2%;
+    color: #0E0E0E;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2.5em 0;
+    text-align: left;
+} 
+
+.whatsapp{
+    position: fixed;
+    float: right;
+    right: 2.5em;
+    top: 35em;
+
+}
+
+footer{
+    background-color: #F6C34A;
+    height: fit-content;
+    padding: 1.5em 9em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: ; 
+}
+
+.logo-footer{
+    width: 100%;
+}
+
+.titulos{
+    color: #0E0E0E;
+    margin: 1.5em 0;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+#endereco{
+    color: #0E0E0E;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
 }
-     
-#depoimento1{
-    padding: 19em 2em 2em 2em;
-    margin: 2em;
-    background-color: #FBFBFB;
-    border-radius: 2%;
-    color: #0E0E0E;
-    position: absolute;
-    left: 6em;
-    background-image: url(./midias/Ellipse\ 1.png);
-    background-repeat: no-repeat;
-    background-position: 7em 5em ;
-}
-
-#depoimento2{
-    padding-left: em;
-    padding: 19em 2em 2em 2em;
-    background-color: #FBFBFB;
-    border-radius: 2%;
-    color: #0E0E0E; 
-    position: absolute;
-    left: 31.5em;
-    background-image: url(./midias/Ellipse\ 2.png);
-    background-repeat: no-repeat;
-    background-position: 7em 5em;
-}
-
-#depoimento3{
-    padding-left: em;
-    padding: 19em 2em 4em 2em;
-    background-color: #FBFBFB;
-    border-radius: 2%;
-    color: #0E0E0E;
-    position: absolute;
-    left: 57em;
-    background-image: url(./midias/Ellipse\ 3.png);
-    background-repeat: no-repeat;
-    background-position: 7em 5em;
-}
-
-#depoimento4{
-    padding-left: em;
-    padding: 19em 2em 2em 2em;
-    background-color: #FBFBFB;
-    border-radius: 2%;
-    color: #0E0E0E;
-    position: absolute;
-    right: 6.5em;
-    background-image: url(./midias/Ellipse\ 4.png);
-    background-repeat: no-repeat;
-    background-position: 7em 5em;
-} 
-
-
-footer{
-    background-color: #F6C34A;
-    position: relative; 
-    bottom: -11.8em;
-    width: 98.9vw;
-    height: 78vh;
-    margin-top: 30em; 
-    /* top: 65vh;
-    bottom: 5em;  */
-    padding: 1em 3em 3em 3em;
-    /* display: inline-block; */
-}
-
-#logo-footer{
-    padding-top: 2em;
-    padding-left: 3.8em;
-}
-
-h3{
-    color: #0E0E0E;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 36px;
-    padding-top: 2em;
-    padding-bottom: 2em;
-}
-
-.titulo-mapa-footer{
-    position: relative;
-    top: .8em;
-    left: 3.3em;
-    color: orangered;
-}
-
-#mapa{
-    width: 1vw;
-    height: .2vh;
-    position: relative;
-    top: 1em;
-    left: 3.9em;
-    background-color: blue
-
-}
-
-#endereco{ /* o nome da rua debaixo do mapa */
-    padding-top: 2em;
-    position: relative;
-    left: 3.9em;
-}
-
-#titulo-links-footer{
-    position: relative;
-    float: right;
-    padding-left: 0;
-    bottom: 20.8em;
-    right: 39.7em;
-    background-color: rebeccapurple;
-}
 
 #lista-links-footer{
-    width: 13em;
-    background-color: #FBFBFB;
-    position: relative;
-    /* float: right;
-    bottom: 19.2em;
-    right: 34em; */
-    left: 36em;
-    bottom: 19.5em;
-
+    list-style: none;
+    text-decoration: none;
+    color: #0E0E0E;
 }
 
 .links-footer{
-    list-style: none;
-    margin-bottom: 1.3em;
-    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #0E0E0E;
+    margin-bottom: 1.5em;
 }
 
-#titulo-redes-sociais{
-    position: relative;
-    left: 43em;
-    bottom: 34.5em;
+.links-footer>a{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #0E0E0E;
+} /* precisa ter essa parte para formatar os ícones que são links, porque elas não são formatados com .links-footer */
+
+.links-footer>a:active{
+    text-decoration: underline;
 }
+
 #redes-sociais{
-    width: 12em;
-    display: inline-block;
-    background-color: aqua;
-    position: relative;
-    left: 53.5em;
-    bottom: 43em;
-}
-
-.links-redes{
-    display: inline-block;
-    margin: .4em;
-}
-
-.area-restrita-titulo{
-    position: relative;
-    left: 60em;
-    bottom: 42.7em;
+    list-style: none;
+    display: flex;
+    gap: 1em;
 }
 
 #areas-internas{
-    width: 10em;
-    margin-bottom: 1em;
-    background-color: maroon;
-    position: relative;
-    left: 75em;
-    bottom: 54.3em;
-}
-
-.links-internos{
     list-style: none;
-    margin-bottom: 1.3em;
-    background-color: wheat;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #0E0E0E;
+    margin-bottom: 1.5em;
 }
-
