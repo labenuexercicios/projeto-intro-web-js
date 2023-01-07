@@ -5,36 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./cursos.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <a href="./home.html">
-            <img src="./midias/logo.png" alt="LabEscola logo" id="logo">
+            <img src="./midias/logo.svg" alt="LabEscola logo" id="logo">
         </a>
 
         <nav>
-            <ul>
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./cursos.html">Cursos</a></li>
-                <li><a href="./contato.html">Contato</a></li>
-                <li><a href="./adm.html">Área ADM</a></li>
+            <ul id="lista-header">
+                <li class="links-header"><a href="./home.html">Home</a></li>
+                <li class="links-header"><a href="./cursos.html">Cursos</a></li>
+                <li class="links-header"><a href="./contato.html">Contato</a></li>
+                <li class="links-header"><a href="./adm.html">Área ADM</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <article>
+            <article  id="html-css">
                 <h1>HTML e CSS</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, impedit cumque? Laborum nihil recusandae temporibus provident neque quod, dicta exercitationem, cumque dolores voluptas sequi corporis nam quas tempora rerum eius?</p>
             </article>
 
-            <article>
+            <article id="javascript">
                 <h1>JavaScript</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, quibusdam. Aspernatur esse soluta libero eaque exercitationem impedit explicabo, reiciendis expedita delectus error dicta minus sunt consequatur blanditiis corrupti voluptas fugit?</p>
             </article>
 
-            <article>
+            <article id="api-rest">
                 <h1>APIs e REST</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum itaque tempora perspiciatis quis placeat recusandae non quaerat dolorem? Rerum optio suscipit, facilis autem dolorum repellendus explicabo unde aspernatur quae laudantium!</p>
             </article>
@@ -93,52 +98,75 @@
     </main>
 
     <footer>
-        <a href="./home.html">
-            <img src="./midias/logo-footer.png" alt="Logo footer" id="logo-footer">
-        </a>
-
-        <h3>Endereço</h3>
-        <a target="_blank" href="https://www.google.com.br/maps/place/R.+Pais+Leme,+215+-+Pinheiros,+S%C3%A3o+Paulo+-+SP,+05424-150/@-23.5685757,-46.6991529,18z/data=!3m1!4b1!4m5!3m4!1s0x94ce57a7c7ace4c3:0x586759cab9b5c95a!8m2!3d-23.5685772!4d-46.6985022?hl=pt-BR">
-            <img src="./midias/endereco.png" alt="endereco" id="endereco">
-        </a>
-        <p>R. Pais Leme, 215. CEP 05.424-150 - Pinheiros</p>
-
-        <h3>Links</h3>
-            <nav>
-                <ul>
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="./cursos.html">Cursos</a></li>
-                    <li><a href="./contato.html">Fale Conosco</a></li>
-                    <li>Termos e condições</li>
-                    <li>Política de privacidade</li>
-                    <li>FAQ</li>
-                </ul>
-            </nav>
-
-        <h3>Redes sociais</h3>
-            <nav>
-                <a target="_blank" href="https://twitter.com/">
-                    <img src="./midias/icones/icon-twitter.png" alt="twitter" id="icon-twitter">
-                </a>
-                <a target="_blank" href="https://linkedin.com">
-                    <img src="./midias/icones/icon-linkedin.png" alt="linkedin" id="icon-linkedin">
-                </a>
-                <a target="_blank" href="https://facebook.com">
-                    <img src="./midias/icones/icon-fb.png" alt="facebook" id="icon-facebook">
-                </a>
-                <a  target="_blank" href="https://intagram.com">
-                    <img src="./midias/icones/icon-ig.png" alt="instagram" id="icon-instagram">
-                </a>
-            </nav>
-
-        <h3>Área restrita</h3>
-            <nav>
-                <ul>
-                    <li>Área administrativa</li>
-                    <li>Espaço do aluno</li>
-                </ul>
-            </nav>
-
+        <div class="logo-footer">
+            <a href="./home.html">
+                <img src="./midias/logo-footer.svg" alt="LabEscola logo" id="logo-no-footer"/>
+            </a>
+          </div>
+    
+          <div>
+            <h3 class="titulos" id="titulo-mapa-footer">Endereço</h3>
+            <a
+              id="mapa" target="_blank"
+              href="https://www.google.com.br/maps/place/R.+Pais+Leme,+215+-+Pinheiros,+S%C3%A3o+Paulo+-+SP,+05424-150/@-23.5685757,-46.6991529,18z/data=!3m1!4b1!4m5!3m4!1s0x94ce57a7c7ace4c3:0x586759cab9b5c95a!8m2!3d-23.5685772!4d-46.6985022?hl=pt-BR">
+              <figure><img src="./midias/mapa.svg" 
+                alt="endereco-mapa"
+                id="endereco-mapa"/>
+              </figure>
+            </a>
+            <p id="endereco">R. Pais Leme, 215. CEP 05.424-150 - Pinheiros</p>
+          </div>
+    
+          <div>
+            <div class="titulos" id="titulo-links-footer">
+              <h3>Links</h3>
+            </div>
+            
+    
+            <div id="lista-links-footer">
+              <p class="links-footer"><a  href="./home.html">Home</a></p> 
+              <p class="links-footer" ><a href="./cursos.html">Cursos</a></p>  
+              <p class="links-footer">Blog</p>
+              <p class="links-footer"><a href="./contato.html">Fale Conosco</a></p>  
+              <p class="links-footer">Termos e condições</p>
+              <p class="links-footer">Política de privacidade</p>
+              <p class="links-footer">FAQ</p>
+            </div>
+          </div>
+    
+          <div id="redes-sociais">
+            <div class="titulos" id="titulo-redes-sociais">
+              <h3>Redes sociais</h3>
+            </div>
+            
+    
+            <a target="_blank" href="https://twitter.com/">
+              <figure class="links-redes" id="icon-twitter"><img src="./midias/icones/icon-twitter.svg" alt="twitter"/>
+              </figure>
+            </a>
+              
+            <a target="_blank" href="https://linkedin.com">
+              <figure class="links-redes" id="icon-linkedin"><img src="./midias/icones/icon-linkedin.svg"alt="linkedin"/>
+              </figure>
+            </a>
+                    
+            <a target="_blank" href="https://facebook.com">
+              <figure class="links-redes" id="icon-facebook"><img src="./midias/icones/icon-fb.svg" alt="facebook"/></figure>
+            </a>
+              
+            <a target="_blank" href="https://intagram.com">
+              <figure class="links-redes" id="icon-ig"><img src="./midias/icones/icon-ig.svg" alt="instagram"/></figure>
+            </a>
+          </div>
+    
+          <div>
+            <h3 class="titulos" id="area-restrita-titulo">Área restrita</h3>
+            
+            <div id="areas-internas">
+                <p class="links-internos">Área administrativa</p>
+                <p class="links-internos">Espaço do aluno</p>
+            </div>
+          </div>
     </footer>
 </body>
 </html>

@@ -283,12 +283,48 @@ footer{
 }
 
 #redes-sociais{
-    list-style: none;
-    display: flex;
-    gap: 1em;
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* gap: 1em; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr; 
+    grid-gap: 0 1em;
 }
 
-#areas-internas{
+/* #titulo-redes-sociais{
+    width: 100%;
+    background-color: aliceblue;
+} isso é para se tivessem usando o flex*/
+
+
+ 
+#titulo-redes-sociais{
+    grid-row: 1/2;
+    grid-column: 1/span 4;
+}
+ 
+#icon-twitter{
+    grid-row: 2/3;
+    grid-column: 1/span 1;
+}
+
+#icon-linkedin{
+    grid-row: 2/3;
+    grid-column: 2/span 1; 
+}
+
+#icon-facebook{
+    grid-row: 2/3;
+    grid-column: 3/span 1; 
+}
+
+#icon-ig{
+    grid-row: 2/3;
+    grid-column: 4/5; 
+}
+ 
+.links-internos{
     list-style: none;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;

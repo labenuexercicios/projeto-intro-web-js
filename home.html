@@ -6,21 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <script src="./script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+   
     <!-- esse aqui é o link Google Fonts da fonte que está no Figma -->
     <link rel="stylesheet" href="home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
   </head>
 
   <body>
@@ -29,6 +22,7 @@
         <figure><img src="./midias/logo.svg" alt="LabEscola logo" id="logo" />
         </figure>
       </a>
+      
       <nav>
         <ul id="lista-header">
           <li class="links-header">
@@ -135,50 +129,54 @@
       </div>
 
       <div>
-        <h3 class="titulos" id="titulo-links-footer">Links</h3>
-        <ul id="lista-links-footer">
-            <li class="links-footer"><a href="./home.html">Home</a></li>
-            <li class="links-footer"><a href="./cursos.html">Cursos</a></li>
-            <li class="links-footer">Blog</li>
-            <li class="links-footer"><a href="./contato.html">Fale Conosco</a></li>
-            <li class="links-footer">Termos e condições</li>
-            <li class="links-footer">Política de privacidade</li>
-            <li class="links-footer">FAQ</li>
-        </ul>
+        <div class="titulos" id="titulo-links-footer">
+          <h3>Links</h3>
+        </div>
+        
+
+        <div id="lista-links-footer">
+          <p class="links-footer"><a  href="./home.html">Home</a></p> 
+          <p class="links-footer" ><a href="./cursos.html">Cursos</a></p>  
+          <p class="links-footer">Blog</p>
+          <p class="links-footer"><a href="./contato.html">Fale Conosco</a></p>  
+          <p class="links-footer">Termos e condições</p>
+          <p class="links-footer">Política de privacidade</p>
+          <p class="links-footer">FAQ</p>
+        </div>
       </div>
 
-      <div>
-        <h3 class="titulos" id="titulo-redes-sociais">Redes sociais</h3>
-        <ul id="redes-sociais">
-          <li class="links-redes">
-              <a target="_blank" href="https://twitter.com/">
-                        <img src="./midias/icones/icon-twitter.svg" alt="twitter" id="icon-twitter"/>
-              </a>
-          </li>
-          <li class="links-redes">
-            <a target="_blank" href="https://linkedin.com">
-                <img src="./midias/icones/icon-linkedin.svg"alt="linkedin" id="icon-linkedin"/>
-                    </a>
-                </li>
-          <li class="links-redes">
-            <a target="_blank" href="https://facebook.com">
-                <img src="./midias/icones/icon-fb.svg" alt="facebook" id="icon-facebook"/>
-              </a>
-          </li>
-          <li class="links-redes">
-            <a target="_blank" href="https://intagram.com">
-                <img src="./midias/icones/icon-ig.svg" alt="instagram" id="icon-ig"/>
-                </a>
-            </li>
-        </ul>
+      <div id="redes-sociais">
+        <div class="titulos" id="titulo-redes-sociais">
+          <h3>Redes sociais</h3>
+        </div>
+        
+
+        <a target="_blank" href="https://twitter.com/">
+          <figure class="links-redes" id="icon-twitter"><img src="./midias/icones/icon-twitter.svg" alt="twitter"/>
+          </figure>
+        </a>
+          
+        <a target="_blank" href="https://linkedin.com">
+          <figure class="links-redes" id="icon-linkedin"><img src="./midias/icones/icon-linkedin.svg"alt="linkedin"/>
+          </figure>
+        </a>
+                
+        <a target="_blank" href="https://facebook.com">
+          <figure class="links-redes" id="icon-facebook"><img src="./midias/icones/icon-fb.svg" alt="facebook"/></figure>
+        </a>
+          
+        <a target="_blank" href="https://intagram.com">
+          <figure class="links-redes" id="icon-ig"><img src="./midias/icones/icon-ig.svg" alt="instagram"/></figure>
+        </a>
       </div>
 
       <div>
         <h3 class="titulos" id="area-restrita-titulo">Área restrita</h3>
-        <ul id="areas-internas">
-            <li class="links-internos">Área administrativa</li>
-            <li class="links-internos">Espaço do aluno</li>
-        </ul>
+        
+        <div id="areas-internas">
+            <p class="links-internos">Área administrativa</p>
+            <p class="links-internos">Espaço do aluno</p>
+        </div>
       </div>
     </footer>
   </body>
