@@ -2,7 +2,7 @@
     background-color: #0E0E0E;
     color:#FBFBFB ;
     text-align: center;
-    padding-top: 10.938em;
+    padding-top: 10.938rem;
     padding-bottom: 11.438rem;
 }
 
@@ -30,16 +30,16 @@
 }
 
 .depositions__cards--itens > img {
-    margin-bottom: 3.813rem;
-    margin-top: 2.063rem;
+    padding-top: 2.063rem;
 }
 
 .depositions__cards--itens > p{
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     text-align: start;
-    padding: 0 2.005rem ;
-    padding-bottom: 1.625rem;
+    width: 13.845vw;
+    height: 14.984vh;
+    padding: 1rem 2.005rem;
 }

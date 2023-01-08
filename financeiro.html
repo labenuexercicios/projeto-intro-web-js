@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Financeiro</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="formulario.css">
- </head>
-
+    <link rel="stylesheet" href="./menu-adm.css">
+    <link rel="stylesheet" href="./financeiro.css">
+</head>
 <body>
     <header>
         <a href="./index.html"><img src="./mideas/logo 1.png" alt="Logo Labenu" id="logo"></a>
@@ -24,34 +23,37 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
+        <div class="menu-list">
+        <nav class="menu-list__courses">
+            <ul>
+                <li class="menu-list__item"><a class="menu-list__link" href="./adm.html">Turmas</a></li>
+                <li class="menu-list__item"><a class="menu-list__link" href="./matricula.html">Matriculas</a></li>
+                <li class="menu-list__item"><a class="menu-list__link" href="./financeiro.html">Financeiro Alunos</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-list__dice">
         <section>
-            <form class="contact-form" action="#">
-                <h3 class="contact-form__title">Fale Conosco</h3>
+            <h3>Financeiro</h3>
+            <ul>
+                <li>
+                    <label>Curso</label>
+                    <input type="">
+                </li>
 
-                <div class="contact-form__fields">
-                    <div class="contact-form__dice">
-                        <label for="nome" class="contact-form__label">Nome</label>
-                        <input type="text" id="nome" name="nome-usuario" class="contact-form__input">
-                    </div>
-
-                    <div class="contact-form__dice">
-                        <label for="email" class="contact-form__label">E-mail</label>
-                        <input type="email" id="email" name="email-usuario" class="contact-form__input">
-                    </div>
-
-                    <div class="contact-form__dice">
-                        <label for="msg" class="contact-form__label">Mensagem</label>
-                        <textarea id="msg" class="contact-form__textarea"></textarea>
-                    </div>
-
-                    <div class="contact-form__dice">
-                        <input type="submit" class="contact-form__btn" value="Enviar"></input>
-                    </div>
-                </div>
-            </form>
+                <li>
+                    <label></label>
+                    <input>
+                </li>
+            </ul>
         </section>
+        <section>
+
+        </section>
+    </div>
+    </div>
 
     </main>
 
@@ -104,7 +106,5 @@
             </div>
         </div>
     </footer>
-
 </body>
-
 </html>

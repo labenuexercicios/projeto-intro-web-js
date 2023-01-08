@@ -7,7 +7,7 @@ footer {
 
 .footer__logo{
     display: flex;
-    padding: 2rem 7rem 3.313rem;
+    padding: 2rem 9.7rem 3.313rem;
 } 
 
 
@@ -58,7 +58,7 @@ iframe{
 
 .flexible {
     display: flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
 }
 
 .flexible__anchor--mideas {

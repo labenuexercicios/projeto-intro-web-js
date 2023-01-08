@@ -75,7 +75,6 @@ main section a:hover {
 .about__us{
     background-color: #0E0E0E;
     color:#FBFBFB ;
-    text-align: center;
     padding-top: 4.938rem;
 }
 
@@ -87,6 +86,7 @@ main section a:hover {
     font-style: normal;
     line-height: 3.75rem;
     padding-bottom: 2.75rem;
+    text-align: center;
 }
 
 .about__us--subtitle {
@@ -94,9 +94,10 @@ main section a:hover {
     line-height: 2.25rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-style: normal;
-    padding: 2.5em;
-    text-align:center;
+    padding: 2.75rem 25.75rem;
+    width: 57.03vw;
+    height: 14.984vh;
+    
 }
 
 

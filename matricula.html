@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="formulario.css">
- </head>
+    <link rel="stylesheet" href="./menu-adm.css">
+    <link rel="stylesheet" href="./matricula.css">
+    <title>Matricula</title>
+</head>
 
 <body>
     <header>
@@ -26,33 +27,64 @@
     </header>
 
     <main>
-        <section>
-            <form class="contact-form" action="#">
-                <h3 class="contact-form__title">Fale Conosco</h3>
+        <div class="menu-list">
+            <nav class="menu-list__courses">
+                <ul>
+                    <li class="menu-list__item"><a class="menu-list__link" href="./adm.html">Turmas</a></li>
+                    <li class="menu-list__item"><a class="menu-list__link" href="./matricula.html">Matriculas</a></li>
+                    <li class="menu-list__item"><a class="menu-list__link" href="./financeiro.html">Financeiro Alunos</a></li>
+                </ul>
+            </nav>
 
-                <div class="contact-form__fields">
-                    <div class="contact-form__dice">
-                        <label for="nome" class="contact-form__label">Nome</label>
-                        <input type="text" id="nome" name="nome-usuario" class="contact-form__input">
+            <div class="contact">
+                <section>
+                    <h3 class="contact-title">Matrículas</h3>
+                    <form class="contact-form" action="#">
+                        <ul>
+                            <li class="contact-form__item">
+                                <label for="nome" class="contact-form__label">Nome</label>
+                                <input type="text" id="nome" name="nome-usuario" class="contact-form__input">
+                            </li>
+
+                            <li class="contact-form__item">
+                                <label for="course" class="contact-form__label">Curso</label>
+                                <input type="text" id="course" name="course" class="contact-form__input">
+                            </li>
+
+                            <li class="contact-form__item">
+                                <label for="class" class="contact-form__label">Turma</label>
+                                <input type="text" id="class" name="class" class="contact-form__input">
+                            </li>
+
+                            <li class="contact-form__item">
+                                <label for="portion" class="contact-form__label">Número de parcelas</label>
+                                <input type="text" id="portion" name="portion" class="contact-form__input">
+                            </li>
+                            <li class="contact-form__item">
+                                <input type="submit" value="Matricular aluno" class="contact-form__btn">
+                            </li>
+                        </ul>
+                    </form>
+                </section>
+
+                <section>
+                    <div class="contact-resgister">
+                        <h3 class="contact-title">Aluno matriculado</h3>
+                        <img class="contact-resgister__img" src="./mideas/Vector-check.png" alt="simbolo de check">
                     </div>
-
-                    <div class="contact-form__dice">
-                        <label for="email" class="contact-form__label">E-mail</label>
-                        <input type="email" id="email" name="email-usuario" class="contact-form__input">
+                    <div class="contact-dice">
+                        <ul class="contact-dice__list">
+                            <li class="contact-dice__item">Aluno Matriculado</li>
+                            <li class="contact-dice__item">Nome: Calvin Klein</li>
+                            <li class="contact-dice__item">Curso: Javascript</li>
+                            <li class="contact-dice__item">Turma: Clarke</li>   
+                           </ul>
                     </div>
+                </section>
 
-                    <div class="contact-form__dice">
-                        <label for="msg" class="contact-form__label">Mensagem</label>
-                        <textarea id="msg" class="contact-form__textarea"></textarea>
-                    </div>
+            </div>
 
-                    <div class="contact-form__dice">
-                        <input type="submit" class="contact-form__btn" value="Enviar"></input>
-                    </div>
-                </div>
-            </form>
-        </section>
-
+        </div>
     </main>
 
     <footer>
@@ -104,7 +136,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
