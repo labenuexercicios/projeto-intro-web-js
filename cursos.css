@@ -13,9 +13,6 @@ header{
     align-items: center;
 }
 
-#lista-header{
-    
-}
 .links-header{
     list-style: none;
     display: inline-block;
@@ -27,7 +24,7 @@ header{
     line-height: 36px;
 }
 
-.links-header>a{
+.links-header > a{
     color: #0E0E0E;
     text-decoration: none;
 }
@@ -45,60 +42,302 @@ main{
 
 main section:nth-child(1){
     background-color: #F6C34A;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    height: 85vh;
-
+    padding: 2.5em 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4fr 1fr;
+    justify-items: center;
+    align-items: center; 
+    row-gap: 3em;
+    height: 80vh;
 }
 
 #html-css{
     background-color: #FFFFFF;
     width: 21em;
     height: 19em;
-    border-radius: 2%;
+    border-radius: 4%;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2.5em;
+    padding: 3em 1em;
 }
 
-#html-css>p{
+#html-css > h1{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 51px;
+    color: #000000;
+}
+
+#html-css > p{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
-    line-height: 24px;
-    padding: 2em 1em;
+    line-height: 22px;
+    color: #000000;
+    text-align: left;
 }
 
 #javascript{
     background-color: #FFFFFF;
     width: 21em;
     height: 19em;
-    border-radius: 2%;
+    border-radius: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2.5em;
+    padding: 3em 1em;
 }
 
-#javascript>p{
+#javascript > h1{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 51px;
+    color: #000000;
+}
+
+#javascript > p{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
-    line-height: 24px;
-    padding: 2em 1em;
+    line-height: 22px;
+    color: #000000;
+    text-align: left;
 }
 
 #api-rest{
     background-color: #FFFFFF;
     width: 21em;
     height: 19em;
-    border-radius: 2%;
+    border-radius: 4%;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2.5em;
+    padding: 3em 1em;
 }
 
-#api-rest>p{
+#api-rest > h1{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 51px;
+    color: #000000;
+}
+
+#api-rest > p{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    color: #000000;
+    text-align: left;
+}
+
+button{
+    grid-row: 2/span 1;
+    grid-column: 1/span 3;
+    justify-self: center; 
+    background-color: #0E0E0E;
+    width: 19em;
+    height: 4em;
+    border-radius: .5rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 36px;
+}
+
+button > a{
+    text-decoration: none;
+    color: #FBFBFB;
+}
+button:active{
+    background-color: #FBFBFB;
+}
+
+button:active > a{
+    color: #0E0E0E;
+}
+
+main section:nth-child(2){
+    background-color: #0E0E0E;
+    height: 137vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 6em 0;
+}
+
+.cursos{
+    background-color: #FBFBFB;
+    width: 38em;
+    height: 16em;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+}
+
+.cursos > h1{
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 51px;
+}
+
+.ementas > h2{
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+} 
+
+.ementas > p{
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+}
+.whatsapp{
+    position: fixed;
+    float: right;
+    right: 2.5em;
+    top: 35em;
+}
+
+footer{
+    background-color: #F6C34A;
+    height: fit-content;
+    padding: 1.5em 9em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo-footer{
+    width: 100%;
+}
+
+.titulos{
+    color: #0E0E0E;
+    margin: 1.5em 0;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+#endereco{
+    color: #0E0E0E;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
-    padding: 2em 1em;
+}
+
+#lista-links-footer{
+    list-style: none;
+    text-decoration: none;
+    color: #0E0E0E;
+}
+
+.links-footer{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #0E0E0E;
+    margin-bottom: 1.5em;
+}
+
+.links-footer>a{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #0E0E0E;
+} 
+
+.links-footer>a:active{
+    text-decoration: underline;
+}
+
+#redes-sociais{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr; 
+    grid-gap: 0 1em;
+}
+
+#titulo-redes-sociais{
+    grid-row: 1/2;
+    grid-column: 1/span 4;
+}
+ 
+#icon-twitter{
+    grid-row: 2/3;
+    grid-column: 1/span 1;
+}
+
+#icon-linkedin{
+    grid-row: 2/3;
+    grid-column: 2/span 1; 
+}
+
+#icon-facebook{
+    grid-row: 2/3;
+    grid-column: 3/span 1; 
+}
+
+#icon-ig{
+    grid-row: 2/3;
+    grid-column: 4/5; 
+}
+ 
+.links-internos{
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #0E0E0E;
+    margin-bottom: 1.5em;
 }
