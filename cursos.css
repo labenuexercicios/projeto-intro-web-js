@@ -63,6 +63,11 @@ main{
     border-radius: 9px;
 }
 
+.courses__btn:hover{
+    transform: scale(1.1);
+}
+
+
 .courses__link{
     color: #FBFBFB;
     text-decoration: none;
