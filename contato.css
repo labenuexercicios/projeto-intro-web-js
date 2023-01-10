@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #FBFBFB;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;   
+}
+
+.links-header{
+    list-style: none;
+    display: inline-block;
+    margin: 0 3.2em;
+    font-size: 1.2em;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3em;
+}
+
+.links-header > a{
+    color: #0E0E0E;
+    text-decoration: none;
+}
+
+.links-header > a:active{
+    text-decoration: underline;
+}
+
+main{
+    background-color: #0E0E0E;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    background-color: #F0F0F0;
+    width: 22em;
+    height: 26em;
+    border-radius: .3em;
+    padding: 0 3.4em; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* gap: 1em; */
+}
+
+section > h2{
+    color: #000000;
+    font-size: 1.2em;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3em;
+    
+}
+
+section > form{
+    color: #000000;
+    font-size: .8em;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.7em;
+}
+
+#name, #email{
+    border-radius: .3em;
+    height: 1.7rem;
+    width: 15rem;
+    margin-bottom: .3rem;
+}
+
+textarea{
+    border-radius: .3em;
+    height: 8rem;
+    width: 15rem;
+    margin-bottom: .7rem;
+}
+
+button{
+    background-color: #F6C34A;
+    font-size: 1em;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.7em;
+    width: 15rem;
+    height: 2rem;
+    border-radius: .3em;
+    border: 0;
+}
+
+button:active{
+    background-color:  #000000;
+    color: #FBFBFB;
+}
+
+
+

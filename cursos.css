@@ -17,11 +17,11 @@ header{
     list-style: none;
     display: inline-block;
     margin: 0 3.2em;
-    font-size: 18px;
+    font-size: 1.2em;
     font-family:'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
-    line-height: 36px;
+    line-height: 3em;
 }
 
 .links-header > a{
@@ -30,7 +30,6 @@ header{
 }
 
 .links-header:active{
-    color: #0E0E0E;
     text-decoration: underline;
 }
 
@@ -281,7 +280,7 @@ footer{
     line-height: 24px;
     text-decoration: none;
     color: #0E0E0E;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em;
 }
 
 .links-footer>a{
@@ -339,5 +338,5 @@ footer{
     line-height: 24px;
     text-decoration: none;
     color: #0E0E0E;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em;
 }
