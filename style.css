@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    font-style: normal;
+    
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    width: 98.9vw;
+    height: 100vh;
+}
+
+.cabecalho {
+    background-color: #FBFBFB;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 9vh;
+    margin-right: 215px;
+
+}
+
+.logo-header {
+    height: 9vh;
+    margin-left: 215px;
+    
+}
+#li-header{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    text-align: center;
+    background-color: orange;
+    
+}
+
+#descubra {  
+    position: absolute;
+    top: 200px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+    
+}
+
+#aprenda {
+    position: absolute;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 51px;
+}
+li {
+    list-style-type: none;  
+}
+#item1{
+    padding-left: 80px;
+}
+footer{
+    background-color: orange;
+}
+main{
+    height: 100vh;
+}
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    text-align: center;
+    background-color: black;
+    
+}
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    text-align: center;
+    background-color: black;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.articu{
+    display: grid;
+    
+}
+article{
+    background-color: white;
+}
