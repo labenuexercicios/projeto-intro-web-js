@@ -56,15 +56,16 @@ main section:nth-child(1){
 
 h1.primeiro-bloco{
     font-weight: 700;
-    font-size: 38px;
-    line-height: 90px;
+    font-size: 2.7em;
+    line-height: 2em;
+
 }
 
 p.primeiro-bloco{
     font-weight: 400;
-    font-size: 28px;
-    line-height: 51px;
-    padding-bottom: 1.5em;
+    font-size: 1.9em;
+    line-height: 2em;
+    padding-bottom: 1.3em;
 }
 
 button{
@@ -76,8 +77,8 @@ button{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 36px;
+    font-size: 1.3em;
+    line-height: 3em;
 }
 
 button > a{
@@ -107,19 +108,19 @@ h2{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 60px;
+    font-size: 2em;
+    line-height: 1.5em;
 }
 
 main section:nth-child(2) > p{
     color: #FBFBFB;
     text-align: justify;
-    padding: 2em 12em;
+    padding: 1.5em 12em;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 36px;
+    font-size: 1em;
+    line-height: 2em;
 }
 
 main section:nth-child(3){
@@ -132,7 +133,7 @@ main section:nth-child(3){
     background-color: #0E0E0E;
     color: white;
     height: 85vh;
-    padding: 0 9em;
+    padding: 0 7em;
 }
 
 main section:nth-child(3)>h2{
@@ -140,15 +141,14 @@ main section:nth-child(3)>h2{
     grid-row: 1/2;
     justify-self: center;
     margin-top: 2em;
-    /* padding: 0 10em; */
 }
 
 .depoimentos{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 24px;
+    font-size: .9em;
+    line-height: .7em;
     padding: 2em 1em;
 }
      
@@ -211,19 +211,20 @@ main section:nth-child(3)>h2{
 .whatsapp{
     position: fixed;
     float: right;
-    right: 2.5em;
+    right: 1.4em;
     top: 35em;
 }
 
 footer{
+    height: auto;
     background-color: #F6C34A;
-    height: fit-content;
-    padding: 1em 9em;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em 9em;
     justify-content: space-between;
     align-items: flex-start;
+
 }
 
 .logo-footer{
@@ -236,98 +237,55 @@ footer{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 36px;
+    font-size: 1.1em;
+    line-height: 1em;
 }
 
-#endereco{
+#endereco-mapa{
+    margin-bottom: -.4em;
+}
+
+
+.text-footer > a, p{
+    text-decoration: none;
     color: #0E0E0E;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 24px;
-}
-
-#lista-links-footer{
-    list-style: none;
+    font-size: .87em;
+    line-height: 2.7em;
     text-decoration: none;
-    color: #0E0E0E;
 }
 
-.links-footer{
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
+#link-1 > a{
     font-weight: 400;
-    font-size: 13px;
-    line-height: 24px;
-    text-decoration: none;
-    color: #0E0E0E;
-    margin-bottom: 1.2em;
+    font-size: 1em;
+    line-height: 2.7em;
 }
 
-.links-footer>a{
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
+#link-2 > a{
     font-weight: 400;
-    font-size: 13px;
-    line-height: 24px;
-    text-decoration: none;
-    color: #0E0E0E;
-} /* precisa ter essa parte para formatar os ícones que são links, porque elas não são formatados com .links-footer */
-
-.links-footer>a:active{
-    text-decoration: underline;
+    font-size: 1em;
+    line-height: 2.7em;
 }
 
-#redes-sociais{
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* gap: 1em; */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr; 
-    grid-gap: 0 1em;
-}
-
-/* #titulo-redes-sociais{
-    width: 100%;
-    background-color: aliceblue;
-} isso é para se tivessem usando o flex*/
-
-#titulo-redes-sociais{
-    grid-row: 1/2;
-    grid-column: 1/span 4;
-}
- 
-#icon-twitter{
-    grid-row: 2/3;
-    grid-column: 1/span 1;
-}
-
-#icon-linkedin{
-    grid-row: 2/3;
-    grid-column: 2/span 1; 
-}
-
-#icon-facebook{
-    grid-row: 2/3;
-    grid-column: 3/span 1; 
-}
-
-#icon-ig{
-    grid-row: 2/3;
-    grid-column: 4/5; 
-}
- 
-.links-internos{
-    list-style: none;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
+#link-3 > a{
     font-weight: 400;
-    font-size: 13px;
-    line-height: 24px;
-    text-decoration: none;
-    color: #0E0E0E;
-    margin-bottom: 1.2em;
+    font-size: 1em;
+    line-height: 2.7em;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 1.4em;
+}
+
+#link-4 > a{
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2.7em;
 }

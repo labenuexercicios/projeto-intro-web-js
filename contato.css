@@ -52,7 +52,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* gap: 1em; */
+    
 }
 
 section > h2{
@@ -106,5 +106,86 @@ button:active{
     color: #FBFBFB;
 }
 
+.whatsapp{
+    position: fixed;
+    float: right;
+    right: 1.4em;
+    top: 35em;
+}
+
+footer{
+    height: auto;
+    background-color: #F6C34A;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em 9em;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.logo-footer{
+    width: 100%;
+}
+
+.titulos{
+    color: #0E0E0E;
+    margin: 1.5em 0;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1em;
+    line-height: 1em;
+}
+
+#endereco-mapa{
+    margin-bottom: -.4em;
+}
+
+
+.text-footer > a, p{
+    text-decoration: none;
+    color: #0E0E0E;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: .87em;
+    line-height: 2.7em;
+    text-decoration: none;
+}
+
+#link-1 > a{
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2.7em;
+}
+
+#link-2 > a{
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2.7em;
+}
+
+#link-3 > a{
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2.7em;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 1.4em;
+}
+
+#link-4 > a{
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2.7em;
+}
 
 
