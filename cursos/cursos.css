@@ -34,7 +34,7 @@ header {
     gap: 200px;
 }
 
-.logo img{
+.logo img {
     width: 110%;
 }
 
@@ -103,155 +103,144 @@ header {
     color: blue
 }
 
-main {
+.principal-cursos{ 
+    background-color:#F6C34A;
+    text-align: center;
+    padding: 8% 12% 0 12%;
+}
+
+.cursos {
+    display: grid;    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);   
+    gap: 7%;  
+    row-gap: 1%;
+    justify-content: center; 
+}
+
+.html {  
+    grid-column: 1;
+    grid-row: 1;     
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 5%;   
+}
+
+.titulo-html{
+    padding: 5% 0 15% 0
+}
+
+.text-html{
+    text-align: left;
+    padding: 5%;
+    font-size: 1rem;
+    
+}
+
+.js {
+    grid-column: 2;
+    grid-row: 1;   
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 2%;
+}
+
+.titulo-js{
+    padding: 5% 0 13% 0
+}
+
+.text-js{
+    text-align: left;
+    padding: 7%;
+    font-size: 1rem;
+}
+
+.api {
+    grid-column: 3;
+    grid-row: 1;    
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 2%;
+}
+
+.titulo-api{
+    padding: 5% 0 13% 0
+}
+
+.text-api{
+    text-align: left;
+    padding: 7%;
+    font-size: 1rem;
+}
+
+.quero { 
+    grid-column: 1/4;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;     
     background-color: black;
+    color: white;
+    padding: 2%;
+    border-radius: 10px;
+    list-style: none;
+    width: 25vw;
+    font-size: 1.2rem;
 }
 
-.fundotitulo {
-    width: 100%;
-    height: 75vh;
-    background-color: #F6C34A;
-    z-index: -1;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    background-image: url(/imagens/background-hero.png)
-}
-
-.titulo {
-    grid-column: 3/9;
-    grid-row: 4/4;
-    font-size: 32px;
-    text-align: center;
-}
-
-.aprenda {
-    grid-column: 3/9;
-    grid-row: 5;
-    font-size: 21px;
-    text-align: center;
-}
-
-.conheça {
-    grid-row: 7;
-    grid-column: 5/7;
+.descricao-cursos{
     background-color: black;
-    color: white;
-    text-decoration-line: none;
-    font-size: 15px;
-    border-radius: 5px;
-    padding: 4% 5%;
-    text-align: center;
-}
-
-.fundosobre {
     display: flex;
-    flex-direction: column;
-    padding: 0 20%
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    padding: 10% 0; 
+    gap: 5%;
 }
 
-.sobre {
-    padding: 8% 0;
-    text-align: center;
-    color: white;
-}
-
-.textosobre {
-    text-align: start;
-    line-height: 150%;
-    color: white;   
-}
-
-.depo {
+.descricao-html{
     display: flex;
-    padding:  1% 15%;
-    gap: 2%;
-}
-
-.titulo-depo {
-    color: white;
-    text-align: center;
-    padding: 2% 0;
-}
-
-.dep1 {
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
     background-color: white;
     border-radius: 10px;
-    text-align: center;
-    padding: 2% 2%;
-    width: 20vw;
     list-style: none;
+    padding: 2.4%;
+    width: 55vw;
 }
 
-.dep1 img {
-    width: 7vw;
-    padding-bottom: 20%;
-}
-
-.dep1 p {
-    text-align: left;
-    line-height: 120%;
-    font-size: 70%;
-}
-
-.dep2 {
+.descricao-js{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
     background-color: white;
     border-radius: 10px;
-    text-align: center;
-    padding: 2% 2%;
-    width: 20vw;
     list-style: none;
+    padding: 2.4%;
+    width: 55vw;
 }
 
-.dep2 img {
-    width: 7vw;
-    padding-bottom: 20%;
-}
-
-.dep2 p {
-    text-align: left;
-    line-height: 120%;
-    font-size: 70%;
-}
-
-.dep3 {
+.descricao-api{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
     background-color: white;
     border-radius: 10px;
-    text-align: center;
-    padding: 2% 2%;
-    width: 20vw;
     list-style: none;
+    padding: 2.4%;
+    width: 55vw;
 }
 
-.dep3 img {
-    width: 7vw;
-    padding-bottom: 20%;
+.descricao-cursos h2{
+    padding: 1% 0 3% 0;
 }
-
-.dep3 p {
-    text-align: left;
-    line-height: 120%;
-    font-size: 70%;
-}
-
-.dep4 {
-    background-color: white;
-    border-radius: 10px;
-    text-align: center;
-    padding: 2% 2%;
-    width: 20vw;
-    list-style: none;
-}
-
-.dep4 img {
-    width: 7vw;
-    padding-bottom: 20%;
-}
-
-.dep4 p {
-    text-align: left;
-    line-height: 120%;
-    font-size: 70%;
+.descricao-cursos p{
+    padding: 1% 0 3% 0;
 }
 
 footer {

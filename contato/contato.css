@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wats {
+    position: fixed;
+    bottom: 4px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    padding: 2%;
+}
+
+.wats img {
+    width: 5vw;
+}
+
+header {
+    padding: .7% 0;
+    height: 15vh;
+    background-color: #FBFBFB;
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    gap: 200px;
+}
+
+.logo img{
+    width: 110%;
+}
+
+.menu {
+    display: flex;    
+    gap: 30px;
+    list-style: none;
+    padding: 6% 0;
+    text-decoration-line: none;
+}
+
+.home {
+    text-decoration-line: none;
+    color: black;
+}
+
+.home:hover {
+    color: black;
+    text-decoration-line: underline;
+}
+
+.home:active {
+    color: blue
+}
+
+.curso {
+    text-decoration-line: none;
+    color: black;
+}
+
+.curso:hover {
+    color: black;
+    text-decoration-line: underline;
+}
+
+.curso:active {
+    color: blue
+}
+
+.contato {
+    text-decoration-line: none;
+    color: black;
+}
+
+.contato:hover {
+    color: black;
+    text-decoration-line: underline;
+}
+
+.contato:active {
+    color: blue
+}
+
+.areaADM {
+    text-decoration-line: none;
+    color: black;
+}
+
+.areaADM:hover {
+    color: black;
+    text-decoration-line: underline;
+}
+
+.areaADM:active {
+    color: blue
+}
+
+main{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5% 0;    
+}
+
+.contat{
+    justify-content: center;
+    align-items: center;    
+    padding: 3%;    
+    background-color: white;    
+    width: 30vw;
+}
+
+.enviar{    
+    background-color: #F6C34A;
+    padding: 3% 44%;
+}
+
+footer {
+    display: grid;
+    height: 80vh;
+    background-color: #F6C34A;
+    padding: 2% 0;
+}
+
+.logo-footer img {
+    width: 35%;
+    padding: 0 10%;
+}
+
+.footer1 {
+    display: flex;
+    gap: 8%;
+    padding: 0 10%;
+    font-size: 80%;
+}
+
+.map {
+    list-style: none;
+
+}
+
+.links {
+    list-style: none;
+}
+
+.sociais {
+    list-style: none;
+}
+
+.twiter img {
+    width: 20%;
+}
+
+.linkedin img {
+    width: 20%;
+}
+
+.face img {
+    width: 20%
+}
+
+.insta img {
+    width: 20%
+}
+
+.restrita {
+    list-style: none;
+}

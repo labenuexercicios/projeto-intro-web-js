@@ -6,86 +6,174 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela: Cursos</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="cursos.css">
     <script src="script.js"></script>
 </head>
 
 <body>
+</head>
+<a href="https://web.whatsapp.com/" class="wats" ><img src="/imagens/logos_whatsapp-icon.svg"></a>
     <header>
         <a href="/home/home.html" class="logo">
-            <img src="/imagens/logo.site.png" id="logo">
+            <img src="/imagens/logo.site.png">
         </a>
         <nav>
-            <ul>
-                <li><a href="/home/home.html">Home</a></li>
-                <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="/contato/contato.html">Contato</a></li>
-                <li><a href="/area.ADM/areaADM.turmas.html">Área ADM</a></li>
+            <ul class="menu">
+                <li><a href="/home/home.html" class="home"><b>Home</b></a></li>
+                <li><a href="/cursos/cursos.html" class="curso"><b>Cursos</b></a></li>
+                <li><a href="/contato/contato.html" class="contato"><b>Contato</b></a></li>
+                <li><a href="/area.ADM/areaADM.turmas.html" class="areaADM"><b>Área ADM</b></a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <ul>
-                <li><h1>HTML e CSS</h1><p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt ultricies enim, ac</p></li>
-                <li><h1>JavaScript</h1><p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt ultricies enim, ac</p></li>
-                <li><h1>APIs e Rest</h1><p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt ultricies enim, ac</p></li>
+        <section class="principal-cursos" >
+            <ul class="cursos">
+                <li class="html">
+                    <h1 class="titulo-html">HTML e CSS</h1>
+                    <p class="text-html">Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor
+                        nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a
+                        faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt
+                        ultricies enim, ac </p>
+                </li>
+                <li class="js">
+                    <h1 class="titulo-js">JavaScript</h1>
+                    <p class="text-js">Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor
+                        nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a
+                        faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt 
+                        ultricies enim, ac</p>
+                </li>
+                <li class="api">
+                    <h1 class="titulo-api">APIs e Rest</h1>
+                    <p class="text-api">Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor
+                        nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a
+                        faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt
+                        ultricies enim, ac</p>
+                </li>
+                <li class="quero"><a><b>Quero fazer parte!</b></a></li>                
             </ul>
-            <a>Quero fazer parte!</a>
+            
         </section>
-            <ul>
-                <ul>
-                    <li><h1>HTML e CSS</h1></li>
-                    <li><h2>Módulo 1</h2><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p></li>
-                    <li><h2>Módulo 2</h2><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p></li>
-                </ul>
-                <ul>
-                    <li><h1>JavaScript</h1></li>
-                    <li><h2>Módulo 1</h2><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p></li>
-                    <li><h2>Módulo 2</h2><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p></li>
-                </ul>
-                <ul>
-                    <li><h1>APIs e Rest</h1></li>
-                    <li><h2>Módulo 1</h2><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p></li>
-                    <li><h2>Módulo 2</h2><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p><p>Suspendisse condimentum</p></li>
-                </ul>                
+        <ul class="descricao-cursos">
+            <ul class="descricao-html">
+                <li>
+                    <h1>HTML e CSS</h1>
+                </li>
+                <li>
+                    <h2>Módulo 1</h2>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                </li>
+                <br>
+                <li>
+                    <h2>Módulo 2</h2>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                </li>
             </ul>
+            <br>
+            <ul class="descricao-js">
+                <li>
+                    <h1>JavaScript</h1>
+                </li>
+                <li>
+                    <h2>Módulo 1</h2>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                </li>
+                <br>
+                <li>
+                    <h2>Módulo 2</h2>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                </li>
+            </ul>
+            <br>
+            <ul class="descricao-api">
+                <li>
+                    <h1>APIs e Rest</h1>
+                </li>
+                <li>
+                    <h2>Módulo 1</h2>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                </li>
+                <br>
+                <li>
+                    <h2>Módulo 2</h2>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                    <p>Suspendisse condimentum</p>
+                </li>
+            </ul>
+        </ul>
         <section>
 
         </section>
     </main>
     <footer>
-        <a href="/home/home.html" class="logo">
-            <img src="/imagens/logo.site.png" id="logo">
+        <a href="/home/home.html" class="logo-footer">
+            <img src="/imagens/logo.site.png" >
         </a>
-        <ul>
-            <li>Endereço</li>
-            <li><iframe
+        <dev class="footer1">
+        <ul class="map">
+            <li><b>Endereço</b></li>
+            <br>
+            <li class="google"><iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0006583919144!2d-46.700315378915455!3d-23.568419836945488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1672102043529!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="350" height="200" style="border:solid;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                    <br>
             <li>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</li>
         </ul>
-        <ul>Links
+        <ul class="links"><b>Links</b>
+            <br>
+            <br>
             <li><a>Home</a></li>
+            <br>
             <li><a>Cursos</a></li>
+            <br>
             <li><a>Blog</a></li>
+            <br>
             <li><a>Fale conosco</a></li>
+            <br>
             <li><a>Termos e condições</a></li>
+            <br>
             <li><a>Política de privacidade</a></li>
+            <br>
             <li><a>FAQ</a></li>
         </ul>
-        <ul>Sociais
-            <li><a href="https://twitter.com/"><img src="/imagens/twiter.png"></a>
-                <a href="https://br.linkedin.com/"><img src="/imagens/linkedin.png"></a>
-                <a href="https://pt-br.facebook.com/"><img src="/imagens/face.png"></a>
-                <a href="https://www.instagram.com/"><img src="/imagens/insta.png">
-            </li></a>
+        <ul class="sociais"><b>Sociais</b>
+            <br>
+            <br>
+            <li>
+                <a class="twiter" href="https://twitter.com/">
+                    <img src="/imagens/twiter.png">
+                </a>
+                <a class="linkedin" href="https://br.linkedin.com/">
+                    <img src="/imagens/linkedin.png">
+                </a>
+                <a class="face" href="https://pt-br.facebook.com/">
+                    <img src="/imagens/face.png">
+                </a>
+                <a class="insta" href="https://www.instagram.com/">
+                    <img src="/imagens/insta.png">
+                </a>
+            </li>
         </ul>
-        <ul>Área Restrita
+        <ul class="restrita"><b>Área Restrita</b>
+            <br>
+            <br>
             <li><a>Área administrativa</a></li>
+            <br>
             <li><a>Espaço do aluno</a></li>
         </ul>
+    </dev>
     </footer>
 
 </body>
