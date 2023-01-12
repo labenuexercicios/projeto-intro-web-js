@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#adm-selecionado{ /* faz o item ficar sublinhado no menu */
+    text-decoration-line: underline;
+}
+
+header {
+    display: flex;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FBFBFB;
+    padding: 0 11rem;
+
+}
+
+#logo {
+    height: 4rem;
+    width: 18rem;
+    /* border: 3px solid black; */
+}
+
+
+
+.menu-links {
+    display: flex;
+    /* align-items: center; */
+    gap: 4.688rem;
+    list-style: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 2.25rem;
+
+
+}
+
+
+.menu-item {
+    text-decoration: none;
+    color: #0E0E0E;
+}
