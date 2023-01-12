@@ -76,6 +76,7 @@ section > form{
 
 #name, #email{
     border-radius: .3em;
+    border: .13em solid black;
     height: 1.7rem;
     width: 15rem;
     margin-bottom: .3rem;
@@ -83,6 +84,7 @@ section > form{
 
 textarea{
     border-radius: .3em;
+    border: .13em solid black;
     height: 8rem;
     width: 15rem;
     margin-bottom: .7rem;
