@@ -2,19 +2,18 @@ main{
     width: 100%;
 }
 
-.link__whatsaap{
+.link-whatsaap{
     position: fixed;
-    bottom: 1.25rem;
-    right: 1.875rem;
+    bottom: 1.25em;
+    right: 1.875em;
     width: 4.122vw;
     height: 8.31vh;
 }
 
 
-.courses{
+.c-courses{
     width: 100%;
     height: 70vh;
-    text-align: center;
     background-image: url(./mideas/background-hero.png);
     background-repeat: no-repeat;
     background-color: #f5c75a;
@@ -25,15 +24,15 @@ main{
     
 }
 
-.courses__text > h1 {
+.c-courses__text > h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 3.75rem;
     font-weight: 700;
     line-height: 5.625rem;
-    margin-top: 13.75rem;
+    padding-top: 13.75rem;
 } 
 
-.courses__text > p{
+.c-courses__text > p{
     font-size: 2.125rem;
     font-weight: 400;
     line-height: 3.188rem;
@@ -41,7 +40,7 @@ main{
 }
 
 
-.courses__btn{
+.c-courses__btn{
     background-color:  #0E0E0E; 
     height: 8.22vh;
     width: 23.4375vw;
@@ -50,11 +49,11 @@ main{
     border-radius: 9px;
 }
 
-.courses__btn:hover{
+.c-courses__btn:hover{
     transform: scale(1.1);
 }
 
-.courses__link{
+.c-courses__link{
     color: #FBFBFB;
     text-decoration: none;
     display: block;
@@ -72,14 +71,14 @@ main section a:hover {
     text-decoration: none;
 }
 
-.about__us{
+.about-us{
     background-color: #0E0E0E;
     color:#FBFBFB ;
     padding-top: 4.938rem;
 }
 
 
-.about__us--title{
+.about-us__title{
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
@@ -89,7 +88,7 @@ main section a:hover {
     text-align: center;
 }
 
-.about__us--subtitle {
+.about-us__subtitle {
     font-size: 1.5rem;
     line-height: 2.25rem;
     font-family: 'Open Sans', sans-serif;

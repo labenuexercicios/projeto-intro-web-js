@@ -267,3 +267,19 @@ const relatorioEstudante = (nomeEstudante) => {
 relatorioEstudante("Chris Evans")
 relatorioEstudante("Halle Berry")
 relatorioEstudante("blablabla")
+
+
+// function menuOpen(){
+//     let menuMobile = document.querySelector('.menu-mobile');
+//     if(menuMobile.classList.contains('.open')){
+//         menuMobile.classList.remove('.open')
+//         /* document.querySelector('.menu-mobile__icon').src = "./mideas/icons8-cardápio-64.png" */
+//     }else{
+//         menuMobile.classList.add('.open')
+//         /* document.querySelector('.menu-mobile__icon').src = "./mideas/icons8-cancelar-30" */
+//     }
+// }
+
+function menuOpen(){
+    alert("teste")
+}

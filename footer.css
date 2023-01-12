@@ -1,11 +1,11 @@
 footer {
     background-color: #f5c75a;
-    height: 59.52vh;
+    height: 60%;
     width: 100%;
 }
 
 
-.footer__logo{
+.footer-logo{
     display: flex;
     padding: 2rem 9.7rem 3.313rem;
 } 
@@ -17,7 +17,7 @@ iframe{
     border: 2px solid #000;
 }
 
-.footer__street{
+.footer-street{
     padding-top: 0.75rem;
 }
 
@@ -26,7 +26,7 @@ iframe{
 }
 
 
-.footer__title{
+.footer-title{
     color: #0E0E0E;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem ;
@@ -38,13 +38,13 @@ iframe{
     padding-bottom: 1.688rem;
 }
 
-.footer__title--item{
+.footer-contact__item{
     padding-bottom: 0.75rem;
     list-style-type: none; 
     padding-left:0;
 }
 
-.footer__title--link{
+.footer-contact__link{
     font-size: 1rem;
     font-weight: 400;
     color: #0E0E0E;
@@ -52,7 +52,7 @@ iframe{
     text-decoration: none;
 }
 
-.footer__title--link:hover{
+.footer-contact__link:hover{
     text-decoration: none;
 }
 
@@ -61,37 +61,37 @@ iframe{
     justify-content:space-evenly;
 }
 
-.flexible__anchor--mideas {
+.flexible-anchor__mideas {
     display: flex;
     padding-left: 0; 
 }
 
-.footer__medias--link{
+.footer-medias__link{
     padding-left: 0;
     padding-right: 1.289rem;
     text-align: center;
 }
 
-.footer__adm--anchor{
+.footer-adm__anchor{
     display: flex;
     flex-direction: column;
     
 }
 
-.footer__adm--item{
+.footer-adm__item{
     padding-bottom: 0.75rem;
     list-style-type: none;
     
 }
 
-.footer__adm--link{
+.footer-adm__link{
     color: #0E0E0E;
     text-decoration: none;
     font-weight: 400;
     font-size: 1rem;
 }
 
-.footer__adm--link:hover{
+.footer-adm__link:hover{
     text-decoration: none;
 }
 
