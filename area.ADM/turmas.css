@@ -10,20 +10,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.wats {
-    position: fixed;
-    bottom: 4px;
-    right: 5px;
-    background-color: transparent;
-    border: none;
-    z-index: 1;
-    padding: 2%;
-}
-
-.wats img {
-    width: 5vw;
-}
-
 header {
     padding: .7% 0;
     height: 15vh;
@@ -34,7 +20,7 @@ header {
     gap: 200px;
 }
 
-.logo img{
+.logo img {
     width: 110%;
 }
 
@@ -104,158 +90,135 @@ header {
 }
 
 main {
+    display: flex;
+}
+
+.menu-direto {
     background-color: black;
+    padding: 1% 5% 0% 5%;
 }
 
-.fundotitulo {
-    width: 100%;
-    height: 75vh;
-    background-color: #F6C34A;
-    z-index: -1;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    background-image: url(/imagens/background-hero.png);
-    background-size: contain;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.titulo {
-    grid-column: 3/9;
-    grid-row: 4/4;
-    font-size: 32px;
-    text-align: center;
-}
-
-.aprenda {
-    grid-column: 3/9;
-    grid-row: 5;
-    font-size: 21px;
-    text-align: center;
-}
-
-.conheça {
-    grid-row: 7;
-    grid-column: 5/7;
-    background-color: black;
-    color: white;
-    text-decoration-line: none;
-    font-size: 15px;
-    border-radius: 5px;
-    padding: 4% 5%;
-    text-align: center;
-}
-
-.fundosobre {
+.menu-adm {
     display: flex;
     flex-direction: column;
-    padding: 0 20%
+   /*  text-align: start; */
+    list-style: none;
+    padding: 50% 0;
+    gap: 50px;
 }
 
-.sobre {
-    padding: 8% 0;
-    text-align: center;
+.turma {
     color: white;
+    text-decoration-line: none;
 }
 
-.textosobre {
-    text-align: start;
-    line-height: 150%;
-    color: white;   
+.matricula {
+    color: white;
+    text-decoration-line: none;
 }
 
-.depo {
+.finan {
+    color: white;
+    text-decoration-line: none;
+    
+}
+
+.area-turmas {
+    background-color: #F6C34A;
+    width: 79.7%;
     display: flex;
-    padding:  1% 15%;
-    gap: 2%;
+    border-bottom: 1px solid black;
+
 }
 
-.titulo-depo {
+.turmas {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 25px;
+    padding: 10% 5%;
+}
+
+.titulos-turma {
+    padding: 1% 35%;
+    line-height: 300%;
+}
+
+.text-turma {
+    font-size: 0.75rem;
+    width: 14vw;
+    padding: 5% 15%;
+    line-height: 165%;
+}
+
+.botao-buscar{
+    padding: 5%;
+}
+
+.area-buscar{
+    position: absolute;
+    right: 30%;
+    bottom: 72%;
+}
+
+.buscar {
+    background-color: black;
     color: white;
-    text-align: center;
-    padding: 2% 0;
+    position: absolute;
+    right: 24.5%;
+    bottom: 72%;
+    padding: 0.9%;
 }
 
-.dep1 {
+.Hipátia {
     background-color: white;
     border-radius: 10px;
-    text-align: center;
-    padding: 2% 2%;
-    width: 20vw;
+    list-style: none;
+
+}
+
+.Sibyla {
+    background-color: white;
+    border-radius: 10px;
     list-style: none;
 }
 
-.dep1 img {
-    width: 7vw;
-    padding-bottom: 20%;
-}
-
-.dep1 p {
-    text-align: left;
-    line-height: 120%;
-    font-size: 70%;
-}
-
-.dep2 {
+.Curie {
+    flex-grow: 0;
     background-color: white;
     border-radius: 10px;
-    text-align: center;
-    padding: 2% 2%;
-    width: 20vw;
     list-style: none;
 }
 
-.dep2 img {
-    width: 7vw;
-    padding-bottom: 20%;
-}
-
-.dep2 p {
-    text-align: left;
-    line-height: 120%;
-    font-size: 70%;
-}
-
-.dep3 {
+.Zhenyi {
     background-color: white;
     border-radius: 10px;
-    text-align: center;
-    padding: 2% 2%;
-    width: 20vw;
     list-style: none;
 }
 
-.dep3 img {
-    width: 7vw;
-    padding-bottom: 20%;
-}
-
-.dep3 p {
-    text-align: left;
-    line-height: 120%;
-    font-size: 70%;
-}
-
-.dep4 {
+.Clarke {
     background-color: white;
     border-radius: 10px;
-    text-align: center;
-    padding: 2% 2%;
-    width: 20vw;
     list-style: none;
 }
 
-.dep4 img {
-    width: 7vw;
-    padding-bottom: 20%;
+.Blackwell {
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
 }
 
-.dep4 p {
-    text-align: left;
-    line-height: 120%;
-    font-size: 70%;
+.Elion {
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
 }
+
+.Burnell {
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+}
+
 
 footer {
     display: grid;
@@ -288,7 +251,7 @@ iframe{
 }
 
 .links {
-    list-style: none;        
+    list-style: none;       
 }
 
 #titulo-footer{

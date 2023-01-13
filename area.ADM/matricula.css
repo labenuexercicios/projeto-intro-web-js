@@ -10,36 +10,23 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.wats {
-    position: fixed;
-    bottom: 4px;
-    right: 5px;
-    background-color: transparent;
-    border: none;
-    z-index: 1;
-    padding: 2%;
-}
-
-.wats img {
-    width: 5vw;
-}
-
 header {
     padding: .7% 0;
     height: 15vh;
     background-color: #FBFBFB;
-    display: flex;    
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
     gap: 200px;
 }
 
-.logo img{
+.logo img {
     width: 110%;
 }
 
 .menu {
-    display: flex;    
+    display: flex;
+    flex-direction: row;
     gap: 30px;
     list-style: none;
     padding: 6% 0;
@@ -102,26 +89,41 @@ header {
     color: blue
 }
 
-main{
-    background-color: black;
+main {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 5% 0;    
 }
 
-.contat{
-    justify-content: center;
-    align-items: center;    
-    padding: 3%;    
-    background-color: white;    
-    width: 30vw;
+.menu-direto {
+    background-color: black;
+    padding: 1% 5% 0% 5%;
 }
 
-.enviar{    
-    background-color: #F6C34A;
-    padding: 3% 44%;
+.menu-adm {
+    display: flex;
+    flex-direction: column;
+   /*  text-align: start; */
+    list-style: none;
+    padding: 50% 0;
+    gap: 50px;
 }
+
+.turma {
+    color: white;
+    text-decoration-line: none;
+}
+
+.matricula {
+    color: white;
+    text-decoration-line: none;
+}
+
+.finan {
+    color: white;
+    text-decoration-line: none;
+    
+}
+
+
 
 footer {
     display: grid;
@@ -154,7 +156,7 @@ iframe{
 }
 
 .links {
-    list-style: none;      
+    list-style: none;       
 }
 
 #titulo-footer{

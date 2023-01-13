@@ -1,81 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela: área ADM Turmas</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="turmas.css">
     <script src="script.js"></script>
 </head>
+
 <body>
     <header>
         <a href="/home/home.html" class="logo">
-            <img src="/imagens/logo.site.png" id="logo">
+            <img src="/imagens/logo.site.png">
         </a>
         <nav>
-            <ul>
-                <li><a href="/home/home.html">Home</a></li>
-                <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="/contato/contato.html">Contato</a></li>
-                <li><a href="/area.ADM/areaADM.turmas.html">Área ADM</a></li>
+            <ul class="menu">
+                <li><a href="/home/home.html" class="home"><b>Home</b></a></li>
+                <li><a href="/cursos/cursos.html" class="curso"><b>Cursos</b></a></li>
+                <li><a href="/contato/contato.html" class="contato"><b>Contato</b></a></li>
+                <li><a href="/area.ADM/areaADM.turmas.html" class="areaADM"><b>Área ADM</b></a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <nav>
-            <ul>
-                <li><a href="/area.ADM/areaADM.turmas.html">Turmas</a></li>
-                <li><a href="/area.ADM/areaADM.matículas.html">Matrículas</a></li>
-                <li><a href="/area.ADM/areaADM.Financeiro.html">Financeiro Alunos</a></li>
+        <nav class="menu-direto">
+            <ul class="menu-adm">
+                <li><a class="turma" href="/area.ADM/areaADM.turmas.html"><b>Turmas</b></a></li>
+                <li><a class="matricula" href="/area.ADM/areaADM.matículas.html"><b>Matrículas</b></a></li>
+                <li><a class="finan" href="/area.ADM/areaADM.Financeiro.html"><b>Financeiro Alunos</b></a></li>
             </ul>
         </nav>
-        <section>
-            <ul>
-                <li><a>Hipátia</a></li>
-                <li><a>Sibyla</a></li>
-                <li><a>Curie</a></li>
-                <li><a>Zhenyi</a></li>
-                <li><a>Clarke</a></li>
-                <li><a>Blackwell</a></li>
-                <li><a>Elion</a></li>
-                <li><a>Burnell</a></li>
+        <section class="area-turmas">
+        <div class="botao-buscar">
+            <input class="area-buscar" type="text" name="buscar" id="buscar" style="height: 7vh;width: 24vw;"><br><label for="buscar"><b class="buscar"><a >Buscar</a></b>
+            </label><br>
+        </div>
+            <ul class="turmas">
+                <li class="Hipátia"><a class="titulos-turma"><b>Hipátia</b></a>
+                <div class="text-turma">
+                    <p><b>Curso:</b> Javascript</p>
+                    <p><b>Início:</b> 30/11/2022</p>
+                    <p><b>Término:</b> 30/01/2023</p>
+                    <p><b>Número de alunos:</b> 150</p>
+                    <p><b>Período:</b> Noturno</p>
+                    <p><b>Cloncluído:</b> Não</p>
+                </div>
+                </li>
+                <li class="Sibyla"><a><b class="titulos-turma">Sibyla</b></a>
+                <div class="text-turma">
+                    <p><b>Curso:</b> JavaScript</p>
+                    <p><b>Início:</b> 30/10/2022</p>
+                    <p><b>Término:</b> 30/12/2022</p>
+                    <p><b>Número de alunos:</b> 200</p>
+                    <p><b>Período:</b> Integral</p>
+                    <p><b>Cloncluído:</b> Não</p>
+                </div>
+                </li>
+                <li class="Curie"><a><b class="titulos-turma">Curie</b></a>
+                <div class="text-turma">
+                    <p><b>Curso:</b> HTML e CSS</p>
+                    <p><b>Início:</b> 15/09/2022</p>
+                    <p><b>Término:</b> 15/10/2022</p>
+                    <p><b>Número de alunos:</b> 180</p>
+                    <p><b>Período:</b> Noturno</p>
+                    <p><b>Cloncluído:</b> Não</p>
+                </div>
+                </li>
+                <li class="Zhenyi"><a><b class="titulos-turma">Zhenyi</b></a>
+                <div class="text-turma">
+                    <p><b>Curso:</b> HTML e CSS</p>
+                    <p><b>Início:</b> 01/11/2022</p>
+                    <p><b>Término:</b> 01/01/2023</p>
+                    <p><b>Número de alunos:</b> 80</p>
+                    <p><b>Período:</b> Integral</p>
+                    <p><b>Cloncluído:</b> Não</p>
+                </div>
+                </li>
+                <li class="Clarke"><a><b class="titulos-turma">Clarke</b></a>
+                <div class="text-turma">
+                    <p><b>Curso:</b> HTML e CSS</p>
+                    <p><b>Início:</b> 04/07/2022</p>
+                    <p><b>Término:</b> 04/09/2022</p>
+                    <p><b>Número de alunos:</b> 200</p>
+                    <p><b>Período:</b> Noturno</p>
+                    <p><b>Cloncluído:</b> Sim</p>
+                </div>
+                </li>
+                <li class="Blackwell"><a><b class="titulos-turma">Blackwell</b></a>
+                <div class="text-turma">
+                    <p><b>Curso:</b> APIs Rest</p>
+                    <p><b>Início:</b> 20/03/2022</p>
+                    <p><b>Término:</b> 20/06/2022</p>
+                    <p><b>Número de alunos:</b> 100</p>
+                    <p><b>Período:</b> Integral</p>
+                    <p><b>Cloncluído:</b> Sim</p>
+                </div>
+                </li>
+                <li class="Elion"><a><b class="titulos-turma">Elion</b></a>
+                <div class="text-turma">
+                    <p><b>Curso:</b> APIs Rest</p>
+                    <p><b>Início:</b> 12/01/2022</p>
+                    <p><b>Término:</b> 12/06/2022</p>
+                    <p><b>Número de alunos:</b> 200</p>
+                    <p><b>Período:</b> Noturno</p>
+                    <p><b>Cloncluído:</b> Sim</p>
+                </div>
+                </li>
+                <li class="Burnell"><a><b class="titulos-turma">Burnell</b></a>
+                <div class="text-turma">
+                    <p><b>Curso:</b> APIs Rest</p>
+                    <p><b>Início:</b> 18/10/2022</p>
+                    <p><b>Término:</b> 18/04/2023</p>
+                    <p><b>Número de alunos:</b> 90</p>
+                    <p><b>Período:</b> Integral</p>
+                    <p><b>Cloncluído:</b> Não</p>
+                </div>
+                </li>
             </ul>
         </section>
     </main>
     <footer>
-        <a href="/home/home.html" class="logo">
-            <img src="/imagens/logo.site.png" id="logo">
+        <a href="/home/home.html" class="logo-footer">
+            <img src="/imagens/logo.site.png">
         </a>
-        <ul>
-            <li>Endereço</li>
-            <li><iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0006583919144!2d-46.700315378915455!3d-23.568419836945488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1672102043529!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe></li>
-            <li>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</li>
-        </ul>
-        <ul>Links
-            <li><a>Home</a></li>
-            <li><a>Cursos</a></li>
-            <li><a>Blog</a></li>
-            <li><a>Fale conosco</a></li>
-            <li><a>Termos e condições</a></li>
-            <li><a>Política de privacidade</a></li>
-            <li><a>FAQ</a></li>
-        </ul>
-        <ul>Sociais
-            <li><a href="https://twitter.com/"><img src="/imagens/twiter.png"></a>
-                <a href="https://br.linkedin.com/"><img src="/imagens/linkedin.png"></a>
-                <a href="https://pt-br.facebook.com/"><img src="/imagens/face.png"></a>
-                <a href="https://www.instagram.com/"><img src="/imagens/insta.png">
-            </li></a>
-        </ul>
-        <ul>Área Restrita
-            <li><a>Área administrativa</a></li>
-            <li><a>Espaço do aluno</a></li>
-        </ul>
+        <dev class="footer1">
+            <ul class="map">
+                <li><b id="titulo-footer">Endereço</b></li>
+                <br>
+                <li class="google"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0006583919144!2d-46.700315378915455!3d-23.568419836945488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1672102043529!5m2!1spt-BR!2sbr"
+ allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                <br>
+                <li>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</li>
+            </ul>
+            <ul class="links"><b id="titulo-footer">Links</b>
+                <br>
+                <br>
+                <li><a class="links-footer" href="/home/home.html">Home</a></li>
+                <br>
+                <li><a class="links-footer" href="/cursos/cursos.html">Cursos</a></li>
+                <br>
+                <li><a class="links-footer" href="https://www.labenu.com.br/">Blog</a></li>
+                <br>
+                <li><a class="links-footer" href="mailto:webmaster@gmail.com">Fale conosco</a></li>
+                <br>
+                <li><a class="links-footer" href="https://www.labenu.com.br/termos-condicoes">Termos e condições</a></li>
+                <br>
+                <li><a class="links-footer" href="https://www.labenu.com.br/politica-de-privacidade">Política de privacidade</a></li>
+                <br>
+                <li><a class="links-footer" href="https://www.labenu.com.br/faq">FAQ</a></li>
+            </ul>
+            <ul class="sociais"><b id="titulo-footer">Sociais</b>
+                <br>
+                <br>
+                <li>
+                    <a class="twiter" href="https://twitter.com/">
+                        <img src="/imagens/twiter.png">
+                    </a>
+                    <a class="linkedin" href="https://br.linkedin.com/">
+                        <img src="/imagens/linkedin.png">
+                    </a>
+                    <a class="face" href="https://pt-br.facebook.com/">
+                        <img src="/imagens/face.png">
+                    </a>
+                    <a class="insta" href="https://www.instagram.com/">
+                        <img src="/imagens/insta.png">
+                    </a>
+                </li>
+            </ul>
+            <ul class="restrita"><b id="titulo-footer">Área Restrita</b>
+                <br>
+                <br>
+                <li><a href="/area.ADM/areaADM.turmas.html" class="links-footer">Área administrativa</a></li>
+                <br>
+                <li><a href="https://estudante.labenu.com.br/login" class="links-footer">Espaço do aluno</a></li>
+            </ul>
+        </dev>
     </footer>
-    
+
 </body>
+
 </html>
