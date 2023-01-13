@@ -1,81 +1,81 @@
 const turmas = [ //"HC1", "JS1", "REST1", "REST2",
     {
-        turma:"Hipatia",
-        curso:"JavaScript",
-        inicio:"30/11/2022",
-        termino:"30/01/2023",
+        turma: "Hipatia",
+        curso: "JavaScript",
+        inicio: "30/11/2022",
+        termino: "30/01/2023",
         numeroDeAlunos: 150,
-        periodo:"Noturno",
+        periodo: "Noturno",
         concluida: false
     },
 
     {
-        turma:"Sibyla",
-        curso:"JavaScript",
-        inicio:"30/10/2022",
-        termino:"30/12/2022",
+        turma: "Sibyla",
+        curso: "JavaScript",
+        inicio: "30/10/2022",
+        termino: "30/12/2022",
         numeroDeAlunos: 200,
-        periodo:"Integral",
+        periodo: "Integral",
         concluida: false
     },
 
     {
-        turma:"Curie",
-        Curso:"HTML e CSS",
-        inicio:"15/09/2022",
-        termino:"15/10/2022",
+        turma: "Curie",
+        Curso: "HTML e CSS",
+        inicio: "15/09/2022",
+        termino: "15/10/2022",
         numeroDeAlunos: 180,
-        periodo:"Noturno",
+        periodo: "Noturno",
         concluida: true
     },
 
     {
-        turma:"Zhenyi",
-        curso:"HTML e CSS",
-        inicio:"01/11/2022",
-        termino:"01/01/2023",
+        turma: "Zhenyi",
+        curso: "HTML e CSS",
+        inicio: "01/11/2022",
+        termino: "01/01/2023",
         numeroDeAlunos: 80,
-        periodo:"integral",
+        periodo: "integral",
         concluida: false
     },
 
     {
-        turma:"Clarke",
-        curso:"HTML e CSS",
-        inicio:"04/07/2022",
-        termino:"01/09/2022",
+        turma: "Clarke",
+        curso: "HTML e CSS",
+        inicio: "04/07/2022",
+        termino: "01/09/2022",
         numeroDeAlunos: 200,
-        periodo:"Noturno" ,
-        concluida:true 
+        periodo: "Noturno",
+        concluida: true
     },
 
     {
-        turma:"BlackWell",
-        curso:"APIsREST" ,
-        inicio:"20/03/2022",
-        termino:"20/06/2022",
+        turma: "BlackWell",
+        curso: "APIsREST",
+        inicio: "20/03/2022",
+        termino: "20/06/2022",
         numeroDeAlunos: 100,
-        periodo:"Integral" ,
+        periodo: "Integral",
         concluida: true
     },
 
     {
-        turma:"Elion" ,
-        curso:"APIsREST" ,
-        inicio:"12/01/2022" ,
-        termino:"12/06/2022" ,
+        turma: "Elion",
+        curso: "APIsREST",
+        inicio: "12/01/2022",
+        termino: "12/06/2022",
         numeroDeAlunos: 200,
-        periodo:"Noturno" ,
+        periodo: "Noturno",
         concluida: true
     },
 
     {
-        turma:"Burnell" ,
-        curso:"APIsREST" ,
-        inicio:"18/10/2022" ,
-        termino:"18/04/2022" ,
+        turma: "Burnell",
+        curso: "APIsREST",
+        inicio: "18/10/2022",
+        termino: "18/04/2022",
         numeroDeAlunos: 90,
-        periodo:"Integral",
+        periodo: "Integral",
         concluida: false
     },
 
@@ -83,24 +83,24 @@ const turmas = [ //"HC1", "JS1", "REST1", "REST2",
 
 const cursos = [
     {
-        curso:"HTML e CSS",
-        descricao:"Curso voltado para criacao e estilizacao de paginas Web para iniciantes" ,
-        duracao:"1 Mes",
-        valor: 500 
+        curso: "HTML e CSS",
+        descricao: "Curso voltado para criacao e estilizacao de paginas Web para iniciantes",
+        duracao: "1 Mes",
+        valor: 500
     },
 
     {
-        curso:"JavaScript",
-        descricao:"Aprenda como desenvolver paginas aplicacoes Web com JavaScript completo para inicantes  ",
-        duracao:"2 Meses",
-        valor: 900 
+        curso: "JavaScript",
+        descricao: "Aprenda como desenvolver paginas aplicacoes Web com JavaScript completo para inicantes  ",
+        duracao: "2 Meses",
+        valor: 900
     },
 
     {
-        curso:"APIs REST",
-        descricao:"Aprofunde ainda mais seus conhecimentos e conheca os principios do estilo arquitetonico REST e construa APIs de forma profissional",
-        duracao:"6 Meses" ,
-        valor: 2000 
+        curso: "APIs REST",
+        descricao: "Aprofunde ainda mais seus conhecimentos e conheca os principios do estilo arquitetonico REST e construa APIs de forma profissional",
+        duracao: "6 Meses",
+        valor: 2000
     },
 
 
@@ -108,37 +108,37 @@ const cursos = [
 
 const estudantes = [
     {
-        estudante:"Chris Evans",
-        turma:"Hipatica",
-        curso:"JavaScript",
-        valor:"900",
+        estudante: "Chris Evans",
+        turma: "Hipatica",
+        curso: "JavaScript",
+        valor: "900",
         nParcelas: 9,
-        desconto: false ,
-        parcelas: 100 
+        desconto: false,
+        parcelas: 100
     },
 
     {
-        estudante:"Halle Barry",
-        turma:"Burnell",
-        curso:"APIsREST" ,
-        valor:"2000" ,
+        estudante: "Halle Barry",
+        turma: "Burnell",
+        curso: "APIsREST",
+        valor: "2000",
         nParcelas: 4,
         desconto: false,
-        parcelas: 500 
+        parcelas: 500
     },
 
     {
-        estudante:"Lashana Lynch",
-        turma:"Zhenyi",
-        curso:"HTML e CSS",
-        valor:"500",
-        nParcelas: 1 ,
+        estudante: "Lashana Lynch",
+        turma: "Zhenyi",
+        curso: "HTML e CSS",
+        valor: "500",
+        nParcelas: 1,
         desconto: true,
-        parcelas: 500 
+        parcelas: 500
     },
 ];
 
-function parcelarCurso(parcelas) {
+/* function parcelarCurso(parcelas) {
     //const parcelas = estudantes[2].nParcelas 
     if(parcelas <= 2 && parcelas >= 1 ){
         desconto = cursos[1].valor - (cursos[1].valor * 0.2)
@@ -155,16 +155,48 @@ function parcelarCurso(parcelas) {
         return `Digite um valor valido de parcelas !`
     }
 };
-console.log(parcelarCurso(4));
+console.log(parcelarCurso(4)); */
 
-parcelarCurso = (parcelas) => {
+const parcelarCurso = (parcela) => {
+    let valorTotal
+    let valorParcela
 
-    if (parcelas <= 2){
+    if (parcela <= 2 &&  parcela >= 1) {
 
-        valorTotal = valorDoCurso - (valorDoCurso )
+        valorTotal = cursos[0].valor - (cursos[0].valor * 0.2)
+        valorTotal = valorTotal / valorParcela
 
+        console.log(`O curso ${cursos[0].curso} ficou no valor total de R$ ${valorTotal} em ${parcela}x de ${valorParcela} reais. Foi concedido desconto de 20%.`);
+
+    } else if (parcela > 2 && parcela <= 12){
+        valorTotal = cursos[0].valor
+        valorParcela = valorTotal / valorParcela
+
+        console.log(`O curso ${cursos[0].curso} ficou no valor total de R$ ${valorTotal} em ${parcela}x de ${valorParcela} reais.`)
+    } else {
+        console.log("Número inválido! Por favor digite um número válido.")
     }
 
 }
 
+const buscarCurso = (nomeCurso) => {
+     for(cadaCurso of cursos){
+        if(cadaCurso.curso === nomeCurso)
+        return cadaCurso
+     }
+}
 
+const buscarTurma = (nomeTurma) => {
+    for(cadaTurma of turmas){
+       if(cadaTurma.turma === nomeTurma)
+       return cadaTurma
+    }
+}
+
+const buscarEstudante = (nomeEstudante) => {
+    for(cadaEstudante of 
+        estudantes){
+       if(cadaEstudante.estudantes === nomeEstudante)
+       return cadaEstudante
+    }
+}

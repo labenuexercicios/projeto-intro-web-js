@@ -3,15 +3,21 @@
     padding: 0;
     font-family: Helvetica;
     font-style: normal;
-    
+
 }
 
 body {
-    justify-content: center;
-    align-items: center;
-    width: 98.9vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
 }
+
+li {
+    list-style-type: none;  
+}
+
+/* ///////////////////////////////////////////////////////////////// HEADER ////////////////////////////////////////////////////////////////// */
 
 .cabecalho {
     background-color: #FBFBFB;
@@ -20,6 +26,7 @@ body {
     border-radius: 8px;
     display: flex;
     height: 15vh;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -30,89 +37,170 @@ body {
     justify-content: center;
     height: 9vh;
     margin-right: 215px;
-
 }
 
 .logo-header {
     height: 9vh;
     margin-left: 215px;
-    
 }
+
 #li-header{
     display: flex;
     justify-content: center;
     align-items:center;
-    
-}
-.section1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 100vh;
-    text-align: center;
-    background-color: orange;
-    
+    color: black;
 }
 
-#descubra {  
-    position: absolute;
-    top: 200px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 90px;
-    
-}
-
-#aprenda {
-    position: absolute;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 51px;
-}
-li {
-    list-style-type: none;  
-}
 #item1{
     padding-left: 80px;
 }
-footer{
-    background-color: orange;
+
+/* /////////////////////////////////////////////////////////// BOTÃO FLUTUANTE /////////////////////////////////////////////////////////////// */
+
+.botao-whats{
+    position: fixed;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    right: 21px;
+    bottom: 21px; 
+    box-shadow: #999;
 }
-main{
-    height: 100vh;
+
+.whatsapp{
+    position: fixed;
+    width: 62px;
+    height: 62px;
+    right: 20px;
+    bottom: 20px;     
 }
-.section2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 100vh;
-    text-align: center;
-    background-color: black;
-    
-}
-.section3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 100vh;
-    text-align: center;
-    background-color: black;
+
+/* ///////////////////////////////////////////////////////////// SEACTION PAI //////////////////////////////////////////////////////////////// */
+/* main{
+    height: 80%;
+    width: 100%;
 }
 section{
+    
+} */
+
+/* ////////////////////////////////////////////////////////////// SEACTION 1 ///////////////////////////////////////////////////////////////// */
+
+.section1 {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    background-image: url(./asset/background-hero.svg);
+    background-color: #E9BB4E;
+    background-size: cover;
+    background-repeat: no-repeat; 
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
 }
-.articu{
-    display: grid;
+
+.section1-conheca{
+    background-color: black;
+    color: white;
+    padding: 15px 45px;
+    border-radius: 8px;
+    margin-top: 13vh;
+}
+
+#section1-descubra {  
+    display: flex;
+    bottom: 10%;
+    font-style: normal;
+    font-size: 50px; 
+    margin-top: 24vh;
+}
+
+#section1-aprenda {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 1vh;
+}
+
+/* ////////////////////////////////////////////////////////////// SEACTION 2 ///////////////////////////////////////////////////////////////// */
+
+.section2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    color: white;
+    height: 55vh;
+    text-align: center;
+    background-color: black;
+}
+
+#section2-sobre{
+    margin-top: 9vh;
+}
+
+#section2-texto{
+    width: 45vw;
+    margin-top: 8vh;
+    text-align: start;
+    line-height: 25px;
+}
+
+/* ////////////////////////////////////////////////////////////// SEACTION 3 ///////////////////////////////////////////////////////////////// */
+
+.section3 {
+    display: flex;
+    height: 75vh;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+    gap: 30px;
+}
+
+.grid-home{
+    display: flex;
+    gap: 1.7vw;
+    height: 45vh;
+    width: 88%; 
     
 }
-article{
+
+#depoimento-palavra{
+    color: white;
+    margin-bottom: 5vh;
+}
+
+#depoimentos{
+    height: 100%;
     background-color: white;
+    border-radius: 8px; 
+    padding: 30px 30px 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+#section3-imagem{
+    height: 13vh;
+    width: 13vw;
+    
+    
+}
+
+#section3-texto{
+    text-align: start;
+    /* padding: 0 30px;
+    padding-bottom: 30px;
+    line-height: 1.3em; */
+}
+
+
+/* /////////////////////////////////////////////////////////////// FOOTER //////////////////////////////////////////////////////////////////// */
+
+footer{
+    display: flex;
+    justify-content: center;
+    
+    background-color: orange;
+    height: 20%;
 }
