@@ -249,7 +249,7 @@ const parcelarCurso = (carrinhoCurso, nParcelas) => {
   } else {
     console.log(
       `O valor do pagamento é de R$ ${valorTotal}, parcelado em ${nParcelas} de R$ ${
-        valorTotal / nParcelas
+        (valorTotal / nParcelas).toFixed(2)
       }`
     );
   }
@@ -307,16 +307,18 @@ const adicionarCarrinho = (buscarCurso) => {
   return carrinhoCursos.push(buscarCurso.valor);
 };
 
-const relatorioEstudante = (buscarEstudante) => {
-  return buscarEstudante;
-};
-//console.log(relatorioEstudante(buscarEstudante("Ruan")));
-//console.log(buscarEstudante("Ruan"));
+const relatorioEstudante = (buscaEstudante) => {
+  const resultado = estudante.find((i) => i.estudante.toLowerCase() === buscaEstudante.toLowerCase());
 
-/* dicionarCarrinho(buscarCurso("JavaScript"));
+  return resultado ? resultado : "estudante não encontrada";
+};
+console.log(relatorioEstudante("Ruan"))
+console.log(buscarEstudante("Ruan"));
+
+adicionarCarrinho(buscarCurso("JavaScript"));
 adicionarCarrinho(buscarCurso("HTML e CSS"));
 adicionarCarrinho(buscarCurso("APIs REST"));
- */
-//parcelarCurso(carrinhoCursos, 2);
+
+parcelarCurso(carrinhoCursos, 3);
 
 //"JavaScript","HTML e CSS","APIs REST"
