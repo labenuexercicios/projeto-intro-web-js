@@ -6,7 +6,7 @@
 
 header{
     background-color: #FBFBFB;
-    height: 12vh;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -46,7 +46,7 @@ main section:nth-child(1){
     justify-content: center;
     align-items: center;
     height: 80vh;
-    background-image: url(./midias/background-home.png);
+    background-image: url(./midias/background-home.svg);
     background-color: #F6C34A;
     color: #0E0E0E;
     font-family:'Poppins', sans-serif;
@@ -249,8 +249,12 @@ footer{
     margin-bottom: -.4em;
 }
 
+#lista-links-footer, #areas-internas{
+    display: flex;
+    flex-direction: column;
+}
 
-.text-footer > a, p{
+.text-footer{
     text-decoration: none;
     color: #0E0E0E;
     font-family: 'Open Sans', sans-serif;
@@ -261,24 +265,6 @@ footer{
     text-decoration: none;
 }
 
-#link-1 > a{
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 2.7em;
-}
-
-#link-2 > a{
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 2.7em;
-}
-
-#link-3 > a{
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 2.7em;
-}
-
 .icons{
     display: flex;
     flex-direction: row;
@@ -286,10 +272,4 @@ footer{
     align-items: center;
     justify-content: start;
     gap: 1.4em;
-}
-
-#link-4 > a{
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 2.7em;
 }
