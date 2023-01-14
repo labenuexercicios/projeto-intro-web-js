@@ -51,7 +51,7 @@
      
 }
 
-@media screen and (max-device-width: 480px){
+@media screen and (max-device-width: 780px){
 
     .depositions {
         height: 110vh;
@@ -80,7 +80,9 @@
         width: 80vw;
         height: fit-content;
         display: grid;
-        grid-template-columns: repeat(2, auto);   
+        grid-template-columns: repeat(2, auto); 
+        justify-content: center;  
+        align-items: center;
     }
 
     .depositions-cards__photo{

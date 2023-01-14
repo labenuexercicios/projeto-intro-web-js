@@ -37,7 +37,7 @@ header {
     display: none;
 }
 
-@media screen and (max-device-width: 480px){
+@media screen and (max-device-width: 780px){
 
     header{
         width: 100%;

@@ -7,25 +7,24 @@ main{
     background-color: #f5c75a;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.375rem;
-    height: 70vh;
+    height: 90vh;;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-grow: 1;
 }
 
 .link-whatsaap{
     position: fixed;
-    bottom: 1.25rem;
-    right: 1.875rem;
-    width: 4.122vw;
-    height: 8.31vh;
+    bottom: 1.25em;
+    right: 1.875em;
+    width: 50px;
+    height: auto;
 }
 
 
-.courses__container{
+.courses-container{
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-column-gap: 7.781rem;
@@ -33,7 +32,7 @@ main{
 }
 
 
-.courses__container--cards{
+.courses-container__cards{
     background-color: #fff;
     width: 20.156vw;
     height: 38.39vh;
@@ -42,12 +41,12 @@ main{
     text-align: center;
 }
 
-.courses__container--cards > h2{
+.courses-container__title{
     font-size: 2.125rem;
     padding-top: 2.625rem;
 }
 
-.courses__container--cards > p{
+.courses-container__subtitle{
     font-size: 1rem;
     font-weight: 400;
     text-align: justify;
@@ -55,7 +54,7 @@ main{
     
 }
 
-.courses__btn{
+.courses-btn{
     background-color:  #0E0E0E; 
     height: 8.22vh;
     width: 23.4375vw;
@@ -65,12 +64,12 @@ main{
     flex-grow: 1;
 }
 
-.courses__btn:hover{
+.courses-btn:hover{
     transform: scale(1.1);
 }
 
 
-.courses__link{
+.courses-btn__link{
     color: #FBFBFB;
     text-decoration: none;
     display: block;
@@ -93,7 +92,7 @@ main{
       
 }
 
-.description__card1, .description__card2, .description__card3{
+.description-cards{
     background-color: #FBFBFB;
     height: 25vh;
     width: 48.43vw;
@@ -102,18 +101,18 @@ main{
     justify-content: space-around;
 }
 
-.description__title--courses{
+.description-cards__title{
     font-size: 2.125rem;
     padding: 6.063rem 0;
 }
 
-.description__title--module{
+.description-cards__subtitle{
     font-size: 1.5rem;
     padding-top: 3.125rem;
     padding-bottom: 0.688rem;
 }
 
- .description__title--item{
+ .description-cards__item{
     list-style: none;
 } 
 
