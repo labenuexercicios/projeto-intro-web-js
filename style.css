@@ -25,7 +25,7 @@ li {
     text-align: center;
     border-radius: 8px;
     display: flex;
-    height: 15vh;
+    height: 14vh;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -75,16 +75,65 @@ li {
     bottom: 20px;     
 }
 
-/* ///////////////////////////////////////////////////////////// SEACTION PAI //////////////////////////////////////////////////////////////// */
-/* main{
-    height: 80%;
-    width: 100%;
-}
-section{
-    
-} */
+/* /////////////////////////////////////////////////////////////// FOOTER //////////////////////////////////////////////////////////////////// */
 
-/* ////////////////////////////////////////////////////////////// SEACTION 1 ///////////////////////////////////////////////////////////////// */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6C34A;
+    height: 55vh;
+    font-size: 15px;
+}
+
+.logo-footer{
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    margin-right: 860px;
+}
+
+.footer-flex{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 70%;
+    gap: 5vw;
+}
+
+.links-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.area-restrita{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#gap-palavra{
+    margin-bottom: 20px;
+}
+
+#mapa{
+    margin-top: 10px;
+    margin-bottom: 10px;   
+    border-radius: 8px;
+}
+
+#redes{
+    margin-right: 5px;
+}
+
+/* ////////////////////////////////////////////////////////// SEACTION HOME 1 /////////////////////////////////////////////////////////////// */
 
 .section1 {
     display: flex;
@@ -121,7 +170,7 @@ section{
     margin-top: 1vh;
 }
 
-/* ////////////////////////////////////////////////////////////// SEACTION 2 ///////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// SEACTION HOME 2 /////////////////////////////////////////////////////////////// */
 
 .section2 {
     display: flex;
@@ -144,7 +193,7 @@ section{
     line-height: 25px;
 }
 
-/* ////////////////////////////////////////////////////////////// SEACTION 3 ///////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// SEACTION HOME 3 /////////////////////////////////////////////////////////////// */
 
 .section3 {
     display: flex;
@@ -159,7 +208,7 @@ section{
 .grid-home{
     display: flex;
     gap: 1.7vw;
-    height: 45vh;
+    height: 41vh;
     width: 88%; 
     
 }
@@ -194,13 +243,87 @@ section{
     line-height: 1.3em; */
 }
 
+/* ////////////////////////////////////////////////////////// SEACTION CURSOS 1 /////////////////////////////////////////////////////////////// */
 
-/* /////////////////////////////////////////////////////////////// FOOTER //////////////////////////////////////////////////////////////////// */
-
-footer{
+.section-cursos{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #F6C34A;
     
-    background-color: orange;
-    height: 20%;
+}
+
+.container-grid-cursos{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    display: grid;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    gap: 0 5vw;
+}
+
+#cursos{
+    height: 100%;
+    background-color: white;
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+} 
+
+#gap-cursos{
+    margin-bottom: 50px;
+    margin-top: 45px;
+    font-size: 28px;
+}
+
+.section1-fazerparte{
+    background-color: black;
+    color: white;
+    padding: 15px 45px;
+    border-radius: 8px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.div-curso1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-curso2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-curso3{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#texto-cursos{
+    width: 80%;
+}
+
+/* ////////////////////////////////////////////////////////// SEACTION CURSOS 2 /////////////////////////////////////////////////////////////// */
+
+.section2-cursos{
+    height: 110vh;
+    background-color: #0E0E0E;
 }
