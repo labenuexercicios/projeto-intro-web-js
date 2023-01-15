@@ -123,7 +123,79 @@ main {
     
 }
 
+.area-matricula {
+    background-color: #F6C34A;
+    width: 79.7%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2 fr;
+    border-bottom: 1px solid black;
+    /* justify-content: space-around;
+    flex-wrap: wrap; */
+    height: 90vh;
+    padding: 5% 1%;
+}
 
+.matricula-titulo{
+    display: flex;
+    right: 50%;
+    padding: 0 0 3% 0;
+    font-size: 1.4rem;
+}
+
+.formulario{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    padding: 0% 15%;
+    font-size: 0.9rem; 
+    gap: 5px;    
+}
+
+.area-digitavel{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 5px;
+    border: none;
+}
+
+.botao-matricula{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    width: 20vw;
+    height: 5vh;
+}
+
+.novo-aluno{
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    padding: 0 12% 0 0;
+}
+
+.aluno-novo{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    list-style: none;
+    /* justify-content: end; */
+    align-items: flex-start;
+    line-height: 150%;
+}
+
+.aluno-novo h1{
+    line-height: 350%;
+}
+
+.aluno-novo img{
+    width: 13%;
+       
+}
 
 footer {
     display: grid;

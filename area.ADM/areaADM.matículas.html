@@ -30,22 +30,36 @@
                 <li><a class="finan" href="/area.ADM/areaADM.Financeiro.html"><b>Financeiro Alunos</b></a></li>
             </ul>
         </nav>
-        <section>
-            <ul>
-                <li>nome</li>
-                <li>curso</li>
-                <li>turma</li>
-                <li>número de parcelas</li>
-            </ul>
-            <button type="submit">Matricular aluno</button>
-            <ul>
-                <li><h1>Aluno Matriculado</h1></li>
-                <img src="./imagens/circle-check-fill.png">
-                <li>Aluno Matriculado</li>
-                <li>Nome: Calvin Klein</li>
-                <li>Curso: Javascript</li>
-                <li>Turma: Clarke</li>
-            </ul>
+        <section class="area-matricula"> 
+            <form class="formulario" action="#">
+                <b class="matricula-titulo">Matrículas</b>
+                
+                
+                <label for="nome"><b>Nome</b></label>
+                <input class="area-digitavel" type="text" name="nome" id="nome">
+             
+                <label for="curso"><b>Curso</b></label>
+                <input class="area-digitavel" type="text" name="curso" id="curso">
+                
+                <label for="turma"><b>Turma</b></label>
+                <input class="area-digitavel" type="text" name="turma" id="turma">
+               
+                <label><b>Número de parcelas</b></label>
+                <input class="area-digitavel" type="number" name="numero" id="numero">
+                <br><br>
+                
+            <button class="botao-matricula" type="submit">Matricular aluno</button>
+            <div class="novo-aluno">
+                <ul class="aluno-novo">
+                    <li><h1>Aluno Matriculado<img src="/imagens/check.png"></h1></li>
+                    
+                    <li>Aluno Matriculado</li>
+                    <li>Nome: Calvin Klein</li>
+                    <li>Curso: Javascript</li>
+                    <li>Turma: Clarke</li>
+                </ul>
+            </div>
+            
         </section>
     </main>
     <footer>

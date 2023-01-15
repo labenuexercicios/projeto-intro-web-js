@@ -30,24 +30,27 @@
                 <li><a class="finan" href="/area.ADM/areaADM.Financeiro.html"><b>Financeiro Alunos</b></a></li>
             </ul>
         </nav>
-        <section>
-            <ul>
+        <section class="area-financeiro">
+            <ul class="finace">
                 <h1>Financeiro</h1>
-                <li>cursos</li>
-                <a>adicionar outro curso</a>
-                <li>Número de parcelas</li>
+                <li class="curso-financ"><label for="curso"><b>Curso</b></label>
+                    <input class="area-digitavel" type="text" name="curso" id="curso"></li>
+                <a class="add-curso">adicionar outro curso</a>
+                <li class="parcela"><label ><b >Número de parcelas</b></label>
+                    <input class="area-digitavel" type="number" name="numero" id="numero"></li>
                 <button type="submit">Ver Valor</button>
             </ul>
-            <ul>
+            <ul class="valores">
                 <h1>valor</h1>
                 <li>Desconto de 20%. Parcelas de 2x de R$1880.00</li>
             </ul>
-            <ul>
+            <ul class="relatorio">
                 <h1>Relatório Aluno</h1>
-                <li>nome</li>
+                <li class="nome-relatorio"><label for="nome"><b>Nome</b></label>
+                    <input class="area-digitavel" type="text" name="nome" id="nome"></li>
                 <button type="submit">Buscar</button>
             </ul>
-            <ul>
+            <ul class="dados-aluno">
                 <li>Aluno: Chris Evans</li>
                 <li>Turma: Hipátia</li>
                 <li>Curso: Javascript</li>

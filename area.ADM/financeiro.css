@@ -101,7 +101,6 @@ main {
 .menu-adm {
     display: flex;
     flex-direction: column;
-   /*  text-align: start; */
     list-style: none;
     padding: 50% 0;
     gap: 50px;
@@ -119,10 +118,89 @@ main {
 
 .finan {
     color: white;
-    text-decoration-line: none;
-    
+    text-decoration-line: none;        
 }
 
+.area-financeiro{
+    background-color: #F6C34A;
+    width: 79.7%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-bottom: 1px solid black;
+    height: 90vh;
+    padding: 3% 10%;      
+}
+
+.finace{    
+    list-style: none;      
+}
+
+.add-curso{
+    text-decoration-line:underline;
+}
+
+.curso-financ{
+    padding: 5% 0 0% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.parcela{
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.finace button{    
+    padding: 2% 21%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+.area-digitavel{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 5px;
+    border: none; 
+}
+
+.valores{
+    grid-column: 1;
+    grid-row: 2;
+    list-style: none;
+    line-height: 250%;
+    padding: 5% 0; 
+}
+
+.relatorio{
+    grid-column: 2;
+    grid-row: 1;
+    list-style: none;
+}
+
+.relatorio button{
+    padding: 4% 43%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+.nome-relatorio{
+    padding: 10% 0 5% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dados-aluno{
+    grid-column: 2;
+    grid-row: 2;
+    list-style: none;
+    line-height: 150%;
+}
 
 
 footer {
