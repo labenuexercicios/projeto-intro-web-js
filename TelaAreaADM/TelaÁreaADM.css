@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    height: 15vh;
+    padding: 20px;
+
+
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.logo {
+    width: 250px;
+    padding: 0 22vh;
+
+}
+
+
+.menu {
+    padding: 20px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: black;
+    
+}
+
+.menu:hover{
+    padding: 20px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: orange;
+    
+}
+
+footer {
+    background-color: rgb(253, 192, 79);
+    height: 55vh;
+    padding: 4vh 20vh;
+
+}
+
+.containerFooter {
+    display: flex;
+    padding-top: 30px;
+
+}
+
+.containerFooter2 {
+    width: 190vh;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+
+
+tr {
+    text-align: left;
+
+}
+
+td {
+    vertical-align: top;
+    padding-top: 27px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+iframe {
+    padding-bottom: 10px;
+}
+
+.whatsapp {
+    position: fixed;
+    
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    padding-top: 10px;
+    font-family: "Open Sans";
+    list-style: none;
+}
+
+th{
+    font-family: "Poppins";
+    font-size: 20px;
+}
+
+.imgcomunicacoes {
+    padding-right: 10px;
+}
+
+main{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    background-color: rgb(253, 192, 79);
+    border-bottom: 1px solid black;
+    
+}
+
+.navMain{
+    
+    
+    background-color: white;
+    height: 100%;
+    font-size: 12px;
+    padding-right: 5vh;
+    padding-left: 10vh;
+    background-color: black;
+    
+    
+    
+}
+
+#menuMain{
+    padding-top: 5vh;
+    color: #707070;
+    font-family: "Poppins";
+    text-align: left;
+    width: 26vh;
+    
+  
+    
+}
+
+#menuMain:hover{
+    padding-top: 5vh;
+    color: white;
+}
+
+.sectionMain{
+    display: grid;
+    background-color: rgb(253, 192, 79);
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr) ;
+    grid-template-rows: repeat(3, 1fr);
+    padding-left: 20vh;
+    height: 40vh;
+    padding-top: 5vh;
+    gap: 3vh;
+    
+   
+}
+
+.sectionTurmas{
+    background-color: white;
+    padding: 2vh;
+    border-radius: 10px;
+    font-family: "Open Sans";
+    height: 27vh;
+    width: 26vh;
+    padding-top: 2vh;
+}
+
+#Sibyla{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#Curie{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#Zhenyi{
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+#Hipatia{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#Clarke{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#Blackwell{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#Elion{
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+#Burnell{
+    grid-column: 4/5;
+    grid-row:3/4;
+}
+
+.Buscar{
+    grid-column: 1/5;
+    grid-row: 1/2;
+    width: 120vh;
+    height: 10vh;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding-bottom: 7vh;
+
+
+
+    
+   
+}
+
+.containerBuscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+   
+    
+
+}
+#buscaLabel {
+    background-color: black;
+    color: white;
+    height: 5vh;
+    width: 14vh;
+    font-size: 18px;
+    border-radius: 0 5px 5px 0;
+   padding-top: 4px;   
+   
+    font-family: "Poppins";
+    
+}
+
+input{
+    height: 5.5vh;
+    width: 40vh;
+    border: 1px solid white;
+    border-radius: 5px 0 0 5px;
+
+}
+
+h1{
+    text-align: center;
+    font-family: "Poppins";
+}
+
+.sectionTurmas p:nth-child(2){
+    padding-top: 2vh;
+}
+
+.sectionTurmas p{
+    padding-top: 5px;
+}
+
