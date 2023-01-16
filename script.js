@@ -21,7 +21,7 @@ const turmas = [ //"HC1", "JS1", "REST1", "REST2",
 
     {
         turma: "Curie",
-        Curso: "HTML e CSS",
+        curso: "HTML e CSS",
         inicio: "15/09/2022",
         termino: "15/10/2022",
         numeroDeAlunos: 180,
