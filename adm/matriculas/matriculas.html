@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Lab Contato</title>
+    <link rel="stylesheet" href="/projeto-intro-web-js/adm/matriculas/style.css">
+    <title>Lab Escola Area ADM Matriculas</title>
 </head>
 <body>
     <header>
         <div class="container-logo-header">
             <a href="/projeto-intro-web-js/home/index.html">
-                <img src="./assets/logo 1.png" alt="Logo LabEscola" id="logo">
+                <img src="/projeto-intro-web-js/adm/assets/logo 1.png" alt="Logo LabEscola" id="logo">
             </a>
-        </div>  
+        </div>
         <nav>
             <ul>
                 <li><a href="/projeto-intro-web-js/home/index.html" class="txt-li">Home</a></li>
@@ -27,37 +27,71 @@
         </nav>
 
     </header>
-
     <main>
-        <a href="/projeto-intro-web-js/contato/contato.html"><img src="./assets/logos_whatsapp-icon.png" id="whats" target="_blank"></a>
+
+        <a href="/projeto-intro-web-js/contato/contato.html"><img src="/projeto-intro-web-js/adm/assets/logos_whatsapp-icon.png" id="whats"target="_blank"></a>
 
         <section id="container">
-            <div class="interno">
-                <div class="titulo">
-                    <p>Fale Conosco</p>  
-                </div>  
-                <form>
-                    <div>
-                        <label for="nome">Nome</label>
-                        <input type="text" placeholder="Digite seu nome" name="nome" required>
-                    </div>
-
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="text" placeholder="Digite seu email" name="email" required>
-                    </div>
-
-                    <div>
-                        <label for="msg">Menssagem</label>
-                        <textarea name="msg" id="msg" cols="20" rows="6" required></textarea>
-                    </div>
-
-                    <div>
-                        <input type="submit" value="Enviar">
-                    </div>
-                </form>
-            </div>
+            <section id="bloco1">
+                <div class="bloco1-menu">
+                    <ul>
+                        <li><a href="/projeto-intro-web-js/adm/adm.html">Turmas</a></li>
+                        <li><a href="/projeto-intro-web-js/adm/matriculas/matriculas.html" >Matriculas</a></li>
+                        <li><a href="/projeto-intro-web-js/adm/financeiro/financeiro.html" >Financeiro Alunos</a></li>
+                    </ul>
+                </div>
             </section>
+
+            <section id="bloco2">
+
+                <div id="bloco2-container1">
+
+                   <div class="container1-item">
+                        <p>Matriculas</p>
+                        <form>
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome">
+
+                            <label for="curso">Curso</label>
+                            <input type="text" name="curso" id="curso">
+
+                            <label for="turma">Turma</label>
+                            <input type="text" name="turma" id="turma">
+
+                            <label for="parcelas">Numero de Parcelas</label>
+                            <input type="text" name="parcelas" id="parcelas">
+
+                            <input type="submit" value="Matricular Aluno ">
+                        </form>
+                   </div>
+            
+
+                </div>
+
+                <div id="bloco2-container2">
+
+                    <div class="container2-item">
+                        <div class="container2-titulo">
+                            <p>Aluno Matriculado</p>
+                            <img src="./assets/check.png" alt="aluno martriculado">
+                        </div>
+                        
+                        <ul>
+                            <li>Aluno:....</li>
+                            <li>Nome:.....</li>
+                            <li>Curso:....</li>
+                            <li>Turma:....</li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+
+            </section>
+
+        </section>
     </main>
 
     <footer>

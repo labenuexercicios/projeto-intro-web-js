@@ -6,47 +6,41 @@
 
 body {
     background-color: #E9BB4E;
-    display: grid;
+    width: 100%;
+    height: 100%;
 }
+
+/* HEADER ----------------------------------------------------- */
 
 header {
     background-color: #FFFFFF;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
     height: 20vh;
-    margin: 0 auto;
-
 }
 
 nav {
-    flex-direction: row;
-    padding-right: 5%;
-    padding-left: 5%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
-     line-height: 2rem;
+    line-height: 1.5rem;
     text-decoration-line: underline;
     color: #0E0E0E;
 
 }
 
-ul {
+nav ul {
     display: flex;
-    position: relative;
-    width: 100%;
-    height: 5vh;
-    flex-direction: row;
-    align-items: baseline;
+    align-items: center;
+    height: 100%;
     gap: 2em;
     
 }
 
-li {
+ li {
     list-style: none;
 }
 
@@ -54,21 +48,38 @@ li {
     color: #0E0E0E;
 }
 
-#logo {
+.container-logo-header{
     display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+}
+
+/* MAIN ----------------------------------------------------- */
+
+main {
     width: 100%;
+    height: 80%;
 }
 
-
-#back {
+#back{
     position: absolute;
+    height: 180vh;
     width: 100vw;
-    height: 71vh;
-    top: 20%;
-    background-color: #E9BB4E;
 }
 
-#whatss {
+/* BLOCO 1----------------------------------------------------- */
+
+#bloco1{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100vw;
+
+}
+
+#whats {
     position: fixed;
     width: 65px;
     height: 65px;
@@ -76,249 +87,311 @@ li {
     top: 75vh;
     z-index: 999;
 }
-
-
-.bloco1 {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(7, 2fr);
-
-} 
-
-/* .bloco1 section{
-    display: grid;
-} */
-
-.div-sec-bloc1{
-    align-self: center;
-    padding-left: 10%;
-    grid-column: 3/8;
-    grid-row: 1/3;
-}
-
-.div-sec-bloc2{
-    align-self: center;
-    padding-left: 10%;
-    grid-column: 3/8;
-    grid-row: 3/5;
-}
-
-.titulo-home {
-    height: 10;
-    position: absolute;
-    width: 50%;
+/* conteudo BLOCO 1----------------------------------------------------- */
+#bloco1-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 33%;
     font-family: 'Poppins';
-    text-align: center;
     font-style: normal;
-    font-size: 3em;
+    font-size: 2rem;
+    line-height: 5rem;
+    color: #0E0E0E;
+
+}
+
+#bloco1-frase{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 33%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 2rem;
     line-height: 5rem;
     color: #0E0E0E;
 }
 
-.frase-home {
-    /* display: flex; */
-    position: relative; 
-    height: 10vh;
-    width: 50vw;
+#btn-bloco1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 33%;
+}
+
+.btn1{
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Poppins';
-    text-align: center;
-    font-style: normal;
-    font-size: 1.5em;
-    /* line-height: 10rem; */
-    color: #0E0E0E;
-}
- .btn-conheca{
-    align-self: center;
-    padding-left: 25%;
-    grid-column: 4/7;
-    grid-row: 5/6;
-
-} 
-.bt-cursos {
-    position: relative;
-    width: 25vw;
-    height: 10vh;
-    background: #0E0E0E;
+    background-color: black;
     border-radius: 9px;
-
-}
-
-.frase-bt {
-    align-self: center;
-    color: #FFFFFF;
-    font-family: 'Poppins';
-    font-size: 1.8em;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.sobre-nos-back {
-    /* position: absolute; */
-    display: grid;
-    width: 100vw;
-    height: 125vh;
-    top: 90%;
-    background: #0E0E0E;
-    grid-template-columns: repeat(11, 120px);
-    grid-template-rows: repeat(10, 1fr);
-}
-
-.titulo-sobre-nos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 14vh;
-    padding-top: 25%;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2.7em;
-    line-height: 1rem;
-    color: #FBFBFB;
-}
-
-.container-sobre-nos{
-    display: flex;
-    width: 85vw;
-    height: 55vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.txt-sobre-nos {
-    justify-self: center;
-    /* text-align: center; */
-    width: 50%;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.4em;
-    line-height: 2.5rem;
-    color: #FBFBFB;
-}
-
- .depoimentos {
-    position: absolute;
-    top: 145%;
-    height: 70vh;
-    display: grid;
-    /* justify-items: center; */
-} 
-
- .titulo-depoimentos {
-    /* position: absolute; */
-    display: grid;
-    justify-content: center;
-    align-items: center;
-     width: 100vw;
+    width: 25%;
     height: 10vh;
+    z-index: 999;
+    
+}
+
+.btn1-frase{
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 700;
-    font-size: 2.5em;
-    line-height: 1em;
-    color: #FBFBFB;
-} 
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: 1fr;
-    justify-items: center;
-} 
-
-  .card-1 {
-    position: relative;
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    width: 20vw;
-    height: 60vh;
-    background: #FBFBFB;
-    border-radius: 10px;
-} 
-
- .card-2 {
-    position: relative;
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    width: 20vw;
-    height: 60vh;
-    background: #FBFBFB;
-    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 5rem;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
+/* BLOCO 2----------------------------------------------------- */
 
-.card-3 {
-    position: relative;
-    display: grid;
-    grid-column: 3/4;
-    grid-row: 1/2;
-    width: 20vw;
-    height: 60vh;
-    background: #FBFBFB;
-    border-radius: 10px;
-
+#bloco2{
+    display: flex;
+    flex-direction: column;
+    background-color: #0E0E0E;
+    height: 30vh;
+    width: 100vw;
 }
 
-.card-4 {
-    position: relative;
-    display: grid;
-    grid-column: 4/5;
-    grid-row: 1/2;
-    width: 20vw;
-    height: 60vh;
-    background: #FBFBFB;
-    border-radius: 10px;
-}
-
- div .cards p {
-    position: absolute;
-    padding: 0 5%;
-    top: 40%;
+.bloco2-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50%;
     width: 100%;
-    text-align: left;
+
+}
+
+.titulo2{
     font-family: 'Poppins';
     font-style: normal;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+.bloco2-texto{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+}
+
+.texto2{
+    width: 50%;
+    text-align: center;
+    font-family: 'Open Sans';
     font-weight: 400;
-    font-size: 1em;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+/* BLOCO 3----------------------------------------------------- */
+#bloco3{
+    display: flex;
+    flex-direction: column;
+    background-color: #0E0E0E;
+    height: 70vh;
+    width: 100vw;
+}
+
+.bloco3-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+
+}
+
+.titulo3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+.bloco3-cards{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: 25% 75%;
+    height: 80%;
+    width: 100%;
+
+}
+
+#bloco3-txt{
+    display: flex;
+    align-items: center;
+    height: 65%;
+    width: 90%;
+    padding-left: 10%;
+    font-family: 'Poppins';
+    font-size: 1rem;
     line-height: 1.5em;
     color: #0E0E0E;
 }
 
-  .foto_depo {
+#bloco3-foto{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    height: 35%;
+    width: 100%;
+
+}
+
+.bloco3-card1{
+    display: flex;
     justify-self: center;
-    padding-top: 10%;
-}  
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 1/5;
+    width: 85%;
+    height: 85%;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+}
 
-/*  section p {
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    left: 8px;
-    top: 200px;
-    font-family: 'Open Sans';
-    font-style: normal;
+.bloco3-card2{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    width: 80%;
+    height: 85%;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+}
+
+.bloco3-card3{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    grid-column: 3/4;
+    grid-row: 1/4;
+    width: 80%;
+    height: 85%;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+}
+
+.bloco3-card4{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    grid-column: 4/5;
+    grid-row: 1/4;
+    width: 80%;
+    height: 85%;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+}
+
+/* FOOTER----------------------------------------------------- */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
+}
+
+footer ul{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1em;
+    line-height: 2em;
     color: #0E0E0E;
-}  */
- 
-footer {
-    position: absolute;
-    width: 100%;
-    height: 50vh;
-    background-color: #E9BB4E;
-    top: 1700px;
+
 }
 
-.logo-foot {
-    position: relative;
-    left: 55px;
-    top: -90px;
+.footer-logo{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    padding: 2%;
 }
+
+#bloco4-footer{
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+    padding: 0 2.5%;
+}
+
+#bloco4-titulo4{
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #0E0E0E;
+    margin-bottom: 5%;
+
+}
+.bloco4-endereco{
+    width: 30%;
+}
+
+iframe{
+    height: 65%;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.bloco4-map-end{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #0E0E0E;  
+}
+
+.bloco4-links{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bloco4-medias{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%;    */
+}
+
+.bloco4-medias section{
+    width: 100%;
+}
+
+.bloco4-medias ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.bloco4-links, .bloco4-medias, .bloco4-rest{
+    width: 20%;
+    padding-left: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

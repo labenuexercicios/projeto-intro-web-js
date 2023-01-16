@@ -11,93 +11,195 @@
 
 <body>
     <header>
-
-        <a href="index.html">
-            <img src="./assets/logo 1.png" alt="Logo LabEscola" id="logo">
-        </a>
+        <div class="container-logo-header">
+            <a href="index.html">
+                <img src="./assets/logo 1.png" alt="Logo LabEscola" id="logo">
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="./index.html" class="txt-li">Home</a></li>
 
-                <li><a href="/cursos/cursos.html" class="txt-li">Cursos</a></li>
+                <li><a href="/projeto-intro-web-js/cursos/cursos.html" class="txt-li">Cursos</a></li>
 
-                <li><a href="/contato/contato.html" class="txt-li">Contato</a></li>
+                <li><a href="/projeto-intro-web-js/contato/contato.html" class="txt-li">Contato</a></li>
 
-                <li><a href="/adm/adm.html" class="txt-li">Area ADM</a></li>
+                <li><a href="/projeto-intro-web-js/adm/adm.html" class="txt-li">Area ADM</a></li>
             </ul>
         </nav>
 
     </header>
     <main>
-        <img src="./assets/background-hero.png" alt="Logo Hero" id="back">
+        <img src="./assets/background-hero.png" alt="background" id="back">
 
-        <a href="/contato/contato.html"><img src="./assets/logos_whatsapp-icon.png" id="whatss"></a>
+        <section id="bloco1">
 
-        <div class="bloco1">
-            <!-- <section> -->
-                <div class="div-sec-bloc1">
-                    <h1 class="titulo-home">Descubra o novo ensino !</h1>
-                </div>
-                <div class="div-sec-bloc2">
-                    <p class="frase-home">Aprenda de verdade, no seu tempo, no seu ritmo.</p>
-                </div>
-            <!-- </section> -->
-                <div class="btn-conheca">
-                    <button class="bt-cursos"><a href="/cursos/cursos.html" class="frase-bt">Conheca nossos cursos</a></button>
-                </div>  
-        </div>
+            <a href="/projeto-intro-web-js/contato/contato.html"><img src="./assets/logos_whatsapp-icon.png" id="whats"target="_blank"></a>
 
-        <div>
-            <section class="sobre-nos-back">
-                <h4 class="titulo-sobre-nos">Sobre Nos</h4>
-                <div class="container-sobre-nos">
-                <p class="txt-sobre-nos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic earum molestias
+            <div id="bloco1-titulo">
+                <h1 class="titulo1">Descubra o novo ensino !</h1>
+            </div>
+
+            <div id="bloco1-frase">
+                <p class="frase1">Aprenda de verdade, no seu tempo, no seu ritmo.</p>
+            </div>
+
+            <div id="btn-bloco1">
+                <button class="btn1"><a href="/projeto-intro-web-js/cursos/cursos.html" class="btn1-frase" target="_blank">Conheca nossos cursos</a></button>
+            </div>
+
+        </section>
+
+
+        <section id="bloco2">
+
+            <div class="bloco2-titulo">
+                <h4 class="titulo2">Sobre Nos</h4>
+            </div>
+
+            <div class="bloco2-texto">
+                <p class="texto2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic earum molestias
                     odit, repellat delectus doloribus quod! Recusandae atque cupiditate quisquam. Iusto esse labore
                     iste, rerum expedita repudiandae adipisci at minima.</p>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
-        <div class="depoimentos">
-            <section>
-                <h4 class="titulo-depoimentos">Depoimentos</h4>
 
-                <div class="cards">
-                    <div class="card-1">
-                        <img src="./assets/Ellipse 1.png" alt="foto_depo_1" class="foto_depo">
-                        <p class="txt-card-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio
-                            quos atque eaque dolorem consectetur blanditiis autem similique illo, enim numquam totam ut
-                            eos voluptatum provident temporibus quia officia veniam?</p>
+        <section id="bloco3">
+
+            <div class="bloco3-titulo">
+                <h4 class="titulo3">Depoimentos</h4>
+            </div>
+
+            <div class="bloco3-cards">
+
+                <div class="bloco3-card1">
+                    <div id="bloco3-foto">
+                        <img src="./assets/Ellipse 1.png" alt="foto_depo_1">
                     </div>
 
-                    <div class="card-2">
-                        <img src="./assets/Ellipse 2.png" alt="foto_depo_2" class="foto_depo">
-                        <p class="txt-card-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio
-                            quos atque eaque dolorem consectetur blanditiis autem similique illo, enim numquam totam ut
-                            eos voluptatum provident temporibus quia officia veniam?</p>
-                    </div>
-
-                    
-                    <div class="card-3">
-                        <img src="./assets/Ellipse 3.png" alt="foto_depo_3" class="foto_depo">
-                        <p class="txt-card-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio
-                            quos atque eaque dolorem consectetur blanditiis autem similique illo, enim numquam totam ut
-                            eos voluptatum provident temporibus quia officia veniam?</p>
-                    </div>
-                    
-                    <div class="card-4">
-                        <img src="./assets/Ellipse 4.png" alt="foto_depo_4" class="foto_depo">
-                        <p class="txt-card-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio
+                    <div id="bloco3-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio
                             quos atque eaque dolorem consectetur blanditiis autem similique illo, enim numquam totam ut
                             eos voluptatum provident temporibus quia officia veniam?</p>
                     </div>
                 </div>
-            </section>
-        </div>
+
+                <div class="bloco3-card2">
+                    <div id="bloco3-foto">
+                        <img src="./assets/Ellipse 2.png" alt="foto_depo_2">
+                    </div>
+
+                    <div id="bloco3-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio
+                            quos atque eaque dolorem consectetur blanditiis autem similique illo, enim numquam totam ut
+                            eos voluptatum provident temporibus quia officia veniam?</p>
+                    </div>
+                </div>
+
+
+                <div class="bloco3-card3">
+                    <div id="bloco3-foto">
+                        <img src="./assets/Ellipse 3.png" alt="foto_depo_3">
+                    </div>
+
+                    <div id="bloco3-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio
+                            quos atque eaque dolorem consectetur blanditiis autem similique illo, enim numquam totam ut
+                            eos voluptatum provident temporibus quia officia veniam?</p>
+                    </div>
+                </div>
+
+
+                <div class="bloco3-card4">
+                    <div id="bloco3-foto">
+                        <img src="./assets/Ellipse 4.png" alt="foto_depo_4">
+                    </div>
+
+                    <div id="bloco3-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio
+                            quos atque eaque dolorem consectetur blanditiis autem similique illo, enim numquam totam ut
+                            eos voluptatum provident temporibus quia officia veniam?</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
     </main>
 
     <footer>
-        <img src="./assets/lab-logo-footer.png" alt="lab-logo-foot" class="logo-foot">
+        <div class="footer-logo">
+            <div>
+                <img src="./assets/lab-logo-footer.png" alt="lab-logo-foot">
+            </div>
+        </div>
+
+        <section id="bloco4-footer">
+
+            <div class="bloco4-endereco">
+
+                <div id="bloco4-titulo4">
+                    <p>Endereco</p>
+                </div>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9962772954627!2d-46.70069088518842!3d-23.568577184679345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150%2C%20Brasil!5e0!3m2!1spt-BR!2sit!4v1673562529583!5m2!1spt-BR!2sit"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <p class="bloco4-map-end"> R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+
+            </div>
+
+            <div class="bloco4-links">
+                
+                <div id="bloco4-titulo4">
+                    <p>Links</p>
+                </div>
+
+                <ul>
+                    <li>Home</li>
+                    <li>Cursos</li>
+                    <li>Blog</li>
+                    <li>Fale conosco</li>
+                    <li>Termos e condicoes</li>
+                    <li>Politica de privacidade</li>
+                    <li>FAQ</li>
+                </ul>
+
+            </div>
+
+            <div class="bloco4-medias">
+
+                <div id="bloco4-titulo4">
+                    <p>Redes Sociais</p>
+                </div>
+
+                <section>
+                    <ul>
+                        <li><img src="./assets/icon-twitter 1.png" alt="icon-twitter"></li>
+                        <li><img src="./assets/icon-linkedin 1.png" alt="icon-linkedin"></li>
+                        <li><img src="./assets/icon-fb 1.png" alt="icon-fb"></li>
+                        <li><img src="./assets/icon-ig 1.png" alt="icon-ig"></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="bloco4-rest">
+
+                <div id="bloco4-titulo4">
+                    <p>Area Restrita</p>
+                </div>
+
+                <ul>
+                    <li>Area administrativa</li>
+                    <li>Espaco do aluno</li>
+                </ul>
+            </div>
+
+        </section>
 
     </footer>
 
