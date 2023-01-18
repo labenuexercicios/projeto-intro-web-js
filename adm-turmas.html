@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./adm-turmas.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Área ADM</title>
+    <link rel="stylesheet" href="./adm-turmas.css">
+    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -19,17 +20,17 @@
           <li class="links-header"><a href="./cursos.html">Cursos</a></li>
           <li class="links-header"><a href="./contato.html">Contato</a></li>
           <li class="links-header"><a href="./adm-turmas.html">Área ADM</a></li>
-        </ul>
+      </ul>
       </nav>
     </header>
 
     <main>
-      <aside>
+      <aside id="menu-adm">
         <nav>
-          <ul id="lista-aside"> <!-- tem que linkar essa lista -->
-            <li class="links-aside">Turmas</li>
-            <li class="links-aside">Matrículas</li>
-            <li class="links-aside">Financeiro Alunos</li>
+          <ul id="lista-aside">
+            <li><a href="./adm-turmas.html" class="links-aside" id="selected-aside">Turmas</a></li>
+            <li><a href="./adm-matriculas.html" class="links-aside">Matrículas</a></li>
+            <li><a href="" class="links-aside">Financeiro Alunos</a></li>
           </ul>
         </nav>
       </aside>
@@ -124,12 +125,6 @@
           <p class="details"><span class="bold">Concluído:</span> Não</p>
         </div>
       </section>
-
-      <div class="whatsapp">
-        <a target="_blank" href="https://web.whatsapp.com/" alt="whatsapp-link">
-          <figure><img src="./midias/logos_whatsapp-icon.svg" alt="whatsapp-icon"></figure>
-        </a>
-      </div>
     </main>
 
     <footer>
@@ -138,7 +133,7 @@
           <img
             src="./midias/logo-footer.svg"
             alt="LabEscola logo"
-            id="logo-no-footer"
+            id="logo-in-footer"
           />
         </a>
       </div>

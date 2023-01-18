@@ -13,6 +13,10 @@ header{
     align-items: center;
 }
 
+#logo{
+    height: 4em;
+}
+
 .links-header{
     list-style: none;
     display: inline-block;
@@ -58,7 +62,6 @@ h1.primeiro-bloco{
     font-weight: 700;
     font-size: 2.7em;
     line-height: 2em;
-
 }
 
 p.primeiro-bloco{
@@ -228,7 +231,6 @@ footer{
     padding: 1em 9em;
     justify-content: space-between;
     align-items: flex-start;
-
 }
 
 .logo-footer{

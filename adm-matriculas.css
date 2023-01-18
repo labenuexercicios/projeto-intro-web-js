@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #FBFBFB;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo{
+    height: 4em;
+}
+
+.links-header{
+    list-style: none;
+    display: inline-block;
+    margin: 0 3.2em;
+    font-size: 1.2em;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3em;
+}
+
+.links-header > a{
+    color: #0E0E0E;
+    text-decoration: none;
+}
+
+.links-header > a:active{
+    text-decoration: underline;
+}
+
+main{
+    height: 88vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: .1em solid #0E0E0E;
+}
+
+#menu-adm{
+    background-color: #0E0E0E;
+    order: 1;
+    width: 18%;
+}
+
+#lista-aside{
+    padding: 2.5em 1em 0 5em;
+    list-style: none;
+}
+
+.links-aside{
+    color: #707070;
+    text-decoration: none;
+    text-align: left;
+    list-style: none;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 5em;
+}
+
+#selected-aside{
+    color: #FFFFFF;
+}
+
+#confirm-report{
+    background-color: #F6C34A;
+    order: 3;
+    flex-grow: 2;
+    padding: 2.5em 0 2.5em 0em;
+}
+
+section{
+    background-color: #F6C34A;
+    order: 2;
+    flex-grow: 1.8;
+    padding: 2.5em 0 2.5em 10em;
+}
+
+h1{
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: .1em;
+    color: #000000;
+    margin: 2.5em 0 3em 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input{
+    width: 25em;
+    height: 2em;
+    border-radius: .3em;
+    border-color: #FBFBFB;
+    margin-bottom: 1em;
+}
+
+button{
+    width: 26em;
+    height: 3em;
+    border-radius: .3em;
+    border-color: #0E0E0E;
+    margin-top: 1em; 
+    background-color: #0E0E0E;
+    color: #FBFBFB;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+label{
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1em;
+    color: #000000; 
+}
+
+
+
+

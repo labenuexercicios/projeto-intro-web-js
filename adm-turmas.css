@@ -13,6 +13,10 @@ header{
     align-items: center;
 }
 
+#logo{
+    height: 4em;
+}
+
 .links-header{
     list-style: none;
     display: inline-block;
@@ -34,41 +38,46 @@ header{
 }
 
 main{
-    height: auto;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
     border-bottom: .1em solid #0E0E0E;
+
 }
 
 aside{
     background-color: #0E0E0E;
-    color: #FFFFFF;
-    width: 20%;
+    width: 18%;
 }
 
 #lista-aside{
-    padding: 2.5em 0 0 5em;
-    width: 15em;
+    padding: 2.5em 1em 0 5em;
+    list-style: none;
 }
 
 .links-aside{
-    list-style: none;
+    color: #707070;
+    text-decoration: none;
     text-align: left;
     list-style: none;
-    margin-bottom: 2em;
     font-family:'Poppins', sans-serif;
     font-style: normal;
     font-size: 1em;
     font-weight: 700;
-    line-height: 3em;
+    line-height: 5em;
+}
+
+#selected-aside{
+    color: #FFFFFF;
 }
 
 section{
     background-color: #F6C34A;
+    flex: 4;
+    height: fit-content;
     padding: 4em 4em;
-    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -116,7 +125,6 @@ button:active{
     color: #0E0E0E;
 }
 
-
 .classes{
     background-color: #FFFFFF;
     width: 14em;
@@ -152,14 +160,6 @@ button:active{
     font-weight: 800;
 }
 
-
-.whatsapp{
-    position: fixed;
-    float: right;
-    right: 1.4em;
-    top: 35em;
-}
-
 footer{
     height: auto;
     background-color: #F6C34A;
@@ -169,7 +169,6 @@ footer{
     padding: 1em 9em;
     justify-content: space-between;
     align-items: flex-start;
-
 }
 
 .logo-footer{

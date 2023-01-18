@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área ADM</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./adm-matriculas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="./home.html">
+            <img src="./midias/logo.svg" alt="LabEscola logo" id="logo" />
+          </a>
+          <nav>
+            <ul>
+              <li class="links-header"><a href="./home.html">Home</a></li>
+              <li class="links-header"><a href="./cursos.html">Cursos</a></li>
+              <li class="links-header"><a href="./contato.html">Contato</a></li>
+              <li class="links-header"><a href="./adm-turmas.html">Área ADM</a></li>
+          </ul>
+          </nav>
+    </header>
+
+    <main>
+        <aside id="menu-adm">
+            <nav>
+                <ul id="lista-aside">
+                    <li><a href="./adm-turmas.html" class="links-aside">Turmas</a></li>
+                    <li><a href="./adm-matriculas.html" class="links-aside" id="selected-aside">Matrículas</a></li>
+                    <li><a href="" class="links-aside">Financeiro Alunos</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <aside id="confirm-report"> <!-- essa parte não tem esses dados fixos, vão ter que mudar conforme os dados são preenchidos -->
+            <h1>Aluno matriculado</h1>
+            <p>Aluno Matriculado</p>
+            <p>Nome: Calvin Klein</p>
+            <p>Curso: Javascript</p>
+            <p>Turma: Clarke</p>
+        </aside>
+
+        <section>
+            <h1>Matrículas</h1>
+            <form action="#">
+                <label for="name">Nome</label>
+                <input type="text" name="nome" id="name">
+                
+                <label for="course">Curso</label>
+                <input type="text" name="curso" id="course">
+                
+                <label for="class">Turma</label>
+                <input type="text" name="turma" id="class">
+              
+                <label for="payment">Número de parcelas</label>
+                <input type="text" name="numero-parcelas" id="payment">
+                
+                <button type="submit">Matricular aluno</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo-footer">
+            <a href="./home.html">
+              <img
+                src="./midias/logo-footer.svg"
+                alt="LabEscola logo"
+                id="logo-in-footer"
+              />
+            </a>
+          </div>
+    
+          <div>
+            <h3 class="titulos">Endereço</h3>
+            <a
+              id="mapa"
+              target="_blank"
+              href="https://www.google.com.br/maps/place/R.+Pais+Leme,+215+-+Pinheiros,+S%C3%A3o+Paulo+-+SP,+05424-150/@-23.5685757,-46.6991529,18z/data=!3m1!4b1!4m5!3m4!1s0x94ce57a7c7ace4c3:0x586759cab9b5c95a!8m2!3d-23.5685772!4d-46.6985022?hl=pt-BR"
+            >
+              <img src="./midias/mapa.svg" alt="endereco-mapa" id="endereco-mapa" />
+            </a>
+            <p class="text-footer">R. Pais Leme, 215. CEP 05.424-150 - Pinheiros</p>
+          </div>
+    
+          <div>
+            <h3 class="titulos">Links</h3>
+            <div id="lista-links-footer">
+              <a class="text-footer" href="./home.html">Home</a>
+              <a href="./cursos.html" class="text-footer">Cursos</a>
+              <a href="#" class="text-footer">Blog</a>
+              <a href="./contato.html" class="text-footer">Fale Conosco</a>
+              <a href="#" class="text-footer">Termos e condições</a>
+              <a href="#" class="text-footer">Política de privacidade</a>
+              <a href="#" class="text-footer">FAQ</a>
+            </div>
+          </div>
+    
+          <div id="redes-sociais">
+            <h3 class="titulos">Redes sociais</h3>
+            <div class="icons">
+              <a target="_blank" class="links-redes" href="https://twitter.com/">
+                <img src="./midias/icones/icon-twitter.svg" alt="twitter" />
+              </a>
+    
+              <a target="_blank" class="links-redes" href="https://linkedin.com">
+                <img src="./midias/icones/icon-linkedin.svg" alt="linkedin" />
+              </a>
+    
+              <a target="_blank" class="links-redes" href="https://facebook.com">
+                <img src="./midias/icones/icon-fb.svg" alt="facebook" />
+              </a>
+    
+              <a target="_blank" class="links-redes" href="https://intagram.com">
+                <img src="./midias/icones/icon-ig.svg" alt="instagram" />
+              </a>
+            </div>
+          </div>
+    
+          <div>
+            <h3 class="titulos">Área restrita</h3>
+            <div id="areas-internas">
+              <a href="./adm-turmas.html" class="text-footer"
+                >Área administrativa</a
+              >
+              <a href="#" class="text-footer">Espaço do aluno</a>
+            </div>
+          </div>
+    </footer>
+</body>
+</html>

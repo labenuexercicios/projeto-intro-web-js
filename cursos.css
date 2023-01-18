@@ -13,6 +13,10 @@ header{
     align-items: center;
 }
 
+#logo{
+    height: 4em;
+}
+
 .links-header{
     list-style: none;
     display: inline-block;
@@ -242,7 +246,6 @@ footer{
     padding: 1em 9em;
     justify-content: space-between;
     align-items: flex-start;
-
 }
 
 .logo-footer{

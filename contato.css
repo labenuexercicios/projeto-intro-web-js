@@ -13,6 +13,10 @@ header{
     align-items: center;   
 }
 
+#logo{
+    height: 4em;
+}
+
 .links-header{
     list-style: none;
     display: inline-block;
@@ -52,7 +56,6 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
 }
 
 section > h2{
@@ -124,7 +127,6 @@ footer{
     padding: 1em 9em;
     justify-content: space-between;
     align-items: flex-start;
-
 }
 
 .logo-footer{
