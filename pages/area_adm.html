@@ -64,7 +64,6 @@
                 type="text"
                 placeholder="Digite o nome da turma"
                 id="buscaTurma"
-                onchange="turmasCard(this.value)"
               />
               <button onclick="turmasCard(this.previousElementSibling.value)">
                 Buscar
@@ -118,11 +117,12 @@
             <h2 class="title">Cursos</h2>
             <div id="lista_cursos_body"></div>
           </article>
+
           <div class="container">
             <div class="left">
               <h2 class="title">Financeiro</h2>
-              <label for="buscaCurso">Curso</label>
-              <input type="text" id="buscaCurso" readonly />
+              <p>Curso</p>
+              <div id="buscaCurso"></div>
               <button class="addCurso" onclick="mostrarCursos()">
                 Adicionar outro curso
               </button>
@@ -137,7 +137,6 @@
               <input
                 type="text"
                 id="buscaAluno"
-                onchange="relatorioEstudante(this.value)"
               />
               <button
                 onclick="relatorioEstudante(this.previousElementSibling.value)"

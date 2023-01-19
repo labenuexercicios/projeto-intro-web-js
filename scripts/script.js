@@ -168,7 +168,7 @@ const carrinhoCursos = [];
 
 const addCarrinhoCurso = (curso) => {
   const cursoBuscado = buscarCurso(curso);
-  
+
   if (cursoBuscado === undefined) {
     swal({
       title: "Curso não encontrado!",
@@ -176,21 +176,37 @@ const addCarrinhoCurso = (curso) => {
     });
     return;
   }
-  
-  const query = carrinhoCursos.filter((e) => {
-    e.curso.toLowerCase() === curso.toLowerCase();
-  })
 
-  console.log(carrinhoCursos.filter((e) => {
-    e.curso.toLowerCase() === curso.toLowerCase();
-  }));
-  console.log(carrinhoCursos);
+  for (let item of carrinhoCursos) {
+    if (item.curso === curso) {
+      swal({
+        title: "Curso já adicionado!",
+        icon: "warning",
+      });
+      return;
+    }
+  }
 
   carrinhoCursos.push(cursoBuscado);
+
+  document.getElementById("buscaCurso").innerHTML += `
+    <span class="show_curso">
+      <p>${curso === "HTML e CSS" ? "HTML" : curso}</p>
+      <img src="../assets/cancel.png" alt="Cancel" onclick="removeCarrinhoCurso(this.parentElement, this.previousElementSibling.innerHTML)">
+    </span>
+  `;
+};
+
+const removeCarrinhoCurso = (element, curso) => {
+  if (curso === "HTML") curso = "HTML e CSS";
+  const cursoBuscado = buscarCurso(curso);
+
+  carrinhoCursos.pop(cursoBuscado);
+  element.remove();
 };
 
 const mostrarCursos = () => {
-  document.getElementById("lista_cursos").style.opacity = "1";
+  document.getElementById("lista_cursos").style.display = "flex";
   document.getElementById("lista_cursos_body").innerHTML = "";
 
   for (let value of cursos) {
@@ -209,22 +225,19 @@ const mostrarCursos = () => {
       </div>
     `;
   }
-}
+};
 
 mostrarCursos();
 
 const esconderCursos = () => {
-  document.getElementById("lista_cursos").style.opacity = "0";
-}
+  document.getElementById("lista_cursos").style.display = "none";
+};
 
 const buscarCurso = (nome) => {
-  return cursos.find(
-    (e) => e.curso.toLowerCase() === nome.toLowerCase()
-  );;
+  return cursos.find((e) => e.curso.toLowerCase() === nome.toLowerCase());
 };
 
 const buscarEstudante = (nome) => {
-  console.log(nome)
   const query = estudantes.filter(
     (e) => e.estudante.toLowerCase() === nome.toLowerCase()
   );
@@ -252,7 +265,7 @@ const matricular = (nome, curso, turma, nParcelas) => {
   const cursoBuscado = buscarCurso(curso);
   const turmaBuscada = buscarTurma(turma);
   document.getElementById("matricula-msg").style.visibility = "hidden";
-  
+
   if (cursoBuscado === undefined) {
     swal({
       title: "Curso não encontrado!",
