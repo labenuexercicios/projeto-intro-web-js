@@ -116,17 +116,4 @@ a:hover{
         top: -7px;
     }
 
-    .conheça{
-        height: 3vh;
-        padding:1%;
-    }
-
-    .depo{
-        flex-direction: column;        
-        align-items: center;                
-    }
-
-    .depo li{
-        padding: 2%;
-    }
 }

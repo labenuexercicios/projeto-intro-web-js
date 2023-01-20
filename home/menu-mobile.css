@@ -1,66 +1,6 @@
-/* @media screen and (max-device-width : 480px) {
+ @media screen and (max-device-width : 480px) {
         
-    #menu{
-        display: block;
-        position: absolute;
-        width: 30%;
-        top: 69px;
-        font-size: 20px;
-        right: 0;
-        display: block;
-        height: 0;
-        transition: .6s;
-        background-color: white;
-        border-radius: 5px;
-        visibility: hidden;
-        overflow-y: hidden;
-
-    }
-    #nav.active #menu{
-        height: 19vh;
-        display: block;  
-        visibility: visible;  
-            
-    }
-    #menu a {
-        padding:1rem 0;
-        margin: 0 1rem;
-        border-bottom: 1px solid black;
-    }
-    #btn-menu{
-        display: flex;
-        padding: .5rem 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        gap: .5rem;
-    }
-    #hamburguer{
-        border-top: 2px solid;
-        width: 20px;
-
-    }
-    #hamburguer::after,#hamburguer::before{
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-    }
-    #nav.active #hamburguer{
-        border-top-color:transparent ;    
-    }
-    #nav.active #hamburguer::before{
-        transform: rotate(135deg);
-    }
-    #nav.active #hamburguer::after{
-        transform: rotate(-135deg);
-        top: -7px;
-    }
-
+    
     .conheça{
         height: 3vh;
         padding:1%;
@@ -76,4 +16,4 @@
     .depo li{
         padding: 2%;
     }
-} */
+}

@@ -10,85 +10,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* header {
-    padding: .7% 0;
-    height: 15vh;
-    background-color: #FBFBFB;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 200px;
-}
-
-.logo img {
-    width: 110%;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    list-style: none;
-    padding: 6% 0;
-    text-decoration-line: none;
-}
-
-.home {
-    text-decoration-line: none;
-    color: black;
-}
-
-.home:hover {
-    color: black;
-    text-decoration-line: underline;
-}
-
-.home:active {
-    color: blue
-}
-
-.curso {
-    text-decoration-line: none;
-    color: black;
-}
-
-.curso:hover {
-    color: black;
-    text-decoration-line: underline;
-}
-
-.curso:active {
-    color: blue
-}
-
-.contato {
-    text-decoration-line: none;
-    color: black;
-}
-
-.contato:hover {
-    color: black;
-    text-decoration-line: underline;
-}
-
-.contato:active {
-    color: blue
-}
-
-.areaADM {
-    text-decoration-line: none;
-    color: black;
-}
-
-.areaADM:hover {
-    color: black;
-    text-decoration-line: underline;
-}
-
-.areaADM:active {
-    color: blue
-} */
-
 main {
     display: flex;
 }
@@ -100,8 +21,7 @@ main {
 
 .menu-adm {
     display: flex;
-    flex-direction: column;
-   /*  text-align: start; */
+    flex-direction: column;   
     list-style: none;
     padding: 50% 0;
     gap: 50px;
@@ -219,72 +139,3 @@ main {
     list-style: none;
 }
 
-
-/* footer {
-    display: grid;
-    height: 65vh;
-    background-color: #F6C34A;
-    padding: 2% 0;    
-}
-
-.logo-footer img {
-    width: 35%;
-    padding: 0 10%;
-}
-
-.footer1 {
-    display: flex;
-    gap: 11%;
-    padding: 0 10%;
-    font-size: 80%;
-}
-
-.map {
-    list-style: none;
-}
-
-iframe{
-    border-radius: 5px;
-    border: 1px solid black;
-    width: 23vw;
-    height: 30vh;
-}
-
-.links {
-    list-style: none;       
-}
-
-#titulo-footer{
-    font-size: 1.2rem;
-}
-
-.links-footer{
-    text-decoration-line: none;
-    color: black;
-    font-size: 0.9rem;   
-}
-
-.sociais {
-    list-style: none;    
-}
-
-.twiter img {
-    width: 23%;
-}
-
-.linkedin img {
-    width: 23%;
-    
-}
-
-.face img {
-    width: 23%
-}
-
-.insta img {
-    width: 23%
-}
-
-.restrita {
-    list-style: none;
-} */
