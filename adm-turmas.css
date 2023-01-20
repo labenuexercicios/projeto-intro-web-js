@@ -52,12 +52,11 @@ aside{
     width: 18%;
 }
 
-#lista-aside{
+#aside-list{
     padding: 2.5em 1em 0 5em;
-    list-style: none;
 }
 
-.links-aside{
+.aside-links{
     color: #707070;
     text-decoration: none;
     text-align: left;
@@ -175,7 +174,7 @@ footer{
     width: 100%;
 }
 
-.titulos{
+.titles{
     color: #0E0E0E;
     margin: 1.5em 0;
     font-family: 'Poppins', sans-serif;
@@ -185,11 +184,11 @@ footer{
     line-height: 1em;
 }
 
-#endereco-mapa{
+#map-adress{
     margin-bottom: -.4em;
 }
 
-#lista-links-footer, #areas-internas{
+#list-links-footer, #areas-internas{
     display: flex;
     flex-direction: column;
 }

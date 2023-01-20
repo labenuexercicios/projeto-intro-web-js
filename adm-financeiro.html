@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área ADM</title>
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="./adm-matriculas.css">
+    <link rel="stylesheet" href="./adm-financeiro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,52 +23,58 @@
           </ul>
           </nav>
     </header>
-
     <main>
         <aside id="menu-adm">
             <nav>
                 <ul id="aside-list">
                     <li><a href="./adm-turmas.html" class="aside-links">Turmas</a></li>
-                    <li><a href="./adm-matriculas.html" class="aside-links" id="selected-aside">Matrículas</a></li>
-                    <li><a href="./adm-financeiro.html" class="aside-links">Financeiro Alunos</a></li>
+                    <li><a href="./adm-matriculas.html" class="aside-links">Matrículas</a></li>
+                    <li><a href="./adm-financeiro.html" class="aside-links" id="selected-aside">Financeiro Alunos</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <aside id="confirm-report"> <!-- essa parte não tem esses dados fixos, vão ter que mudar conforme os dados são preenchidos -->
-          <div class="confirm-student">
-            <h1>Aluno matriculado</h1>
-            <figure>
-              <img src="./midias/confirm-check.svg" alt="check" id="confirm-check">
-            </figure>
-          </div>
-            
-          <p class="studant-info">Aluno Matriculado</p>
-          <p class="studant-info">Nome: Calvin Klein</p>
-          <p class="studant-info">Curso: Javascript</p>
-          <p class="studant-info">Turma: Clarke</p>
-        </aside>
+        <article id="search">
+            <h1>Financeiro</h1>
+            <form action="#">
+                <label for="course">Curso</label>
+                <input type="text" name="curso" id="course">
+                <a href="#">Adicionar outro curso</a>
 
-        <section>
-            <h1>Matrículas</h1>
+                <label for="payment-plan">Número de parcelas</label>
+                <input type="text" name="numero-parcelas" id="payment-plan">
+
+                <button type="submit">Ver valor</button>
+            </form>
+        </article>
+
+        <article id="student-report">
+            <h1>Relatório Aluno</h1>
             <form action="#">
                 <label for="name">Nome</label>
                 <input type="text" name="nome" id="name">
-                
-                <label for="course">Curso</label>
-                <input type="text" name="curso" id="course">
-                
-                <label for="class">Turma</label>
-                <input type="text" name="turma" id="class">
-              
-                <label for="payment">Número de parcelas</label>
-                <input type="text" name="numero-parcelas" id="payment">
-                
-                <button type="submit">Matricular aluno</button>
-            </form>
-        </section>
-    </main>
 
+                <button type="submit">Buscar</button>
+            </form>
+        </article>
+
+        <article id="payment"> <!-- Esses dados vão ser alterados com o JS -->
+            <div>
+                <h1>Valor</h1>
+                <p>Desconto de 20%. Parcelas de R$1880,00</p>
+            </div>
+            <div>
+                <p>Aluno: Chirs Evans</p>
+                <p>Turma: Hipátia</p>
+                <p>Curso: Javascript</p>
+                <p>Valor total: R$900</p>
+                <p>Valor parcela: R$100</p>
+                <p>Nº parcelas: 9</p>
+            </div>
+        </article>
+
+
+    </main>
     <footer>
         <div class="logo-footer">
             <a href="./home.html">
@@ -132,5 +138,6 @@
             </div>
           </div>
     </footer>
+    
 </body>
 </html>
