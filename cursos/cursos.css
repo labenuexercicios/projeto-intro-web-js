@@ -10,98 +10,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.wats {
-    position: fixed;
-    bottom: 4px;
-    right: 5px;
-    background-color: transparent;
-    border: none;
-    z-index: 1;
-    padding: 2%;
-}
-
-.wats img {
-    width: 5vw;
-}
-
-header {
-    padding: .7% 0;
-    height: 15vh;
-    background-color: #FBFBFB;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 200px;
-}
-
-.logo img {
-    width: 110%;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    list-style: none;
-    padding: 6% 0;
-    text-decoration-line: none;
-}
-
-.home {
-    text-decoration-line: none;
-    color: black;
-}
-
-.home:hover {
-    color: black;
-    text-decoration-line: underline;
-}
-
-.home:active {
-    color: blue
-}
-
-.curso {
-    text-decoration-line: none;
-    color: black;
-}
-
-.curso:hover {
-    color: black;
-    text-decoration-line: underline;
-}
-
-.curso:active {
-    color: blue
-}
-
-.contato {
-    text-decoration-line: none;
-    color: black;
-}
-
-.contato:hover {
-    color: black;
-    text-decoration-line: underline;
-}
-
-.contato:active {
-    color: blue
-}
-
-.areaADM {
-    text-decoration-line: none;
-    color: black;
-}
-
-.areaADM:hover {
-    color: black;
-    text-decoration-line: underline;
-}
-
-.areaADM:active {
-    color: blue
-}
 
 .principal-cursos{ 
     background-color:#F6C34A;
@@ -260,7 +168,7 @@ footer {
     display: grid;
     height: 65vh;
     background-color: #F6C34A;
-    padding: 2% 0;    
+    padding: 2% 0;
 }
 
 .logo-footer img {
@@ -279,7 +187,7 @@ footer {
     list-style: none;
 }
 
-iframe{
+iframe {
     border-radius: 5px;
     border: 1px solid black;
     width: 23vw;
@@ -287,38 +195,42 @@ iframe{
 }
 
 .links {
-    list-style: none;       
+    list-style: none;
 }
 
-#titulo-footer{
+#titulo-footer {
     font-size: 1.2rem;
 }
 
-.links-footer{
+.links-footer {
     text-decoration-line: none;
     color: black;
-    font-size: 0.9rem;   
+    font-size: 0.9rem;
 }
 
 .sociais {
-    list-style: none;    
+    list-style: none;
+    
 }
 
 .twiter img {
     width: 23%;
+    text-decoration: none;
 }
 
 .linkedin img {
     width: 23%;
-    
+    text-decoration: none;
 }
 
 .face img {
-    width: 23%
+    width: 23%;
+    text-decoration: none;
 }
 
 .insta img {
-    width: 23%
+    width: 23%;
+    text-decoration: none;
 }
 
 .restrita {

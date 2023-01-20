@@ -1,4 +1,3 @@
-
 const turmas = [
     {
         turma: "Hipatia",
@@ -304,3 +303,4 @@ const relatorioEstudante = (nomeEstudante) =>{
 }
 //console.log(relatorioEstudante("Lashana Lynch"))
 //estudante: "Halle Berry",Lashana Lynch
+

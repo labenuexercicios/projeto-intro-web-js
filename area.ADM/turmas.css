@@ -10,7 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-header {
+/* header {
     padding: .7% 0;
     height: 15vh;
     background-color: #FBFBFB;
@@ -87,7 +87,7 @@ header {
 
 .areaADM:active {
     color: blue
-}
+} */
 
 main {
     display: flex;
@@ -220,7 +220,7 @@ main {
 }
 
 
-footer {
+/* footer {
     display: grid;
     height: 65vh;
     background-color: #F6C34A;
@@ -287,4 +287,4 @@ iframe{
 
 .restrita {
     list-style: none;
-}
+} */

@@ -10,33 +10,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-main{
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 5% 0;    
-}
-
-.contat{
-    justify-content: center;
-    align-items: center;    
-    padding: 3%;    
-    background-color: white;    
-    width: 30vw;
-}
-
-.enviar{    
-    background-color: #F6C34A;
-    padding: 3% 44%;
-}
-
-/* footer {
+footer {
     display: grid;
     height: 65vh;
     background-color: #F6C34A;
-    padding: 2% 0;    
+    padding: 2% 0;
 }
 
 .logo-footer img {
@@ -55,7 +33,7 @@ main{
     list-style: none;
 }
 
-iframe{
+iframe {
     border-radius: 5px;
     border: 1px solid black;
     width: 23vw;
@@ -63,40 +41,44 @@ iframe{
 }
 
 .links {
-    list-style: none;      
+    list-style: none;
 }
 
-#titulo-footer{
+#titulo-footer {
     font-size: 1.2rem;
 }
 
-.links-footer{
+.links-footer {
     text-decoration-line: none;
     color: black;
-    font-size: 0.9rem;   
+    font-size: 0.9rem;
 }
 
 .sociais {
-    list-style: none;    
+    list-style: none;
+    
 }
 
 .twiter img {
     width: 23%;
+    text-decoration: none;
 }
 
 .linkedin img {
     width: 23%;
-    
+    text-decoration: none;
 }
 
 .face img {
-    width: 23%
+    width: 23%;
+    text-decoration: none;
 }
 
 .insta img {
-    width: 23%
+    width: 23%;
+    text-decoration: none;
 }
 
 .restrita {
     list-style: none;
-} */
+}
