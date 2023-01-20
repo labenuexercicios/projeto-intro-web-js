@@ -16,10 +16,6 @@ iframe{
     border: 2px solid #000;
 }
 
-.footer-street{
-    /* padding-top: 0.75rem; */
-}
-
 .footer__medias > img {
     padding-top: 1.688rem;
 }
@@ -97,7 +93,7 @@ iframe{
 @media screen and (max-device-width: 780px){
     footer {
         background-color: #f5c75a;
-        height: 60vh;
+        height: 70%;
         
     }
 

@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financeiro</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="./menu-adm.css">
-    <link rel="stylesheet" href="./financeiro.css">
+    <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/menu-adm.css">
+    <link rel="stylesheet" href="./css/financeiro.css">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
     </header>
 
     <main>
-        <div class="menu-list">
+        <section class="menu-list">
             <nav class="menu-list__courses">
                 <ul>
                     <li class="menu-list__item"><a class="menu-list__link" href="./adm.html">Turmas</a></li>
@@ -51,26 +52,48 @@
                 </ul>
             </nav>
 
-            <div class="menu-list__dice">
-                <section>
-                    <h3>Financeiro</h3>
-                    <ul>
-                        <li>
-                            <label>Curso</label>
-                            <input type="">
-                        </li>
 
-                        <li>
-                            <label></label>
-                            <input>
-                        </li>
-                    </ul>
-                </section>
-                <section>
+            <section class="menu-list__dice">
+                <section class="menu-list__form">
+                    <h3 class="menu-list__title">Financeiro</h3>
+                    <form action="#">
+                        <ul>
+                            <li class="menu-list__item">
+                                <label class="menu-list__label">Curso</label>
+                                <input class="menu-list__input" type="">
+                            </li>
 
+                            <li class="menu-list__item">
+                                <a class="menu-list__anchor" href="./adm.html">Adicionar outro curso</a>
+                            </li>
+
+                            <li class="menu-list__item">
+                                <label class="menu-list__label">Número de parcelas</label>
+                                <input class="menu-list__input" type="number">
+                            </li>
+
+                            <li class="menu-list__item">
+                                <input class="menu-list__input" id="btn-value" type="submit" value="Ver valor">
+                            </li>
+                        </ul>
+                    </form>
                 </section>
-            </div>
-        </div>
+
+                <section>
+                    <h3 class="menu-list__title">Relatório Aluno</h3>
+                        <div class="menu-list__item">
+                            <label class="menu-list__label">Nome</label>
+                            <input class="menu-list__input" type="text">
+
+                        </div>
+
+                        <div>
+                            <input class="menu-list__input" id="btn-search" type="search" placeholder="Buscar">
+                        </div>
+                </section>
+            </section>
+
+        </section>
 
     </main>
 

@@ -1,8 +1,8 @@
-section {
+.contact {
     background-color: #0E0E0E;
-    height: 70vh;
+    height: 85vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -10,11 +10,12 @@ section {
     height: 59.31vh;
     width: 25.32vw;
     background-color: #F0F0F0;
-    border-radius: 8.45488px;
+    border-radius: 8px;
 }
 
 .contact-form__title {
-    padding: 3.039rem 4.008rem 1.053rem;
+    line-height:3.039rem;
+    padding-left: 4.008rem;
     font-size: 1.497rem;
     font-weight: 700;
 }
@@ -27,7 +28,7 @@ section {
 
 .contact-form__dice {
     width: 74%;
-    padding-top: 0.704rem;
+    line-height: 1.704rem ;
 }
 
 .contact-form__label {
@@ -35,7 +36,6 @@ section {
     font-family: 'Poppins', sans-serif;
     font-size: 1.057rem;
     font-weight: 700;
-    padding-bottom: 0.199rem;
     display: inline-block;
     width: 100%;
 }
@@ -43,14 +43,14 @@ section {
 .contact-form__input {
     width: 100%;
     height: 4.252vh;
-    border-radius: 0.528rem;
+    border-radius: 5px;
     border: 1px solid;
 }
 
 .contact-form__textarea {
     width: 100%;
     height: 16.56vh;
-    border-radius: 0.528rem;
+    border-radius: 5px;
     border: 1px solid #0E0E0E;
 }
 

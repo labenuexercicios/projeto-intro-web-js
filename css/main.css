@@ -21,9 +21,10 @@ main{
 .c-courses{
     width: 100%;
     height: var(--height-first);
-    background-image: url(./mideas/background-hero.png);
+    background-image: url(../mideas/background-hero.png);
     background-repeat: no-repeat;
     background-color: #f5c75a;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -68,10 +69,6 @@ main{
 .c-courses__link:hover {
     text-decoration: none;
 }
-
-/*  .container{
-    height: 140vh;
-}  */
 
 .about-us{
     background-color: #0E0E0E;

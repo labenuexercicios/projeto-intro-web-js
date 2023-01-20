@@ -3,18 +3,14 @@
     background-color: #f5c75a;
     display: flex;
     justify-content: space-evenly;
-    width: 79.8vw;
-    height: 80.95vh;
+    width: 80%;
 }
 
 .contact-title{
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    line-height: 2.25rem;
-    padding-top: 3.75rem;
-    padding-bottom: 3.125rem;
-
+    line-height: 10rem;
 }
 
 .contact-form__item{
@@ -27,9 +23,7 @@
     font-size: 1rem;
     font-weight: 800;
     font-style: normal;
-    line-height: 1.5rem;
-    padding-top: 0.5rem;
-
+    line-height: 2rem;
 }
 
 .contact-form__input{
@@ -49,7 +43,6 @@
     color: #FBFBFB;
     font-size: 1rem;
     font-weight: 700;
-    line-height: 1.5rem;
     cursor: pointer;
 }
 
@@ -59,23 +52,20 @@
 
 .contact-resgister{
     display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .contact-resgister__img{
-    height: 4.5785vh;
-    width: 2.2916vw;
-    padding-top: 3.75rem;
-    padding-left: 1.813rem;
+    height: 44px;
+    width: 44px;
 }
 
-.contact-dice__list{
-    list-style-type: none;
-    padding-top: 1.75rem;
-}
 
 .contact-dice__item{
     color: #000;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.375rem;
+    list-style-type: none;
 }
