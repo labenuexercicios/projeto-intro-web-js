@@ -40,8 +40,12 @@
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="./cursos.html">Cursos</a></li>
-            <li><a href="./contato.html">Contato</a></li>
-            <li><a href="./area_adm.html">Área ADM</a></li>
+            <li>
+              <a href="./contato.html">Contato</a>
+            </li>
+            <li class="active_header">
+              <a href="./area_adm.html">Área ADM</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -49,11 +53,11 @@
 
     <main id="adm">
       <nav>
-        <div class="container">
-          <button class="btn active">Turmas</button>
-          <button class="btn">Matricula</button>
-          <button class="btn">Financeiro Alunos</button>
-        </div>
+        <ul class="container">
+          <li><button class="btn active">Turmas</button></li>
+          <li><button class="btn">Matricula</button></li>
+          <li><button class="btn">Financeiro Alunos</button></li>
+        </ul>
       </nav>
 
       <section>
@@ -65,12 +69,15 @@
                 placeholder="Digite o nome da turma"
                 id="buscaTurma"
               />
-              <button onclick="turmasCard(this.previousElementSibling.value)">
+              <button
+                id="btn"
+                onclick="gridCards(this.previousElementSibling.value)"
+              >
                 Buscar
               </button>
             </div>
 
-            <div class="cards" id="cards"></div>
+            <div class="gallery" id="cards"></div>
           </div>
         </article>
 
@@ -91,7 +98,7 @@
                 <label for="parcelas">Número de parcelas: <span>*</span></label>
                 <input type="number" id="parcelas" required />
 
-                <button type="submit">Matricular Aluno</button>
+                <button id="btn" type="submit">Matricular Aluno</button>
               </form>
             </article>
 
@@ -124,23 +131,27 @@
               <p>Curso</p>
               <div id="buscaCurso"></div>
               <button class="addCurso" onclick="mostrarCursos()">
-                Adicionar outro curso
+                Adicionar curso
               </button>
               <label for="nParcelas">Número de Parcelas</label>
               <input type="number" id="nParcelas" />
-              <button class="value">Ver Valor</button>
+              <button
+                id="btn"
+                onclick="parcelarCurso(carrinhoCursos, this.previousElementSibling.value)"
+              >
+                Ver Valor
+              </button>
+
+              <div id="curso_valor"></div>
             </div>
 
             <div class="right">
               <h2 class="title">Relatório Aluno</h2>
               <label for="buscaAluno">Nome</label>
-              <input
-                type="text"
-                id="buscaAluno"
-              />
+              <input type="text" id="buscaAluno" />
               <button
+                id="btn"
                 onclick="relatorioEstudante(this.previousElementSibling.value)"
-                class="value"
               >
                 Buscar
               </button>

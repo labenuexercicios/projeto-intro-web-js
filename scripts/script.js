@@ -125,12 +125,16 @@ const estudantes = [
   },
 ];
 
+const carrinhoCursos = [];
+
 const parcelarCurso = (arr, nParcelas) => {
   let descontoCursos = 0;
   const descontoAVista = 0.2;
 
   let total = 0;
-  for (let value of arr) total += value;
+  for (let item of arr) {
+    total += item.valor;
+  }
 
   switch (arr.length) {
     case 3:
@@ -148,53 +152,52 @@ const parcelarCurso = (arr, nParcelas) => {
   if (nParcelas <= 2) {
     total -= total * descontoAVista;
 
-    console.log(
-      `O valor do pagamento é de R$ ${total.toFixed(
+    document.getElementById("curso_valor").innerHTML = `
+      <p><b>Valor</b></p>
+      <p class="text">O valor do pagamento é de <b>R$ ${total.toFixed(
         2
-      )} com 20% desconto, parcelado em ${nParcelas}x de R$ ${(
-        total / nParcelas
-      ).toFixed(2)}`
-    );
+      )}</b> com 20% desconto, parcelado em ${nParcelas}x de <b>R$ ${(
+      total / nParcelas
+    ).toFixed(2)}</b></p>
+      `;
   } else {
-    console.log(
-      `O valor do pagamento é de R$ ${total.toFixed(
-        2
-      )}, parcelado em ${nParcelas}x de R$ ${(total / nParcelas).toFixed(2)}`
-    );
+    document.getElementById("curso_valor").innerHTML = `
+    <p><b>Valor</b></p>
+    <p class="text">O valor do pagamento é de <b>R$ ${total.toFixed(
+      2
+    )}</b>, parcelado em ${nParcelas}x de <b>R$ ${(total / nParcelas).toFixed(
+      2
+    )}</b></p>`;
   }
 };
 
-const carrinhoCursos = [];
+const buscaCurso = document.getElementById("buscaCurso");
 
 const addCarrinhoCurso = (curso) => {
   const cursoBuscado = buscarCurso(curso);
 
   if (cursoBuscado === undefined) {
-    swal({
-      title: "Curso não encontrado!",
-      icon: "error",
-    });
+    sweetAlert("Curso não encontrado!", "error");
     return;
   }
 
   for (let item of carrinhoCursos) {
     if (item.curso === curso) {
-      swal({
-        title: "Curso já adicionado!",
-        icon: "warning",
-      });
+      sweetAlert("Curso já adicionado!", "warning");
       return;
     }
   }
 
   carrinhoCursos.push(cursoBuscado);
 
-  document.getElementById("buscaCurso").innerHTML += `
+  buscaCurso.innerHTML += `
     <span class="show_curso">
       <p>${curso === "HTML e CSS" ? "HTML" : curso}</p>
       <img src="../assets/cancel.png" alt="Cancel" onclick="removeCarrinhoCurso(this.parentElement, this.previousElementSibling.innerHTML)">
     </span>
   `;
+
+  buscaCurso.style.borderColor = "black";
 };
 
 const removeCarrinhoCurso = (element, curso) => {
@@ -203,6 +206,10 @@ const removeCarrinhoCurso = (element, curso) => {
 
   carrinhoCursos.pop(cursoBuscado);
   element.remove();
+
+  if (carrinhoCursos.length === 0) {
+    buscaCurso.style.borderColor = "transparent";
+  }
 };
 
 const mostrarCursos = () => {
@@ -227,8 +234,6 @@ const mostrarCursos = () => {
   }
 };
 
-mostrarCursos();
-
 const esconderCursos = () => {
   document.getElementById("lista_cursos").style.display = "none";
 };
@@ -252,8 +257,8 @@ const buscarTurma = (nome) => {
     return turmas;
   }
 
-  const query = turmas.filter(
-    (e) => e.turma.toLowerCase() === nome.toLowerCase()
+  const query = turmas.filter((e) =>
+    e.turma.toLowerCase().includes(nome.toLowerCase())
   );
 
   if (query.length > 0) {
@@ -267,18 +272,12 @@ const matricular = (nome, curso, turma, nParcelas) => {
   document.getElementById("matricula-msg").style.visibility = "hidden";
 
   if (cursoBuscado === undefined) {
-    swal({
-      title: "Curso não encontrado!",
-      icon: "error",
-    });
+    sweetAlert("Curso não encontrado!", "error");
     return;
   }
 
   if (turmaBuscada === undefined) {
-    swal({
-      title: "Turma não encontrada!",
-      icon: "error",
-    });
+    sweetAlert("Turma não encontrada!", "error");
     return;
   }
 
@@ -319,10 +318,7 @@ const relatorioEstudante = (nome) => {
 
   if (estudanteBuscado === undefined) {
     reloatorioMsg.innerHTML = "";
-    swal({
-      title: "Aluno não encontrado!",
-      icon: "error",
-    });
+    sweetAlert("Aluno não encontrado!", "error");
     return;
   }
 
@@ -341,15 +337,12 @@ const relatorioEstudante = (nome) => {
 let htmlCode = ``;
 const card = document.getElementById("cards");
 
-const turmasCard = (nome) => {
+const gridCards = (nome) => {
   const turmaBuscada = buscarTurma(nome);
   document.getElementById("buscaTurma").value = "";
 
   if (turmaBuscada === undefined) {
-    swal({
-      title: "Turma não encontrada!",
-      icon: "error",
-    });
+    sweetAlert("Turma não encontrada!", "error");
     return;
   }
 
@@ -390,8 +383,15 @@ for (let value of turmas) {
 `;
 }
 
-const main = document.getElementById("adm");
-const btns = main.getElementsByClassName("btn");
+const sweetAlert = (msg, icon) => {
+  swal({
+    title: msg,
+    icon: icon,
+  });
+};
+
+//Menu ativo Area ADM
+const btns = document.getElementsByClassName("btn");
 
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {

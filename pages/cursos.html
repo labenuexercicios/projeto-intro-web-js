@@ -7,12 +7,25 @@
     <meta name="author" content="Ruan Heleno" />
     <meta author="https://ruanheleno.github.io" />
     <title>Cursos</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <script src="../scripts/script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -24,9 +37,13 @@
         <nav>
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="./cursos.html">Cursos</a></li>
-            <li><a href="./contato.html">Contato</a></li>
-            <li><a href="./area_adm.html">Área ADM</a></li>
+            <li class="active_header"><a href="./cursos.html">Cursos</a></li>
+            <li>
+              <a href="./contato.html">Contato</a>
+            </li>
+            <li>
+              <a href="./area_adm.html">Área ADM</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -73,12 +90,14 @@
             </div>
           </div>
 
-          <a href="">
-            <button>Quero fazer parte!</button>
+          <a href="#">
+            <button class="cta_btn">
+              <a href="mailto:"> Quero fazer parte! </a>
+            </button>
           </a>
 
           <a href="">
-            <figure class="cta">
+            <figure id="cta_wpp">
               <img
                 src="../assets/logos_whatsapp-icon.png"
                 alt="Whatsapp icon"
