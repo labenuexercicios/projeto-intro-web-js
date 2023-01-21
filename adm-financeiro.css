@@ -38,7 +38,7 @@ header{
 }
 
 main{
-    height: 90vh;
+    height: 88vh;
     background-color: #F6C34A; 
     display: grid;
     grid-template-columns: 18% repeat(2, 1fr);
@@ -54,27 +54,105 @@ main{
 #search{
     grid-column: 2/3;
     grid-row: 1/2;
+    align-self: start;
     text-align: left;
-    padding: 2.5em 0 2.5em 10em;
+    padding: 2.5em 0 2em 1.2em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
-}
-
-#search>form{
-    background-color: aqua;
-    width: 80%;
 }
 
 #student-report{
     grid-column: 3/4;
     grid-row: 1/2;
+    align-self: start;
+    justify-self: start;
+    text-align: left;
+    padding: 2.5em 0 2em 0em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: .1em;
+    color: #000000;
+    margin: 2.5em 0 1.2em 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form > a{ 
+    text-decoration: underline;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: .7em;
+    font-weight: 400;
+    line-height: 2em;
+    margin: -.8em  0 -.8em .4em;
+    color: #000000;
+}
+
+label{
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: .9em;
+    font-weight: 700;
+    line-height: 1em;
+    color: #000000; 
+    margin: 2em 0 .2em 0;
+}
+
+input{
+    width: 25em;
+    height: 2em;
+    border-radius: .3em;
+    border: #F6C34A;
+    margin-bottom: 1em;
+}
+
+button{
+    width: 26em;
+    height: 3em;
+    border-radius: .3em;
+    border-color: #0E0E0E;
+    margin-top: 1em; 
+    background-color: #0E0E0E;
+    color: #FBFBFB;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1em;
 }
 
 #payment{
     grid-column: 2/4;
     grid-row: 2/3;
+    align-self: start;
+    width: 80%;
+    padding: 1em 0 2.5em 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14em;
+}
+
+.paragraph{
+    font-size: .8em;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #000000;
 }
 
 #menu-adm{
@@ -99,10 +177,9 @@ main{
     line-height: 5em;
 }
 
-
-
-
-
+#selected-aside{
+    color: #FFFFFF;
+}
 
 footer{
     height: auto;
@@ -148,6 +225,7 @@ footer{
     line-height: 2.7em;
     text-decoration: none;
 }
+
 .icons{
     display: flex;
     flex-direction: row;
