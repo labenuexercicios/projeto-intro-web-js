@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -33,17 +33,17 @@ header {
     font-family: "Poppins";
     text-decoration: none;
     color: black;
-    
+
 }
 
-.menu:hover{
+.menu:hover {
     padding: 20px;
     font-size: 20px;
     font-style: bold;
     font-family: "Poppins";
     text-decoration: none;
     color: orange;
-    
+
 }
 
 footer {
@@ -89,24 +89,24 @@ iframe {
 
 .whatsapp {
     position: fixed;
-    
+
     bottom: 20px;
     right: 20px;
     width: 60px;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-li{
+li {
     padding-top: 10px;
     font-family: "Open Sans";
     list-style: none;
 }
 
-th{
+th {
     font-family: "Poppins";
     font-size: 20px;
 }
@@ -115,173 +115,130 @@ th{
     padding-right: 10px;
 }
 
-main{
+
+main {
     height: 100vh;
-    width:205vh;
     background-color: black;
     display: flex;
     background-color: rgb(253, 192, 79);
     border-bottom: 1px solid black;
- 
-    
+
+
 }
 
-.navMain{
-    
-  
+.navMain {
+
+    padding-top: 5vh;
     background-color: white;
     height: 100;
     font-size: 12px;
-    background-color: black;
+    padding-right: 5vh;
     padding-left: 9vh;
-   
-    
-   
+    background-color: black;
+    width: 30vh;
 
-    
-    
-    
+
+
 }
 
-#menuMain{
+#menuMain {
     padding-top: 5vh;
     color: #707070;
     font-family: "Poppins";
     text-align: left;
+    width: 30vh;
     padding-bottom: 10px;
-    
- 
-  
-    
 }
 
-.NavMain2{
-width: 35vh;
-padding-top: 5vh;
-
-
-     
-}
-
-#menuMainTur{
+#menuMainFin{
     padding-top: 5vh;
     color: white;
     font-family: "Poppins";
     text-align: left;
+    width: 30vh;
     padding-bottom: 10px;
-    
 
 }
 
-#menuMain:hover{
+#menuMain:hover {
     padding-top: 5vh;
     color: white;
 }
 
-
-
-.h1Nav{
+.h1Nav {
     padding-bottom: 5vh;
     font-family: "Poppins";
-    }
-
-
-#menuMain:hover{
-    padding-top: 5vh;
-    color: white;
-}
-
-.sectionMain{
-    display: flex;
-    background-color: rgb(253, 192, 79);
-   
-    padding-top: 5vh;
-    width: 200vh;
-    padding-left: 10vh;
-    align-items: center;
-    flex-direction: column;
-    
-    
-   
-}
-
-.sectionTurmas{
-    
-    background-color: white;
-    padding: 2vh;
-    border-radius: 10px;
-    font-family: "Open Sans";
-    height: 27vh;
-    width: 26vh;
-    padding-top: 2vh;
 }
 
 
-.Buscar{
-    display: flex;
-    width: 100vh;
-    height: 10vh;
-     align-items: center;
-    padding-bottom: 7vh;
-    
-       
-}
 
-.containerBuscar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-
-   
-    
-
-}
-#buscaLabel {
-    background-color: black;
-    color: white;
-    height: 5.6vh;
-    width: 14vh;
-    font-size: 18px;
-    border-radius: 0 5px 5px 0;
-    font-family: "Poppins";
-    align-items: center;
-    
-}
 
 input{
-    height: 5.5vh;
-    width: 40vh;
-    border: 1px solid white;
-    border-radius: 5px 0 0 5px;
-    font-family: "Poppins";
-    padding-left: 2vh;
+    height: 3.5vh;
+    border: 0px solid white;
+    border-radius: 2px;
+    width: 21vw 
+ }
 
-}
-
-.h1Turmas{
-    text-align: center;
-    font-family: "Poppins";
-}
-
-.sectionTurmas p:nth-child(2){
+ label{
     padding-top: 2vh;
-}
+    font-family: "Poppins";
+    font-size: 15px;
+ }
 
-.sectionTurmas p{
-    padding-top: 5px;
-}
+ h1{font-family: "Poppins";}
 
-#buscasDeTurma{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap:2vh;
+ .botao{
+    color: white;
+    background-color: black;
+    font-family: "Poppins";
+    height: 5vh;
+    text-align: center;
+    border-radius: 6px;
     align-items: center;
-   padding-left: 4vh;
+    padding-top: 1vh;
+    font-size: 15px;
     
-  
+ }
+
+
+ .sectionContainer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+ }
+ .financeiroMat{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding-left: 12vw;
     
-  
+ }
+
+ .formMain {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12vw;
+    padding-top: 6vh;
+    grid-row: 1/2;
+    grid-column: 1/2;
+
 }
+
+ .formMain2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12vw;
+    padding-top: 6vh;
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+}
+
+.financeiroMat2{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding-left: 12vw;
+
+    
+ }

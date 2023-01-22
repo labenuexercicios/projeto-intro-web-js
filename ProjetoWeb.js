@@ -7,7 +7,7 @@ const turmas = [
         termino: "30/01/2023",
         numeroalunos: 150,
         periodo: "noturno",
-        concluida: false,
+        concluida: false
     },
 
     {
@@ -27,7 +27,7 @@ const turmas = [
         termino: "15/10/2022",
         numeroalunos: 180,
         periodo: "noturno",
-        concluida: true,
+        concluida: true
     },
 
     {
@@ -37,7 +37,7 @@ const turmas = [
         termino: "01/01/2023",
         numeroalunos: 80,
         periodo: "integral",
-        concluida: false,
+        concluida: false
     },
 
     {
@@ -239,17 +239,53 @@ const parcelarCurso = (parcela, carrinhoCursos) => {
 }
 parcelarCurso(1, carrinho)
 
-const buscarTurma = (nomeTurma) => {
-    const buscar = turmas.filter((elementos) => {
-        return elementos.turma === nomeTurma
-    })
+const gerarCard = (turmaEncontrada)=>{
 
-    return buscar.length > 0 ? buscar : "Não encontrado"
+    
+     
+    const card = turmaEncontrada.map((turmasBuscadas)=>{
+        return(`<section class="sectionTurmas">
+                <h1 class="h1Turmas">${turmasBuscadas.turma}</h1>
+                <p><b>Curso:</b>${turmasBuscadas.curso}</p>
+                <p><b>Início:</b>${turmasBuscadas.inicio}</p>
+                <p><b>Término:</b>${turmasBuscadas.termino}</p>
+                <p><b>Número de alunos:</b>${turmasBuscadas.numeroalunos}</p>
+                <p><b>Período:</b>${turmasBuscadas.periodo}</p>
+                <p><b>Concluído:</b>${turmasBuscadas.concluida}</p>
+
+
+         </section>`
+       
+     )}
+     
+    )
+   
+    const teste = document.getElementById("buscasDeTurma")
+
+   teste.innerHTML = card
+     
+   
 
 }
 
-console.log(buscarTurma("Burnell"))
 
+const buscarTurma = () => {
+
+     const inputTurma = document.getElementById("busca").value.toLowerCase() 
+     console.log(inputTurma)
+    
+     const buscar = turmas.filter((elementos) => {
+         return elementos.turma.toLowerCase() === inputTurma 
+        
+       
+    })
+
+/*    return buscar.length > 0 ? buscar : "Não encontrado" */
+
+    return buscar.length>0 ? gerarCard(buscar) : gerarCard(turmas)
+ 
+}
+buscarTurma()
 
 /* const buscarTurma = (nomeTurma) => {
     
@@ -321,7 +357,6 @@ const buscarEstudante = (nomeEstudante, cb) => {
 }
 //const nomeEstudante = prompt("Digite o nome do estudante")
 buscarEstudante("Ch", relatorioEstudante)
-
 
 
 

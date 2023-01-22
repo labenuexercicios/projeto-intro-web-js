@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../TelaAreaADM/TelaÁreaADM.css">
+    <script src="../ProjetoWeb.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="containerHeader">
@@ -14,9 +17,9 @@
             <nav>
                 <ul class="menu">
                     <b><a class="menu" href="../TelaHome/TelaHome.html">Home</a>
-                    <a class="menu" href="../TelaCursos/TelaCursos.html">Cursos</a>
-                    <a class="menu" href="../TelaContato/TelaContato.html">Contatos</a>
-                    <a class="menu" href="../TelaAreaADM/TelaÁreaADM.html">Area ADM</a></b>
+                        <a class="menu" href="../TelaCursos/TelaCursos.html">Cursos</a>
+                        <a class="menu" href="../TelaContato/TelaContato.html">Contatos</a>
+                        <a class="menu" href="../TelaAreaADM/TelaÁreaADM.html"><u>Area ADM</u></a></b>
                 </ul>
             </nav>
 
@@ -26,24 +29,35 @@
     <main>
 
         <nav class="navMain">
-           <h1 id="menuMain">Turmas</h1>
-           <h1 id="menuMain">Matriculas</h1>
-           <h1 id="menuMain">Financeiro Alunos</h1>
+            <div class="NavMain2">
+            <a href="./TelaÁreaADM.html" id="menuMainTur">
+                <h1 class="h1Nav">Turmas</h1>
+            </a>
+            <a href="./TelaMatriculas.html" id="menuMain">
+                <h1 class="h1Nav">Matriculas</h1>
+            </a>
+            <a href="./TelaFinanceiro.html" id="menuMain">
+                <h1 class="h1Nav">Financeiro Alunos
+            </a>
+        </div>
         </nav>
 
-       
+
         <section class="sectionMain">
-            
+
             <section class="Buscar">
-                <div class ="containerBuscar">
-             <input type="search" name="busca" id="busca">
-             <div id="buscaLabel"><b>Buscar</b>
-            </div> 
-            </div>
+                <div class="containerBuscar">
+                    <input type="search" name="busca" id="busca" placeholder="Digite o nome da turma">
+                    <button id="buscaLabel" id="botaoTurma" onclick="buscarTurma()"><b>Buscar</b>
+                    </button>
+                </div>
             </section>
 
+            <section id="buscasDeTurma">
+            </section>
+            <!-- 
             <section class="sectionTurmas" id="Hipatia">
-                <h1>Hipátia</h1>
+                <h1 class="h1Turmas">Hipátia</h1>
                 <p><b>Curso:</b>JavaScript</p>
                 <p><b>Início:</b>30/11/2022</p>
                 <p><b>Término:</b>30/01/2023</p>
@@ -54,7 +68,7 @@
            
 
             <section class="sectionTurmas" id="Sibyla">
-                <h1>Sibyla</h1>
+                <h1 class="h1Turmas">Sibyla</h1>
                 <p><b>Curso:</b>JavaScript</p>
                 <p><b>Início:</b>30/10/2022</p>
                 <p><b>Término:</b>30/12/2022</p>
@@ -65,7 +79,7 @@
             </section>
 
             <section class="sectionTurmas" id="Curie">
-                <h1>Curie</h1>
+                <h1 class="h1Turmas">Curie</h1>
                 <p><b>Curso:</b>HTML e CSS</p>
                 <p><b>Início:</b>18/09/2022</p>
                 <p><b>Término:</b>15/10/2022</p>
@@ -76,7 +90,7 @@
             </section>
 
             <section class="sectionTurmas" id="Zhenyi">
-                <h1>Zhenyi</h1>
+                <h1 class="h1Turmas">Zhenyi</h1>
                 <p><b>Curso:</b>HTML e CSS</p>
                 <p><b>Início:</b>01/11/2022</p>
                 <p><b>Término:</b>01/01/2022</p>
@@ -87,7 +101,7 @@
             </section>
 
             <section class="sectionTurmas" id="Clarke">
-                <h1>Clarke</h1>
+                <h1 class="h1Turmas">Clarke</h1>
                 <p><b>Curso:</b>HTML e CSS</p>
                 <p><b>Início:</b>04/07/2022</p>
                 <p><b>Término:</b>04/09/2022</p>
@@ -98,7 +112,7 @@
             </section>
 
             <section class="sectionTurmas" id="Blackwell">
-                <h1>Blackwell</h1>
+                <h1 class="h1Turmas">Blackwell</h1>
                 <p><b>Curso:</b>APIs Rest</p>
                 <p><b>Início:</b>20/03/2022</p>
                 <p><b>Término:</b>20/06/2022</p>
@@ -108,7 +122,7 @@
             </section>
 
             <section class="sectionTurmas" id="Elion">
-                <h1>Elion</h1>
+                <h1 class="h1Turmas">Elion</h1>
                 <p><b>Curso:</b>APIs Rest</p>
                 <p><b>Início:</b>12/01/2022</p>
                 <p><b>Término:</b>12/06/2022</p>
@@ -118,20 +132,20 @@
             </section>
 
             <section class="sectionTurmas" id="Burnell">
-                <h1>Burnell</h1>
+                <h1 class="h1Turmas">Burnell</h1>
                 <p><b>Curso:</b>APIs Rest</p>
                 <p><b>Início:</b>18/10/2022</p>
                 <p><b>Término:</b>18/04/2023</p>
                 <p><b>Número de alunos:</b>90</p>
                 <p><b>Período:</b>Integral</p>
                 <p><b>Concluído:</b>Não</p>
+ -->
 
-                
-            </section>
+        </section>
         </section>
     </main>
-   
-    
+
+
     <footer>
         <a href="../TelaHome/TelaHome.html"><img width="150" src="../ProjetoWEB MEDIA/Frame 2.png"></a>
         <br>
@@ -145,9 +159,10 @@
                 </tr>
 
                 <tr>
-                    <td><iframe width="350" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                            id="gmap_canvas"
-                            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Pais%20Leme,%20215%20Pinheiros+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                    <td><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.5633462113569!2d-46.69839767789106!3d-23.56795720853416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7cb26e215%3A0x14690a6aff3b136a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1674405727104!5m2!1spt-BR!2sbr"
+                            width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe><a
                             href='https://maps-generator.com/'></a>
                         <p>R. Pais Leme,215. CEP 05424-150-Pinheiros</p>
                     </td>
@@ -181,6 +196,7 @@
         </div>
     </footer>
     <a href="#"><img src="../ProjetoWEB MEDIA/logos_whatsapp-icon.png" class="whatsapp"></a>
-    
+
 </body>
+
 </html>

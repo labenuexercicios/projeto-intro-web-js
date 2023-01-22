@@ -117,7 +117,6 @@ th{
 
 main{
     height: 100vh;
-    width:205vh;
     background-color: black;
     display: flex;
     background-color: rgb(253, 192, 79);
@@ -128,16 +127,14 @@ main{
 
 .navMain{
     
-  
+    padding-top: 5vh ;
     background-color: white;
     height: 100;
     font-size: 12px;
-    background-color: black;
+    padding-right: 5vh;
     padding-left: 9vh;
-   
-    
-   
-
+    background-color: black;
+    width: 30vh;
     
     
     
@@ -148,34 +145,33 @@ main{
     color: #707070;
     font-family: "Poppins";
     text-align: left;
+    width: 30vh;
     padding-bottom: 10px;
     
- 
-  
-    
-}
-
-.NavMain2{
-width: 35vh;
-padding-top: 5vh;
-
-
      
 }
 
-#menuMainTur{
+#menuMainMat{
     padding-top: 5vh;
     color: white;
     font-family: "Poppins";
     text-align: left;
+    width: 30vh;
     padding-bottom: 10px;
     
-
 }
 
 #menuMain:hover{
     padding-top: 5vh;
     color: white;
+}
+
+.formMain{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20vh;
+    padding-top: 6vh;
+        
 }
 
 
@@ -191,97 +187,70 @@ padding-top: 5vh;
     color: white;
 }
 
-.sectionMain{
+
+.formMain{
     display: flex;
-    background-color: rgb(253, 192, 79);
-   
-    padding-top: 5vh;
-    width: 200vh;
-    padding-left: 10vh;
-    align-items: center;
     flex-direction: column;
     
-    
-   
-}
-
-.sectionTurmas{
-    
-    background-color: white;
-    padding: 2vh;
-    border-radius: 10px;
-    font-family: "Open Sans";
-    height: 27vh;
-    width: 26vh;
-    padding-top: 2vh;
+    padding-left: 12vw;
+    padding-top: 6vh;
+        
 }
 
 
-.Buscar{
-    display: flex;
-    width: 100vh;
-    height: 10vh;
-     align-items: center;
-    padding-bottom: 7vh;
-    
-       
-}
 
-.containerBuscar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-
-   
-    
-
-}
-#buscaLabel {
-    background-color: black;
-    color: white;
-    height: 5.6vh;
-    width: 14vh;
-    font-size: 18px;
-    border-radius: 0 5px 5px 0;
+.h1Nav{
+    padding-bottom: 5vh;
     font-family: "Poppins";
-    align-items: center;
-    
-}
+    }
 
 input{
-    height: 5.5vh;
-    width: 40vh;
-    border: 1px solid white;
-    border-radius: 5px 0 0 5px;
-    font-family: "Poppins";
-    padding-left: 2vh;
+    height: 3.5vh;
+    border: 0px solid white;
+    border-radius: 2px;
+    width: 21vw 
+ }
 
-}
-
-.h1Turmas{
-    text-align: center;
-    font-family: "Poppins";
-}
-
-.sectionTurmas p:nth-child(2){
+ label{
     padding-top: 2vh;
-}
+    font-family: "Poppins";
+    font-size: 15px;
+ }
 
-.sectionTurmas p{
-    padding-top: 5px;
-}
-
-#buscasDeTurma{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap:2vh;
+ .botao{
+    color: white;
+    background-color: black;
+    font-family: "Poppins";
+    height: 5vh;
+    text-align: center;
+    border-radius: 6px;
     align-items: center;
-   padding-left: 4vh;
+    padding-top: 1vh;
+    font-size: 15px;
     
-  
+ }
+
+ .sectionContainer{
+    display: flex;
     
-  
+ }
+
+.matriculado{
+    padding-left: 30vh;
+    padding-top: 7vh;
+    font-size: 18px;
+    
 }
+
+
+
+.imagemOk{
+    width: 4vh;
+    padding-left: 10px;
+
+   }
+
+h1{
+    padding-bottom: 5vh;
+    font-family: "Poppins";
+    }

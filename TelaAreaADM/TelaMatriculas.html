@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="TelaContato.css">
+    <link rel="stylesheet" href="./TelaMatriculas.css">
     <title>Document</title>
 </head>
-
 <body>
     <header>
         <div class="containerHeader">
@@ -17,8 +15,8 @@
                 <ul class="menu">
                     <b><a class="menu" href="../TelaHome/TelaHome.html">Home</a>
                     <a class="menu" href="../TelaCursos/TelaCursos.html">Cursos</a>
-                    <a class="menu" href="../TelaContato/TelaContato.html"><u>Contatos</u></a>
-                    <a class="menu" href="../TelaAreaADM/TelaÁreaADM.html">Area ADM</a></b>
+                    <a class="menu" href="../TelaContato/TelaContato.html">Contatos</a>
+                    <a class="menu" href="../TelaAreaADM/TelaÁreaADM.html"><u>Area ADM</u></a></b>
                 </ul>
             </nav>
 
@@ -26,31 +24,53 @@
     </header>
 
     <main>
-        <section class="containerMain">
-            <div class="textoMain"> 
-            <h1 id="faleConosco"><b>Fale conosco</b></h1>
-            <form classe="formulario" autocomplete="off">
-            <label for="nome"><b>Nome</b></label>
-            <br>
-            <input type="email" name="email" id="email">
-            <br>
-            <label for="email"><b>Email</b></label>
-            <br>
-            <input type="email" name="email" id="email">
-    
-            <br>
-            <label for="mensagem"><b>Mensagem</b></label>
-            <br>
-            <textarea rows="10" cols="35" id="mensagem" placeholder="Digite sua mensagem"></textarea>
-            <br>
-           <br>
-           <a href="#"><div class="botaoMain"><b>Enviar</b></div></a>
-            </div>  
+
+        <nav class="navMain">
+           <a href="./TelaÁreaADM.html" id="menuMain"><h1 class="h1Nav">Turmas</h1></a>
+           <a href="./TelaMatriculas.html" id="menuMainMat"><h1 class="h1Nav">Matriculas</h1></a>
+           <a href="./TelaFinanceiro.html" id="menuMain"><h1 class="h1Nav">Financeiro Alunos</a>
+        </nav>
+
+       
+        <section class="sectionContainer">
+            <form class="formMain">
+                <h1>Matrículas</h1>
+                <label for="nome"><b>Nome</b></label>
+                <input type="name" name="nome" id="nome">
+
+                <label for="curso"><b>Curso</b></label>
+                <input type="text" name="curso" id="curso">
+
+                <label for="turma"><b>Turma</b></label>
+                <input type="text" name="turma" id="turma">
+
+                <label for="parcelas"><b>Número de parcelas</b></label>
+                <input type="parcelas" name="parcelas" id="parcelas">
+                <br>
+                <br>
+                <a><div class="botao"><b>Matricular aluno</b></div></a>
+
             </form>
+
+
+            <aside class="matriculado">
+                <h1>Aluno matriculado<img class="imagemOk" src="../ProjetoWEB MEDIA/Vector (2).png"></img> </h1> 
+                <br>
+                <p>Aluno Matriculado</p>
+                <p>Nome: Calvin Klein</p>
+                <p>Curso: JavaScript</p>
+                <p>Turma: Clarke</p>
+
+               
+
+
+            </aside>
+ 
+            
         </section>
-
-
     </main>
+   
+    
     <footer>
         <a href="../TelaHome/TelaHome.html"><img width="150" src="../ProjetoWEB MEDIA/Frame 2.png"></a>
         <br>
@@ -98,6 +118,6 @@
         </div>
     </footer>
     <a href="#"><img src="../ProjetoWEB MEDIA/logos_whatsapp-icon.png" class="whatsapp"></a>
+    
 </body>
-
 </html>
