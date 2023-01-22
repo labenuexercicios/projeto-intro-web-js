@@ -11,7 +11,7 @@
   <body>
     <header>
       <a class="logo" href="./home.html"><img src="./midia/home/logo.png" /></a>
-
+      
       <nav class="nav">
         <li><a href="./home.html">Home</a></li>
         <li><a href="./cursos.html">Cursos</a></li>
@@ -19,115 +19,118 @@
         <li><a href="./areaADM.html">Área ADM</a></li>
       </nav>
     </header>
-    <main>
-        <nav>
-          <ul>
-            <li><a href="./areaADM.html">Turmas</a></li>
-            <li><a href="./matriculas.html">Matriculas</a></li>
-            <li><a href="./financeiroAlunos.html">Financeiro Alunos</a></li>
-          </ul>
-        </nav>
-        <section>
-          <input type="text" placeholder="Digite o numero da turma" required>
-          <button type="submit">Buscar </button>
-          <article class="bloco">
-            <h1>Hipátia</h1>
-            <p>Curso: Javascript
-              Início: 30/11/2022
-              
-              Término: 30/01/2023
-              
-              Número de alunos: 150
-              
-              Período: Noturno
-              Concluído: Não</p>
+    <main id="main">
+      <aside class="menu-esquerda">
+        
+        <ul>
+          <li><a href="./areaADM.html">Turmas</a></li>
+          <li><a href="./matriculas.html">Matriculas</a></li>
+          <li><a href="./financeiroAlunos.html">Financeiro Alunos</a></li>
+        </ul>
+      
+    </aside>
+      <section class="areaADM">
+        <div class="div">
+        <div class="nTurma">
+          <label for="text"></label>
+          <input id="input-busca-curso" type="text" placeholder="Digite o numero da turma" required />
+          <button type="submit" onclick="buscarTurma()">Buscar</button>
+        </div>
+        
+      
+        <div class="organizar">
+          <article>
+            <div class="figTurmas">
+              <h1></h1>
+              <p>
+                
+              </p>
+            </div>
           </article>
-    
+          
           <article class="bloco">
-            <h1>Sibyla</h1>
-            <p>Curso: JavaScript
-              Início: 30/10/2022
-              
-              Término: 30/12/2022
-              
-              Número de alunos: 200
-              Período: Integral
-              Concluído: Não </p>
+            <div class="figTurmas">
+              <h1>Sibyla</h1>
+              <p>
+                Curso: JavaScript Início: 30/10/2022 Término: 30/12/2022 Número
+                de alunos: 200 Período: Integral Concluído: Não
+              </p>
+            </div>
           </article>
-    
+          
           <article class="bloco">
-            <h1>Curie</h1>
-            <p>Curso: HTML e CSS
-              Início: 15/09/2022
-              
-              Término: 15/10/2022
-              
-              Número de alunos: 180
-              Período: Noturno
-              Concluído: Não</p>
+            <div class="figTurmas">
+              <h1>Curie</h1>
+              <p>
+                Curso: HTML e CSS Início: 15/09/2022 Término: 15/10/2022 Número
+                de alunos: 180 Período: Noturno Concluído: Não
+              </p>
+            </div>
           </article>
-    
+          
           <article class="bloco">
-            <h1>Zhenyi</h1>
-            <p>Curso: HTML e CSS
-              Início: 01/11/2022
-              
-              Término: 01/01/2022
-              
-              Número de alunos: 80
-              Período: Integral
-              Concluído: Não</p>
+            <div class="figTurmas">
+              <h1>Zhenyi</h1>
+              <p>
+                Curso: HTML e CSS Início: 01/11/2022 Término: 01/01/2022 Número
+                de alunos: 80 Período: Integral Concluído: Não
+              </p>
+            </div>
           </article>
           <article class="bloco">
-            <h1>Clarke</h1>
-            <p>Curso: HTML e CSS
+            <div class="figTurmas">
+              <h1>Clarke</h1>
+              <p>
+                Curso: HTML e CSS Início: 04/07/2022 Término: 04/09/2022 Número
+                de alunos: 200 Período: Noturno Concluído: Sim
+              </p>
+            </div>
+          </article>
+          
+          <article class="bloco">
+            <div class="figTurmas">
+              <h1>Blackwell</h1>
+              <p>
+                Curso: APIs Rest Início: 20/03/2022 Término: 20/06/2022 Número
+                de alunos: 100 Período: Integral Concluído: Sim
+              </p>
+            </div>
+          </article>
+          
+          <article class="bloco">
+            <div class="figTurmas">
+              <h1>Elion</h1>
+              <p>
+                Curso: APIs Rest Início: 12/01/2022 Término: 12/06/2022 Número
+                de alunos: 200 Período: Noturno Concluído: Sim
+              </p>
+            </div>
+          </article>
+          
+          <article class="bloco">
+            <div class="figTurmas">
+              <h1>Burnell</h1>
+              <p>
+                Curso: APIs Rest Início: 18/10/2022 Término: 18/04/2023 Número
+                de alunos: 90 Período: Integral Concluído: Não
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
 
-              Início: 04/07/2022
-              
-              Término: 04/09/2022
-              
-              Número de alunos: 200
-              Período: Noturno
-              Concluído: Sim</p>
-          </article>
-    
-          <article class="bloco">
-            <h1>Blackwell</h1>
-            <p>Curso: APIs Rest
-              Início: 20/03/2022
-              Término: 20/06/2022
-              Número de alunos: 100
-              Período: Integral
-              Concluído: Sim</p>
-          </article>
-    
-          <article class="bloco">
-            <h1>Elion</h1>
-            <p>Curso: APIs Rest
-              Início: 12/01/2022
-              Término: 12/06/2022
-              Número de alunos: 200
-              Período: Noturno
-              Concluído: Sim</p>
-          </article>
-    
-          <article class="bloco">
-            <h1>Burnell</h1>
-            <p>Curso: APIs Rest
-              Início: 18/10/2022
-              Término: 18/04/2023
-              Número de alunos: 90
-              Período: Integral
-              Concluído: Não</p>
-          </article>
-        </section>
-        <aside class="whatsapp"><a href="./contato.html"><img src="./midia/home/logos_whatsapp-icon.png" alt=""></a></aside>
+      </section>
+      <aside class="whatsapp">
+        <a href="./contato.html"
+        ><img src="./midia/home/logos_whatsapp-icon.png" alt=""
+        /></a>
+      </aside>
     </main>
     <footer>
       <a href="./home.html"
-        ><img class="logoFooter" src="./midia/home/logo.png"
+      ><img class="logoFooter" src="./midia/home/logo.png"
       /></a>
-
+      
       <div class="endereco">
         <div class="links">
           <ol>
@@ -144,7 +147,7 @@
             </ul>
           </ol>
         </div>
-
+        
         <div class="links">
           <ol>
             <h2 class="h2Footer">Links</h2>
@@ -164,15 +167,23 @@
           <h2 class="h2Footer"><b>Redes Sociais</b></h2>
           <ol>
             <ul class="redes">
+              <li>
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (1).png" alt=""
+                /></a>
 
-              <li><a class="aFooter" href=""><img src="./midia/home/Vector (1).png" alt="" /></a>
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (2).png" alt=""
+                /></a>
 
-              <a class="aFooter" href=""><img src="./midia/home/Vector (2).png" alt="" /></a>
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (3).png" alt=""
+                /></a>
 
-              <a class="aFooter" href=""><img src="./midia/home/Vector (3).png" alt="" /></a>
-
-              <a class="aFooter" href=""><img src="./midia/home/Vector (4).png" alt="" /></a></li>
-
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (4).png" alt=""
+                /></a>
+              </li>
             </ul>
           </ol>
         </div>
@@ -188,5 +199,5 @@
         </div>
       </div>
     </footer>
-</body>
+  </body>
 </html>

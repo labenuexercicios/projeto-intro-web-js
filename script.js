@@ -248,36 +248,46 @@ const parcelarCurso = (carrinhoCurso, nParcelas) => {
     );
   } else {
     console.log(
-      `O valor do pagamento é de R$ ${valorTotal}, parcelado em ${nParcelas} de R$ ${
-        (valorTotal / nParcelas).toFixed(2)
-      }`
+      `O valor do pagamento é de R$ ${valorTotal}, parcelado em ${nParcelas} de R$ ${(
+        valorTotal / nParcelas
+      ).toFixed(2)}`
     );
   }
 };
 
 function buscarCurso(nomeCurso) {
-  const resultado = curso.find((i) => i.curso.toLowerCase() === nomeCurso.toLowerCase());
+  const resultado = curso.find(
+    (i) => i.curso.toLowerCase() === nomeCurso.toLowerCase()
+  );
 
   return resultado ? resultado : "Turma não encontrada";
-  }
+}
 
-console.log(buscarCurso("JavaScript"))
+/* console.log(buscarCurso("JavaScript")) */
 
-const buscarTurma = (buscTurma) => {
-  const turmasResultado = turma.filter((i) => i.turma.toLowerCase() === buscTurma.toLowerCase());
+const buscarTurma = () => {
+  const inputTurma = document
+    .getElementById("input-busca-curso")
+    .value.toLowerCase();
+
+  const turmasResultado = turma.filter(
+    (i) => i.turma.toLowerCase().includes(inputTurma.toLowerCase()) 
+  );
+  console.log(turmasResultado);
   return turmasResultado.length > 0 ? turmasResultado : "turma não encontrada";
-  };
-console.log(buscarTurma("hipátia"));
+
+};
 
 
 
 const buscarEstudante = (buscaEstudante) => {
-  const resultado = estudante.find((i) => i.estudante.toLowerCase() === buscaEstudante.toLowerCase());
+  const resultado = estudante.find(
+    (i) => i.estudante.toLowerCase() === buscaEstudante.toLowerCase()
+  );
 
   return resultado ? resultado : "estudante não encontrada";
-  
 };
-console.log(buscarEstudante("ruan"))
+/* console.log(buscarEstudante("ruan")) */
 
 const matricular = (novoEstudante, novoCurso, novoTurma, nParcelas) => {
   const valorCurso = buscarCurso(novoCurso);
@@ -308,16 +318,18 @@ const adicionarCarrinho = (buscarCurso) => {
 };
 
 const relatorioEstudante = (buscaEstudante) => {
-  const resultado = estudante.find((i) => i.estudante.toLowerCase() === buscaEstudante.toLowerCase());
+  const resultado = estudante.find(
+    (i) => i.estudante.toLowerCase() === buscaEstudante.toLowerCase()
+  );
 
   return resultado ? resultado : "estudante não encontrada";
 };
-console.log(relatorioEstudante("Ruan"))
+/* console.log(relatorioEstudante("Ruan"))
 console.log(buscarEstudante("Ruan"));
 
 adicionarCarrinho(buscarCurso("JavaScript"));
 adicionarCarrinho(buscarCurso("HTML e CSS"));
-adicionarCarrinho(buscarCurso("APIs REST"));
+adicionarCarrinho(buscarCurso("APIs REST")); */
 
 parcelarCurso(carrinhoCursos, 3);
 
