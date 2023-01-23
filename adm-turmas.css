@@ -38,26 +38,25 @@ header{
 }
 
 main{
-    height: 88vh;
+    height: auto;
     background-color: #F6C34A;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
     border-bottom: .1em solid #0E0E0E;
-
 }
 
-aside{
+#menu-adm{
     background-color: #0E0E0E;
     width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0 0 1em;
 }
 
-#aside-list{
-    padding: 2.5em 1em 0 5em;
-}
-
-.aside-links{
+.aside-links, .aside-links > a{
     color: #707070;
     text-decoration: none;
     text-align: left;
@@ -69,7 +68,7 @@ aside{
     line-height: 5em;
 }
 
-#selected-aside{
+#selected-aside > a{
     color: #FFFFFF;
 }
 

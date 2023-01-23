@@ -38,24 +38,25 @@ header{
 }
 
 main{
-    height: 88vh;
+    height: 86vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: .1em solid #0E0E0E;
+    background-color: #F6C34A;
 }
 
 #menu-adm{
     background-color: #0E0E0E;
     order: 1;
     width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0 0 1em;
 }
 
-#aside-list{
-    padding: 2.5em 1em 0 5em;
-}
-
-.aside-links{
+.aside-links, .aside-links > a{
     color: #707070;
     text-decoration: none;
     text-align: left;
@@ -67,19 +68,17 @@ main{
     line-height: 5em;
 }
 
-#selected-aside{
+#selected-aside > a{
     color: #FFFFFF;
 }
 
 #confirm-report{
-    background-color: #F6C34A;
     order: 3;
     flex-grow: 2;
     padding: 2.5em 0 2.5em 0em;
 }
 
 section{
-    background-color: #F6C34A;
     order: 2;
     flex-grow: 1.8;
     padding: 2.5em 0 2.5em 10em;

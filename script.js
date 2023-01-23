@@ -133,42 +133,53 @@ const estudantes = [
 }
 ]
 
+const buscarCurso=()=>{
+    event.preventDefault()
+    
+    const inputCurso = document.getElementById('course').value
 
-const buscarCurso2=(nomeCurso)=>{
- 
-    const index = cursos.findIndex(element=> element.curso.toLowerCase().indexOf(nomeCurso.toLowerCase())>-1)
-        
-    typeof index == 'number'?
-    console.log(cursos[index]) : console.log('Curso não encontrado')
-    return cursos[index]
-
+    const index = cursos.findIndex(element=> element.curso.toLowerCase().indexOf(inputCurso.toLowerCase())>-1)
+    console.log(cursos[index])
+    return index > -1? cursos[index] : 'Curso não encontrado'
 }
 
 
+//buscarCurso('pi')
 //buscarCurso('Java')
 //buscarCurso('xxxxx')
 
 
+//tem que linkar o input de cursos em acrescentaCursos, na verdade. Eu acho.....
 
+const carrinhoCursos = []
 const acrescentaCurso=(nomeCurso, callback)=>{
-    const carrinhoCursos = []
+    //essa função pega o valor do curso. Ela é usada na função parcelarCurso. Linkar ela no Adicionar outro curso lá do html
+    
     const arrCursosSelecionados = [callback(nomeCurso)]
-    for(let index in arrCursosSelecionados){
-        carrinhoCursos.push(arrCursosSelecionados[index].valor)
-    }
-    console.log(carrinhoCursos)
-    return carrinhoCursos
+    
+    if(typeof callback(nomeCurso) == 'object'){
+        for(let index in arrCursosSelecionados){
+            carrinhoCursos.push(arrCursosSelecionados[index].valor)
+        }
+        
+        return carrinhoCursos 
+    } 
+
+    return 'Curso não encontrado'
 }
 
-
-//acrescentaCurso('javascript', buscarCurso2)
-
+//acrescentaCurso('javascript', buscarCurso)
+//acrescentaCurso('APIsRest', buscarCurso)
+//acrescentaCurso('javascript', buscarCurso)
+//acrescentaCurso('xxxx', buscarCurso)
  
 const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
     let valorTotal = 0 
     let valorDesconto = 0
     let valorComDesconto = 0
     let valorParcelasComDesconto = 0
+    
+    
     
     if(nParcelas === 1 || nParcelas === 2){
         switch (carrinhoCursos.length){
@@ -241,26 +252,34 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
 
             default:
                 console.log('Confira os cursos solicitados.');
-                break   
+                break 
         }
     }
 } 
 
-/* 
-const arrCursos = [900, 200]
-parcelarCurso("JavaScript, APIsRest", arrCursos, 2)  
+ 
+//const arrCursos = [900, 200]
+//parcelarCurso("JavaScript, APIsRest", arrCursos, 2) 
+//parcelarCurso("JavaScript, APIsRest", carrinhoCursos, 2)
+//const arrCursos2 = [500, 900, 200]
+//parcelarCurso("HTML e CSS, JavaScript, APIsRest", arrCursos2, 1)
+ 
 
-const arrCursos2 = [500, 900, 200]
-parcelarCurso("HTML e CSS, JavaScript, APIsRest", arrCursos2, 1)
-*/
 
+const buscarTurma = ()=>{
+    event.preventDefault()
 
-const buscarTurma = (nomeTurma)=>{
-    const retornaTurma =  turmas.filter((element)=> element.turma.toLowerCase() === nomeTurma.toLowerCase())
+    const inputTurma = document.getElementById('input-search-class').value.toLowerCase()
+    
+    const retornaTurma =  turmas.filter((element)=> element.turma.toLowerCase() === inputTurma.toLowerCase())
 
-    retornaTurma.length > 0?
-    console.log(retornaTurma):console.log('Turma não encontrada!')
+    return retornaTurma.length > 0? retornaTurma : 'Turma não encontrada!'
 }
+
+const gerarCard = () =>{
+    /* pesquisar sobre a como fazer essa função */
+}
+
 
 /*
 //Teste da função
@@ -269,6 +288,7 @@ buscarTurma('currrie')
 buscarTurma('Hipátia') 
 buscarTurma('HIPÁTIA') 
 */
+
 
 
 
@@ -285,8 +305,8 @@ const buscarEstudante=(nomeEstudante)=>{
 
 /* 
 //Teste para chamar função
-buscarEstudante('ha')
-*/
+buscarEstudante('ha') */
+
 
 /* 
 //Teste da função

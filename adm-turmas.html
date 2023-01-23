@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Área ADM</title>
     <link rel="stylesheet" href="./adm-turmas.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <a href="./home.html">
+      <a href="./index.html">
         <img src="./midias/logo.svg" alt="LabEscola logo" id="logo" />
       </a>
       <nav>
         <ul>
-          <li class="links-header"><a href="./home.html">Home</a></li>
+          <li class="links-header"><a href="./index.html">Home</a></li>
           <li class="links-header"><a href="./cursos.html">Cursos</a></li>
           <li class="links-header"><a href="./contato.html">Contato</a></li>
           <li class="links-header"><a href="./adm-turmas.html">Área ADM</a></li>
@@ -28,21 +28,17 @@
       <aside id="menu-adm">
         <nav>
           <ul id="aside-list">
-            <li><a href="./adm-turmas.html" class="aside-links" id="selected-aside">Turmas</a></li>
-            <li><a href="./adm-matriculas.html" class="aside-links">Matrículas</a></li>
-            <li><a href="./adm-financeiro.html" class="aside-links">Financeiro Alunos</a></li>
-          </ul>
+            <li  class="aside-links"  id="selected-aside"><a href="./adm-turmas.html">Turmas</a></li>
+            <li class="aside-links"><a href="./adm-matriculas.html">Matrículas</a></li>
+            <li class="aside-links"><a href="./adm-financeiro.html">Financeiro Alunos</a></li>
+        </ul>
         </nav>
       </aside>
 
       <section>
         <form id="search-bar" action="">
-          <input
-            type="text"
-            placeholder="Digite o número da turma"
-            name="search"
-          />
-          <button type="submit">Buscar</button>
+          <input id="input-search-class" type="text" placeholder="Digite o nome da turma" name="search"/>
+          <button type="submit" onclick="buscarTurma(event)">Buscar</button>
         </form>
 
         <div class="classes">
@@ -129,7 +125,7 @@
 
     <footer>
       <div class="logo-footer">
-        <a href="./home.html">
+        <a href="./index.html">
           <img
             src="./midias/logo-footer.svg"
             alt="LabEscola logo"
@@ -151,7 +147,7 @@
       <div>
         <h3 class="titles">Links</h3>
         <div id="list-links-footer">
-          <a class="text-footer" href="./home.html">Home</a>
+          <a class="text-footer" href="./index.html">Home</a>
           <a href="./cursos.html" class="text-footer">Cursos</a>
           <a href="#" class="text-footer">Blog</a>
           <a href="./contato.html" class="text-footer">Fale Conosco</a>

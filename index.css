@@ -42,9 +42,10 @@ main{
     height: auto; 
     display: flex;
     flex-direction: column;
+    background-color: #0E0E0E;
 }
 
-main section:nth-child(1){
+#first-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,13 +59,14 @@ main section:nth-child(1){
     text-align: center; 
 }
 
-h1.primeiro-bloco{
+h1.first-section-text{
     font-weight: 700;
     font-size: 2.7em;
     line-height: 2em;
+    margin-top: 2em;
 }
 
-p.primeiro-bloco{
+p.first-section-text{
     font-weight: 400;
     font-size: 1.9em;
     line-height: 2em;
@@ -75,7 +77,7 @@ button{
     background-color: #0E0E0E;
     width: 18em;
     height: 4em;
-    margin-top: 2.5em;
+    margin: 2.5em 0 3em 0;
     border-radius: .5rem;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -96,26 +98,26 @@ button:active > a{
     color: #0E0E0E;
 }
 
-main section:nth-child(2){
+#about-us{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #0E0E0E;
-    color: white;
-    height: 52vh;
-    margin-bottom: -2em;
+    height: auto;
+    padding: 2em 0 2em 0;
 }
 
 h2{
+    color: #FBFBFB;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2em;
     line-height: 1.5em;
+    padding: 1em 0 .5em 0;
 }
 
-main section:nth-child(2) > p{
+#about-us > p{
     color: #FBFBFB;
     text-align: justify;
     padding: 1.5em 10em;
@@ -126,27 +128,24 @@ main section:nth-child(2) > p{
     line-height: 2em;
 }
 
-main section:nth-child(3){
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2em;
-    justify-items: center;
-    align-items: start;
-    background-color: #0E0E0E;
-    color: white;
-    height: 85vh;
-    padding: 0 7em;
+
+#opnions-block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5em;
+    justify-content: space-evenly;
+    height: auto;
+    padding: 0 4em 4em 4em;    
 }
 
-main section:nth-child(3)>h2{
-    grid-column: 1/5;
-    grid-row: 1/2;
-    justify-self: center;
-    margin-top: .5em;
+#opnions-block>h2{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.5em;
 }
 
-.depoimentos{
+.opnions-text{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -155,9 +154,9 @@ main section:nth-child(3)>h2{
     padding: 2em .4em;
 }
      
-#depoimento1{
-    width: 98%;
-    height: 98%;
+#op1, #op2, #op3, #op4{
+    width: 20em;
+    height: 25em;
     background-color: #FBFBFB;
     border-radius: 2%;
     padding: 1.3em 1em 0 1em;
@@ -169,51 +168,6 @@ main section:nth-child(3)>h2{
     gap: 1em 0;
     text-align: left;
 }
-
-#depoimento2{
-    width: 98%;
-    height: 98%;
-    background-color: #FBFBFB;
-    border-radius: 2%;
-    padding: 1.3em 1em 0 1em;
-    color: #0E0E0E;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    gap: 1em 0;
-    text-align: left;
-}
-
-#depoimento3{
-    width: 98%;
-    height: 98%;
-    background-color: #FBFBFB;
-    border-radius: 2%;
-    padding: 1.3em 1em 0 1em;
-    color: #0E0E0E;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    gap: 1em 0;
-    text-align: left;
-}
-
-#depoimento4{
-    width: 98%;
-    height: 98%;
-    background-color: #FBFBFB;
-    border-radius: 2%;
-    padding: 1.3em 1em 0 1em;
-    color: #0E0E0E;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    gap: 1em 0;
-    text-align: left;
-} 
 
 .whatsapp{
     position: fixed;

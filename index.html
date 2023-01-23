@@ -7,7 +7,7 @@
     <title>Home</title>
     <script src="./script.js"></script>
     <!-- esse aqui é o link Google Fonts da fonte que está no Figma -->
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <a href="./home.html">
+      <a href="./index.html">
         <figure><img src="./midias/logo.svg" alt="LabEscola logo" id="logo" />
         </figure>
       </a>
@@ -24,7 +24,7 @@
       <nav>
         <ul>
           <li class="links-header">
-            <a href="./home.html" style="text-decoration: none">Home</a>
+            <a href="./index.html" style="text-decoration: none">Home</a>
           </li>
           <li class="links-header">
             <a href="./cursos.html" style="text-decoration: none">Cursos</a>
@@ -40,9 +40,9 @@
     </header>
 
     <main>
-      <section>
-        <h1 class="primeiro-bloco">Descubra o novo ensino!</h1>
-        <p class="primeiro-bloco">
+      <section id="first-section">
+        <h1 class="first-section-text">Descubra o novo ensino!</h1>
+        <p class="first-section-text">
           Aprenda de verdade, no seu tempo, no seu ritmo!
         </p>
         <button type="button">
@@ -52,8 +52,8 @@
         </button>
       </section>
 
-      <section>
-        <h2 id="sobre-nos">Sobre Nós</h2>
+      <section id="about-us">
+        <h2>Sobre Nós</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque est
           laboriosam eligendi aliquam perspiciatis aspernatur facere praesentium
@@ -65,11 +65,11 @@
         </p>
       </section>
 
-      <section>
+      <section id="opnions-block">
         <h2>Depoimentos</h2>
-        <span id="depoimento1">
+        <span id="op1">
           <figure><img src="./midias/Ellipse 1.svg" alt="photo-1" id="profile-1"></figure>
-          <p class="depoimentos">
+          <p class="opnions-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
             facilis dolores id voluptatibus velit tenetur dolorum quaerat odio
             nobis deleniti blanditiis doloribus mollitia aliquam! Aut,
@@ -77,23 +77,23 @@
           </p>
         </span>
 
-        <span id="depoimento2">
+        <span id="op2">
           <figure><img src="./midias/Ellipse 2.svg" alt="photo-2" id="profile-2"></figure>
-          <p class="depoimentos">
+          <p class="opnions-text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia esse voluptates, fuga quasi vitae error tenetur nihil consequatur necessitatibus minus quod maxime repellendus, incidunt corporis iure ducimus culpa beatae unde.
           </p>
         </span>
 
-        <span id="depoimento3">
+        <span id="op3">
           <figure><img src="./midias/Ellipse 3.svg" alt="photo-3" id="profile-3"></figure>
-          <p class="depoimentos">
+          <p class="opnions-text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam eos, omnis soluta, quaerat voluptates accusamus facilis voluptatum deserunt, perspiciatis tenetur dolores? Facere ad voluptatibus similique officiis voluptate doloremque.
           </p>
           
         </span>
-        <span id="depoimento4">
+        <span id="op4">
           <figure><img src="./midias/Ellipse 4.svg" alt="photo-4" id="profile-4"></figure>
-          <p class="depoimentos">
+          <p class="opnions-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae, ratione eius sequi perferendis tempore magni eum alias abeligendi molestias minima, odit ipsa nesciunt eveniet totam enim? Nesciunt, delectus.
           </p>
         </span>
@@ -108,7 +108,7 @@
 
     <footer>
       <div class="logo-footer">
-        <a href="./home.html">
+        <a href="./index.html">
           <img
             src="./midias/logo-footer.svg"
             alt="LabEscola logo"
@@ -130,7 +130,7 @@
       <div>
         <h3 class="titles">Links</h3>
         <div id="list-links-footer">
-          <a class="text-footer" href="./home.html">Home</a>
+          <a class="text-footer" href="./index.html">Home</a>
           <a href="./cursos.html" class="text-footer">Cursos</a>
           <a href="#" class="text-footer">Blog</a>
           <a href="./contato.html" class="text-footer">Fale Conosco</a>

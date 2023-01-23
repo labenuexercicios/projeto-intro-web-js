@@ -153,14 +153,25 @@ main section:nth-child(1){
     text-align: left;
 }
 
-button{
+#button{
     grid-row: 2/span 1;
     grid-column: 1/span 3;
     justify-self: center; 
     background-color: #0E0E0E;
+    text-decoration: none;
     width: 19em;
     height: 4em;
     border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#button > button{
+    color: #FBFBFB;
+    background-color: #0E0E0E;
+    border-color: #0E0E0E;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -168,17 +179,12 @@ button{
     line-height: 1em;
 }
 
-button > a{
-    text-decoration: none;
-    color: #FBFBFB;
-}
-button:active{
+#button:active, #button:active>button {
     background-color: #FBFBFB;
-}
-
-button:active > a{
+    border-color: #FBFBFB;
     color: #0E0E0E;
 }
+
 
 main section:nth-child(2){
     background-color: #0E0E0E;
