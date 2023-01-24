@@ -7,6 +7,8 @@
 
 //------------------------//
 
+
+//CONFERIR ESSES DAD0S DE DATAS E CONCLUSÃO COM AS ENTRADAS DO HTML
 const turmas = [
 {
     turma: "Hipátia",
@@ -333,16 +335,51 @@ const relatorioEstudante=(nomeEstudante, callback)=>{
 //relatorioEstudante('halle berry', buscarEstudante)
 
 
-const matricular=(nomeAluno, turmaAluno, cursoAluno)=>{
-    const novoAluno = {
-        estudante: nomeAluno,
-        turma: turmaAluno,
-        curso: cursoAluno
-    }
-    estudantes.push(novoAluno)
-    console.log(`Aluno Matriculado\nNome: ${nomeAluno}\nCurso: ${cursoAluno}\nTurma: ${turmaAluno}`)
+const matricular=()=>{
+    event.preventDefault()
+   
+    const nomeInput = document.getElementById('name').value
+    const cursoInput = document.getElementById('course').value.toLowerCase()
+    const turmaInput = document.getElementById('classes').value.toLowerCase()
+    const parcelasInput = document.getElementById('payment').value
+
+    const confereTurma = turmas.filter((element)=> element.turma.toLowerCase() === turmaInput)
+
+    if(nomeInput === ""){ 
+        console.log('Dados inválidos, matrícula não efetuada.')
+    }else if(nomeInput===" "){
+        console.log('Dados inválidos, matrícula não efetuada.')
+    }else{
+        if(confereTurma.length>0){
+            if(confereTurma[0].curso.toLowerCase() === cursoInput){
+                if(confereTurma[0].concluida === false){
+                
+                    const novoAluno = {
+                        estudante: nomeInput,
+                        turma: turmaInput,
+                        curso: cursoInput,
+                        nParcelas: parcelasInput
+                     }
+                
+                    console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`)
+                    
+                    return estudantes.push(novoAluno)
+                }else{
+                console.log('Dados inválidos, matrícula não efetuada.')
+                }
+            }else{
+                console.log('Dados inválidos, matrícula não efetuada.')
+            }
+        }
+    }       
 }
 
+//quando atualiza a página, os dados somem de dentro do array de estudantes, é isso mesmo?
+
+
+
+/* console.log(estudantes)
+console.log(estudantes) */
 /* 
 //Teste da chamada da função
 matricular('Júlia Borges', 'Hipátia', 'JavaScript')
