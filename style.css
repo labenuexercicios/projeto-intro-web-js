@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+#a {
+  color: #fbfbfb;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+mouse over link a:hover {
+  color: #ddd;
+}
+
+a:active {
+  color: blue;
+}
+h2 {
+  font-family: "Poppins";
+}
+p {
+  font-family: Open Sans;
+}
+
+header {
+  display: flex;
+  height: 6em;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+header a img {
+  display: grid;
+  justify-content: center;
+}
+nav li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 7em;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+.nav li {
+  display: grid;
+  font-size: 1.2em;
+  font-family: "Poppins";
+  font-weight: bold;
+  display: inline;
+  padding-right: 5em;
+  display: inline;
+  order: -1;
+}
+
+.whatsapp {
+  height: 4em;
+  width: 6em;
+  position: fixed;
+  bottom: 3em;
+  right: 3em;
+  border-radius: 100em;
+}
+.sectionUm {
+  background-image: url(./midia/home/background-hero.png);
+  background-color: #f6c34a;
+  background-size: 100%;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  height: 35rem;
+  justify-content: center;
+  font-family: "Poppins";
+}
+
+.descubra {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  display: grid;
+  grid-row: 1/1;
+  grid-column: 3/3;
+  align-items: flex-end;
+  justify-content: center;
+}
+.descubra {
+  align-items: center;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-size: 1.7rem;
+}
+.descubraP {
+  margin-bottom: 5em;
+  grid-column: 2/3;
+  grid-row: 3/3;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+#buttonHome {
+  font-weight: bolder;
+  display: grid;
+  grid-row: 4/5;
+  grid-column: 2/3;
+  align-items: center;
+  justify-content: center;
+}
+#buttonHome button {
+  font-size: 0.9rem;
+  background-color: #0e0e0e;
+  color: #fbfbfb;
+  height: 3.5em;
+  width: 20rem;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+}
+
+.sectionDois {
+  background-color: #0e0e0e;
+  color: #fbfbfb;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.sobre {
+  display: grid;
+  grid-column: 2/3;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  margin-bottom: 2rem;
+  font-size: 1.5em;
+}
+.sobreNos {
+  display: grid;
+
+  width: 100%;
+
+  grid-column: 2/2;
+  grid-row: 2/3;
+}
+.sectionTres {
+  background-color: #0e0e0e;
+  color: #fbfbfb;
+  height: 40em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-flex h2 {
+  margin: -15rem 0 2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.depoCenter {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  font-size: 2.5rem;
+}
+.divDepo {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 0rem;
+}
+figure {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#imgDepo {
+  height: 7rem;
+  width: 7rem;
+  margin-bottom: 1rem;
+}
+
+.pDepo {
+  font-size: 0.88rem;
+}
+.card {
+  background-color: #fbfbfb;
+  color: black;
+  width: 17rem;
+  height: 20rem;
+  border-radius: 6%;
+  font-size: 100%;
+  display: grid;
+  padding: 2rem;
+  margin-bottom: 5rem;
+}
+
+footer {
+  padding: 3em;
+  background-color: #f6c34a;
+  display: flex;
+  flex-wrap: wrap;
+}
+.logoFooter {
+  display: flex;
+  margin: -1rem 0 4rem 18rem;
+}
+
+.endereco {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 18em;
+}
+
+.links {
+  margin: 0 7em 0 0;
+}
+li {
+  margin: 0.6em 0 0 0;
+}
+.h2Footer {
+  margin-bottom: 2em;
+}
+.aFooter {
+  margin-right: 0.7em;
+}
+
+.cursoUm {
+  padding: 5em;
+  background-color: #f6c34a;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tabPrin {
+  display: flex;
+  flex-wrap: wrap;
+  height: 20em;
+  width: 20em;
+  margin-left: 12em;
+  background-color: #ffffff;
+  border-radius: 6%;
+  text-align: left;
+}
+.h2Cursos {
+  margin: 1.5em 2em 1em 3.5em;
+  font-weight: bold;
+  display: inline-block;
+}
+.cursoDois {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5em;
+  background-color: #0e0e0e;
+  color: #fbfbfb;
+  flex-direction: column;
+}
+.cursosC {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #fbfbfb;
+  color: #0e0e0e;
+  margin: 2rem;
+  border-radius: 8px;
+  width: 50rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.h2-Cursos {
+  margin-left: 2rem;
+}
+
+.pCursos {
+  padding: 1em 2em;
+  font-size: 0.9em;
+  text-align: start;
+}
+#botaoCursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0e0e;
+  color: white;
+  width: 25em;
+  border-radius: 0.5rem;
+  margin: 4em 0 0 41em;
+  font-size: 100%;
+  height: 3.5em;
+}
+#botaoCursos a {
+  color: #fbfbfb;
+}
+
+.form {
+  padding: 1rem -1;
+  height: 30em;
+  width: 27em;
+  border-radius: 0.5em;
+  background-color: #fbfbfb;
+  color: #0e0e0e;
+  font-weight: bolder;
+  font-family: "Poppins";
+  font-size: 16.91px;
+}
+form div {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 3em;
+}
+
+input,
+textarea {
+  outline: unset;
+  border: 1px solid gray;
+  width: 26em;
+  height: 2.5em;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+textarea {
+  height: 10rem;
+  resize: none;
+  margin-bottom: 1rem;
+}
+
+.submit {
+  background-color: #f6c34a;
+}
+
+.areaADM {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6c34a;
+  border-bottom: 1px solid black;
+ 
+}
+.nTurma {
+  margin: 4% 0 2% 40%;
+}
+.figTurmas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfb;
+  color: black;
+  width: 13rem;
+  height: 10rem;
+  border-radius: 6%;
+  padding: 2rem;
+}
+.organizar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem 7rem 3rem 16rem;
+  gap: 5rem;
+ }
+
+
+
+
+#main{
+  display: flex;
+  background-color: #f6c34a;
+  border-bottom: 1px solid black;
+  
+}
+
+.matriculas{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  font-family: "Poppins";
+  
+  }
+
+.h3Grid{
+  margin: 3rem 0 -3rem 12rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  }
+
+.menu-esquerda {
+  padding-left:9rem;
+  display: flex;
+  width: 27rem;
+  background-color: #0e0e0e;
+}
+
+.menu-esquerda  li a{
+  color: #fbfbfb;
+  font-family: "Poppins";
+ 
+}
+
+.menu-esquerda  li{
+  margin-top: 3rem;
+}
+.formMatricula {
+ 
+  grid-row: 1/2;
+  grid-column: 1/2;
+  margin: 5rem 0 3rem 6rem;
+  padding-right: 20rem;
+  border-radius: 0.5em;
+  background-color: #f6c34a;
+  color: #0e0e0e;
+  font-weight: bolder;
+  font-family: "Poppins";
+  font-size: 16.91px;
+}
+.submitMatricula{
+width: 21.5rem;
+height: 3rem;
+margin-top: 7%;
+border-radius:0.5rem;
+background-color: #0e0e0e;
+color: #fbfbfb;
+font-size: 1rem;
+font-family: "Poppins";
+
+}
