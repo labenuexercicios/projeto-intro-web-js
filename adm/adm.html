@@ -1,175 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/projeto-intro-web-js/adm/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../script.js" defer></script>
     <title>Lab Escola Area ADM</title>
 </head>
+
 <body>
     <header>
         <div class="container-logo-header">
-            <a href="/projeto-intro-web-js/home/index.html">
+            <a href="../home/index.html">
                 <img src="./assets/logo 1.png" alt="Logo LabEscola" id="logo">
             </a>
         </div>
         <nav>
-            <ul>
-                <li><a href="/projeto-intro-web-js/home/index.html" class="txt-li">Home</a></li>
+            <ul id="lista">
+                <li><a href="../home/index.html" class="txt-li">Home</a></li>
 
-                <li><a href="./cursos.html" class="txt-li">Cursos</a></li>
+                <li><a href="../cursos/cursos.html" class="txt-li">Cursos</a></li>
 
-                <li><a href="/projeto-intro-web-js/contato/contato.html" class="txt-li">Contato</a></li>
+                <li><a href="../contato/contato.html" class="txt-li">Contato</a></li>
 
-                <li><a href="/projeto-intro-web-js/adm/adm.html" class="txt-li">Area ADM</a></li>
+                <li><a href="./adm.html" class="txt-li">Area ADM</a></li>
             </ul>
         </nav>
 
     </header>
     <main>
 
-        <a href="/projeto-intro-web-js/contato/contato.html"><img src="./assets/logos_whatsapp-icon.png" id="whats"target="_blank"></a>
+        <a href="../contato/contato.html"><img src="./assets/logos_whatsapp-icon.png" id="whats" target="_blank"></a>
 
         <section id="container">
             <section id="bloco1">
                 <div class="bloco1-menu">
                     <ul>
-                        <li><a href="/projeto-intro-web-js/adm/adm.html">Turmas</a></li>
-                        <li><a href="/projeto-intro-web-js/adm/matriculas/matriculas.html" >Matriculas</a></li>
-                        <li><a href="/projeto-intro-web-js/adm/financeiro/financeiro.html" >Financeiro Alunos</a></li>
+                        <li><a href="./adm.html">Turmas</a></li>
+                        <li><a href="../adm/matriculas/matriculas.html">Matriculas</a></li>
+                        <li><a href="../adm/financeiro/financeiro.html">Financeiro Alunos</a></li>
                     </ul>
                 </div>
             </section>
 
             <section id="bloco2">
 
-                <div id="bloco2-container1">
+                <form id="bloco2-container1">
 
-                    <input type="text" name="buscar-curso" class="bloco2-buscar" placeholder="Digite o nome do curso">
+                    <input type="text" name="buscar-turma" class="bloco2-buscar" placeholder="Digite o nome da turma"
+                        id="buscar-turma">
 
-                    <input type="submit" value="Buscar" class="bloco2-btn-buscar">
+                    <input type="submit" value="Buscar" class="bloco2-btn-buscar" id="bloco2-btn-buscar"
+                        onclick=" buscarTurma(event)">
 
-                </div>
+                </form>
 
                 <div id="bloco2-container2">
 
                     <div id="bloco2-container2-cards">
-                        <article >
-                            <div class="bloco2-item-card">
-                                <p class="bloco2-titulo">Hipátia</p>
-                                <ul>
-                                    <li><b> Curso:</b>  javasript</li>
-                                    <li><b>Inicio:</b>  30/11/2022</li>
-                                    <li><b>Termino:</b> 30/01/2023</li>
-                                    <li><b>Numero de Alunos:</b> 150</li>
-                                    <li><b>Periodo:</b> Noturno</li>
-                                    <li><b>Concluido:</b> Nao</li>
-                                </ul>
-                             </div>
-                        </article>
-
-                        <article >
-                            <div class="bloco2-item-card">
-                                <p class="bloco2-titulo">Sibyla</p>
-                                <ul>
-                                    <li><b> Curso:</b>  javasript</li>
-                                    <li><b>Inicio:</b>  30/10/2022</li>
-                                    <li><b>Termino:</b> 30/12/2022</li>
-                                    <li><b>Numero de Alunos:</b> 20</li>
-                                    <li><b>Periodo:</b> Integral</li>
-                                    <li><b>Concluido:</b> Nao</li>
-                                </ul>
-                             </div>
-                        </article>
-
-                        <article >
-                            <div class="bloco2-item-card">
-                                <p class="bloco2-titulo">Curie</p>
-                                <ul>
-                                    <li><b> Curso:</b> HTML e CSS</li>
-                                    <li><b>Inicio:</b> 15/09/2022</li>
-                                    <li><b>Termino:</b> 15/10/2022</li>
-                                    <li><b>Numero de Alunos:</b> 180</li>
-                                    <li><b>Periodo:</b> Noturno</li>
-                                    <li><b>Concluido:</b> Nao</li>
-                                </ul>
-                             </div>
-                        </article>
-
-                        <article >
-                            <div class="bloco2-item-card">
-                                <p class="bloco2-titulo">Zhenyi</p>
-                                <ul>
-                                    <li><b> Curso:</b> HTML e CSS</li>
-                                    <li><b>Inicio:</b>  01/11/2022</li>
-                                    <li><b>Termino:</b> 01/01/2023</li>
-                                    <li><b>Numero de Alunos:</b> 80</li>
-                                    <li><b>Periodo:</b> Integral</li>
-                                    <li><b>Concluido:</b> Nao</li>
-                                </ul>
-                             </div>
-                        </article>
-
-                        <article >
-                            <div class="bloco2-item-card">
-                                <p class="bloco2-titulo">Clarke</p>
-                                <ul>
-                                    <li><b> Curso:</b> HTML e CSS</li>
-                                    <li><b>Inicio:</b>  04/07/2022</li>
-                                    <li><b>Termino:</b> 04/04/2022</li>
-                                    <li><b>Numero de Alunos:</b> 200</li>
-                                    <li><b>Periodo:</b> Noturno</li>
-                                    <li><b>Concluido:</b> sim</li>
-                                </ul>
-                             </div>
-                        </article>
-
-                        <article >
-                            <div class="bloco2-item-card">
-                                <p class="bloco2-titulo">Blackwell</p>
-                                <ul>
-                                    <li><b> Curso:</b> API`s Rest</li>
-                                    <li><b>Inicio:</b> 20/03/2022</li>
-                                    <li><b>Termino:</b> 20/06/2022</li>
-                                    <li><b>Numero de Alunos:</b> 100</li>
-                                    <li><b>Periodo:</b> Integral</li>
-                                    <li><b>Concluido:</b> Sim</li>
-                                </ul>
-                             </div>
-                        </article>
-
-                        <article >
-                            <div class="bloco2-item-card">
-                                <p class="bloco2-titulo">Elion</p>
-                                <ul>
-                                    <li><b> Curso:</b>API`s Rest</li>
-                                    <li><b>Inicio:</b> 12/01/2022</li>
-                                    <li><b>Termino:</b> 12/06/2022</li>
-                                    <li><b>Numero de Alunos:</b> 200</li>
-                                    <li><b>Periodo:</b> Noturno</li>
-                                    <li><b>Concluido:</b> Sim</li>
-                                </ul>
-                             </div>
-                        </article>
-
-                        <article >
-                            <div class="bloco2-item-card">
-                                <p class="bloco2-titulo">Burnell</p>
-                                <ul>
-                                    <li><b> Curso:</b> API`s Rest</li>
-                                    <li><b>Inicio:</b>  18/10/2022</li>
-                                    <li><b>Termino:</b> 30/01.2023</li>
-                                    <li><b>Numero de Alunos:</b> 150</li>
-                                    <li><b>Periodo:</b> Noturno</li>
-                                    <li><b>Concluido:</b> Nao</li>
-                                </ul>
-                             </div>
-                        </article>
-
-                    </div>    
 
 
+                    </div>
 
                 </div>
 
@@ -205,7 +98,7 @@
             </div>
 
             <div class="bloco4-links">
-                
+
                 <div id="bloco4-titulo4">
                     <p>Links</p>
                 </div>
@@ -253,6 +146,7 @@
         </section>
 
     </footer>
-    
+
 </body>
+
 </html>

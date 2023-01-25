@@ -48,6 +48,10 @@ li {
     color: #0E0E0E;
 }
 
+#lista a:hover {
+    background: rgba(0, 0, 0, .05);
+}
+
 .container-logo-header {
     display: flex;
     height: 100%;
@@ -129,6 +133,7 @@ main {
     border: none;
     width: 33%;
     height: 35%;
+    padding-left: 2%;
 }
 
 .bloco2-btn-buscar{
@@ -145,6 +150,7 @@ main {
 
 #bloco2-container2{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     height: 75%;
@@ -161,8 +167,8 @@ main {
 }
 
 #bloco2-container2-cards article{
-    height: 45%;
-    width: 20%;
+    height: 50%;
+    width: 15vw;
     background-color: #FFFFFF;
     border-radius: 9px;
 }

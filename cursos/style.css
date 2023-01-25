@@ -48,6 +48,10 @@ li {
     color: #0E0E0E;
 }
 
+#lista a:hover {
+    background: rgba(0, 0, 0, .05);
+}
+
 .container-logo-header {
     display: flex;
     height: 100%;

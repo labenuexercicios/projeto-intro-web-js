@@ -48,6 +48,10 @@ li {
     color: #0E0E0E;
 }
 
+#lista a:hover {
+    background: rgba(0, 0, 0, .05);
+}
+
 .container-logo-header {
     display: flex;
     height: 100%;
@@ -157,7 +161,7 @@ form input{
     height: 6%;
 }
 
-form input[type=submit]{
+form input[type=button]{
     font-family: 'Poppins';
     font-size: 1rem;
     font-weight: 700;

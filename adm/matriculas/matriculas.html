@@ -4,40 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/projeto-intro-web-js/adm/matriculas/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../../script.js" defer></script>
     <title>Lab Escola Area ADM Matriculas</title>
 </head>
 <body>
     <header>
         <div class="container-logo-header">
-            <a href="/projeto-intro-web-js/home/index.html">
-                <img src="/projeto-intro-web-js/adm/assets/logo 1.png" alt="Logo LabEscola" id="logo">
+            <a href="../../home/index.html">
+                <img src="./assets/logo 1.png" alt="Logo LabEscola" id="logo">
             </a>
         </div>
         <nav>
-            <ul>
-                <li><a href="/projeto-intro-web-js/home/index.html" class="txt-li">Home</a></li>
+            <ul id="lista">
+                <li><a href="../../home/index.html" class="txt-li">Home</a></li>
 
-                <li><a href="/projeto-intro-web-js/cursos/cursos.html" class="txt-li">Cursos</a></li>
+                <li><a href="../../cursos/cursos.html" class="txt-li">Cursos</a></li>
 
-                <li><a href="/projeto-intro-web-js/contato/contato.html" class="txt-li">Contato</a></li>
+                <li><a href="../../contato/contato.html" class="txt-li">Contato</a></li>
 
-                <li><a href="/projeto-intro-web-js/adm/adm.html" class="txt-li">Area ADM</a></li>
+                <li><a href="../../adm/adm.html" class="txt-li">Area ADM</a></li>
             </ul>
         </nav>
 
     </header>
     <main>
 
-        <a href="/projeto-intro-web-js/contato/contato.html"><img src="/projeto-intro-web-js/adm/assets/logos_whatsapp-icon.png" id="whats"target="_blank"></a>
+        <a href="../../contato/contato.html"><img src="./assets/logos_whatsapp-icon.png" id="whats"target="_blank"></a>
 
         <section id="container">
             <section id="bloco1">
                 <div class="bloco1-menu">
                     <ul>
-                        <li><a href="/projeto-intro-web-js/adm/adm.html">Turmas</a></li>
-                        <li><a href="/projeto-intro-web-js/adm/matriculas/matriculas.html" >Matriculas</a></li>
-                        <li><a href="/projeto-intro-web-js/adm/financeiro/financeiro.html" >Financeiro Alunos</a></li>
+                        <li><a href="../adm.html">Turmas</a></li>
+                        <li><a href="./matriculas.html" >Matriculas</a></li>
+                        <li><a href="../financeiro/financeiro.html" >Financeiro Alunos</a></li>
                     </ul>
                 </div>
             </section>
@@ -53,36 +54,33 @@
                             <input type="text" name="nome" id="nome">
 
                             <label for="curso">Curso</label>
-                            <input type="text" name="curso" id="curso">
+                            <!-- <input type="text" name="curso" id="curso"> -->
+                            <input list="all-courses" id="curso" name="lista-de-cursos">
+                            <datalist id="all-courses">
+                            <option value="HTML E CSS"></option>
+                            <option value="JavaScript"></option>
+                            <option value="APIs REST"></option>
+                            </datalist>
+
 
                             <label for="turma">Turma</label>
                             <input type="text" name="turma" id="turma">
 
                             <label for="parcelas">Numero de Parcelas</label>
                             <input type="text" name="parcelas" id="parcelas">
+                            
+                            <input type="button" value="Matricular Aluno " id="btn-matricular" onclick= "matricular()">
 
-                            <input type="submit" value="Matricular Aluno ">
                         </form>
+
+                        
+
                    </div>
             
 
                 </div>
 
                 <div id="bloco2-container2">
-
-                    <div class="container2-item">
-                        <div class="container2-titulo">
-                            <p>Aluno Matriculado</p>
-                            <img src="./assets/check.png" alt="aluno martriculado">
-                        </div>
-                        
-                        <ul>
-                            <li>Aluno:....</li>
-                            <li>Nome:.....</li>
-                            <li>Curso:....</li>
-                            <li>Turma:....</li>
-                        </ul>
-                    </div>
 
 
 

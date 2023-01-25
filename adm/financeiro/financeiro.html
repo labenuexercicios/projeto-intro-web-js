@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="../../script.js" defer></script>
     <title>Lab Escola Area ADM Financeiro</title>
 </head>
+
 <body>
     <header>
         <div class="container-logo-header">
-            <a href="/projeto-intro-web-js/home/index.html">
-                <img src="/projeto-intro-web-js/adm/assets/logo 1.png" alt="Logo LabEscola" id="logo">
+            <a href="../../home/index.html">
+                <img src="./assets/logo 1.png" alt="Logo LabEscola" id="logo">
             </a>
         </div>
         <nav>
-            <ul>
-                <li><a href="/projeto-intro-web-js/home/index.html" class="txt-li">Home</a></li>
+            <ul id="lista">
+                <li><a href="../../home/index.html" class="txt-li">Home</a></li>
 
-                <li><a href="/projeto-intro-web-js/cursos/cursos.html" class="txt-li">Cursos</a></li>
+                <li><a href="../../cursos/cursos.html" class="txt-li">Cursos</a></li>
 
-                <li><a href="/projeto-intro-web-js/contato/contato.html" class="txt-li">Contato</a></li>
+                <li><a href="../../contato/contato.html" class="txt-li">Contato</a></li>
 
-                <li><a href="/projeto-intro-web-js/adm/adm.html" class="txt-li">Area ADM</a></li>
+                <li><a href="../../adm/adm.html" class="txt-li">Area ADM</a></li>
             </ul>
         </nav>
 
     </header>
     <main>
 
-        <a href="/projeto-intro-web-js/contato/contato.html"><img src="/projeto-intro-web-js/adm/assets/logos_whatsapp-icon.png" id="whats"target="_blank"></a>
+        <a href="../../contato/contato.html"><img src="./assets/logos_whatsapp-icon.png" id="whats" target="_blank"></a>
 
         <section id="container">
             <section id="bloco1">
                 <div class="bloco1-menu">
                     <ul>
-                        <li><a href="/projeto-intro-web-js/adm/adm.html">Turmas</a></li>
-                        <li><a href="/projeto-intro-web-js/adm/matriculas/matriculas.html" >Matriculas</a></li>
-                        <li><a href="/projeto-intro-web-js/adm/financeiro/financeiro.html" >Financeiro Alunos</a></li>
+                        <li><a href="../adm.html">Turmas</a></li>
+                        <li><a href="../matriculas/matriculas.html">Matriculas</a></li>
+                        <li><a href="./financeiro.html">Financeiro Alunos</a></li>
                     </ul>
                 </div>
             </section>
@@ -69,20 +72,19 @@
 
                         <form>
                             <label for="nome">Nome</label>
-                            <input type="text" name="nome" id="nome">
-    
-                            <input type="submit" value="Buscar">
+
+                            <input type="text" name="nome" placeholder="Digite o nome do aluno" id="inputRelatorioAluno">
+
+                            <input type="submit" value="Buscar" onclick="buscarEstudante(event)" id="btn-relatorio">
+
+                            <section id="container2-item-relatorio">
+
+                            </section>
                         </form>
-                        
+
                     </div>
 
-                    
-
                 </div>
-
-
-               
-
 
             </section>
 
@@ -115,7 +117,7 @@
             </div>
 
             <div class="bloco4-links">
-                
+
                 <div id="bloco4-titulo4">
                     <p>Links</p>
                 </div>
@@ -163,6 +165,7 @@
         </section>
 
     </footer>
-    
+
 </body>
+
 </html>

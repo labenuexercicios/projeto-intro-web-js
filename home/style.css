@@ -21,6 +21,14 @@ header {
     height: 20vh;
 }
 
+.container-logo-header{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+}
+
 nav {
     font-family: 'Poppins';
     font-style: normal;
@@ -44,17 +52,19 @@ nav ul {
     list-style: none;
 }
 
+#lista a:hover {
+    background: rgba(0, 0, 0, .05);
+}
+
 .txt-li {
     color: #0E0E0E;
 }
 
-.container-logo-header{
-    display: flex;
-    height: 100%;
-    width: 50%;
-    justify-content: start;
-    align-items: center;
+#btn-mobile {
+    display: none;
 }
+
+
 
 /* MAIN ----------------------------------------------------- */
 
@@ -382,7 +392,17 @@ iframe{
 .bloco4-links, .bloco4-medias, .bloco4-rest{
     width: 20%;
     padding-left: 5%;
-}
+};
+
+/* RESPONSIVIDADE------------------------------------------------------------ */
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* celulares */
+    }
+    
+    @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+    /* tablets */
+    }
 
 
 
