@@ -268,18 +268,51 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
  
 
 
-const buscarTurma = ()=>{
+let turmaParaCard
+const buscarTurma = (event)=>{
     event.preventDefault()
 
     const inputTurma = document.getElementById('input-search-class').value.toLowerCase()
     
-    const retornaTurma =  turmas.filter((element)=> element.turma.toLowerCase() === inputTurma.toLowerCase())
+    const retornaTurma = turmas.filter(element => {
+        if(element.turma.toLowerCase().includes(inputTurma))
+        return element
+    })
 
-    return retornaTurma.length > 0? retornaTurma : 'Turma não encontrada!'
+    document.getElementById('input-search-class').value = ""
+    console.log(retornaTurma)
+    //turmaParaCard = retornaTurma
+    return retornaTurma.length > 0? gerarCard(retornaTurma) : gerarCard(turmas) 
+    
 }
 
-const gerarCard = () =>{
-    /* pesquisar sobre a como fazer essa função */
+const gerarCard = (cardTurmas) =>{
+    const searchContainer = document.getElementById('search-container')
+
+    console.log('entrei na função gerarCard')
+    console.log('retornaTurma:', retornaTurma)
+
+    const geradorDeCard = retornaTurma.map((element) =>{
+        console.log('entrei no geradorDeCard')
+        const newCard = document.createElement('div')
+        
+        newCard.setAttribute("class", "classes")
+        
+        newCard.innerHTML = `
+        <h1 class="class-name">${element.turma}</h1>
+        <p class="details"><span class="bold">Curso:</span> ${element.curso}</p>
+        <p class="details"><span class="bold">Início:</span> ${element.inicio}</p>
+        <p class="details"><span class="bold">Término:</span> ${element.termino}</p>
+        <p class="details"><span class="bold">Número de alunos:</span> ${element.numeroDeAlunos}</p>
+        <p class="details"><span class="bold">Período:</span> ${element.periodo}</p>
+        <p class="details"><span class="bold">Concluído:</span> ${element.concluida}</p>
+      `
+
+      searchContainer.insertAdjacentElement('beforeend', newCard)
+    })
+
+    return geradorDeCard
+   
 }
 
 
@@ -317,6 +350,24 @@ buscarEstudante('ChRis EVAns')
 buscarEstudante('halle berry')
  */
 
+const relatorioEstudante=()=>{
+    event.preventDefault()
+    const nomeInput = document.getElementById('name').value
+    const dadosEstudantes = buscarEstudante(nomeInput)
+    
+    const relatorio = {
+        aluno: dadosEstudantes.estudante,
+        turma: dadosEstudantes.turma,
+        curso: dadosEstudantes.curso,
+        valorTotal: dadosEstudantes.valor,
+        valorParcelas: dadosEstudantes.parcelas,
+        nParcelas: dadosEstudantes.nParcelas
+    }
+    console.log(`Aluno: ${relatorio.aluno}\nTurma: ${relatorio.turma}\nCurso: ${relatorio.curso}\nValor Toral: ${relatorio.valorTotal}\nValor Parcelas: ${relatorio.valorParcelas}\nNº Parcelas: ${relatorio.nParcelas}`)
+    return relatorio
+} 
+
+/* 
 const relatorioEstudante=(nomeEstudante, callback)=>{
     const dadosEstudantes = callback(nomeEstudante)
     
@@ -330,7 +381,7 @@ const relatorioEstudante=(nomeEstudante, callback)=>{
     }
     console.log(`Aluno: ${relatorio.aluno}\nTurma: ${relatorio.turma}\nCurso: ${relatorio.curso}\nValor Toral: ${relatorio.valorTotal}\nValor Parcelas: ${relatorio.valorParcelas}\nNº Parcelas: ${relatorio.nParcelas}`)
     return 
-} 
+}  */
 
 //relatorioEstudante('halle berry', buscarEstudante)
 
@@ -362,6 +413,7 @@ const matricular=()=>{
                      }
                 
                     console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`)
+                    console.log(estudantes)
                     
                     return estudantes.push(novoAluno)
                 }else{
@@ -373,7 +425,7 @@ const matricular=()=>{
         }
     }       
 }
-
+//console.log(estudantes)
 //quando atualiza a página, os dados somem de dentro do array de estudantes, é isso mesmo?
 
 
