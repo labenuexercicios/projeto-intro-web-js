@@ -79,6 +79,27 @@ main{
     padding: 2.5em 0 2.5em 0em;
 }
 
+.confirm-student{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+#confirm-check{
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.studant-info{
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-size: .78em;
+    font-weight: 400;    ;
+    line-height: 1.5em;
+}
+
 section{
     order: 2;
     flex-grow: 1.8;
@@ -132,27 +153,6 @@ label{
     line-height: 1em;
     color: #000000; 
     margin: 0em 0 .2em 0;
-}
-
-.confirm-student{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-}
-
-#confirm-check{
-    width: 2.2em;
-    height: 2.2em;
-}
-
-.studant-info{
-    color: #000000;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-size: .78em;
-    font-weight: 400;    ;
-    line-height: 1.5em;
 }
 
 footer{

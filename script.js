@@ -268,10 +268,10 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
  
 
 
-let turmaParaCard
+
 const buscarTurma = (event)=>{
     event.preventDefault()
-
+   
     const inputTurma = document.getElementById('input-search-class').value.toLowerCase()
     
     const retornaTurma = turmas.filter(element => {
@@ -281,40 +281,53 @@ const buscarTurma = (event)=>{
 
     document.getElementById('input-search-class').value = ""
     console.log(retornaTurma)
-    //turmaParaCard = retornaTurma
-    return retornaTurma.length > 0? gerarCard(retornaTurma) : gerarCard(turmas) 
+    
+    return retornaTurma.length > 0? gerarCardTurmas(retornaTurma) : gerarCardTurmas(turmas) 
     
 }
 
-const gerarCard = (cardTurmas) =>{
+
+
+const gerarCardTurmas = (cardTurmas) =>{
+
     const searchContainer = document.getElementById('search-container')
 
-    console.log('entrei na função gerarCard')
-    console.log('retornaTurma:', retornaTurma)
-
-    const geradorDeCard = retornaTurma.map((element) =>{
-        console.log('entrei no geradorDeCard')
+    const geradorDeCard = cardTurmas.map((element) =>{
         const newCard = document.createElement('div')
-        
         newCard.setAttribute("class", "classes")
-        
-        newCard.innerHTML = `
-        <h1 class="class-name">${element.turma}</h1>
-        <p class="details"><span class="bold">Curso:</span> ${element.curso}</p>
-        <p class="details"><span class="bold">Início:</span> ${element.inicio}</p>
-        <p class="details"><span class="bold">Término:</span> ${element.termino}</p>
-        <p class="details"><span class="bold">Número de alunos:</span> ${element.numeroDeAlunos}</p>
-        <p class="details"><span class="bold">Período:</span> ${element.periodo}</p>
-        <p class="details"><span class="bold">Concluído:</span> ${element.concluida}</p>
-      `
 
+        newCard.innerHTML = `
+            <h1 class="class-name">${element.turma}</h1>
+            <p class="details"><span class="bold">Curso:</span> ${element.curso}</p>
+            <p class="details"><span class="bold">Início:</span> ${element.inicio}</p>
+            <p class="details"><span class="bold">Término:</span> ${element.termino}</p>
+            <p class="details"><span class="bold">Número de alunos:</span> ${element.numeroDeAlunos}</p>
+            <p class="details"><span class="bold">Período:</span> ${element.periodo}</p>
+            <p class="details"><span class="bold">Concluído:</span> ${element.concluida}</p>
+        `
       searchContainer.insertAdjacentElement('beforeend', newCard)
     })
-
     return geradorDeCard
-   
 }
 
+/* 
+TENTAR FAZER ISSO FUNCIONAR
+const apagarCard = () =>{
+    
+    const removeCard = document.getElementsByClassName('classes')
+
+    removeCard.remove()
+    
+    console.log(typeof document.getElementsByClassName('classes'))
+    if(document.getElementsByClassName('classes').length > 0){
+      console.log(document.getElementsByClassName('classes'))
+
+      console.log('pra remover', removeCard)
+        
+    }
+
+}
+ */
 
 /*
 //Teste da função
@@ -367,21 +380,6 @@ const relatorioEstudante=()=>{
     return relatorio
 } 
 
-/* 
-const relatorioEstudante=(nomeEstudante, callback)=>{
-    const dadosEstudantes = callback(nomeEstudante)
-    
-    const relatorio = {
-        aluno: dadosEstudantes.estudante,
-        turma: dadosEstudantes.turma,
-        curso: dadosEstudantes.curso,
-        valorTotal: dadosEstudantes.valor,
-        valorParcelas: dadosEstudantes.parcelas,
-        nParcelas: dadosEstudantes.nParcelas
-    }
-    console.log(`Aluno: ${relatorio.aluno}\nTurma: ${relatorio.turma}\nCurso: ${relatorio.curso}\nValor Toral: ${relatorio.valorTotal}\nValor Parcelas: ${relatorio.valorParcelas}\nNº Parcelas: ${relatorio.nParcelas}`)
-    return 
-}  */
 
 //relatorioEstudante('halle berry', buscarEstudante)
 
@@ -394,36 +392,52 @@ const matricular=()=>{
     const turmaInput = document.getElementById('classes').value.toLowerCase()
     const parcelasInput = document.getElementById('payment').value
 
-    const confereTurma = turmas.filter((element)=> element.turma.toLowerCase() === turmaInput)
+    const confereTurma = turmas.filter((element)=> element.turma.toLowerCase() === turmaInput
+    )
 
-    if(nomeInput === ""){ 
-        console.log('Dados inválidos, matrícula não efetuada.')
-    }else if(nomeInput===" "){
-        console.log('Dados inválidos, matrícula não efetuada.')
-    }else{
-        if(confereTurma.length>0){
-            if(confereTurma[0].curso.toLowerCase() === cursoInput){
-                if(confereTurma[0].concluida === false){
-                
-                    const novoAluno = {
-                        estudante: nomeInput,
-                        turma: turmaInput,
-                        curso: cursoInput,
-                        nParcelas: parcelasInput
-                     }
-                
-                    console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`)
-                    console.log(estudantes)
-                    
-                    return estudantes.push(novoAluno)
-                }else{
-                console.log('Dados inválidos, matrícula não efetuada.')
-                }
-            }else{
-                console.log('Dados inválidos, matrícula não efetuada.')
-            }
-        }
-    }       
+    console.log(confereTurma)
+    /* torcar os consoles desses returns por um alert de dados inválidos */
+    /* tenta pegar os dados do nome do curso e da turma direto do confere turmas */
+
+    if(nomeInput == "" || nomeInput==" ") return console.log('Dados inválidos, matrícula não efetuada.')
+         
+    if(!confereTurma.length>0) return console.log('2Dados inválidos, matrícula não efetuada.')
+
+    if(confereTurma[0].curso.toLowerCase() != cursoInput) return console.log('3Dados inválidos, matrícula não efetuada.')
+
+    if(confereTurma[0].concluida === true) return console.log ('4Dados inválidos, matrícula não efetuada.')
+    
+    const novoAluno = {
+        estudante: nomeInput,
+        turma: turmaInput,
+        curso: cursoInput,
+        nParcelas: parcelasInput
+    }
+        
+    console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`)
+    
+    console.log(estudantes)
+            
+    estudantes.push(novoAluno)
+
+    return gerarCardMatricula(novoAluno)
+          
+}
+
+const gerarCardMatricula=(estudanteDados)=>{
+    const confirmContainer = document.getElementById('confirm-report')
+
+    const newCard = document.createElement('div')
+
+    newCard.innerHTML = `
+    <p class="studant-info">Aluno Matriculado</p>
+    <p class="studant-info">Nome: ${estudanteDados.estudante}</p>
+    <p class="studant-info">Curso: ${estudanteDados.curso}</p>
+    <p class="studant-info">Turma: ${estudanteDados.turma}</p>
+    `
+    confirmContainer.insertAdjacentElement('beforeend', newCard)
+
+    return
 }
 //console.log(estudantes)
 //quando atualiza a página, os dados somem de dentro do array de estudantes, é isso mesmo?
