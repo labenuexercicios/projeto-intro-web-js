@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financeiro</title>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/global.js" defer></script>
+    <script src="./js/relatorio-estudante.js" defer></script>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -69,7 +70,7 @@
 
                             <li class="menu-list__item">
                                 <label class="menu-list__label">Número de parcelas</label>
-                                <input class="menu-list__input" type="number">
+                                <input class="menu-list__input" type="number" min="1" max="10">
                             </li>
 
                             <li class="menu-list__item">
@@ -83,13 +84,13 @@
                     <h3 class="menu-list__title">Relatório Aluno</h3>
                         <div class="menu-list__item">
                             <label class="menu-list__label">Nome</label>
-                            <input class="menu-list__input" type="text">
-
+                            <input id="report-input" class="menu-list__input" type="text">
                         </div>
 
                         <div>
                             <input class="menu-list__input" id="btn-search" type="search" placeholder="Buscar">
                         </div>
+                        <div class="contact-dice" id="report"></div>
                 </section>
             </section>
 

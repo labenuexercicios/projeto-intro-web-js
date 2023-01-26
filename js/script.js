@@ -19,90 +19,6 @@ const cursos = [
     }
 ]
 
-
-const turmas = [
-    {
-        turma: "Hipátia",
-        curso: "JavaScript",
-        inicio: "30/11/2022",
-        termino: "30/01/2023",
-        nunAlunos: 150,
-        periodo: "Noturno",
-        concluida: false
-    },
-
-    {
-        turma: "Sibyla",
-        curso: "JavaScript",
-        inicio: "30/11/2022",
-        termino: "30/12/2022",
-        nunAlunos: 200,
-        periodo: "Integral",
-        concluida: false
-    },
-
-    {
-        turma: "Curie",
-        curso: "HTML e CSS",
-        inicio: "15/09/2022",
-        termino: "15/10/2022",
-        nunAlunos: 180,
-        periodo: "Noturno",
-        concluida: true
-    },
-
-    {
-        turma: "Zhenyi",
-        curso: "HTML e CSS",
-        inicio: "01/11/2022",
-        termino: "01/01/2023",
-        nunAlunos: 80,
-        periodo: "Integral",
-        concluida: false
-    },
-
-    {
-        turma: "Clarke",
-        curso: "HTML e CSS",
-        inicio: "04/07/2022",
-        termino: "04/09/2022",
-        nunAlunos: 200,
-        periodo: "Noturno",
-        concluida: true
-    },
-
-    {
-        turma: "Blackwell",
-        curso: "APIsRest",
-        inicio: "20/03/2022",
-        termino: "20/06/2022",
-        nunAlunos: 100,
-        periodo: "Integral",
-        concluida: true
-    },
-
-    {
-        turma: "Elion",
-        curso: "APIsRest",
-        inicio: "12/01/2022",
-        termino: "12/06/2022",
-        nunAlunos: 200,
-        periodo: "Noturno",
-        concluida: true
-    },
-
-    {
-        turma: "Burnell",
-        curso: "APIsRest",
-        inicio: "18/10/2022",
-        termino: "18/04/2023",
-        nunAlunos: 90,
-        periodo: "Integral",
-        concluida: false
-    }
-]
-
-
 const estudantes = [
     {
         estudante: "Chris Evans",
@@ -171,14 +87,15 @@ const buscarCurso = (nomeCurso) => {
     const encontarCurso = cursos.find(curso => curso.curso.toLowerCase().startsWith(nomeCurso.toLowerCase()))
     return encontarCurso
 }
-console.log(buscarCurso("jav"))
+// console.log(buscarCurso("jav"))
 
 
-const buscarTurma = (nomeTurma) => {
+/* const buscarTurma = (nomeTurma) => {
     const encontarTurma = turmas.filter(item => item.turma.toLowerCase() === nomeTurma.toLowerCase())
 
     return encontarTurma.length > 0 ? encontarTurma[0] : 'Turma não encontrada'
-}
+} */
+
 
 // console.log(buscarTurma("Elion"))
 // console.log(buscarTurma("blablabla"))
@@ -191,55 +108,55 @@ const buscarTurma = (nomeTurma) => {
 // buscarTurma("Burnell")
 
 
-const buscarEstudante = (nomeEstudante) => {
-    for (i = 0; i < estudantes.length; i++) {
-        if (estudantes[i].estudante.toLowerCase().startsWith(nomeEstudante.toLowerCase())){
-            return estudantes[i]
-        }
+// const buscarEstudante = (nomeEstudante) => {
+//     for (i = 0; i < estudantes.length; i++) {
+//         if (estudantes[i].estudante.toLowerCase().startsWith(nomeEstudante.toLowerCase())){
+//             return estudantes[i]
+//         }
 
-    }
+//     }
 
-    return `Estudande não encontrado`
-}
+//     return `Estudande não encontrado`
+// }
 
-console.log(buscarEstudante("Las"))
-console.log(buscarEstudante("blablabla"))
-console.log(buscarEstudante("Hal"))
+// console.log(buscarEstudante("Las"))
+// console.log(buscarEstudante("blablabla"))
+// console.log(buscarEstudante("Hal"))
 
-const matricular = (nome, curso, turma, numParcelas) => {
-    let valorCurso = buscarCurso(curso)
-    let valorTotal = 0
-    let valorPorParcela = 0
-    let desconto = false
+// const matricular = (nome, curso, turma, numParcelas) => {
+//     let valorCurso = buscarCurso(curso)
+//     let valorTotal = 0
+//     let valorPorParcela = 0
+//     let desconto = false
 
 
-    if(numParcelas > 0 && numParcelas <= 2){
-        desconto = true
-        valorTotal = valorCurso.valor - (valorCurso.valor * 0.2)
-        valorPorParcela = valorTotal / numParcelas
-    }else{
-        valorTotal = valorCurso.valor
-        valorPorParcela = valorTotal / numParcelas
+//     if(numParcelas > 0 && numParcelas <= 2){
+//         desconto = true
+//         valorTotal = valorCurso.valor - (valorCurso.valor * 0.2)
+//         valorPorParcela = valorTotal / numParcelas
+//     }else{
+//         valorTotal = valorCurso.valor
+//         valorPorParcela = valorTotal / numParcelas
 
-    }
+//     }
 
-    const novoAluno = {
-        estudante: nome,
-        curso: curso,
-        turma: turma,
-        valor: valorCurso.valor,
-        nParcelas: numParcelas,
-        desconto: desconto,
-        valorParcelas: valorPorParcela
+//     const novoAluno = {
+//         estudante: nome,
+//         curso: curso,
+//         turma: turma,
+//         valor: valorCurso.valor,
+//         nParcelas: numParcelas,
+//         desconto: desconto,
+//         valorParcelas: valorPorParcela
         
-    }
+//     }
 
-    estudantes.push(novoAluno)
-    console.log(estudantes)
-    console.log(`Aluno Matriculado \nNome: ${nome} \nCurso: ${curso} \nTurma: ${turma}`)
-    // console.log("Aluno Matriculado", novoAluno)
-}
-matricular("regiane", "Javascript", "Ozemela", 2)
+//     estudantes.push(novoAluno)
+//     console.log(estudantes)
+//     console.log(`Aluno Matriculado \nNome: ${nome} \nCurso: ${curso} \nTurma: ${turma}`)
+//     // console.log("Aluno Matriculado", novoAluno)
+// }
+// matricular("regiane", "Javascript", "Ozemela", 2)
 
 const adicionarAoCarrinho = (nomeCurso) => {
     const curso = buscarCurso(nomeCurso) // nao precisa do .toLowerCase pois a funcar buscarCurso já faz
@@ -254,19 +171,19 @@ const adicionarAoCarrinho = (nomeCurso) => {
 adicionarAoCarrinho("JavaScript")
 console.log(carrinhoCursos)
 
-const relatorioEstudante = (nomeEstudante) => {
-    const relatorio = buscarEstudante(nomeEstudante)
+// const relatorioEstudante = (nomeEstudante) => {
+//     const relatorio = buscarEstudante(nomeEstudante)
 
-    if (!relatorio) {
-        return
-    }
+//     if (!relatorio) {
+//         return
+//     }
 
-    console.log(relatorio)
-}
+//     console.log(relatorio)
+// }
 
-relatorioEstudante("Chris Evans")
-relatorioEstudante("Halle Berry")
-relatorioEstudante("blablabla")
+// relatorioEstudante("Chris Evans")
+// relatorioEstudante("Halle Berry")
+// relatorioEstudante("blablabla")
 
 
 // function menuOpen(){

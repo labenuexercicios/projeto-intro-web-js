@@ -1,158 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/script.js" defer></script>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/menu-adm.css">
-    <link rel="stylesheet" href="./css/matricula.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/global.js" defer></script>
+    <script src="./js/matricula.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/menu-adm.css" />
+    <link rel="stylesheet" href="./css/matricula.css" />
     <title>Matricula</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="./index.html"><img src="./mideas/logo 1.png" alt="Logo Labenu" id="logo"></a>
-        <nav class="m-menu">
-            <ul class="m-menu__list">
-                <li><a class="m-menu__links" href="./index.html">Home</a></li>
-                <li><a class="m-menu__links" href="./cursos.html">Cursos</a></li>
-                <li><a class="m-menu__links" href="./contato.html">Contato</a></li>
-                <li><a class="m-menu__links" href="./adm.html">Area ADM</a></li>
-            </ul>
+      <a href="./index.html"
+        ><img src="./mideas/logo 1.png" alt="Logo Labenu" id="logo"
+      /></a>
+      <nav class="m-menu">
+        <ul class="m-menu__list">
+          <li><a class="m-menu__links" href="./index.html">Home</a></li>
+          <li><a class="m-menu__links" href="./cursos.html">Cursos</a></li>
+          <li><a class="m-menu__links" href="./contato.html">Contato</a></li>
+          <li><a class="m-menu__links" href="./adm.html">Area ADM</a></li>
+        </ul>
 
-            <div class="menu-mobile">
-                <button><img class="menu-mobile__icon" src="./mideas/icons8-cardápio-64.png" alt="menu"></button>
-            </div>
-        </nav>
-
-        <div class="m-mobile">
-            <ul class="m-mobile__list">
-                <li><a class="m-mobile__links" href="./index.html">Home</a></li>
-                <li><a class="m-mobile__links" href="./cursos.html">Cursos</a></li>
-                <li><a class="m-mobile__links" href="./contato.html">Contato</a></li>
-                <li><a class="m-mobile__links" href="./adm.html">Area ADM</a></li>
-            </ul>
+        <div class="menu-mobile">
+          <button>
+            <img
+              class="menu-mobile__icon"
+              src="./mideas/icons8-cardápio-64.png"
+              alt="menu"
+            />
+          </button>
         </div>
+      </nav>
 
+      <div class="m-mobile">
+        <ul class="m-mobile__list">
+          <li><a class="m-mobile__links" href="./index.html">Home</a></li>
+          <li><a class="m-mobile__links" href="./cursos.html">Cursos</a></li>
+          <li><a class="m-mobile__links" href="./contato.html">Contato</a></li>
+          <li><a class="m-mobile__links" href="./adm.html">Area ADM</a></li>
+        </ul>
+      </div>
     </header>
 
     <main>
-        <div class="menu-list">
-            <nav class="menu-list__courses">
-                <ul>
-                    <li class="menu-list__item"><a class="menu-list__link" href="./adm.html">Turmas</a></li>
-                    <li class="menu-list__item"><a class="menu-list__link" href="./matricula.html">Matriculas</a></li>
-                    <li class="menu-list__item"><a class="menu-list__link" href="./financeiro.html">Financeiro
-                            Alunos</a></li>
-                </ul>
-            </nav>
+      <div class="menu-list">
+        <nav class="menu-list__courses">
+          <ul>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="./adm.html">Turmas</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="./matricula.html">Matriculas</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="./financeiro.html"
+                >Financeiro Alunos</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-            <section class="contact">
-                <section>
-                    <h3 class="contact-title">Matrículas</h3>
-                    <form class="contact-form" action="#">
-                        <ul>
-                            <li class="contact-form__item">
-                                <label for="nome" class="contact-form__label">Nome</label>
-                                <input type="text" id="nome" name="nome-usuario" class="contact-form__input">
-                            </li>
+        <section class="contact">
+          <section>
+            <h3 class="contact-title">Matrículas</h3>
+            <form class="contact-form" id="matricula" action="#">
+              <ul>
+                <li class="contact-form__item">
+                  <label for="nome" class="contact-form__label">Nome</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="name"
+                    class="contact-form__input"
+                  />
+                </li>
 
-                            <li class="contact-form__item">
-                                <label for="course" class="contact-form__label">Curso</label>
-                                <input type="text" id="course" name="course" class="contact-form__input">
-                            </li>
+                <li class="contact-form__item">
+                  <label for="course" class="contact-form__label">Curso</label>
+                  <select
+                    name="courses"
+                    id="courses"
+                    class="contact-form__input"
+                  ></select>
+                </li>
 
-                            <li class="contact-form__item">
-                                <label for="class" class="contact-form__label">Turma</label>
-                                <input type="text" id="class" name="class" class="contact-form__input">
-                            </li>
+                <li class="contact-form__item">
+                  <label for="class" class="contact-form__label">Turma</label>
+                  <select
+                    name="classes"
+                    id="classes"
+                    class="contact-form__input"
+                  ></select>
+                </li>
 
-                            <li class="contact-form__item">
-                                <label for="portion" class="contact-form__label">Número de parcelas</label>
-                                <input type="text" id="portion" name="portion" class="contact-form__input">
-                            </li>
-                            <li class="contact-form__item">
-                                <input type="submit" value="Matricular aluno" class="contact-form__btn">
-                            </li>
-                        </ul>
-                    </form>
-                </section>
+                <li class="contact-form__item">
+                  <label for="portion" class="contact-form__label"
+                    >Número de parcelas</label
+                  >
+                  <input
+                    type="number"
+                    id="portion"
+                    name="portion"
+                    class="contact-form__input"
+                    max="10"
+                    min="1"
+                  />
+                </li>
+                <li class="contact-form__item">
+                  <input
+                    id="btn-registration"
+                    type="submit"
+                    value="Matricular aluno"
+                    class="contact-form__btn"
+                  />
+                </li>
+              </ul>
+            </form>
+          </section>
 
-                <section>
-                    <div class="contact-resgister">
-                        <h3 class="contact-title">Aluno matriculado</h3>
-                        <img class="contact-resgister__img" src="./mideas/Vector-check.png" alt="simbolo de check">
-                    </div>
-                    <div class="contact-dice">
-                        <ul class="contact-dice__list">
-                            <li class="contact-dice__item">Aluno Matriculado</li>
-                            <li class="contact-dice__item">Nome: Calvin Klein</li>
-                            <li class="contact-dice__item">Curso: Javascript</li>
-                            <li class="contact-dice__item">Turma: Clarke</li>
-                        </ul>
-                    </div>
-                </section>
-
-            </section>
-
-        </div>
+          <section>
+            <div class="contact-resgister" id="register"></div>
+          </section>
+        </section>
+      </div>
     </main>
 
     <footer>
-        <img class="footer-logo" src="./mideas/Frame 2.png" alt="logo labenu">
-        <div class="flexible">
-            <div>
-                <p class="footer-title">Endereço</p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9962768688824!2d-46.6985022!3d-23.5685772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1671031245381!5m2!1spt-BR!2sbr"
-                    width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p class="footer-street">R. Pais Lemes, 215. CEP 05424-150 - Pinheiros</p>
-            </div>
-
-            <div class="footer-contact">
-                <p class="footer-title">Links</p>
-                <ul>
-                    <li class="footer-contact__item"><a class="footer-contact__link" href="#">Home</a></li>
-                    <li class="footer-contact__item"><a class="footer-contact__link" href="#">Cursos</a></li>
-                    <li class="footer-contact__item"><a class="footer-contact__link" href="#">Blog</a></li>
-                    <li class="footer-contact__item"><a class="footer-contact__link" href="#">Fale Conosco</a></li>
-                    <li class="footer-contact__item"><a class="footer-contact__link" href="#">Termos e condições</a>
-                    </li>
-                    <li class="footer-contact__item"><a class="footer-contact__link" href="#">Política de
-                            privacidade</a>
-                    </li>
-                    <li class="footer-contact__item"><a class="footer-contact__link" href="#">FAQ</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-medias">
-                <p class="footer-title">Redes sociais</p>
-                <div class="flexible-anchor__mideas">
-                    <a class="footer-medias__link" href="#"><img src="./mideas/Vector.png" alt="logo twiter"></a>
-                    <a class="footer-medias__link" href="#"><img src="./mideas/Vector (1).png" alt="logo linkedin"></a>
-                    <a class="footer-medias__link" href="#"><img src="./mideas/Vector (2).png" alt="logo facebook"></a>
-                    <a class="footer-medias__link" href="#"><img src="./mideas/Vector (3).png" alt="logo instagram"></a>
-                </div>
-            </div>
-
-            <div class="footer-adm">
-                <p class="footer-title">Área restrita</p>
-                <div class="footer-adm__anchor">
-                    <ul>
-                        <li class="footer-adm__item"><a class="footer-adm__link" href="./adm.html">Área
-                                administrativa</a></li>
-                        <li class="footer-adm__item"><a class="footer-adm__link" href="#">Espaço do aluno</a></li>
-                    </ul>
-                </div>
-            </div>
+      <img class="footer-logo" src="./mideas/Frame 2.png" alt="logo labenu" />
+      <div class="flexible">
+        <div>
+          <p class="footer-title">Endereço</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9962768688824!2d-46.6985022!3d-23.5685772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1671031245381!5m2!1spt-BR!2sbr"
+            width="300"
+            height="250"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p class="footer-street">
+            R. Pais Lemes, 215. CEP 05424-150 - Pinheiros
+          </p>
         </div>
-    </footer>
-</body>
 
+        <div class="footer-contact">
+          <p class="footer-title">Links</p>
+          <ul>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link" href="#">Home</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link" href="#">Cursos</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link" href="#">Blog</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link" href="#">Fale Conosco</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link" href="#">Termos e condições</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link" href="#"
+                >Política de privacidade</a
+              >
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link" href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-medias">
+          <p class="footer-title">Redes sociais</p>
+          <div class="flexible-anchor__mideas">
+            <a class="footer-medias__link" href="#"
+              ><img src="./mideas/Vector.png" alt="logo twiter"
+            /></a>
+            <a class="footer-medias__link" href="#"
+              ><img src="./mideas/Vector (1).png" alt="logo linkedin"
+            /></a>
+            <a class="footer-medias__link" href="#"
+              ><img src="./mideas/Vector (2).png" alt="logo facebook"
+            /></a>
+            <a class="footer-medias__link" href="#"
+              ><img src="./mideas/Vector (3).png" alt="logo instagram"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-adm">
+          <p class="footer-title">Área restrita</p>
+          <div class="footer-adm__anchor">
+            <ul>
+              <li class="footer-adm__item">
+                <a class="footer-adm__link" href="./adm.html"
+                  >Área administrativa</a
+                >
+              </li>
+              <li class="footer-adm__item">
+                <a class="footer-adm__link" href="#">Espaço do aluno</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

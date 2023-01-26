@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area Adm</title>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/global.js" defer></script>
+    <script src="./js/buscar-turma.js" defer></script>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -56,107 +57,10 @@
                     <div class="menu-classes__input">
                         <input type="text" id="turma" name="nome-turma" placeholder="Digite o nome da turma"
                             class="menu-classes-search">
-                        <input type="submit" class="menu-classes__btn" value="Buscar"></input>
+                        <input type="submit" class="menu-classes__btn" value="Buscar" id="search"></input>
                     </div>
 
-                    <div class="container-courses">
-                        <div class="container-courses__cards">
-                            <h3 class="container-courses__title">Hipátia</h3>
-                            <div class="container-courses__report">
-                                <p><strong>Curso: </strong>Javascript</p>
-                                <p><strong>Início: </strong>30/11/2022</p>
-                                <p><strong>Término: </strong>30/01/2023</p>
-                                <p><strong>Número de alunos: </strong>150</p>
-                                <p><strong>Período: </strong>Noturno</p>
-                                <p><strong>Concluído: </strong>Não</p>
-                            </div>
-                        </div>
-
-                        <div class="container-courses__cards">
-                            <h3 class="container-courses__title">Sibyla</h3>
-                            <div class="container-courses__report">
-                                <p><strong>Curso: </strong>Javascript</p>
-                                <p><strong>Início: </strong>30/10/2022</p>
-                                <p><strong>Término: </strong>30/12/2022</p>
-                                <p><strong>Número de alunos: </strong>200</p>
-                                <p><strong>Período: </strong>Integral</p>
-                                <p><strong>Concluído: </strong>Não</p>
-                            </div>
-                        </div>
-
-                        <div class="container-courses__cards">
-                            <h3 class="container-courses__title">Curie</h3>
-                            <div class="container-courses__report">
-                                <p><strong>Cursos: </strong>HTML e CSS</p>
-                                <p><strong>Início: </strong>15/09/2022</p>
-                                <p><strong>Término: </strong>15/10/2022</p>
-                                <p><strong>Número de alunos: </strong>180</p>
-                                <p><strong>Período: </strong>Noturno</p>
-                                <p><strong>Concluído: </strong>Não</p>
-                            </div>
-                        </div>
-
-                        <div class="container-courses__cards">
-                            <h3 class="container-courses__title">Zhenyi</h3>
-                            <div class="container-courses__report">
-                                <p><strong>Curso: </strong>HTML e CSS</p>
-                                <p><strong>Início: </strong>01/11/2022</p>
-                                <p><strong>Término: </strong>01/01/2022</p>
-                                <p><strong>Número de alunos: </strong>80</p>
-                                <p><strong>Período: </strong>Integral</p>
-                                <p><strong>Concluído: </strong>Não</p>
-                            </div>
-                        </div>
-
-                        <div class="container-courses__cards">
-                            <h3 class="container-courses__title">Clarke</h3>
-                            <div class="container-courses__report">
-                                <p><strong>Curso: </strong>HTML e CSS</p>
-                                <p><strong>Início: </strong>04/07/2022</p>
-                                <p><strong>Término: </strong>04/09/2022</p>
-                                <p><strong>Número de alunos: </strong>200</p>
-                                <p><strong>Período: </strong>Noturno</p>
-                                <p><strong>Concluído: </strong>Sim</p>
-                            </div>
-                        </div>
-
-                        <div class="container-courses__cards">
-                            <h3 class="container-courses__title">Blackwell</h3>
-                            <div class="container-courses__report">
-                                <p><strong>Curso: </strong>APIs Rest</p>
-                                <p><strong>Início: </strong>20/03/2022</p>
-                                <p><strong>Término: </strong>20/06/2022</p>
-                                <p><strong>Número de alunos: </strong>100</p>
-                                <p><strong>Período: </strong>Integral</p>
-                                <p><strong>Concluído: </strong>Sim</p>
-                            </div>
-                        </div>
-
-                        <div class="container-courses__cards">
-                            <h3 class="container-courses__title">Elion</h3>
-                            <div class="container-courses__report">
-                                <p><strong>Curso: </strong>APIs Rest</p>
-                                <p><strong>Início: </strong>12/01/2022</p>
-                                <p><strong>Término: </strong>12/06/2022</p>
-                                <p><strong>Número de alunos: </strong>200</p>
-                                <p><strong>Período: </strong>Noturno</p>
-                                <p><strong>Concluído: </strong>Sim</p>
-                            </div>
-                        </div>
-
-                        <div class="container-courses__cards">
-                            <h3 class="container-courses__title">Burnell</h3>
-                            <div class="container-courses__report">
-                                <p><strong>Curso: </strong>APIs Rest</p>
-                                <p><strong>Início: </strong>18/10/2022</p>
-                                <p><strong>Término: </strong>18/04/2023</p>
-                                <p><strong>Número de alunos: </strong>90</p>
-                                <p><strong>Período: </strong>Integral</p>
-                                <p><strong>Concluído: </strong>Não</p>
-                            </div>
-                        </div>
-
-                    </div>
+                    <div class="container-courses" id="courses"></div>
                 </div>
             </section>
         </div>
