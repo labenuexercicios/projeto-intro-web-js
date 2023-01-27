@@ -8,12 +8,11 @@
 //------------------------//
 
 
-//CONFERIR ESSES DAD0S DE DATAS E CONCLUSÃO COM AS ENTRADAS DO HTML
 const turmas = [
 {
     turma: "Hipátia",
     curso: "JavaScript",
-    inicio: "30/11/2022",  //ver como faz para usar o Date
+    inicio: "30/11/2022",  
     termino: "30/01/2023",
     numeroDeAlunos: 150, 
     periodo: "noturno",
@@ -145,7 +144,6 @@ const buscarCurso=()=>{
     return index > -1? cursos[index] : 'Curso não encontrado'
 }
 
-
 //buscarCurso('pi')
 //buscarCurso('Java')
 //buscarCurso('xxxxx')
@@ -153,7 +151,7 @@ const buscarCurso=()=>{
 
 //tem que linkar o input de cursos em acrescentaCursos, na verdade. Eu acho.....
 
-const carrinhoCursos = []
+const carrinhoCursos = [] //às vezes colocar esse array dentro da função buscar curso
 const acrescentaCurso=(nomeCurso, callback)=>{
     //essa função pega o valor do curso. Ela é usada na função parcelarCurso. Linkar ela no Adicionar outro curso lá do html
     
@@ -180,8 +178,6 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
     let valorDesconto = 0
     let valorComDesconto = 0
     let valorParcelasComDesconto = 0
-    
-    
     
     if(nParcelas === 1 || nParcelas === 2){
         switch (carrinhoCursos.length){
@@ -258,7 +254,6 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
         }
     }
 } 
-
  
 //const arrCursos = [900, 200]
 //parcelarCurso("JavaScript, APIsRest", arrCursos, 2) 
@@ -266,8 +261,6 @@ const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
 //const arrCursos2 = [500, 900, 200]
 //parcelarCurso("HTML e CSS, JavaScript, APIsRest", arrCursos2, 1)
  
-
-
 
 const buscarTurma = (event)=>{
     event.preventDefault()
@@ -286,11 +279,21 @@ const buscarTurma = (event)=>{
     
 }
 
-
-
 const gerarCardTurmas = (cardTurmas) =>{
 
     const searchContainer = document.getElementById('search-container')
+
+    //console.log(typeof document.getElementsByClassName('classes'))
+
+    if(document.getElementsByClassName('classes').length > 0){ //o retorno desse document.getElement é um objeto, ele vai ter conteúdo enquanto enquanto ainda existir uma class = "classes"
+        while(document.getElementsByClassName('classes').length > 0){
+            
+            const cards = document.querySelector('.classes')
+        
+            console.log(document.querySelector('.classes'))
+            cards.parentNode.removeChild(cards)
+        }
+    } 
 
     const geradorDeCard = cardTurmas.map((element) =>{
         const newCard = document.createElement('div')
@@ -310,25 +313,6 @@ const gerarCardTurmas = (cardTurmas) =>{
     return geradorDeCard
 }
 
-/* 
-TENTAR FAZER ISSO FUNCIONAR
-const apagarCard = () =>{
-    
-    const removeCard = document.getElementsByClassName('classes')
-
-    removeCard.remove()
-    
-    console.log(typeof document.getElementsByClassName('classes'))
-    if(document.getElementsByClassName('classes').length > 0){
-      console.log(document.getElementsByClassName('classes'))
-
-      console.log('pra remover', removeCard)
-        
-    }
-
-}
- */
-
 /*
 //Teste da função
 buscarTurma('curie')
@@ -336,8 +320,6 @@ buscarTurma('currrie')
 buscarTurma('Hipátia') 
 buscarTurma('HIPÁTIA') 
 */
-
-
 
 
 const buscarEstudante=(nomeEstudante)=>{
@@ -355,13 +337,12 @@ const buscarEstudante=(nomeEstudante)=>{
 //Teste para chamar função
 buscarEstudante('ha') */
 
-
 /* 
 //Teste da função
 buscarEstudante('Chris Evans') 
 buscarEstudante('ChRis EVAns') 
 buscarEstudante('halle berry')
- */
+*/
 
 const relatorioEstudante=()=>{
     event.preventDefault()
@@ -396,16 +377,18 @@ const matricular=()=>{
     )
 
     console.log(confereTurma)
+    console.log(estudantes)
     /* torcar os consoles desses returns por um alert de dados inválidos */
-    /* tenta pegar os dados do nome do curso e da turma direto do confere turmas */
+    
+    
 
-    if(nomeInput == "" || nomeInput==" ") return console.log('Dados inválidos, matrícula não efetuada.')
+    if(nomeInput == "" || nomeInput==" ") return console.log('Dados inválidos, matrícula não efetuada.'), removerCardMatricula()
          
-    if(!confereTurma.length>0) return console.log('2Dados inválidos, matrícula não efetuada.')
+    if(!confereTurma.length>0) return console.log('2Dados inválidos, matrícula não efetuada.'), removerCardMatricula()
 
-    if(confereTurma[0].curso.toLowerCase() != cursoInput) return console.log('3Dados inválidos, matrícula não efetuada.')
+    if(confereTurma[0].curso.toLowerCase() != cursoInput) return console.log('3Dados inválidos, matrícula não efetuada.'), removerCardMatricula()
 
-    if(confereTurma[0].concluida === true) return console.log ('4Dados inválidos, matrícula não efetuada.')
+    if(confereTurma[0].concluida === true) return console.log ('4Dados inválidos, matrícula não efetuada.'), removerCardMatricula()
     
     const novoAluno = {
         estudante: nomeInput,
@@ -413,6 +396,32 @@ const matricular=()=>{
         curso: cursoInput,
         nParcelas: parcelasInput
     }
+
+   /* TENTAR FAZER FUNCIONAR A CONDIÇÃO DE ALUNO JÁ MATRICULADO  
+   
+   const confereAlunoNome = estudantes.filter((element)=>element.estudante === novoAluno.estudante)
+    const confereAlunoTurma = estudantes.filter((element)=> element.turma === novoAluno.turma)
+    const confereAlunoCurso = estudantes.filter((element)=> element.curso === novoAluno.curso)
+    console.log(confereAlunoNome)
+    //console.log(confereAlunoTurma)
+    //console.log(confereAlunoCurso)
+
+    
+    if(confereAlunoNome.estudante = novoAluno.estudante){
+        if(confereAlunoNome.curso = novoAluno.curso){
+            if(confereAlunoNome.turma = novoAluno.turma){
+                console.log('aluno já está matriculado')
+                return
+            }else{
+                estudantes.push(novoAluno)
+            }
+        }else{
+            estudantes.push(novoAluno)
+        }
+    }else{
+        estudantes.push(novoAluno)
+    } */
+
         
     console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`)
     
@@ -420,25 +429,48 @@ const matricular=()=>{
             
     estudantes.push(novoAluno)
 
-    return gerarCardMatricula(novoAluno)
+    return gerarCardMatricula(novoAluno, confereTurma, removerCardMatricula)
           
 }
 
-const gerarCardMatricula=(estudanteDados)=>{
+const removerCardMatricula=()=>{
+    if(document.getElementsByClassName('confirm-report-div').length > 0){
+        while(document.getElementsByClassName('confirm-report-div').length > 0){
+            const card = document.querySelector('.confirm-report-div')
+            card.parentNode.removeChild(card)
+        }
+    }
+}
+
+const gerarCardMatricula=(estudanteDados, arrTurma, callback)=>{
     const confirmContainer = document.getElementById('confirm-report')
 
+    callback()
+   
     const newCard = document.createElement('div')
-
+    newCard.setAttribute('class', 'confirm-report-div')
+    
     newCard.innerHTML = `
+    <div class="confirm-student">
+            <h1>Aluno matriculado</h1>
+            <figure>
+              <img src="./midias/confirm-check.svg" alt="check" id="confirm-check">
+            </figure>
+          </div>
+
     <p class="studant-info">Aluno Matriculado</p>
     <p class="studant-info">Nome: ${estudanteDados.estudante}</p>
-    <p class="studant-info">Curso: ${estudanteDados.curso}</p>
-    <p class="studant-info">Turma: ${estudanteDados.turma}</p>
+    <p class="studant-info">Curso: ${arrTurma[0].curso}</p>
+    <p class="studant-info">Turma: ${arrTurma[0].turma}</p>
     `
+
     confirmContainer.insertAdjacentElement('beforeend', newCard)
 
     return
 }
+
+
+
 //console.log(estudantes)
 //quando atualiza a página, os dados somem de dentro do array de estudantes, é isso mesmo?
 
