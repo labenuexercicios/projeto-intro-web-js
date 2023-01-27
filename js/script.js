@@ -158,18 +158,18 @@ const buscarCurso = (nomeCurso) => {
 // }
 // matricular("regiane", "Javascript", "Ozemela", 2)
 
-const adicionarAoCarrinho = (nomeCurso) => {
-    const curso = buscarCurso(nomeCurso) // nao precisa do .toLowerCase pois a funcar buscarCurso já faz
+// const adicionarAoCarrinho = (nomeCurso) => {
+//     const curso = buscarCurso(nomeCurso) // nao precisa do .toLowerCase pois a funcar buscarCurso já faz
 
-    if (!curso) { // isso serve para nao colocar curso que nao existe no carrinho do curso
-        return // quando o curso nao existe ele nao executa a linha de baixo, o push
-    }
+//     if (!curso) { // isso serve para nao colocar curso que nao existe no carrinho do curso
+//         return // quando o curso nao existe ele nao executa a linha de baixo, o push
+//     }
 
-    carrinhoCursos.push(curso.valor)
-}
+//     carrinhoCursos.push(curso.valor)
+// }
 
-adicionarAoCarrinho("JavaScript")
-console.log(carrinhoCursos)
+// adicionarAoCarrinho("JavaScript")
+// console.log(carrinhoCursos)
 
 // const relatorioEstudante = (nomeEstudante) => {
 //     const relatorio = buscarEstudante(nomeEstudante)

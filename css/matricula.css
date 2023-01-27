@@ -61,6 +61,10 @@
     width: 44px;
 }
 
+.contact-dice{
+    display: block;
+}
+
 
 .contact-dice__item{
     color: #000;

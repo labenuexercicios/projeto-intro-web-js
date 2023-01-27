@@ -43,6 +43,12 @@
 .menu-list__anchor{
     font-size: 0.875rem;
     color: #000;
+    cursor: pointer;
+    
+}
+
+.menu-list__anchor:hover{
+    font-size: 1rem;
 }
 
 #btn-value, #btn-search, #btn-search::placeholder{

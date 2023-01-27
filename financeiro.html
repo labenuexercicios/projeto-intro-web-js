@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financeiro</title>
     <script src="./js/global.js" defer></script>
+    <script src="./js/cursos.js" defer></script>
     <script src="./js/relatorio-estudante.js" defer></script>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -57,20 +58,20 @@
             <section class="menu-list__dice">
                 <section class="menu-list__form">
                     <h3 class="menu-list__title">Financeiro</h3>
-                    <form action="#">
+                    <form action="#" id="purchase">
                         <ul>
                             <li class="menu-list__item">
                                 <label class="menu-list__label">Curso</label>
-                                <input class="menu-list__input" type="">
+                                <select name="course" class="menu-list__input" id="course"></select>
                             </li>
 
                             <li class="menu-list__item">
-                                <a class="menu-list__anchor" href="./adm.html">Adicionar outro curso</a>
+                                <p id="include" class="menu-list__anchor"><u>Adicionar outro curso</u></p>
                             </li>
 
                             <li class="menu-list__item">
                                 <label class="menu-list__label">Número de parcelas</label>
-                                <input class="menu-list__input" type="number" min="1" max="10">
+                                <input id="portion" name="portion" class="menu-list__input" type="number" min="1" max="10">
                             </li>
 
                             <li class="menu-list__item">
@@ -78,6 +79,7 @@
                             </li>
                         </ul>
                     </form>
+                    <div class="result" id="result"></div>
                 </section>
 
                 <section>
