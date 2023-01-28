@@ -63,14 +63,17 @@
     
 }
 
+
 #btn-value:hover, #btn-search:hover{
     transform: scale(1.1);
 }
 
-.contact-dice{
+.contact-dice, #result, #not-found{
     font-size: 1rem;
     line-height: 1.5rem;
     padding-top: 1rem;
-    
+    font-weight: 700; 
 }
+
+
 

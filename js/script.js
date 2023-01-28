@@ -197,6 +197,6 @@ const buscarCurso = (nomeCurso) => {
 //     }
 // }
 
-function menuOpen(){
-    alert("teste")
-}
+// function menuOpen(){
+//     alert("teste")
+// }

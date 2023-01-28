@@ -23,9 +23,28 @@ main{
     font-weight: 700;
     line-height: 10rem;
     text-decoration: none;
+    position: relative;
 }
 
-.menu-list__link:hover {
-    text-decoration: none;
-    color: #fff;
+
+.menu-list__link::after{
+    content: " ";
+    width: 0%;
+    height: 1.5px;
+    background-color: #00ffff;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: 0.5s ease-in-out;
 }
+
+.menu-list__link:hover{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.menu-list__link:hover::after {
+    width: 100%;
+    
+}
+

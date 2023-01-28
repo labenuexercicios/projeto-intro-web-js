@@ -56,6 +56,10 @@ header {
         display: block;
     }
 
+    .menu-mobile__icon{
+        background-color: transparent;
+    }
+
     .menu-mobile button{
         background-color: transparent;
         border: none;
@@ -63,15 +67,27 @@ header {
     }
 
     .m-mobile__list{
+        position: absolute;
+        width: 100%;
+        top: 0;
         display: flex;
+        font-size: 0.75rem;
+        text-transform: uppercase;
         flex-direction: column;
+        text-decoration: none;
         text-align: center;
         padding-bottom: 1rem;
+    }
+
+    .m-mobile__item{
+        border-bottom:1px solid #626060;
+        padding: 20px 15px;
     }
 
     .m-mobile__links{
         display: block;
         padding-bottom: 1.2rem;
+        color: #7a7777;
     }
 
     .open{

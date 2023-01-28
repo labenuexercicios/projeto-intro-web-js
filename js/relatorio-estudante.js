@@ -12,6 +12,16 @@ const reportTemplate = (element) => {
     </div>`;
 };
 
+function renderNotFound() {
+  const list = document.querySelector("#report");
+
+  if (!list) {
+    return;
+  }
+
+  list.innerHTML = '<p class="not-found">Aluno não encontrado!</p>';
+}
+
 const buscarEstudante = document.querySelector("#btn-search");
 
 buscarEstudante.addEventListener("click", function (e) {
@@ -24,5 +34,13 @@ buscarEstudante.addEventListener("click", function (e) {
 
   document.querySelector("#report").innerHTML = found
     .map((item) => reportTemplate(item))
-    .join("");
+    .join(""); 
+
+
+    if (found.length > 0) {
+      renderCards(found);
+      return
+    }
+  
+    renderNotFound();
 });
