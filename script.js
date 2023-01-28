@@ -298,7 +298,7 @@ const gerarCardTurmas = (cardTurmas) =>{
     const geradorDeCard = cardTurmas.map((element) =>{
         const newCard = document.createElement('div')
         newCard.setAttribute("class", "classes")
-
+   
         newCard.innerHTML = `
             <h1 class="class-name">${element.turma}</h1>
             <p class="details"><span class="bold">Curso:</span> ${element.curso}</p>
@@ -308,9 +308,10 @@ const gerarCardTurmas = (cardTurmas) =>{
             <p class="details"><span class="bold">Período:</span> ${element.periodo}</p>
             <p class="details"><span class="bold">Concluído:</span> ${element.concluida}</p>
         `
-      searchContainer.insertAdjacentElement('beforeend', newCard)
+      searchContainer.insertAdjacentElement('beforeend', newCard) 
+
     })
-    return geradorDeCard
+   return geradorDeCard
 }
 
 /*
@@ -377,18 +378,31 @@ const matricular=()=>{
     )
 
     console.log(confereTurma)
-    console.log(estudantes)
-    /* torcar os consoles desses returns por um alert de dados inválidos */
-    
+    console.log(estudantes) 
     
 
-    if(nomeInput == "" || nomeInput==" ") return console.log('Dados inválidos, matrícula não efetuada.'), removerCardMatricula()
+    if(nomeInput == "" || nomeInput==" ") return swal({
+            title: "Nome não preenchido.",            
+            icon: "error",
+          }), removerCardMatricula()
          
-    if(!confereTurma.length>0) return console.log('2Dados inválidos, matrícula não efetuada.'), removerCardMatricula()
+    if(!confereTurma.length>0) return swal({
+        title: "Turma não encontrada.",            
+        icon: "error",
+      }), removerCardMatricula()
+         
 
-    if(confereTurma[0].curso.toLowerCase() != cursoInput) return console.log('3Dados inválidos, matrícula não efetuada.'), removerCardMatricula()
+    if(confereTurma[0].curso.toLowerCase() != cursoInput) return swal({
+        title: "A turma não oferece esse curso.",            
+        icon: "error",
+      }), removerCardMatricula()
+         
 
-    if(confereTurma[0].concluida === true) return console.log ('4Dados inválidos, matrícula não efetuada.'), removerCardMatricula()
+    if(confereTurma[0].concluida === true) return swal({
+        title: "O curso já foi concluído",            
+        icon: "error",
+      }), removerCardMatricula()
+         
     
     const novoAluno = {
         estudante: nomeInput,
@@ -464,9 +478,7 @@ const gerarCardMatricula=(estudanteDados, arrTurma, callback)=>{
     <p class="studant-info">Turma: ${arrTurma[0].turma}</p>
     `
 
-    confirmContainer.insertAdjacentElement('beforeend', newCard)
-
-    return
+    return confirmContainer.insertAdjacentElement('beforeend', newCard)
 }
 
 

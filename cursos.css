@@ -46,13 +46,14 @@ main{
 main section:nth-child(1){
     background-color: #F6C34A;
     padding: 2.5em 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 4fr 1fr;
-    justify-items: center;
-    align-items: center; 
-    row-gap: 3em;
-    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 80vh;
+    max-height: auto;
 }
 
 #html-css{
@@ -151,6 +152,12 @@ main section:nth-child(1){
     line-height: 1.6rem;
     color: #000000;
     text-align: left;
+}
+
+#button-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #button{

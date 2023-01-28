@@ -38,7 +38,8 @@ header{
 }
 
 main{
-    height: 88vh;
+    min-height: 80vh;
+    max-height: auto;
     background-color: #F6C34A; 
     display: grid;
     grid-template-columns: 18% repeat(2, 1fr);

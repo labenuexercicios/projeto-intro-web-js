@@ -38,7 +38,8 @@ header{
 }
 
 main{
-    height: auto;
+    min-height: 80vh;
+    max-height: auto;
     background-color: #F6C34A;
     display: flex;
     flex-direction: row;
