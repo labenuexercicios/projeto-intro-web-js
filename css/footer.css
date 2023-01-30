@@ -67,6 +67,10 @@ iframe{
     text-align: center;
 }
 
+.footer-medias__link:hover{
+    transform: scale(1.1);
+}
+
 .footer-adm__anchor{
     display: flex;
     flex-direction: column;
