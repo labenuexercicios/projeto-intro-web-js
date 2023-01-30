@@ -56,7 +56,7 @@ const turmas = [
 },
 {
     turma: "Blackwwell",
-    curso: "APIsRest",
+    curso: "APIs Rest",
     inicio: "20/03/2022",
     termino: "20/06/2022",
     numeroDeAlunos: 100,
@@ -65,7 +65,7 @@ const turmas = [
 },
 {
     turma: "Elion",
-    curso: "APIsRest",
+    curso: "APIs Rest",
     inicio: "12/01/2022",
     termino: "12/06/2022",
     numeroDeAlunos: 200,
@@ -74,7 +74,7 @@ const turmas = [
 },
 {
     turma: "Burnell",
-    curso: "APIsRest",
+    curso: "APIs Rest",
     inicio: "18/10/2022",
     periodo: "18/04/2023",
     numeroDeAlunos: 90,
@@ -97,7 +97,7 @@ const cursos = [
     valor: 900
 },
 {
-    curso: "APIsRest",
+    curso: "APIs Rest",
     descricao: "Vem aprender APIsRest para dar um up no seu currículo!", 
     duracao: "6 meses",
     valor: 2000
@@ -134,26 +134,61 @@ const estudantes = [
 }
 ]
 
+const carrinhoCursosValores = []
+const carrinhoCursosNomes = []
 const buscarCurso=()=>{
     event.preventDefault()
     
-    const inputCurso = document.getElementById('course').value
+    const inputCurso = document.getElementById('course').value.toLowerCase()
+    const confereCurso = carrinhoCursosNomes.filter(element=> element.toLowerCase() === inputCurso)
 
-    const index = cursos.findIndex(element=> element.curso.toLowerCase().indexOf(inputCurso.toLowerCase())>-1)
-    console.log(cursos[index])
-    return index > -1? cursos[index] : 'Curso não encontrado'
+    if(inputCurso == " " || inputCurso == "" ) return swal({
+        title: "Curso inválido.",            
+        icon: "error",
+    }) 
+    
+    if(confereCurso.length > 0) return swal({
+        title: "Curso já adicionado.",            
+        icon: "error",
+    }) 
+
+    /*//Primeira opção:
+    const index = cursos.findIndex(element=> element.curso.toLowerCase().indexOf(inputCurso.toLowerCase())>-1) 
+
+    //console.log(cursos[index]) 
+    console.log(index)
+
+   return carrinhoCursosValores.push(cursos[index].valor), carrinhoCursosNomes.push(cursos[index].curso), console.log(carrinhoCursosValores), console.log(carrinhoCursosNomes)*/
+    
+    //Segunda opção:
+
+    const retornaCurso = cursos.filter(element=>{
+        if(element.curso.toLowerCase().includes(inputCurso))
+        return element
+        //essa função vai retornar um array com o objeto do curso dentro
+    })
+    
+    if(retornaCurso.length == 0) return  swal({
+        title: "Curso inválido.",            
+        icon: "error",
+    })  
+    
+
+    return carrinhoCursosNomes.push(retornaCurso[0].curso), carrinhoCursosValores.push(retornaCurso[0].valor), console.log(carrinhoCursosNomes), console.log(carrinhoCursosValores)
+    
 }
+
 
 //buscarCurso('pi')
 //buscarCurso('Java')
 //buscarCurso('xxxxx')
 
 
-//tem que linkar o input de cursos em acrescentaCursos, na verdade. Eu acho.....
 
-const carrinhoCursos = [] //às vezes colocar esse array dentro da função buscar curso
+
+
 const acrescentaCurso=(nomeCurso, callback)=>{
-    //essa função pega o valor do curso. Ela é usada na função parcelarCurso. Linkar ela no Adicionar outro curso lá do html
+    //Antes do DOM, essa função pegava o valor de cada curso, colocava em um array e era usada como callback na função parcelarCurso. 
     
     const arrCursosSelecionados = [callback(nomeCurso)]
     
@@ -173,87 +208,148 @@ const acrescentaCurso=(nomeCurso, callback)=>{
 //acrescentaCurso('javascript', buscarCurso)
 //acrescentaCurso('xxxx', buscarCurso)
  
-const parcelarCurso=(cursos, carrinhoCursos, nParcelas)=>{
+const parcelarCurso=()=>{
+    event.preventDefault()
+
+    const nParcelas = document.getElementById('payment-plan').value
+    const inputCurso = document.getElementById('course').value.toLowerCase()
+
+    if(nParcelas == "" || nParcelas == " ") return swal({
+        title: "Número de parcelas inválido.",            
+        icon: "error",
+    }); 
+
+    if(nParcelas > 5) return swal({
+        title: "Número de parcelas inválido.",            
+        icon: "error",
+    }); 
+
     let valorTotal = 0 
     let valorDesconto = 0
     let valorComDesconto = 0
     let valorParcelasComDesconto = 0
     
     if(nParcelas === 1 || nParcelas === 2){
-        switch (carrinhoCursos.length){
+        switch (carrinhoCursosValores.length){
             case 1: 
-                valorTotal = carrinhoCursos[0]
+                valorTotal = carrinhoCursosValores[0]
                 valorDesconto = .2 * valorTotal;
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
                
-                console.log(`O curso de ${cursos} ficou no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20%.`);
+                console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20%.`);
                 break
 
             case 2:
-                for(let index in carrinhoCursos){
-                valorTotal += carrinhoCursos[index]
+                for(let index in carrinhoCursosValores){
+                valorTotal += carrinhoCursosValores[index]
                 };
  
                 valorDesconto = valorTotal*.3;
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
                 
-                console.log(`Os cursos de ${cursos} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
+                console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
                 break
 
             case 3:
-                for(let index in carrinhoCursos){
-                    valorTotal += carrinhoCursos[index]
+                for(let index in carrinhoCursosValores){
+                    valorTotal += carrinhoCursosValores[index]
                 };
                 valorDesconto = valorTotal*.3;
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
 
-                console.log(`Os cursos de ${cursos} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
+                console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
                 break
 
             default:
                 console.log('Confira os cursos solicitados.');
                 break           
         }
-    }else{
-        switch(carrinhoCursos.length){
+    }else if(nParcelas == 3){
+        switch(carrinhoCursosValores.length){
             case 1:
-                for(let index in carrinhoCursos){
-                    valorTotal += carrinhoCursos[index]
+                for(let index in carrinhoCursosValores){
+                    valorTotal += carrinhoCursosValores[index]
                     };
-                    console.log(`O curso de ${cursos} ficou no valor total de R$${valorTotal}. Não há desconto para ser aplicado.`);
+                    console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Não há desconto para ser aplicado.`);
                     break
                 
         case 2:
-            for(let index in carrinhoCursos){
-                valorTotal += carrinhoCursos[index]
+            for(let index in carrinhoCursosValores){
+                valorTotal += carrinhoCursosValores[index]
             };
             valorDesconto = valorTotal * .1;
             valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
             valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
 
-            console.log(`Os cursos de ${cursos} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 10% sobre o valor total.`);
+            console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 10% sobre o valor total.`);
             break
                 
         case 3:
-            for(let index in carrinhoCursos){
-                valorTotal += carrinhoCursos[index]
+            for(let index in carrinhoCursosValores){
+                valorTotal += carrinhoCursosValores[index]
             };
             valorDesconto = valorTotal * .15;
             valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
             valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
 
-            console.log(`Os cursos de ${cursos} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% sobre o valor total.`);
+            console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% sobre o valor total.`);
             break
 
             default:
                 console.log('Confira os cursos solicitados.');
                 break 
         }
+    }else{
+        switch(carrinhoCursosValores.length){
+            case 1:
+                for(let index in carrinhoCursosValores){
+                    valorTotal += carrinhoCursosValores[index]
+                };
+                valorParcelas = (valorTotal / nParcelas).toFixed(2);
+
+                console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`);
+                break
+            
+            case 2:
+                for(let index in carrinhoCursosValores){
+                    valorTotal += carrinhoCursosValores[index]
+                };
+                valorParcelas = (valorTotal / nParcelas).toFixed(2);
+
+                console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`);
+                break
+            
+                case 3:
+                    for(let index in carrinhoCursosValores){
+                        valorTotal += carrinhoCursosValores[index]
+                    };
+                    valorParcelas = (valorTotal / nParcelas).toFixed(2);
+    
+                    return console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`)
+                    break
     }
+    }
+
 } 
+/* ISSO NÃO FUNCIONA
+const gerarCardCurso = (carrinhoCursosNomes) =>{
+    
+    const container = document.getElementById('course').value
+    for(let element of carrinhoCursosNomes){
+        let newCard = document.createElement('span')
+        newCard.setAttribute('class', 'cardCurso')
+
+        newCard.innerHTML = `${element}`
+       
+        container.insertAdjacentElement('beforeend', newCard)
+    } 
+    
+}
+ */
+
  
 //const arrCursos = [900, 200]
 //parcelarCurso("JavaScript, APIsRest", arrCursos, 2) 
@@ -384,24 +480,24 @@ const matricular=()=>{
     if(nomeInput == "" || nomeInput==" ") return swal({
             title: "Nome não preenchido.",            
             icon: "error",
-          }), removerCardMatricula()
+        }), removerCardMatricula()
          
     if(!confereTurma.length>0) return swal({
-        title: "Turma não encontrada.",            
-        icon: "error",
-      }), removerCardMatricula()
+            title: "Turma não encontrada.",            
+            icon: "error",
+        }), removerCardMatricula()
          
 
     if(confereTurma[0].curso.toLowerCase() != cursoInput) return swal({
-        title: "A turma não oferece esse curso.",            
-        icon: "error",
-      }), removerCardMatricula()
+            title: "A turma não oferece esse curso.",            
+            icon: "error",
+        }), removerCardMatricula()
          
 
     if(confereTurma[0].concluida === true) return swal({
-        title: "O curso já foi concluído",            
-        icon: "error",
-      }), removerCardMatricula()
+            title: "O curso já foi concluído",            
+            icon: "error",
+        }), removerCardMatricula()
          
     
     const novoAluno = {

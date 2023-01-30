@@ -38,7 +38,7 @@ header{
 }
 
 main{
-    min-height: 80vh;
+    min-height: 87vh;
     max-height: auto;
     display: flex;
     flex-direction: row;
@@ -49,7 +49,6 @@ main{
 
 #menu-adm{
     background-color: #0E0E0E;
-    
     order: 1;
     width: 18%;
     display: flex;
