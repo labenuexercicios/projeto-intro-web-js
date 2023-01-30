@@ -127,7 +127,7 @@ window.labenu.students = [
 ];
 
 
-function menuOpen(){
+/* function menuOpen(){
     let menuMobile = document.querySelector('.menu-mobile');
     if(menuMobile.classList.contains('.open')){
         menuMobile.classList.remove('.open')
@@ -136,4 +136,4 @@ function menuOpen(){
         menuMobile.classList.add('.open')
         document.querySelector('.menu-mobile__icon').src = "./mideas/icons8-cancelar-30.png" 
     }
-}
+} */
