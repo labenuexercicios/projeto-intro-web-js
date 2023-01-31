@@ -173,9 +173,10 @@ const buscarCurso=()=>{
         icon: "error",
     })  
     
-
-    return carrinhoCursosNomes.push(retornaCurso[0].curso), carrinhoCursosValores.push(retornaCurso[0].valor), console.log(carrinhoCursosNomes), console.log(carrinhoCursosValores)
+    document.getElementById('course').value=""
     
+    
+    return carrinhoCursosNomes.push(retornaCurso[0].curso), carrinhoCursosValores.push(retornaCurso[0].valor), console.log(carrinhoCursosNomes), console.log(carrinhoCursosValores)
 }
 
 
@@ -228,16 +229,22 @@ const parcelarCurso=()=>{
     let valorDesconto = 0
     let valorComDesconto = 0
     let valorParcelasComDesconto = 0
+    let valorParcelas = 0
+    let porcentagemDesconto 
     
-    if(nParcelas === 1 || nParcelas === 2){
+    if(nParcelas == 1 || nParcelas == 2){
         switch (carrinhoCursosValores.length){
             case 1: 
                 valorTotal = carrinhoCursosValores[0]
                 valorDesconto = .2 * valorTotal;
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+                porcentagemDesconto = '20%'
                
                 console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20%.`);
+
+                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+
                 break
 
             case 2:
@@ -248,8 +255,12 @@ const parcelarCurso=()=>{
                 valorDesconto = valorTotal*.3;
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+                porcentagemDesconto = '20% e 10%'
                 
                 console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
+
+                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+
                 break
 
             case 3:
@@ -259,22 +270,31 @@ const parcelarCurso=()=>{
                 valorDesconto = valorTotal*.3;
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+                porcentagemDesconto = '20% e 10%'
 
                 console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
+
+                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+
                 break
 
             default:
                 console.log('Confira os cursos solicitados.');
                 break           
         }
-    }else if(nParcelas == 3){
+    }else if (nParcelas == 3){
         switch(carrinhoCursosValores.length){
             case 1:
                 for(let index in carrinhoCursosValores){
                     valorTotal += carrinhoCursosValores[index]
-                    };
-                    console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Não há desconto para ser aplicado.`);
-                    break
+                };
+                valorParcelas = (valorTotal / nParcelas).toFixed(2)
+
+                console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Não há desconto para ser aplicado.`);
+
+                return gerarCardValorSemDesconto(valorParcelas)
+
+                break
                 
         case 2:
             for(let index in carrinhoCursosValores){
@@ -283,8 +303,12 @@ const parcelarCurso=()=>{
             valorDesconto = valorTotal * .1;
             valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
             valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+            porcentagemDesconto = '10%'
 
             console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 10% sobre o valor total.`);
+
+            return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+            
             break
                 
         case 3:
@@ -294,15 +318,19 @@ const parcelarCurso=()=>{
             valorDesconto = valorTotal * .15;
             valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
             valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
+            porcentagemDesconto = '20%'
 
             console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% sobre o valor total.`);
+
+            return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+
             break
 
             default:
                 console.log('Confira os cursos solicitados.');
                 break 
         }
-    }else{
+    }else if(nParcelas>3){
         switch(carrinhoCursosValores.length){
             case 1:
                 for(let index in carrinhoCursosValores){
@@ -311,6 +339,9 @@ const parcelarCurso=()=>{
                 valorParcelas = (valorTotal / nParcelas).toFixed(2);
 
                 console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`);
+
+                return gerarCardValorSemDesconto(valorParcelas)
+
                 break
             
             case 2:
@@ -320,6 +351,9 @@ const parcelarCurso=()=>{
                 valorParcelas = (valorTotal / nParcelas).toFixed(2);
 
                 console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`);
+
+                return gerarCardValorSemDesconto(valorParcelas)
+
                 break
             
                 case 3:
@@ -328,27 +362,55 @@ const parcelarCurso=()=>{
                     };
                     valorParcelas = (valorTotal / nParcelas).toFixed(2);
     
-                    return console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`)
+                    console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`)
+
+                    return gerarCardValorSemDesconto(valorParcelas)
+
                     break
+        } 
     }
-    }
-
 } 
-/* ISSO NÃO FUNCIONA
-const gerarCardCurso = (carrinhoCursosNomes) =>{
-    
-    const container = document.getElementById('course').value
-    for(let element of carrinhoCursosNomes){
-        let newCard = document.createElement('span')
-        newCard.setAttribute('class', 'cardCurso')
 
-        newCard.innerHTML = `${element}`
-       
-        container.insertAdjacentElement('beforeend', newCard)
-    } 
-    
+
+const gerarCardValor = (porcentagemDesconto, valorParcelasComDesconto) =>{
+    const paymentContainer = document.getElementById('search')
+
+    //callback() 
+
+
+    const newCard = document.createElement('div')
+    newCard.setAttribute('id', 'payment')
+    newCard.setAttribute('class', 'xxx')
+
+    newCard.innerHTML = `
+        <h1>Valor</h1>
+        <p class="paragraph" >Desconto de ${porcentagemDesconto}. Parcelas de R${valorParcelasComDesconto}</p>
+    `
+    paymentContainer.insertAdjacentElement('beforeend', newCard)
+
 }
- */
+
+const gerarCardValorSemDesconto = (valorParcelas) =>{
+    const paymentContainer = document.getElementById('search')
+
+    //callback() 
+
+
+    const newCard = document.createElement('div')
+    newCard.setAttribute('id', 'payment')
+    newCard.setAttribute('class', 'xxx')
+
+    newCard.innerHTML = `
+        <h1>Valor</h1>
+        <p class="paragraph" >Não há desconto. Parcelas de R${valorParcelas}</p>
+    `
+    paymentContainer.insertAdjacentElement('beforeend', newCard)
+
+}
+
+
+
+
 
  
 //const arrCursos = [900, 200]
@@ -378,8 +440,6 @@ const buscarTurma = (event)=>{
 const gerarCardTurmas = (cardTurmas) =>{
 
     const searchContainer = document.getElementById('search-container')
-
-    //console.log(typeof document.getElementsByClassName('classes'))
 
     if(document.getElementsByClassName('classes').length > 0){ //o retorno desse document.getElement é um objeto, ele vai ter conteúdo enquanto enquanto ainda existir uma class = "classes"
         while(document.getElementsByClassName('classes').length > 0){
