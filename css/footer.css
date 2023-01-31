@@ -1,0 +1,130 @@
+footer {
+    background-color: #f5c75a;
+    height: 50vh;
+    width: 100%;
+}
+
+
+.footer-logo{
+    margin: 1rem 9.7rem;
+} 
+
+
+iframe{
+    width: 23.38vw;
+    height: 27.99vh;
+    border: 2px solid #000;
+}
+
+.footer__medias > img {
+    padding-top: 1.688rem;
+}
+
+
+.footer-title{
+    color: #0E0E0E;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem ;
+    font-weight: 700;
+    line-height: 3.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.footer-contact__item{
+    padding-bottom: 0.75rem;
+    list-style-type: none; 
+    padding-left:0;
+}
+
+.footer-contact__link{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #0E0E0E;
+    line-height: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-contact__link:hover{
+    text-decoration: none;
+}
+
+.flexible {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.flexible-anchor__mideas {
+    display: flex;
+    padding-left: 0; 
+}
+
+.footer-medias__link{
+    padding-left: 0;
+    padding-right: 1.289rem;
+    text-align: center;
+}
+
+.footer-medias__link:hover{
+    transform: scale(1.1);
+}
+
+.footer-adm__anchor{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer-adm__item{
+    padding-bottom: 0.75rem;
+    list-style-type: none;
+    
+}
+
+.footer-adm__link{
+    color: #0E0E0E;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.footer-adm__link:hover{
+    text-decoration: none;
+}
+
+@media screen and (max-device-width: 780px){
+    footer {
+        background-color: #f5c75a;
+        height: 70%;
+        
+    }
+
+    .footer-logo{
+        margin: 1rem;
+        height: auto;
+    }
+
+    iframe{
+        width: 85%;
+        height: 20vw;
+        line-height: 1rem;
+    }
+
+    .footer-container{
+        height: 60%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "footer-place footer-contact"
+        "footer-place footer-contact"
+        "footer-medias footer-adm"
+        "footer-medias footer-adm"
+        "footer-medias footer-adm";
+        justify-content: space-evenly;
+        padding-left: 1.5rem;
+        column-gap: 3rem;
+    }
+}

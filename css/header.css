@@ -1,0 +1,36 @@
+
+header {
+    background-color: #FBFBFB;
+    height: var(--height-header);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    width: 18.1770vw;
+    height: 7.80vh;
+}
+
+
+.m-menu__list{
+    font-size: 1.5em;
+    font-weight: 700;
+    list-style: none;
+    line-height: 2.25em;
+    display: flex;
+}
+
+
+.m-menu__links{
+    color: #0E0E0E;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.m-menu__links:hover{
+    text-decoration: underline;
+}
+
+

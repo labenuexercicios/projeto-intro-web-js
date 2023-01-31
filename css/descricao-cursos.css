@@ -1,0 +1,70 @@
+.menu-classes{
+    background-color: #f5c75a;
+    flex-grow: 3;
+
+}
+
+.menu-classes__input{
+    display: flex;
+    justify-content: center;
+    padding-top:3.813rem ;
+}
+
+input::placeholder{
+    color: #D1D1D1;
+}
+
+.menu-classes-search{
+    width: 23.43vw;
+    height: 4.47vh;
+    padding-left:1.313rem ;
+
+}
+
+.menu-classes__btn{
+    background-color:#0E0E0E;
+    color:#fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    width: 6.25vw;
+    height: 4.86vh;
+    cursor: pointer;
+}
+
+.menu-classes__btn:hover{
+    transform: scale(1.1);
+}
+
+.container-courses{
+    display: grid;
+    grid-template-columns:repeat(4, auto);
+    grid-column-gap: 1.875rem;
+    grid-row-gap: 1.75rem;
+    justify-content: center;
+    padding-top: 6.188rem;
+}
+
+.container-courses__cards{
+    background-color: #fff;
+    border-radius: 12px;
+    width: 12.5vw;
+    height: 23.20vh;
+    padding-top: 0.75rem;
+    
+}
+
+.container-courses__title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+}
+
+.container-courses__report{
+    padding: 1.2rem;
+    line-height: 1.375rem;
+}
+
+

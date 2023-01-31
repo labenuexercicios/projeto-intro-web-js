@@ -1,0 +1,164 @@
+main{
+    width: 100%;
+}
+
+.link-whatsaap{
+    position: fixed;
+    bottom: 1.25em;
+    right: 1.875em;
+    width: 50px;
+    height: auto;
+}
+
+.center{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.c-courses{
+    width: 100%;
+    height: var(--height-first);
+    background-image: url(../mideas/background-hero.png);
+    background-repeat: no-repeat;
+    background-color: #f5c75a;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.c-courses__title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.75rem;
+    font-weight: 700;
+} 
+
+.c-courses__subtitle{
+    font-size: 2.125rem;
+    font-weight: 400;
+    line-height: 3.188rem;
+    font-style: normal;
+}
+
+
+.c-courses__btn{
+    background-color:  #0E0E0E; 
+    height: 8.22vh;
+    width: 23.4375vw;
+    border-radius: 9px;
+}
+
+.c-courses__btn:hover{
+    transform: scale(1.1);
+}
+
+.c-courses__link{
+    color: #FBFBFB;
+    text-decoration: none;
+    display: block;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+
+.c-courses__link:hover {
+    text-decoration: none;
+}
+
+.about-us{
+    background-color: #0E0E0E;
+    color:#FBFBFB ;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50vh;
+}
+
+
+.about-us__title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 3.75rem;
+    text-align: center;
+}
+
+.about-us__subtitle {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    width: 57.03vw;
+    height: 14.984vh;
+}
+
+
+section:nth-child(3) >h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    
+}
+
+@media screen and (max-device-width: 780px) {
+
+    .link-whatsaap{
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
+        width: 50px;
+        height: auto;
+    }
+
+    .c-courses{
+        width: 100%;
+        text-align: center;
+    }
+
+    .c-courses__title{
+        font-size: 2.1rem;
+        line-height: 4.188rem;
+    } 
+
+    .c-courses__subtitle{
+        font-size: 1.8rem;
+    }
+
+    .c-courses__btn{
+        height: 10%;
+        width: 50%;
+    }
+
+    .c-courses__link{
+        font-size: 1.1rem;
+    }
+
+    .about-us{
+        height: 60%;
+    }
+
+    .about-us__title{
+        font-size: 1.7rem;
+        line-height: 9rem;
+    }
+
+    .about-us__subtitle{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        width: 70%;
+        text-align: justify;
+    }
+
+}
+
+
