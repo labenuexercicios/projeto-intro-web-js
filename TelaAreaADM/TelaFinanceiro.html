@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./TelaFinanceiro.css">
+    <script src="../ProjetoWeb.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="containerHeader">
-            <a href="./TelaHome.html"><img src="../ProjetoWEB MEDIA/logo 1.png" class="logo"></a>
+            <a href="../TelaHome/index.html"><img src="../ProjetoWEB MEDIA/logo 1.png" class="logo"></a>
             <nav>
                 <ul class="menu">
-                    <b><a class="menu" href="../TelaHome/TelaHome.html">Home</a>
+                    <b><a class="menu" href="../TelaHome/index.html">Home</a>
                     <a class="menu" href="../TelaCursos/TelaCursos.html">Cursos</a>
                     <a class="menu" href="../TelaContato/TelaContato.html">Contatos</a>
                     <a class="menu" href="../TelaAreaADM/TelaÁreaADM.html"><u>Area ADM</u></a></b>
@@ -35,8 +36,10 @@
         <section class="sectionContainer">
             <form class="formMain">
                 <h1>Financeiro</h1>
-                <label for="curso"><b>Curso</b></label>
-                <input type="text" name="curso" id="curso">
+                <label for="curso" ><b>Curso</b></label>
+                <input type="text" id="cursoEscolhido" name="curso" id="curso">
+                
+               <u><b><a href="#" onclick="adicionarNoCarrinho()">Adicionar curso</a></u></b>
 
                 <label for="curso"><b>Número de parcelas</b></label>
                 <input type="text" name="parcelas" id="parcelas">
@@ -44,39 +47,31 @@
                
                 <br>
                 <br>
-                <a><div class="botao"><b>Matricular aluno</b></div></a>
+                <a href="#"><div class="botao" onclick="parcelarCurso()" id="verValor"><b>Ver Valor</b></div></a>
 
             </form>
 
 
-            <section class="financeiroMat">
-                <h1> Valor </h1> 
-                <br>
-                <p>Aluno Matriculado</p>
-                <p>Nome: Calvin Klein</p>
-                <p>Curso: JavaScript</p>
-                <p>Turma: Clarke</p>
+            <section class="financeiroMat" id="financeiroMat">
+                <h1>Escolha o curso:</h1> 
+                <p id="java">JavaScript</p>    
+                <p id="htmlecss">HTML e CSS</p> 
+                <p id="api">APIsRest</p>           
 
             </section>
 
             <form class="formMain2">
                 <h1>Relatório Aluno</h1>
                 <label for="nome"><b>Nome</b></label>
-                <input type="nome" name="nome" id="nome">
+                <input type="search" name="nome" id="buscaDeEstudantes">
                 <br>
                 <br>
-                <a><div class="botao"><b>Buscar</b></div></a>
+                <a href="#"><div class="botao" onclick="buscarEstudante()"><b>Buscar</b></div></a>
 
             </form>
 
-            <section class="financeiroMat2">
-                
-                <p>Aluno Matriculado</p>
-                <p>Nome: Calvin Klein</p>
-                <p>Curso: JavaScript</p>
-                <p>Turma: Clarke</p>
-
-            </section>
+            <section class="financeiroMat2" id="financeiroMat2"></section>
+           
             
             
         </section>
@@ -84,7 +79,7 @@
    
     
     <footer>
-        <a href="../TelaHome/TelaHome.html"><img width="150" src="../ProjetoWEB MEDIA/Frame 2.png"></a>
+        <a href="../TelaHome/index.html"><img width="150" src="../ProjetoWEB MEDIA/Frame 2.png"></a>
         <br>
         <div class="containerFooter">
             <table class="containerFooter2">
@@ -102,7 +97,7 @@
                     </td>
                     <td>
                         <ul class="links">
-                            <li> <a href="../TelaHome/TelaHome.html">Home</a></li>
+                            <li> <a href="../TelaHome/index.html">Home</a></li>
                             <li> <a href="../TelaCursos/TelaCursos.html">Cursos</a></li>
                             <li> <a href="#">Blog</a></li>
                             <li> <a href="#">Fale conosco</a></li>
@@ -121,7 +116,7 @@
 
                     <td class="areadm">
                         <li><a href="../TelaAreaADM/TelaÁreaADM.html">Área administrativa</a></li>
-                        <li>Espaço do aluno</li>
+                        <li><a href="#">Espaço do aluno</a></li>
                     </td>
 
                 </tr>

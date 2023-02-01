@@ -208,7 +208,8 @@ input{
     height: 3.5vh;
     border: 0px solid white;
     border-radius: 2px;
-    width: 21vw 
+    width: 21vw ;
+    padding-left: 1vh;
  }
 
  label{
@@ -254,3 +255,4 @@ h1{
     padding-bottom: 5vh;
     font-family: "Poppins";
     }
+

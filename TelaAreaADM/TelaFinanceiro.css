@@ -177,7 +177,8 @@ input{
     height: 3.5vh;
     border: 0px solid white;
     border-radius: 2px;
-    width: 21vw 
+    width: 21vw;
+    padding-left: 1vh;
  }
 
  label{
@@ -204,7 +205,7 @@ input{
 
  .sectionContainer {
     display: grid;
-
+    width: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr ;
  }
@@ -212,6 +213,7 @@ input{
     grid-row: 2/3;
     grid-column: 1/2;
     padding-left: 12vw;
+    font-family: "Poppins";
     
  }
 
@@ -232,6 +234,8 @@ input{
     padding-top: 6vh;
     grid-row: 1/2;
     grid-column: 2/3;
+    
+
 
 }
 
@@ -239,6 +243,35 @@ input{
     grid-row: 2/3;
     grid-column: 2/3;
     padding-left: 12vw;
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    width: 50vh;
+    
+    
+    
+   
+    
     
  }
+
+ .alunoEncontrado{
+   width: 100vh;
+   
+
+ }
+
+
+ #buscaDeEstudantes{
+    width: 50vh;
+ }
+
+
+ select{
+    height: 3.5vh;
+    border: 0px solid white;
+    border-radius: 2px;
+    width: 21vw;
+    padding-left: 1vh;
+ }
+

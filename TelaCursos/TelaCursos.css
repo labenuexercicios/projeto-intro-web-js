@@ -174,11 +174,12 @@ main {
 
 .materiasp{
     text-align: left;
-    padding-top: 7vh;
+    padding-top: 5vh;
     padding-left: 15px;
     padding-right: 15px;
     font-family: "Open Sans";
     font-size: 14px;
+    padding-bottom: 2vh;
 }
 
 .h2Materias{
