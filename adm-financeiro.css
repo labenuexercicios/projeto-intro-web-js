@@ -41,16 +41,16 @@ main{
     min-height: 87vh;
     max-height: auto;
     background-color: #F6C34A; 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4em;
+    display: grid;
+    grid-template-columns: 18% 1fr;
+    justify-items: start;
+    column-gap: 10em;
     border-bottom: .1em solid #0E0E0E;
 }
 
 #menu-adm{
     background-color: #0E0E0E;
-    width: 18%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,6 +73,15 @@ main{
     color: #FFFFFF;
 }
 
+#section-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12em;
+    justify-self: start;
+    padding-top: 5.5em;
+}
+
 #search, #student-report{
     align-self: center;
     justify-self: center;
@@ -81,7 +90,6 @@ main{
 #search{
     align-self: start;
     text-align: left;
-    padding: 2.5em 0 2em 4em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -91,8 +99,6 @@ main{
     align-self: start;
     justify-self: start;
     text-align: left;
-    padding: 2.5em 0 2em 0;
-    margin-left: 7em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -105,7 +111,11 @@ h1{
     font-weight: 700;
     line-height: .1em;
     color: #000000;
-    margin: 2.5em 0 1.2em 0;
+    margin-bottom: 1.2em;
+}
+
+.payment-title{
+    margin-top: 2em;
 }
 
 form{
@@ -164,6 +174,7 @@ input{
 
 #report{
     margin-top: 6em;
+    margin-bottom: 4em;
 }
 
 .paragraph{

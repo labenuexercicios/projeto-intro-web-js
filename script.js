@@ -103,7 +103,7 @@ const cursos = [
     valor: 2000
 }
 ]
-//pode ir adicionando mais estudantes
+
 const estudantes = [
 {
     estudante: "Chris Evans",
@@ -180,14 +180,6 @@ const buscarCurso=()=>{
 }
 
 
-//buscarCurso('pi')
-//buscarCurso('Java')
-//buscarCurso('xxxxx')
-
-
-
-
-
 const acrescentaCurso=(nomeCurso, callback)=>{
     //Antes do DOM, essa função pegava o valor de cada curso, colocava em um array e era usada como callback na função parcelarCurso. 
     
@@ -204,18 +196,14 @@ const acrescentaCurso=(nomeCurso, callback)=>{
     return 'Curso não encontrado'
 }
 
-//acrescentaCurso('javascript', buscarCurso)
-//acrescentaCurso('APIsRest', buscarCurso)
-//acrescentaCurso('javascript', buscarCurso)
-//acrescentaCurso('xxxx', buscarCurso)
  
 const parcelarCurso=()=>{
     event.preventDefault()
 
-    const nParcelas = document.getElementById('payment-plan').value
+    const nParcelas = Number(document.getElementById('payment-plan').value)
     const inputCurso = document.getElementById('course').value.toLowerCase()
 
-    if(nParcelas == "" || nParcelas == " ") return swal({
+    if(!nParcelas) return swal({
         title: "Número de parcelas inválido.",            
         icon: "error",
     }); 
@@ -243,7 +231,7 @@ const parcelarCurso=()=>{
                
                 console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20%.`);
 
-                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
 
                 break
 
@@ -259,7 +247,7 @@ const parcelarCurso=()=>{
                 
                 console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
 
-                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
 
                 break
 
@@ -274,7 +262,7 @@ const parcelarCurso=()=>{
 
                 console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
 
-                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
 
                 break
 
@@ -292,7 +280,7 @@ const parcelarCurso=()=>{
 
                 console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Não há desconto para ser aplicado.`);
 
-                return gerarCardValorSemDesconto(valorParcelas)
+                return gerarCardValorSemDesconto(valorParcelas, removerCardValor)
 
                 break
                 
@@ -307,7 +295,7 @@ const parcelarCurso=()=>{
 
             console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 10% sobre o valor total.`);
 
-            return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+            return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
             
             break
                 
@@ -322,7 +310,7 @@ const parcelarCurso=()=>{
 
             console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% sobre o valor total.`);
 
-            return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto)
+            return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
 
             break
 
@@ -340,7 +328,7 @@ const parcelarCurso=()=>{
 
                 console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`);
 
-                return gerarCardValorSemDesconto(valorParcelas)
+                return gerarCardValorSemDesconto(valorParcelas, removerCardValor)
 
                 break
             
@@ -352,7 +340,7 @@ const parcelarCurso=()=>{
 
                 console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`);
 
-                return gerarCardValorSemDesconto(valorParcelas)
+                return gerarCardValorSemDesconto(valorParcelas, removerCardValor)
 
                 break
             
@@ -364,61 +352,53 @@ const parcelarCurso=()=>{
     
                     console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`)
 
-                    return gerarCardValorSemDesconto(valorParcelas)
+                    return gerarCardValorSemDesconto(valorParcelas, removerCardValor)
 
                     break
         } 
     }
 } 
 
+const removerCardValor =()=>{
+    console.log(document.getElementsByClassName('payment-container'))
+    if(document.getElementsByClassName('payment-container').length>0){
+        const card = document.querySelector('.payment-container')
+        card.parentNode.removeChild(card)
+    }
+}
 
-const gerarCardValor = (porcentagemDesconto, valorParcelasComDesconto) =>{
+const gerarCardValor = (porcentagemDesconto, valorParcelasComDesconto, callback) =>{
     const paymentContainer = document.getElementById('search')
 
-    //callback() 
-
+    callback()
 
     const newCard = document.createElement('div')
     newCard.setAttribute('id', 'payment')
-    newCard.setAttribute('class', 'xxx')
+    newCard.setAttribute('class', 'payment-container')
 
     newCard.innerHTML = `
-        <h1>Valor</h1>
+        <h1 class='payment-title'>Valor</h1>
         <p class="paragraph" >Desconto de ${porcentagemDesconto}. Parcelas de R${valorParcelasComDesconto}</p>
     `
-    paymentContainer.insertAdjacentElement('beforeend', newCard)
-
+    return paymentContainer.insertAdjacentElement('beforeend', newCard)
 }
 
-const gerarCardValorSemDesconto = (valorParcelas) =>{
+const gerarCardValorSemDesconto = (valorParcelas, callback) =>{
     const paymentContainer = document.getElementById('search')
 
-    //callback() 
-
+    callback() 
 
     const newCard = document.createElement('div')
     newCard.setAttribute('id', 'payment')
-    newCard.setAttribute('class', 'xxx')
+    newCard.setAttribute('class', 'payment-container')
 
     newCard.innerHTML = `
-        <h1>Valor</h1>
+        <h1 class='payment-title'>Valor</h1>
         <p class="paragraph" >Não há desconto. Parcelas de R${valorParcelas}</p>
     `
-    paymentContainer.insertAdjacentElement('beforeend', newCard)
-
+    return paymentContainer.insertAdjacentElement('beforeend', newCard)
 }
 
-
-
-
-
- 
-//const arrCursos = [900, 200]
-//parcelarCurso("JavaScript, APIsRest", arrCursos, 2) 
-//parcelarCurso("JavaScript, APIsRest", carrinhoCursos, 2)
-//const arrCursos2 = [500, 900, 200]
-//parcelarCurso("HTML e CSS, JavaScript, APIsRest", arrCursos2, 1)
- 
 
 const buscarTurma = (event)=>{
     event.preventDefault()
@@ -434,14 +414,13 @@ const buscarTurma = (event)=>{
     console.log(retornaTurma)
     
     return retornaTurma.length > 0? gerarCardTurmas(retornaTurma) : gerarCardTurmas(turmas) 
-    
 }
 
 const gerarCardTurmas = (cardTurmas) =>{
 
     const searchContainer = document.getElementById('search-container')
 
-    if(document.getElementsByClassName('classes').length > 0){ //o retorno desse document.getElement é um objeto, ele vai ter conteúdo enquanto enquanto ainda existir uma class = "classes"
+    if(document.getElementsByClassName('classes').length > 0){ 
         while(document.getElementsByClassName('classes').length > 0){
             
             const cards = document.querySelector('.classes')
@@ -470,15 +449,6 @@ const gerarCardTurmas = (cardTurmas) =>{
    return geradorDeCard
 }
 
-/*
-//Teste da função
-buscarTurma('curie')
-buscarTurma('currrie')
-buscarTurma('Hipátia') 
-buscarTurma('HIPÁTIA') 
-*/
-
-
 const buscarEstudante=(nomeEstudante)=>{
 
     const retornoEstudante = estudantes.filter(element =>
@@ -487,19 +457,7 @@ const buscarEstudante=(nomeEstudante)=>{
         retornoEstudante.length>0?
         console.log(retornoEstudante[0]) : console.log('Aluno não encontrado')
         return retornoEstudante[0]
-
 }
-
-/* 
-//Teste para chamar função
-buscarEstudante('ha') */
-
-/* 
-//Teste da função
-buscarEstudante('Chris Evans') 
-buscarEstudante('ChRis EVAns') 
-buscarEstudante('halle berry')
-*/
 
 const relatorioEstudante=()=>{
     event.preventDefault()
@@ -515,12 +473,33 @@ const relatorioEstudante=()=>{
         nParcelas: dadosEstudantes.nParcelas
     }
     console.log(`Aluno: ${relatorio.aluno}\nTurma: ${relatorio.turma}\nCurso: ${relatorio.curso}\nValor Toral: ${relatorio.valorTotal}\nValor Parcelas: ${relatorio.valorParcelas}\nNº Parcelas: ${relatorio.nParcelas}`)
-    return relatorio
+    return relatorio, gerarCardRelatorio(relatorio)
 } 
 
+const gerarCardRelatorio =(relatorio)=>{
 
-//relatorioEstudante('halle berry', buscarEstudante)
+    const reportContainer = document.getElementById('student-report')
 
+    if(document.getElementsByClassName('report-class').length > 0){
+        const card  = document.querySelector('.report-class')
+        card.parentNode.removeChild(card)
+        console.log('oi')
+    }
+
+    const newCard = document.createElement('div')
+    newCard.setAttribute('id', 'report')
+    newCard.setAttribute('class', 'report-class')
+
+    newCard.innerHTML = `
+    <p class="paragraph">Aluno: ${relatorio.aluno}</p>
+    <p class="paragraph">Turma: ${relatorio.turma}</p>
+    <p class="paragraph">Curso: ${relatorio.curso}</p>
+    <p class="paragraph">Valor total: R$${relatorio.valorTotal}</p>
+    <p class="paragraph">Valor parcela: R$${relatorio.valorParcelas}</p>
+    <p class="paragraph">Nº parcelas: ${relatorio.nParcelas}</p>
+    `
+    return reportContainer.insertAdjacentElement('beforeend', newCard)
+}
 
 const matricular=()=>{
     event.preventDefault()
@@ -530,9 +509,10 @@ const matricular=()=>{
     const turmaInput = document.getElementById('classes').value.toLowerCase()
     const parcelasInput = document.getElementById('payment').value
 
-    const confereTurma = turmas.filter((element)=> element.turma.toLowerCase() === turmaInput
-    )
+    //const confereTurma = turmas.filter((element)=> element.turma.toLowerCase() === turmaInput)
 
+    const confereTurma = turmas.filter(element=> element.turma.toLowerCase().includes(turmaInput)) 
+   //return console.log(confereTurma)
     console.log(confereTurma)
     console.log(estudantes) 
     
@@ -547,12 +527,10 @@ const matricular=()=>{
             icon: "error",
         }), removerCardMatricula()
          
-
-    if(confereTurma[0].curso.toLowerCase() != cursoInput) return swal({
+    if(!confereTurma[0].curso.toLowerCase().includes(cursoInput)) return swal({
             title: "A turma não oferece esse curso.",            
             icon: "error",
-        }), removerCardMatricula()
-         
+        }), removerCardMatricula()    
 
     if(confereTurma[0].concluida === true) return swal({
             title: "O curso já foi concluído",            
@@ -567,30 +545,24 @@ const matricular=()=>{
         nParcelas: parcelasInput
     }
 
-   /* TENTAR FAZER FUNCIONAR A CONDIÇÃO DE ALUNO JÁ MATRICULADO  
-   
-   const confereAlunoNome = estudantes.filter((element)=>element.estudante === novoAluno.estudante)
-    const confereAlunoTurma = estudantes.filter((element)=> element.turma === novoAluno.turma)
-    const confereAlunoCurso = estudantes.filter((element)=> element.curso === novoAluno.curso)
-    console.log(confereAlunoNome)
-    //console.log(confereAlunoTurma)
-    //console.log(confereAlunoCurso)
+    //REVER ESSAS CONDIÇÕES DE ALUNO JÁ MATRICULADO
 
-    
-    if(confereAlunoNome.estudante = novoAluno.estudante){
-        if(confereAlunoNome.curso = novoAluno.curso){
-            if(confereAlunoNome.turma = novoAluno.turma){
+    const confereAlunoNome = estudantes.filter((element)=>element.estudante.toLowerCase() == novoAluno.estudante.toLowerCase())
+    const confereAlunoTurma = estudantes.filter((element)=> element.turma = novoAluno.turma)
+    const confereAlunoCurso = estudantes.filter((element)=> element.curso = novoAluno.curso)
+    console.log(confereAlunoNome.length)
+        
+    if(confereAlunoNome.length>0){
+        if(confereAlunoTurma.length>0){
+            if(confereAlunoCurso.length>0){
                 console.log('aluno já está matriculado')
-                return
-            }else{
-                estudantes.push(novoAluno)
+                return swal({
+                    title: "Aluno já matriculado no curso.",            
+                    icon: "error",
+                }) 
             }
-        }else{
-            estudantes.push(novoAluno)
         }
-    }else{
-        estudantes.push(novoAluno)
-    } */
+    }
 
         
     console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`)
@@ -600,7 +572,6 @@ const matricular=()=>{
     estudantes.push(novoAluno)
 
     return gerarCardMatricula(novoAluno, confereTurma, removerCardMatricula)
-          
 }
 
 const removerCardMatricula=()=>{
@@ -621,34 +592,20 @@ const gerarCardMatricula=(estudanteDados, arrTurma, callback)=>{
     newCard.setAttribute('class', 'confirm-report-div')
     
     newCard.innerHTML = `
-    <div class="confirm-student">
+        <div class="confirm-student">
             <h1>Aluno matriculado</h1>
             <figure>
               <img src="./midias/confirm-check.svg" alt="check" id="confirm-check">
             </figure>
-          </div>
+        </div>
 
-    <p class="studant-info">Aluno Matriculado</p>
-    <p class="studant-info">Nome: ${estudanteDados.estudante}</p>
-    <p class="studant-info">Curso: ${arrTurma[0].curso}</p>
-    <p class="studant-info">Turma: ${arrTurma[0].turma}</p>
+        <p class="studant-info">Aluno Matriculado</p>
+        <p class="studant-info">Nome: ${estudanteDados.estudante}</p>
+        <p class="studant-info">Curso: ${arrTurma[0].curso}</p>
+        <p class="studant-info">Turma: ${arrTurma[0].turma}</p>
     `
 
     return confirmContainer.insertAdjacentElement('beforeend', newCard)
 }
-
-
-
-//console.log(estudantes)
-//quando atualiza a página, os dados somem de dentro do array de estudantes, é isso mesmo?
-
-
-
-/* console.log(estudantes)
-console.log(estudantes) */
-/* 
-//Teste da chamada da função
-matricular('Júlia Borges', 'Hipátia', 'JavaScript')
-*/
 
 
