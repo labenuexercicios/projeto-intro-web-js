@@ -441,7 +441,7 @@ const gerarCardTurmas = (cardTurmas) =>{
             <p class="details"><span class="bold">Término:</span> ${element.termino}</p>
             <p class="details"><span class="bold">Número de alunos:</span> ${element.numeroDeAlunos}</p>
             <p class="details"><span class="bold">Período:</span> ${element.periodo}</p>
-            <p class="details"><span class="bold">Concluído:</span> ${element.concluida}</p>
+            <p class="details"><span class="bold">Concluído:</span> ${element.concluida? 'sim' : 'não'}</p>
         `
       searchContainer.insertAdjacentElement('beforeend', newCard) 
 
@@ -501,77 +501,66 @@ const gerarCardRelatorio =(relatorio)=>{
     return reportContainer.insertAdjacentElement('beforeend', newCard)
 }
 
-const matricular=()=>{
+const matricular = () =>{
     event.preventDefault()
-   
-    const nomeInput = document.getElementById('name').value
-    const cursoInput = document.getElementById('course').value.toLowerCase()
-    const turmaInput = document.getElementById('classes').value.toLowerCase()
-    const parcelasInput = document.getElementById('payment').value
 
-    //const confereTurma = turmas.filter((element)=> element.turma.toLowerCase() === turmaInput)
+    const nomeInput = document.getElementById('name').value;
+    const cursoInput = document.getElementById('course').value;
+    const turmaInput = document.getElementById('classes').value.toLowerCase();
+    const parcelasInput = document.getElementById('payment').value;
 
-    const confereTurma = turmas.filter(element=> element.turma.toLowerCase().includes(turmaInput)) 
-   //return console.log(confereTurma)
-    console.log(confereTurma)
-    console.log(estudantes) 
-    
+    const confereTurma = turmas.filter(element=> element.turma.toLowerCase().includes(turmaInput));
+
+    console.log(confereTurma);
+
+    const confereAluno = estudantes.filter(element=> element.estudante.toLowerCase() === nomeInput.toLowerCase());
+    console.log(confereAluno); 
+
+
+    if(confereAluno.length>0){
+        const confereCurso = confereAluno.filter(element => element.curso.toLowerCase() == cursoInput.toLowerCase())
+        
+        if(confereCurso.length>0){
+            const confereTurmaMatricula = confereCurso.filter(element => element.turma.toLowerCase() == turmaInput.toLowerCase())
+
+            if(confereTurmaMatricula.length>0) return swal({
+                title: "Aluno já matriculado no curso.",            
+                icon: "error",
+            }), removerCardMatricula()
+        }
+    } 
 
     if(nomeInput == "" || nomeInput==" ") return swal({
-            title: "Nome não preenchido.",            
-            icon: "error",
-        }), removerCardMatricula()
-         
+        title: "Nome não preenchido.",            
+        icon: "error",
+    }), removerCardMatricula()
+     
     if(!confereTurma.length>0) return swal({
-            title: "Turma não encontrada.",            
-            icon: "error",
-        }), removerCardMatricula()
-         
-    if(!confereTurma[0].curso.toLowerCase().includes(cursoInput)) return swal({
-            title: "A turma não oferece esse curso.",            
-            icon: "error",
-        }), removerCardMatricula()    
+        title: "Turma não encontrada.",            
+        icon: "error",
+    }), removerCardMatricula()
+     
+    if(!confereTurma[0].curso.toLowerCase().includes(cursoInput.toLowerCase())) return swal({
+        title: "A turma não oferece esse curso.",            
+        icon: "error",
+    }), removerCardMatricula()    
 
     if(confereTurma[0].concluida === true) return swal({
-            title: "O curso já foi concluído",            
-            icon: "error",
-        }), removerCardMatricula()
-         
-    
+        title: "O curso já foi concluído",            
+        icon: "error",
+    }), removerCardMatricula()
+
+   
+
     const novoAluno = {
         estudante: nomeInput,
         turma: turmaInput,
         curso: cursoInput,
         nParcelas: parcelasInput
-    }
-
-    //REVER ESSAS CONDIÇÕES DE ALUNO JÁ MATRICULADO
-
-    const confereAlunoNome = estudantes.filter((element)=>element.estudante.toLowerCase() == novoAluno.estudante.toLowerCase())
-    const confereAlunoTurma = estudantes.filter((element)=> element.turma = novoAluno.turma)
-    const confereAlunoCurso = estudantes.filter((element)=> element.curso = novoAluno.curso)
-    console.log(confereAlunoNome.length)
-        
-    if(confereAlunoNome.length>0){
-        if(confereAlunoTurma.length>0){
-            if(confereAlunoCurso.length>0){
-                console.log('aluno já está matriculado')
-                return swal({
-                    title: "Aluno já matriculado no curso.",            
-                    icon: "error",
-                }) 
-            }
-        }
-    }
-
-        
-    console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`)
+    };
     
-    console.log(estudantes)
-            
-    estudantes.push(novoAluno)
-
-    return gerarCardMatricula(novoAluno, confereTurma, removerCardMatricula)
+    console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`);
+    return estudantes.push(novoAluno), gerarCardMatricula(novoAluno, confereTurma, removerCardMatricula)
 }
 
 const removerCardMatricula=()=>{
@@ -607,5 +596,4 @@ const gerarCardMatricula=(estudanteDados, arrTurma, callback)=>{
 
     return confirmContainer.insertAdjacentElement('beforeend', newCard)
 }
-
 
