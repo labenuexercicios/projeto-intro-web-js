@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>ADM</title>
+  </head>
+  <body>
+    <header>
+        <a href="index.html"> 
+            <img src="img/logo.png" alt="LabEscola logo" id="logo">
+        </a> 
+        <nav class="header-nav">
+          <a href="/">Home</a>
+          <a href="/cursos.html">Cursos</a>
+          <a href="/contato.html">Contato</a>
+          <a style="text-decoration: underline;" href="/admturma.html" >Area ADM</a>
+        </nav>
+      </header>
+    <main class="mainadm">
+        <nav class="admnav">
+          <a href="/admturma.html">Turma</a>
+          <a href="/admmatricula.html"  style="color: white;">Matricula</a>
+          <a href="/admfinanceiro.html">Financeiro e Alunos</a>
+        </nav>
+        <section class="halfgrid">
+          <div class="matriculas">
+            <h1>Matriculas</h1>
+            <div class="form">
+              <p>Nome</p>
+              <input type="text" id="mat_nome">
+              <p>Curso</p>
+              <input type="text" id="mat_curso">
+              <p>Turma</p>
+              <input type="text" id="mat_turma">
+              <p>Numero de parcelas</p>
+              <input type="text" id="mat_num_parcelas">
+            </div>
+            <button onclick="matricularAluno()" class="btndark" id="matricularButton">Matricular aluno</button>
+          </div>
+          <div class="alunomatriculado">
+            <h1>Aluno matriculado</h1>
+            <div id="mat_aluno"></div>
+          </div>
+        </section>
+    </main>
+    <footer>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus laboriosam, nobis minus dicta aliquid nulla soluta est vero voluptate officia sed iure voluptatum repudiandae architecto inventore consequatur eveniet quasi a natus. Architecto, tempore, natus obcaecati expedita dicta error laudantium similique quibusdam voluptatum optio facere eum maxime ex sed quo delectus magni eveniet, excepturi distinctio rem aspernatur corrupti. Non blanditiis est laborum dolorum, aut a illo repudiandae excepturi rerum dolores ullam officia impedit sunt, corporis et in iste recusandae sit quo veniam repellat. Quae ad illum vel explicabo, voluptas dolorem quasi, nisi necessitatibus itaque saepe cum, alias quisquam consectetur temporibus. Deleniti!</p>
+    </footer>
+
+    <script>
+      function matricularAluno(){
+        let nomeDoAluno = document.getElementById("mat_nome").value;
+        let nomeDoCurso = document.getElementById("mat_curso").value;
+        let nomeDaTurma = document.getElementById("mat_turma").value;
+        let numeroDeParcelas = document.getElementById("mat_num_parcelas").value;
+        matricular(nomeDoAluno, nomeDoCurso, nomeDaTurma, numeroDeParcelas);
+
+        document.getElementById("mat_aluno").innerHTML = `
+        <p>Aluno Matriculado</p>
+        <p>Nome: ${nomeDoAluno}</p>
+        <p>Curso: ${nomeDoCurso}</p>
+        <p>Turma: ${nomeDaTurma}</p>
+
+        `
+      }
+    </script>
+  </body>
+</html>
