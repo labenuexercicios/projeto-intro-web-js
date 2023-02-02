@@ -30,3 +30,6 @@ Recomendamos que caso não lembre como funciona o processo de entrega, clique [*
 
 Bom projeto para vocês!
 
+
+Link deploy: labescola-regiane.surge.sh
+
