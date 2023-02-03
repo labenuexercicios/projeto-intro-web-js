@@ -206,12 +206,14 @@ const parcelarCurso=()=>{
     if(!nParcelas) return swal({
         title: "Número de parcelas inválido.",            
         icon: "error",
-    }); 
+    }); removerCardValor()
 
     if(nParcelas > 5) return swal({
         title: "Número de parcelas inválido.",            
         icon: "error",
-    }); 
+    }); removerCardValor()
+
+    document.getElementById('payment-plan').value = ""
 
     let valorTotal = 0 
     let valorDesconto = 0
@@ -360,7 +362,7 @@ const parcelarCurso=()=>{
 } 
 
 const removerCardValor =()=>{
-    console.log(document.getElementsByClassName('payment-container'))
+    //console.log(document.getElementsByClassName('payment-container'))
     if(document.getElementsByClassName('payment-container').length>0){
         const card = document.querySelector('.payment-container')
         card.parentNode.removeChild(card)
@@ -449,21 +451,31 @@ const gerarCardTurmas = (cardTurmas) =>{
    return geradorDeCard
 }
 
+
 const buscarEstudante=(nomeEstudante)=>{
 
     const retornoEstudante = estudantes.filter(element =>
         element.estudante.toLowerCase().indexOf(nomeEstudante.toLowerCase())> -1)
 
-        retornoEstudante.length>0?
-        console.log(retornoEstudante[0]) : console.log('Aluno não encontrado')
+        if(!retornoEstudante.length>0) return swal({
+            title: "Aluno não encontrado.",            
+            icon: "error",
+        }),  console.log('Aluno não encontrado')
+
+        console.log(retornoEstudante), console.log(retornoEstudante[0])
+
         return retornoEstudante[0]
+         
 }
 
 const relatorioEstudante=()=>{
     event.preventDefault()
     const nomeInput = document.getElementById('name').value
     const dadosEstudantes = buscarEstudante(nomeInput)
+    console.log(dadosEstudantes)
     
+    if(!dadosEstudantes) return
+
     const relatorio = {
         aluno: dadosEstudantes.estudante,
         turma: dadosEstudantes.turma,
@@ -472,7 +484,11 @@ const relatorioEstudante=()=>{
         valorParcelas: dadosEstudantes.parcelas,
         nParcelas: dadosEstudantes.nParcelas
     }
+
+    document.getElementById('name').value = ""
+
     console.log(`Aluno: ${relatorio.aluno}\nTurma: ${relatorio.turma}\nCurso: ${relatorio.curso}\nValor Toral: ${relatorio.valorTotal}\nValor Parcelas: ${relatorio.valorParcelas}\nNº Parcelas: ${relatorio.nParcelas}`)
+
     return relatorio, gerarCardRelatorio(relatorio)
 } 
 
@@ -483,7 +499,6 @@ const gerarCardRelatorio =(relatorio)=>{
     if(document.getElementsByClassName('report-class').length > 0){
         const card  = document.querySelector('.report-class')
         card.parentNode.removeChild(card)
-        console.log('oi')
     }
 
     const newCard = document.createElement('div')
@@ -507,10 +522,9 @@ const matricular = () =>{
     const nomeInput = document.getElementById('name').value;
     const cursoInput = document.getElementById('course').value;
     const turmaInput = document.getElementById('classes').value.toLowerCase();
-    const parcelasInput = document.getElementById('payment').value;
+    const parcelasInput = Number(document.getElementById('payment').value);
 
     const confereTurma = turmas.filter(element=> element.turma.toLowerCase().includes(turmaInput));
-
     console.log(confereTurma);
 
     const confereAluno = estudantes.filter(element=> element.estudante.toLowerCase() === nomeInput.toLowerCase());
@@ -518,12 +532,15 @@ const matricular = () =>{
 
 
     if(confereAluno.length>0){
+        //confere se o nome do aluno aparece no array de estudantes
         const confereCurso = confereAluno.filter(element => element.curso.toLowerCase() == cursoInput.toLowerCase())
         
         if(confereCurso.length>0){
+            //confere se o aluno já está matriculado no curso que colocou no input 
             const confereTurmaMatricula = confereCurso.filter(element => element.turma.toLowerCase() == turmaInput.toLowerCase())
 
             if(confereTurmaMatricula.length>0) return swal({
+                //confere se o aluno já está matriculado na turma que colocou no input
                 title: "Aluno já matriculado no curso.",            
                 icon: "error",
             }), removerCardMatricula()
@@ -550,6 +567,11 @@ const matricular = () =>{
         icon: "error",
     }), removerCardMatricula()
 
+    if(!parcelasInput) return swal({
+        title: "Número de parcelas inválido",            
+        icon: "error",
+    }), removerCardMatricula()
+
    
 
     const novoAluno = {
@@ -558,12 +580,17 @@ const matricular = () =>{
         curso: cursoInput,
         nParcelas: parcelasInput
     };
+
+    document.getElementById('name').value = ""
+    document.getElementById('course').value = ""
+    document.getElementById('classes').value = ""
+    document.getElementById('payment').value = ""
     
     console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`);
     return estudantes.push(novoAluno), gerarCardMatricula(novoAluno, confereTurma, removerCardMatricula)
 }
 
-const removerCardMatricula=()=>{
+const removerCardMatricula = () =>{
     if(document.getElementsByClassName('confirm-report-div').length > 0){
         while(document.getElementsByClassName('confirm-report-div').length > 0){
             const card = document.querySelector('.confirm-report-div')
@@ -572,7 +599,7 @@ const removerCardMatricula=()=>{
     }
 }
 
-const gerarCardMatricula=(estudanteDados, arrTurma, callback)=>{
+const gerarCardMatricula = (estudanteDados, arrTurma, callback) =>{
     const confirmContainer = document.getElementById('confirm-report')
 
     callback()
