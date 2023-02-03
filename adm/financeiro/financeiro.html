@@ -46,23 +46,41 @@
             </section>
 
             <section id="bloco2">
-
+                
                 <div id="bloco2-container1">
 
                     <div class="container1-item">
-                        <p>Financeiro</p>
+                        <p id="tituloFinanc">Financeiro</p>
                         <form>
-                            <label for="curso">Curso</label>
-                            <input type="text" name="curso" id="curso">
+                            <label for="curso">Curso</label>    
+                            <input list="all-courses" id="curso" name="lista-de-cursos" placeholder="Selecione o curso" class="container1-item-inpt" maxlength="3"  required>
+                            <datalist id="all-courses">
+                            <option value="HTML E CSS"></option>
+                            <option value="JavaScript"></option>
+                            <option value="API's REST"></option>
+                            </datalist>
+                            <a onclick="valorCurso()" id="addCarrinho" required>Add curso ao carrinho</a>
 
                             <label for="parcelas">Numero de Parcelas</label>
-                            <input type="text" name="parcelas" id="parcelas">
+                            <!-- <input type="text" name="parcelas" id="parcelas"> -->
+                            <input type="number" name="quantity" min="1" max="10" id="parcelas" step="1" placeholder="Valor Max de parcelas 10" class="container1-item-inpt" required>
+                            
 
-                            <input type="submit" value="Ver Valor">
+                            <input type="button" value="Ver Valor" onclick="parcelarCurso()">
+                            
                         </form>
+                        <div id="calcCurso" class="calcCurso">
+                            
+                        </div>
 
                     </div>
+                    
+                </div>
 
+                <div id="carrinho">
+                    <div class="itensCarrinho">
+
+                    </div>
                 </div>
 
                 <div id="bloco2-container2">
@@ -75,7 +93,7 @@
 
                             <input type="text" name="nome" placeholder="Digite o nome do aluno" id="inputRelatorioAluno">
 
-                            <input type="submit" value="Buscar" onclick="buscarEstudante(event)" id="btn-relatorio">
+                            <input type="submit" value="Buscar" onclick="buscarEstudante(event)" id="btn-relatorio" >
 
                             <section id="container2-item-relatorio">
 
