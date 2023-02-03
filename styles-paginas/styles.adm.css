@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+  
+ body{
+    background-color: #F6C34A;
+ }
+header{ font-family: "poppins", sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    align-items: center;
+ 
+    
+}
+ .asidetest .menuadm{
+    none
+    display: flex;
+    flex-direction: column;
+    color: white;   
+    list-style: none;
+    padding: 0.7em;   
+    text-decoration: none
+ }
+
+
+
+
+.asidetest{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+   
+    align-items: center;
+    width: 20vw;
+    height: 60vh;
+    
+
+
+    
+    background-color: rgb(0, 0, 0);
+}
+.menupaginas{
+display: flex;
+gap: 50px;
+ 
+font-family: 'Titillium Web', sans-serif;
+
+}
+
+.menupaginas a:hover{
+    color: #ffb700;
+    padding-left: 10px;
+}
+
+.menupaginas a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+ 
+
+ .main{
+    background-color: rgb(236, 3, 3);
+    font-family: 'Poppins', normal;
+    border-radius: 20px;
+}
+
+
+
+.section-contato{
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', normal;
+    margin: top 10px;em;
+  
+}
+
+
+form{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.corpalavra{
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(10, 1, 1);
+
+}
+.form-container{
+    border-radius: 20px;
+    width: 400px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 2em;
+    background-color: white;
+  
+   
+}
+
+.form-container b{
+ font-size: 25px;
+ border-radius: 20px;
+ border: 2px solid rgb(255, 255, 255);
+}
+
+
+.btn-enviar{
+border: none;
+border-radius: 5px;
+background-color: #ffb700;
+
+}
+
+form input{ 
+border-radius: 20px;
+width: 330px;
+height: 2em;
+margin-bottom: 2em;
+border-radius: 0.5em;
+outline: none;
+border: 1px solid #999;
+
+}
+.caixamsg{
+    border-radius: 7px;
+
+
+}
+
+button{
+margin-top: 2em;
+}
+
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0px ;
+    background-color: #F6C34A;
+    padding:  10px 10px;
+}
+.container-footer{
+    max-width: 1400px;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+     
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 px;
+}
+
+.footer-col h4{
+    font-size: 22px;
+    color: rgb(10, 0, 0);
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    
+ 
+}
+.footer-col ul{
+    list-style: none;
+   
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(8, 0, 0);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+
+
