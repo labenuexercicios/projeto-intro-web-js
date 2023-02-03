@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+* a:link {
+    color: black;
+    text-decoration: none;
+}
+
+* a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+* a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    height: 12%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.navegacao {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+#logo {
+    width: 349px;
+    height: 75px;
+    left: 255px;
+    top: 39px;
+}
+
+main {
+    height: 70%;
+    width: 100%;
+    background-color: #F6C34A;
+    display: flex;
+}
+
+.aside {
+    background-color: black;
+    width: 300px
+}
+
+.naveg {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 4vw;
+    gap: 4vh;
+}
+
+.naveg a {
+    color: white;
+}
+
+.containerMain {
+    width: 86%;
+    height: 100%;
+}
+
+/* TURMAS */
+
+.buscar {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buscar {
+    font-size: x-large;
+    height: 58px;
+    width: 330px;
+    border: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.buscarTurma {
+    font-size: x-large;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.containerTurmas {
+    background-color: #F6C34A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.titulo {
+    text-align: center;
+    padding: 10px 20px 15px 0px;
+}
+
+.turmas {
+    background-color: rgb(255, 255, 255);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 250px;
+    justify-content: center;
+    padding-left: 25px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px, rgba(0, 0, 0, 0.2) 0px 10px, rgba(0, 0, 0, 0.1) 0px 15px, rgba(0, 0, 0, 0.05) 0px 20px, rgba(240, 46, 170, 0.03) 0px 25px;
+}
+
+/* MATRICULAR */
+
+.containerMatricular {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.matricular {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50px;
+    margin-top: 115px;
+}
+
+
+.label {
+    display: grid;
+    margin-bottom: 30px
+}
+
+.inputMatricular {
+    width: 280px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.matricularAluno {
+    font-size: large;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 5px 0px;
+    width: 281px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 9px;
+    margin-bottom: 400px;
+}
+
+#alunoMatriculado {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 400px;
+    border-radius: 9px;
+    border: none;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: rgb(83, 214, 73);
+    ;
+    padding: 6px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.whatsapp img {
+    width: 40px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6C34A;
+    height: 41%;
+    width: 100%;
+    padding: 0;
+    border-top: 2px solid black;
+}
+
+footer #logo2 {
+    width: 200px;
+    padding-bottom: 20px;
+    padding-left: 12%;
+    margin-top: 10px;
+}
+
+.address img {
+    width: 400px;
+    padding-top: 22px;
+}
+
+.navfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+
+}
+
+.redesocial {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.listaadm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+/*  */
+
+.container {
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+/* .visiveis {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: blueviolet;
+    justify-content: center;
+} */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+
+}
+
+.card h1 {
+    padding-bottom: 25px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    word-wrap: break-word;
+    align-items: center;
+    width: 280px;
+    margin-top: 10px;
+}
+
+.result1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+#buttonValor {
+    height: 20%;
+}
+
+input {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 250px;
+    border-radius: 2px;
+    border: none;
+    height: 40px;
+}
+
+/* .result {
+    height: 10vh;
+    width: 300px;
+    word-wrap: break-word;
+    background-color: azure;
+} */
+
+.result1 {
+    margin-top: 20px;
+}
+
+.buttonFinanceiro {
+    font-size: large;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 5px 0px;
+    width: 281px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 9px;
+}
+
+.inputMatricular {
+    width: 280px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}

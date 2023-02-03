@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+* a:link {
+    color: black;
+    text-decoration: none;
+}
+
+* a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+* a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    height: 12%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.navegacao {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+#logo {
+    width: 349px;
+    height: 75px;
+    left: 255px;
+    top: 39px;
+}
+
+
+main {
+    height: 60.8%;
+    background-color: black;
+}
+
+.containermeio {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    width: 400px;
+    height: 500px;
+    padding: 0 30px;
+}
+
+#input-mensagem {
+    width: 300px;
+    height: 120px;
+    display: flex;
+    align-self: flex-start;
+    justify-self: normal;
+    resize: none;
+}
+
+button{
+    background-color: #F6C34A;
+    font-weight: bolder;
+    height: 50px;
+    border-radius: 6px;
+    border-style: none;
+    margin-top: 15px;
+}
+
+.container-conteudo {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 10px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: rgb(83, 214, 73);;
+    padding: 6px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.whatsapp img {
+    width: 40px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6C34A;
+    height: 41%;
+    width: 100%;
+    padding: 0;
+    border-top: 2px solid black;
+}
+
+footer #logo2 {
+    width: 200px;
+    padding-bottom: 20px;
+    padding-left: 12%;
+    margin-top: 10px;
+}
+
+.address img {
+    width: 400px;
+    padding-top: 22px;
+}
+
+.navfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+
+}
+
+.redesocial {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.listaadm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+}

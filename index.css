@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+* a:link {
+    color: black;
+    text-decoration: none;
+}
+
+* a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+* a:hover {
+    color: black;
+    text-decoration: underline;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    height: 12%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.navegacao {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+#logo {
+    width: 349px;
+    height: 75px;
+    left: 255px;
+    top: 39px;
+}
+
+
+.container1 {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-color: #F6C34A;
+    height: 760px;
+}
+
+#backgroundH{
+    height: 760px;
+}
+
+.container1centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+}
+
+.container1centro p {
+    font-size: 2rem;
+}
+
+.botaocursos {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 200px 2px 0px 2px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#button1 {
+    color: white;
+}
+
+.container2 {
+    background-color: black;
+    height: 450px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container2centro {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    width: 30%;
+}
+
+.container2centro p {
+    font-size: 1rem;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.container3 {
+    background-color: black;
+    height: 580px;
+    text-align: center;
+    color: white;
+    font-size: 23px;
+}
+
+.container3centro {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.person {
+    background-color: white;
+    width: 330px;
+    height: 372px;
+    margin: 20px;
+    color: black;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: rgb(83, 214, 73);;
+    padding: 6px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.whatsapp img {
+    width: 40px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6C34A;
+    height: 41%;
+    width: 100%;
+    padding: 0;
+    border-top: 2px solid black;
+}
+
+footer #logo2 {
+    width: 200px;
+    padding-bottom: 20px;
+    padding-left: 12%;
+    margin-top: 10px;
+}
+
+.address img {
+    width: 400px;
+    padding-top: 22px;
+}
+
+.navfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+
+}
+
+.redesocial {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.listaadm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+}

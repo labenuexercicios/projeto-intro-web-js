@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./adm.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
+</head>
+
+<body onload="onLoad()">
+    <header>
+        <a href="index.html">
+            <img src="./midia/logo 3.png" alt="LabEscola logo" id="logo">
+        </a>
+        <nav>
+            <ul class="navegacao">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="adm.html">Area ADM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="aside">
+            <div class="naveg">
+                <a href="adm.html">Turmas</a>
+                <a href="adm2.html">Matriculas</a>
+                <a href="adm3.html">Financeiro Alunos</a>
+            </div>
+        </aside>
+        <div class="containerMain">
+            <div class="buscar">
+                <label id="" list="cursos"></label>
+                <select list="cursos" name="buscar" id="buscar">
+                    <option value="nenhum">Selecione uma turma</option>
+                    <!-- <option value="">- - SELECIONAR TURMA - -</option>
+                    <option value="Blackwell">Blackwell</option>
+                    <option value="Burnell">Burnell</option>
+                    <option value="Clarke">Clarke</option>
+                    <option value="Curie">Curie</option>
+                    <option value="Elion">Elion</option>
+                    <option value="Hipátia">Hipátia</option>
+                    <option value="Sibyla">Sibyla</option>
+                    <option value="Zhenyi">Zhenyi</option> -->
+                </select>
+                <!-- <label>
+                    <input list="cursos" name="buscar" id="buscar" autocomplete="off" />
+                    <datalist id="cursos">
+                        <option value="Blackwell">Blackwell</option>
+                        <option value="Burnell">Burnell</option>
+                        <option value="Clarke">Clarke</option>
+                        <option value="Curie">Curie</option>
+                        <option value="Elion">Elion</option>
+                        <option value="Hipátia">Hipátia</option>
+                        <option value="Sibyla">Sibyla</option>
+                        <option value="Zhenyi">Zhenyi</option>
+                    </datalist>
+                </label> -->
+
+                <button class="buscarTurma" onclick="getValue()">Buscar</button>
+            </div>
+            <div class="containerTurmas" id="containerTurmas">
+                <div class="turmas">
+                    <h1 class="titulo">Blackwell</h1>
+                </div>
+                <div class="turmas">
+                    <h1 class="titulo">Burnell</h1>
+                </div>
+                <div class="turmas">
+                    <h1 class="titulo">Clarke</h1>
+                </div>
+                <div class="turmas">
+                    <h1 class="titulo">Curie</h1>
+                </div>
+                <div class="turmas">
+                    <h1 class="titulo">Elion</h1>
+                </div>
+                <div class="turmas">
+                    <h1 class="titulo">Hipátia</h1>
+                </div>
+                <div class="turmas">
+                    <h1 class="titulo">Sibyla</h1>
+                </div>
+                <div class="turmas">
+                    <h1 class="titulo">Zhenyi</h1>
+                </div>
+            </div>
+            <div class="whatsapp">
+                <a href="https://web.whatsapp.com/">
+                    <img src="./midia/logos_whatsapp-icon.png" alt="WhatsApp" id="WhatsApp">
+                </a>
+            </div>
+    </main>
+    <footer>
+        <div class="labescolalogo">
+            <a href="index.html">
+                <img src="./midia/logo 2.png" alt="LabEscola logo" id="logo2">
+            </a>
+        </div>
+        <div class="navfooter">
+            <div class="address">
+                <h1>Endereço</h1>
+                <a href="https://goo.gl/maps/tHtVSAx2APoHKov38">
+                    <img src="./midia/Rectangle 4.png" alt="Endereço Labenu" id="address">
+                </a>
+                <p>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+            </div>
+            <div class="links">
+                <h1>Links</h1>
+                <div class="lista">
+                    <a href="index.html">Home</a>
+                    <a href="cursos.html">Cursos</a>
+                    <a href="">Blog</a>
+                    <a href="contato.html">Fale Conosco</a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ">Termos e condições</a>
+                    <a href="https://youtu.be/X0DeIqJm4vM">Politica de privacidade</a>
+                    <a href="https://youtu.be/ABQBgJZBbzw">FAQ</a>
+                </div>
+            </div>
+            <div>
+                <h1>Redes sociais</h1>
+                <div class="redesocial">
+                    <a href="https://twitter.com/">
+                        <img src="./midia/Vector.png" alt="Endereço Twitter Labenu" id="twitter">
+                    </a>
+                    <a href="https://linkedin.com/">
+                        <img src="./midia/Vector (1).png" alt="Endereço Linkedin Labenu" id="twitter">
+                    </a>
+                    <a href="https://facebook.com/">
+                        <img src="./midia/Vector (2).png" alt="Endereço Facebook Labenu" id="twitter">
+                    </a>
+                    <a href="https://instagram.com/">
+                        <img src="./midia/Vector (3).png" alt="Endereço Instagram Labenu" id="twitter">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h1>Área restrita</h1>
+                <div class="listaadm">
+                    <a href="adm.html">
+                        Área administrativa
+                    </a>
+                    <a href="https://estudante.labenu.com.br">
+                        Espaço do aluno
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

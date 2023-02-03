@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+* a:link {
+    color: black;
+    text-decoration: none;
+}
+
+* a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+* a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+body {
+    width: 100vw;
+    height: 200vh;
+}
+
+header {
+    height: 6%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.navegacao {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+#logo {
+    width: 349px;
+    height: 75px;
+    left: 255px;
+    top: 39px;
+}
+
+
+main {
+    height: 72.8%;
+    background-color: black;
+}
+
+.container1 {
+    height: 40%;
+    width: 100%;
+    background-color: #F6C34A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container1topo {
+    display: flex;
+    height: 47.5%;
+}
+
+.curso {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 230px;
+    width: 210px;
+    border-radius: 9px;
+    padding: 2em;
+    margin: 0 30px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.curso h1 {
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+}
+
+.curso p {
+    font-size: 13px;
+}
+
+.botaofazerparte {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 20px 72px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#buttonfazerparte {
+    color: white;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: rgb(83, 214, 73);;
+    padding: 6px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.whatsapp img {
+    width: 40px;
+}
+
+.container2 {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.conteudo {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    justify-items: center;
+    align-items: center;
+    width: 800px;
+    margin-top: 30px;
+    padding: 40px;
+    border-radius: 9px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.conteudo h1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-bottom: 27px;
+    font-size: 32px;
+}
+
+.conteudo #firsth3 {
+    grid-column: 2/3;
+}
+
+.conteudo #secondh3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.conteudo #firstUl {
+    grid-column: 2/3;
+    list-style-type: none;
+}
+
+.conteudo #secondUl {
+    grid-column: 3/4;
+    list-style-type: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6C34A;
+    height: 41%;
+    width: 100%;
+    padding: 0;
+    border-top: 2px solid black;
+}
+
+footer #logo2 {
+    width: 200px;
+    padding-bottom: 20px;
+    padding-left: 12%;
+    margin-top: 10px;
+}
+
+.address img {
+    width: 400px;
+    padding-top: 22px;
+}
+
+.navfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+
+}
+
+.redesocial {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.listaadm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+}
