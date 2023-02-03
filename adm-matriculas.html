@@ -9,20 +9,25 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="./adm-matriculas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header>
         <a href="./index.html">
             <img src="./midias/logo.svg" alt="LabEscola logo" id="logo" />
-          </a>
-          <nav>
-            <ul>
-              <li class="links-header"><a href="./index.html">Home</a></li>
-              <li class="links-header"><a href="./cursos.html">Cursos</a></li>
-              <li class="links-header"><a href="./contato.html">Contato</a></li>
-              <li class="links-header"><a href="./adm-turmas.html">Área ADM</a></li>
+        </a>
+
+        <nav id="nav">
+          <span id="btn-burger" class="material-symbols-outlined" onclick="toggleMenu(event)">
+            menu
+        </span>
+          <ul id="menu">
+            <li class="links-header"><a href="./index.html">Home</a></li>
+            <li class="links-header"><a href="./cursos.html">Cursos</a></li>
+            <li class="links-header"><a href="./contato.html">Contato</a></li>
+            <li class="links-header"><a href="./adm-turmas.html">Área ADM</a></li>
           </ul>
-          </nav>
+        </nav>
     </header>
 
     <main id="main-container">
@@ -70,7 +75,7 @@
             </a>
           </div>
     
-          <div>
+          <div id="adress">
             <h3 class="titles">Endereço</h3>
             <a
               id="map"
@@ -81,7 +86,7 @@
             <p class="text-footer">R. Pais Leme, 215. CEP 05.424-150 - Pinheiros</p>
           </div>
     
-          <div>
+          <div id="footer-menu">
             <h3 class="titles">Links</h3>
             <div id="list-links-footer">
               <a class="text-footer" href="./index.html">Home</a>
@@ -115,7 +120,7 @@
             </div>
           </div>
     
-          <div>
+          <div id="adm-links">
             <h3 class="titles">Área restrita</h3>
             <div id="areas-internas">
               <a href="./adm-turmas.html" class="text-footer">Área administrativa</a>

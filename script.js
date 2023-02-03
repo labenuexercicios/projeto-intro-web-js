@@ -150,7 +150,7 @@ const buscarCurso=()=>{
     if(confereCurso.length > 0) return swal({
         title: "Curso já adicionado.",            
         icon: "error",
-    }) 
+    }), document.getElementById('course').value = ""
 
     /*//Primeira opção:
     const index = cursos.findIndex(element=> element.curso.toLowerCase().indexOf(inputCurso.toLowerCase())>-1) 
@@ -609,7 +609,7 @@ const gerarCardMatricula = (estudanteDados, arrTurma, callback) =>{
     
     newCard.innerHTML = `
         <div class="confirm-student">
-            <h1>Aluno matriculado</h1>
+            <h1 class="confirm-student-title">Aluno matriculado</h1>
             <figure>
               <img src="./midias/confirm-check.svg" alt="check" id="confirm-check">
             </figure>
@@ -624,3 +624,7 @@ const gerarCardMatricula = (estudanteDados, arrTurma, callback) =>{
     return confirmContainer.insertAdjacentElement('beforeend', newCard)
 }
 
+const toggleMenu = () =>{
+    const nav = document.getElementById('nav')
+    nav.classList.toggle('active')
+}
