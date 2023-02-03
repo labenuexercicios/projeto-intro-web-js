@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="./css/contato.css">
+    <title>Aréa ADM</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="css/adm-turmas.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/whatsapp.css">
-
 </head>
 
 <body>
@@ -19,41 +17,38 @@
         <a href="./index.html">
             <img src="./img/logo 1.png" alt="LabEscola logo" id="logo" />
         </a>
+
         <nav>
             <ul class="menu-header">
                 <li><a class="menu-item-header" href="index.html">Home</a></li>
                 <li><a class="menu-item-header" href="./cursos.html">Cursos</a></li>
-                <li><a class="menu-item-header" id="contato-selecionado" href="./contato.html">Contato</a></li>
-                <li><a class="menu-item-header" href="./adm-turmas.html">Area ADM</a></li>
+                <li><a class="menu-item-header" href="./contato.html">Contato</a></li>
+                <li><a class="menu-item-header" id="area-adm-selecionado" href="./adm-turmas.html">Area ADM</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="section-form">
-            <div class="container-form">
-                <h2 id="titulo-form">Fale conosco</h2>
-                <form id="form-fale-conosco" action="#">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
+    <main class="container-adm">
 
-                    <label for="email">Email</label>
-                    <input type="email" name="nome" id="email">
+        <nav class="menu-adm">
+            <ul id="lista-menu-adm">
+                <li><a class="item-menu-adm" id="area-turmas-selecionada" href="./adm-turmas.html">Turmas</a></li>
+                <li><a class="item-menu-adm" href="./adm-matriculas.html">Matriculas</a></li>
+                <li><a class="item-menu-adm" href="./adm-financeiro.html">Financeiro Alunos</a></li>
+            </ul>
+        </nav>
+        <section class="container-turmas">
 
-                    <label for="mensagem">Mensagem</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"
-                        placeholder="Escreva sua mensagem..."></textarea>
+            <div class="search-area">
 
+                <input id="input" type="text" name="input" placeholder="Digite o nome da turma" />
+                <button id="button-buscar" type="submit" onclick="buscarTurma()">Buscar</button>
 
-                    <!-- <div id="button-enviar"> -->
-                        <button type="submit" id="button-enviar">Enviar</button>
-                   <!--  </div> -->
-                </form>
             </div>
+
+            <div id="container-cards">
+            </div>
+
         </section>
-        <aside class="whatsapp">
-            <a target="_blank" href="https://web.whatsapp.com/"><img id="whats" src="./img/logos_whatsapp-icon.svg"
-                    alt="Logo do whatsApp" /></a>
-        </aside>
     </main>
     <footer>
         <div id="logo-footer">
@@ -85,14 +80,12 @@
             <div class="container-redes">
                 <h3 class="titulos-footer">Redes Sociais</h3>
                 <figure class="redes-sociais-footer">
-                    <a href="https://twitter.com"><img class="redes-sociais" src="./img/twitter.svg.svg"
-                            alt="Logo do Twitter"></a>
-                    <a href="https://br.linkedin.com/"><img class="redes-sociais" src="./img/In.svg.svg"
-                            alt="Logo do Linkedin"></a>
+                    <a href="https://twitter.com"><img class="redes-sociais" src="./img/twitter.svg.svg" alt="Logo do Twitter"></a>
+                    <a href="https://br.linkedin.com/"><img class="redes-sociais" src="./img/In.svg.svg" alt="Logo do Linkedin"></a>
                     <a href="https://pt-br.facebook.com/"><img class="redes-sociais" src="./img/facebook.svg.svg"
-                            alt="Logo do Facebook"></a>
+                    alt="Logo do Facebook"></a>
                     <a href="https://www.instagram.com/"><img class="redes-sociais" src="./img/Istagram.svg.svg"
-                            alt="Logo do Istagram"></a>
+                    alt="Logo do Istagram"></a>
                 </figure>
             </div>
 

@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Área adm - financeiro</title>
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="./css/contato.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/whatsapp.css">
-
+    <link rel="stylesheet" href="./css/adm-financeiro.css">
 </head>
 
 <body>
@@ -19,42 +17,66 @@
         <a href="./index.html">
             <img src="./img/logo 1.png" alt="LabEscola logo" id="logo" />
         </a>
+
         <nav>
             <ul class="menu-header">
                 <li><a class="menu-item-header" href="index.html">Home</a></li>
                 <li><a class="menu-item-header" href="./cursos.html">Cursos</a></li>
-                <li><a class="menu-item-header" id="contato-selecionado" href="./contato.html">Contato</a></li>
-                <li><a class="menu-item-header" href="./adm-turmas.html">Area ADM</a></li>
+                <li><a class="menu-item-header" href="./contato.html">Contato</a></li>
+                <li><a class="menu-item-header" id="adm-selecionado" href="./adm-turmas.html">Area ADM</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="section-form">
-            <div class="container-form">
-                <h2 id="titulo-form">Fale conosco</h2>
-                <form id="form-fale-conosco" action="#">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
+    <main class="container-adm">
+        <nav class="menu-adm">
+            <a class="item" href="./adm-turmas.html">Turmas</a>
+            <a class="item" href="./adm-matriculas.html">Matriculas</a>
+            <a class="item" id="financeiro" href="./adm-financeiro.html">Financeiro Alunos</a>
+        </nav>
+        <div id="container-financeiro">
+            <section class="financeiro">
+                <div id="container-formulário">
 
-                    <label for="email">Email</label>
-                    <input type="email" name="nome" id="email">
+                    <h3 class="titulo-financeiro">Financeiro</h3>
 
-                    <label for="mensagem">Mensagem</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"
-                        placeholder="Escreva sua mensagem..."></textarea>
+                    <form action="#" class="form" id="form-financeiro">
 
+                        <label for="curso" id="curso">Curso</label>
+                        <input type="text" id="input-curso">
 
-                    <!-- <div id="button-enviar"> -->
-                        <button type="submit" id="button-enviar">Enviar</button>
-                   <!--  </div> -->
-                </form>
-            </div>
-        </section>
-        <aside class="whatsapp">
-            <a target="_blank" href="https://web.whatsapp.com/"><img id="whats" src="./img/logos_whatsapp-icon.svg"
-                    alt="Logo do whatsApp" /></a>
-        </aside>
+                        <a id="adicionar-curso" href="">Adicionar outro curso</a>
+
+                        <label for="num-parcelas" id="num-parcela">Número de parcelas</label>
+                        <input type="text" id="input-num-parcelas">
+
+                        <button id="btn-ver-saldo">Ver valor</button>
+
+                    </form>
+                </div>
+                <div id="resumo-valor">
+                    <h3 class="titulo-financeiro-valor">Valor</h3>
+                    <p>Desconto de 20%. Parcelas de 2x de 1880.00</p>
+                </div>
+            </section>
+
+            <section class="relatorio-aluno">
+                <div>
+                    <h3 class="titulo-financeiro">Relatório Aluno</h3>
+
+                    <form action="#" class="form">
+                        <label for="input-nome">Nome</label>
+                        <input type="text" name="input-nome" id="input-nome">
+                    </form>
+
+                    <button id="btn-buscar" onclick="relatorioEstudante()" >Buscar</button>
+                </div>
+                <div id="relatorio-mostrado">
+                
+                </div>
+            </section>
+        </div>
     </main>
+
     <footer>
         <div id="logo-footer">
             <img src="./img/logo-footer.png" alt="Logo da LabEscola">

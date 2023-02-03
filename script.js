@@ -188,7 +188,10 @@ const parcelaCurso = (carrinhoCursos, numeroDeParcelas) => {
 
 //******Função que busca um curso no array cursos */
 const buscarCurso = (nomeCurso) => {
+
+    /* const inputCurso = document.getElementById("").value.toLowerCase() */
     nomeCurso = nomeCurso.toLowerCase()
+
     const cursoEncontrado = cursos.find((curso) =>
         curso.curso.toLowerCase().includes(nomeCurso)
     )
@@ -203,30 +206,32 @@ const buscarCurso = (nomeCurso) => {
         }
     } */
 }
-console.log(buscarCurso("ap"))
+/* console.log(buscarCurso("ap")) */
 
 //******Função que busca uma turma no array turmas */
-const buscarTurma = (nomeTurma) => {
-    nomeTurma = nomeTurma.toLowerCase()
-    const turmaEncontrada = turmas.filter((turma) =>
-        turma.turma.toLowerCase().includes(nomeTurma)
-    )
+/* */
 
-    return turmaEncontrada.length !== 0
-        ? turmaEncontrada
-        : "Turma não encontrada!"
 
-    /*  for (let tipoTurma of turmas) {
-        if (tipoTurma.turma === nomeTurma) {
-            return tipoTurma
+
+
+const buscarTurma = () => {
+
+    const inputTurma = document.getElementById("input").value.toLowerCase()
+
+    const turmaBuscada = turmas.filter((nomeTurma) => {
+        /*  console.log(cadaTurma.turma.toLowerCase().includes(inputTurma)) */
+        if (nomeTurma.turma.toLowerCase().includes(inputTurma)) {
+            return nomeTurma
         }
-    } */
+    })
+
+    return (turmaBuscada.length > 0 ? gerarCard(turmaBuscada) : gerarCard(turmas))
 }
-console.log(buscarTurma("hi"))
 
 //***Função que busca um estudante no array estudantes */
+
 const buscarEstudante = (nomeEstudante) => {
-    //***COM FIND */
+    //*** COM FIND */
     nomeEstudante = nomeEstudante.toLowerCase()
     const estudanteEncontrado = estudantes.find((aluno) =>
         aluno.estudante.toLowerCase().includes(nomeEstudante)
@@ -236,36 +241,91 @@ const buscarEstudante = (nomeEstudante) => {
         ? estudanteEncontrado
         : "Aluno não encontrado"
 
-    //***COM FOR
-    /*  for (let tipoEstudante of estudantes) {
-        if (tipoEstudante.estudante.includes(nomeEstudante)) {
-            return tipoEstudante
-        }
-    } */
 }
 
-console.log(buscarEstudante("LA"))
+console.log(buscarEstudante("la"))
+
+const gerarCard = (turmasBuscadas) => {
+
+    const turmaEncontrada = turmasBuscadas.map((item) => {
+        return (
+            `<section class="card-turma" >
+            <p class="nome-turma">${item.turma}</p>
+            <p><span class="info-turma">Curso: </span>
+            <span>${item.curso}</span>
+            </p>
+             <p><span class="info-turma">Inicio: </span>
+            <span>${item.inicio}</span>
+            </p>
+            <p><span class="info-turma">Término: </span>
+            <span>${item.termino}</span>
+            </p>
+            <p><span class="info-turma">Número de alunos: </span>
+            <span>${item.numeroDeAlunos}</span>
+            </p>
+            <p><span class="info-turma">Périodo: </span>
+            <span>${item.periodo}</span>
+            <p><span class="info-turma">Concluido: </span>
+            <span>${item.concluida ? 'Sim' : 'Não'}</span>
+            </p>
+            </section>`
+        )
+    })
+
+    document.getElementById("container-cards").innerHTML = turmaEncontrada.join("")
+
+    //limpando o input
+    document.getElementById("input").value = ""
+
+    /* return turmaEncontrada */
+}
+
 
 //****** Função que matricula um aluno e o adiciona ao array estudantes */
-const matricular = (nomeAluno, nomeCurso, nomeTurma, numeroDeParcelas) => {
+
+//completinha (palminhas)
+const relatorioMatricula = document.getElementById("mostrar-relatorio")
+
+const matricular = () => {
+
+    let nomeAlunoinput = document.getElementById("input-name").value.toLowerCase()
+    let nomeTurmaInput = document.getElementById("input-turma").value.toLowerCase()
+    let nomeCursoInput = document.getElementById("input-curso").value.toLowerCase()
+    let numParcelasInput = document.getElementById("input-num-parcelas").value.toLowerCase()
+
+    console.log(nomeAlunoinput)
+
     const novoAluno = {
-        estudante: nomeAluno,
-        turma: nomeTurma,
-        curso: nomeCurso,
-        numeroDeParcelas: numeroDeParcelas,
+
+        estudante: nomeAlunoinput,
+        turma: nomeTurmaInput,
+        curso: nomeCursoInput,
+        numeroDeParcelas: numParcelasInput,
     }
     estudantes.push(novoAluno)
 
-    console.log(estudantes)
-    console.log(
-        `Aluno Matriculado! \nNome: ${nomeAluno} \nCurso: ${nomeCurso} \nTurma: ${nomeTurma}`
-    )
+    relatorioMatricula.innerHTML = `
+    <article>
+    <h3 class="titulo">Aluno matriculado </h3>
+
+    <div class="relatorio">
+
+        <p><span>Nome: ${nomeAlunoinput} </span></p>
+        <p><span>Curso: ${nomeCursoInput}</span></p>
+        <p><span>Turma:${nomeTurmaInput}</span></p>
+
+    </div>
+    </article>`
+
+    const limparInputs = document.getElementsByClassName('input-matricula');
+    for (let x = 0; x < limparInputs.length; x++) {
+        limparInputs[x].value = ""
+    }
+
+    console.log(novoAluno)
 }
 
-matricular("Maria Clara Dourado", "JavaScript", "Curie", 2)
-matricular("Pérola Valadao ", "HTML e CSS", "Hipátia", 6)
 
-console.log(buscarEstudante("Ma"))
 
 //******Função que adiciona o valor dos cursos escolhidos no carrinho */
 const adicionarNoCarrinho = (curso) => {
@@ -277,16 +337,44 @@ const adicionarNoCarrinho = (curso) => {
 adicionarNoCarrinho("JavaScript")
 adicionarNoCarrinho("html")
 adicionarNoCarrinho("apis rest")
-console.log(carrinhoCursos)
+/* console.log(carrinhoCursos) */
 
 //***Função que gera um relatorio do estudante matriculado */
-const relatorioEstudante = (estudante) => {
-    const aluno = buscarEstudante(estudante)
-    console.log(
-        `Aluno: ${aluno.estudante} \nTurma: ${aluno.turma} \nCurso: ${aluno.curso} \nValor Total: R$${aluno.valor} \nValor Parcela: R$${aluno.valorDaParcela} \nNº Parcelas: ${aluno.numeroDeParcelas}`
-    )
+
+
+
+const relatorioStudent = document.getElementById("relatorio-mostrado")
+console.log("aqui", relatorioStudent)
+
+const relatorioEstudante = () => {
+
+    const inputEstudante = document.getElementById("input-nome").value.toLowerCase()
+
+    console.log(inputEstudante)
+
+    const aluno = buscarEstudante(inputEstudante)
+    console.log(aluno.estudante)
+
+    if(aluno.estudante.includes(inputEstudante)){
+
+
+        //resolver, não está entrando aqui
+    relatorioStudent.innerHTML =
+       `<article>
+            <p><span>Aluno:
+            </span><span>${aluno.estudante}</span></p>
+            <p><span>Turma: </span><span>${aluno.turma}</span></p>
+            <p><span>Curso: </span><span>${aluno.curso}s</span></p>
+            <p><span>Valor total: </span><span>${aluno.valor}</span></p>
+            <p><span>Valor Parcela: </span><span>${aluno.va$lorDaParcela}</span></p>
+            <p><span>N.° Parcelas: </span><span>${aluno.numeroDeParcelas}</span></p>
+        </article>`
+    }else{
+        console.log('oi')
+    }
 }
+    
 
-relatorioEstudante("H")
+/* relatorioEstudante("H")
 
-parcelaCurso(carrinhoCursos, 2)
+parcelaCurso(carrinhoCursos, 2) */

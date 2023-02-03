@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="./css/contato.css">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./css/adm-matriculas.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/whatsapp.css">
-
 </head>
 
 <body>
@@ -19,41 +17,61 @@
         <a href="./index.html">
             <img src="./img/logo 1.png" alt="LabEscola logo" id="logo" />
         </a>
+
         <nav>
             <ul class="menu-header">
                 <li><a class="menu-item-header" href="index.html">Home</a></li>
                 <li><a class="menu-item-header" href="./cursos.html">Cursos</a></li>
-                <li><a class="menu-item-header" id="contato-selecionado" href="./contato.html">Contato</a></li>
-                <li><a class="menu-item-header" href="./adm-turmas.html">Area ADM</a></li>
+                <li><a class="menu-item-header" href="./contato.html">Contato</a></li>
+                <li><a class="menu-item-header" id="adm-selecionado" href="./adm-turmas.html">Area ADM</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="section-form">
-            <div class="container-form">
-                <h2 id="titulo-form">Fale conosco</h2>
-                <form id="form-fale-conosco" action="#">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
+    <main class="container-adm">
+        <nav class="menu-adm">
+            <a class="item" href="./adm-turmas.html">Turmas</a>
+            <a class="item" id="matriculas" href="./adm-matriculas.html">Matriculas</a>
+            <a class="item" href="./adm-financeiro.html">Financeiro Alunos</a>
+        </nav>
+        <section class="container-matriculas">
 
-                    <label for="email">Email</label>
-                    <input type="email" name="nome" id="email">
+            <div class="form-matricula">
+                <h3 class="titulo">Matriculas</h3>
 
-                    <label for="mensagem">Mensagem</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"
-                        placeholder="Escreva sua mensagem..."></textarea>
+                <form action="#">
 
+                    <label for="name-student" class="" id="name-student">
+                        Nome
+                    </label>
+                    <input type="text" class="input-matricula" id="input-name">
 
-                    <!-- <div id="button-enviar"> -->
-                        <button type="submit" id="button-enviar">Enviar</button>
-                   <!--  </div> -->
+                    <label for="curso-student" id="curso-student">
+                        Curso
+                    </label>
+                    <input type="text" class="input-matricula" id="input-curso">
+
+                    <label for="turma-student" id="turma-student">
+                        Turma
+                    </label>
+                    <input type="text" class="input-matricula" id="input-turma">
+
+                    <label for="num-parcelas-student" id="num-parcelas-student">
+                        Número de parcelas
+                    </label>
+                    <input type="number" class="input-matricula" id="input-num-parcelas">
                 </form>
+
+                <button onclick="matricular()" type="submit" id="button-matricular">Matricular aluno</button>
+
             </div>
+
+            <div id="mostrar-relatorio" class="relatorio-matricula">
+               <!--  CONSERTAR O CSS -->
+            </div>
+    
+
         </section>
-        <aside class="whatsapp">
-            <a target="_blank" href="https://web.whatsapp.com/"><img id="whats" src="./img/logos_whatsapp-icon.svg"
-                    alt="Logo do whatsApp" /></a>
-        </aside>
+
     </main>
     <footer>
         <div id="logo-footer">

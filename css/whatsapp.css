@@ -1,0 +1,12 @@
+
+.whatsapp {
+    position: fixed;
+    right: 6%;
+    bottom: 3%;
+    border-radius: 50%;
+}
+
+#whats {
+    width: 10vh;
+    height: 9vh;
+}

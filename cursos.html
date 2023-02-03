@@ -1,33 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos</title>
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cursos.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/whatsapp.css">
 </head>
+
 <body>
     <header>
         <a href="./index.html">
             <img src="./img/logo 1.png" alt="LabEscola logo" id="logo" />
         </a>
-
-        <nav class="menu">
-            <ul class="menu-links">
-                <li><a class="menu-item" id="home-selecionado" href="index.html">Home</a></li>
-                <li><a class="menu-item" href="./cursos.html">Cursos</a></li>
-                <li><a class="menu-item" href="./contato.html">Contato</a></li>
-                <li><a class="menu-item" href="./adm.html">Area ADM</a></li>
+        <nav>
+            <ul class="menu-header">
+                <li><a class="menu-item-header" href="index.html">Home</a></li>
+                <li><a class="menu-item-header" id="cursos-selecionado" href="./cursos.html">Cursos</a></li>
+                <li><a class="menu-item-header" href="./contato.html">Contato</a></li>
+                <li><a class="menu-item-header" href="./adm-turmas.html">Area ADM</a></li>
             </ul>
         </nav>
     </header>
     <main class="main-cursos">
-        <section class="section-tc">1 section</section>
-        <section class="section-tc">2 section</section>
-        <section class="section-tc">3 section</section>
+        <section class="tela-principal">
+            <div class="cards">
+                <div class="card">
+                    <h1>HTML e CSS</h1>
+                    <p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor
+                        nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a
+                        faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt
+                        ultricies enim, ac</p>
+                </div>
+                <div class="card">
+                    <h1>JavaScript</h1>
+                    <p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor
+                        nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a
+                        faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt
+                        ultricies enim, ac</p>
+                </div>
+                <div class="card">
+                    <h1>APIs e Rest</h1>
+                    <p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor
+                        nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a
+                        faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt
+                        ultricies enim, ac</p>
+                </div>
+            </div>
+          <!--   colocar link para o email -->
+            <a id="botao" href="#">Quero fazer parte!</a>
+        </section>
+        <section class="modulo-cursos">
+            <div class="card-modulo">
+                <h1 class="titulo-curso">HTML e CSS</h1>
+                <div class="modulo-um" class="conteudo-modulo">
+                    <ul class="lista-modulo">
+                        <h2>Módulo 1</h2>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                    </ul>
+                </div>
+                <div class="modulo-dois" class="conteudo-modulo">
+                    <ul class="lista-modulo">
+                        <h2>Módulo 2</h2>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-modulo">
+                <h1 class="titulo-curso">JavaScript</h1>
+                <div class="modulo-um" class="conteudo-modulo">
+                    <ul class="lista-modulo">
+                        <h2>Módulo 1</h2>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                    </ul>
+                </div>
+                <div class="modulo-dois" class="conteudo-modulo">
+                    <ul class="lista-modulo">
+                        <h2>Módulo 2</h2>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-modulo">
+                <h1 class="titulo-curso">APIs e Rest</h1>
+                <div class="modulo-um" class="conteudo-modulo">
+                    <ul class="lista-modulo">
+                        <h2>Módulo 1</h2>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                    </ul>
+                </div>
+                <div class="modulo-dois" class="conteudo-modulo">
+                    <ul class="lista-modulo">
+                        <h2>Módulo 2</h2>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                        <li>Suspendisse condimentum</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <aside class="whatsapp">
+            <a target="_blank" href="https://web.whatsapp.com/"><img id="whats" src="./img/logos_whatsapp-icon.svg"
+                    alt="Logo do whatsApp" /></a>
+        </aside>
     </main>
-    <footer class="footer">footer</footer>
+    <aside class="whatsapp">
+        <a target="_blank" href="https://web.whatsapp.com/"><img id="whats" src="./img/logos_whatsapp-icon.svg"
+        alt="Logo do whatsApp" /></a>
+    </aside>
+    <footer>
+        <div id="logo-footer">
+            <img src="./img/logo-footer.png" alt="Logo da LabEscola">
+        </div>
+
+        <div class="container-footer">
+            <div class="container-endereco">
+                <h3 class="titulos-footer">Endereço</h3>
+                <iframe id="maps"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.996277295466!2d-46.70069088521954!3d-23.56857718467923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1673889195476!5m2!1spt-BR!2sbr"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p> R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+            </div>
+
+            <div class="container-links">
+                <h3 class="titulos-footer">Links</h3>
+                <ul class="text-footer">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Termos e condições</a></li>
+                    <li><a href="#">Politica de privacidade</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="container-redes">
+                <h3 class="titulos-footer">Redes Sociais</h3>
+                <figure class="redes-sociais-footer">
+                    <a href="https://twitter.com"><img class="redes-sociais" src="./img/twitter.svg.svg" alt="Logo do Twitter"></a>
+                    <a href="https://br.linkedin.com/"><img class="redes-sociais" src="./img/In.svg.svg" alt="Logo do Linkedin"></a>
+                    <a href="https://pt-br.facebook.com/"><img class="redes-sociais" src="./img/facebook.svg.svg"
+                    alt="Logo do Facebook"></a>
+                    <a href="https://www.instagram.com/"><img class="redes-sociais" src="./img/Istagram.svg.svg"
+                    alt="Logo do Istagram"></a>
+                </figure>
+            </div>
+
+            <div class="container-area">
+                <h3 class="titulos-footer">Area restrita</h3>
+                <ul class="text-footer">
+                    <li><a href="#">Area administrativa</a> </li>
+                    <li><a href="#">Espaço do aluno</a> </li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

@@ -6,63 +6,25 @@
     box-sizing: border-box;
 }
 
-
-header {
-    display: flex;
-    height: 17vh;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #FBFBFB;
-    /* padding: 0 12rem; */
+#home-selecionado {
+    /* faz o item selecionado ficar marcado com uma linha embaixo quando selecionada a pagina home. (Aplicar a cada página) */
+    text-decoration-line: underline;
 
 }
-
-#logo {
-    height: 4rem;
-    width: 18rem;
-    /* border: 3px solid black; */
-}
-
-
-
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4.688rem;
-    list-style: none;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 2.25rem;
-
-
-}
-
-
-.menu-item {
-    text-decoration: none;
-    color: #0E0E0E;
-}
-
 
 main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3f;
-    /* border: 6px solid black; */
-    /* width: 100vw; */
     align-items: center;
-    /* flex-direction: column; */
     text-align: center;
     justify-content: center;
 
 }
 
-.secao1 {
+.container-content {
     /* div que engloba toda a secao 1 */
-    background-image: url('/img/background-hero\ \(1\).svg');
+    background-image: url('../img/background-hero\ \(1\).svg');
     background-size: cover;
     /* faz a imagem ficar mais nitida */
     display: flex;
@@ -78,7 +40,7 @@ main {
     padding-bottom: 5rem;
 }
 
-.section-one h2 {
+.content h2 {
     /* tag section titulo */
     font-family: 'Poppins';
     font-style: normal;
@@ -88,7 +50,7 @@ main {
 
 }
 
-.section-one p {
+.content p {
     /* tag section frase */
     font-family: 'Poppins';
     font-style: normal;
@@ -106,17 +68,12 @@ main {
     font-style: normal;
     font-weight: 700;
     font-size: 1.2rem;
-    /*  line-height: 18rem; */
     text-decoration: none;
     color: #FBFBFB;
 
 }
 
-#home-selecionado {
-    /* faz o item selecionado ficar marcado com uma linha embaixo quando selecionada a pagina home. (Aplicar a cada página) */
-    text-decoration-line: underline;
-
-}
+/* SECAO 1 */
 
 .sobre-nos {
     /* secao sobre nos */
@@ -126,17 +83,12 @@ main {
     align-items: center;
     justify-content: flex-start;
     height: 50vh;
-    width: 100%;
-    /* border: 2px solid blue; */
     background: #0E0E0E;
     color: #FBFBFB;
     font-family: 'Open Sans';
     font-style: normal;
     font-size: 1rem;
     line-height: 36px;
-    /* padding: 2rem 5rem; */
-    /* word-wrap: normal;  */
-
 }
 
 .sobre-nos h3 {
@@ -158,8 +110,6 @@ main {
     padding: 2.5rem 16em;
     font-weight: 400;
     line-height: 150%
-        /*  1.8rem */
-        /* define espacamento entre linhas */
 }
 
 
@@ -170,11 +120,10 @@ main {
     justify-items: center;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid white; */
     padding-bottom: 8rem;
 }
 
-.depoimentos h4 {
+.depoimentos>h4 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -204,8 +153,6 @@ main {
     border-radius: 0.5rem;
     padding: 1.5rem 2rem;
     width: 17%;
-    /* height: 40%; */
-
 }
 
 .img-aluno {
@@ -222,25 +169,4 @@ main {
     text-align: left;
 }
 
-.whatsapp {
-    /*  position: fixed;
-    bottom: 2em;
-    right: 1em; */
-    position: fixed;
-    right: 6%;
-    bottom: 3%;
-    /* background: #FFFFFF; */
-    border-radius: 50%;
-    /* width: 9vh;
-    height: 9vh; */
-}
 
-#whats{
-    width: 10vh;
-    height: 9vh;
-}
-
-footer{
-    height: 64vh;
-    background-color: #f6c34a;
-}
