@@ -1,1 +1,1 @@
-link do deploy no surge alleged-rice.surge.sh
+link do deploy no surge projetojsnobu.surge.sh
