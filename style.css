@@ -1,0 +1,623 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#headerhome{
+    width: 100%;
+    height: 17vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+body {
+    background-color: goldenrod;
+
+}
+#navegacao {
+    display: flex;
+    gap: 3em;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.whats {
+    position: fixed;
+    left: 90.5%;
+    top: 87%;
+    float: right;
+    width: 3.5em;
+}
+
+.link {
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#butaum {
+    width: 30em;
+    height: 7em;
+    background-color: black;
+    border-radius: 1em ;
+}
+
+#linkbutaum {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+}
+
+#sobre12{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 130vh;
+    width: 100vw;
+
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.textoalinhado {
+    margin-top: 80px;
+    font-family:'Poppins', sans-serif ;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 3.75em;
+
+}
+
+#textosobre {
+    text-align: center;
+    width: 80vw;
+    height: 9em; 
+    font-family:'Open', Sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+
+}
+
+.depoimentos {
+    margin-top: 80px;
+
+}
+
+#acertodepoimentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ajustepessoas {
+
+    background-color: white;
+    color: black;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 15px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 5px;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.pessoas {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+
+}
+
+a:hover {
+    color: blue;
+}
+
+#config {
+    background-image: url(./imagem/fundo\ amarelo.png);
+    background-repeat: no-repeat;
+    height: 82vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#alinhamento article {
+    margin-top: 200px;
+
+}
+
+.alinhar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+#descubra1{
+    width: 20em;
+    height: 1em;
+    font-family:'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 6.5em;
+    text-align: center;
+
+}
+
+.aprenda1{
+    width: 30em;
+    height: 2em;
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+}
+
+#logo1 {
+    height: 75px;
+    width: 350px;
+}
+
+#home {
+    text-decoration: underline;
+
+}
+
+#cursos {
+    text-decoration: underline;
+
+}
+
+#contatos {
+    text-decoration: underline;
+
+}
+
+#areadm {
+    text-decoration: underline;
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 70px;
+
+}
+
+.mapa {
+    padding: 25px;
+}
+
+.abamenu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.linkalterar {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+.rede {
+    padding: 15px;
+}
+
+.logosrede {
+    margin: 20px 0px;
+
+}
+
+.admarea {
+    padding: 20px;
+    margin: 5px 0px;
+
+}
+
+.footerarea {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+
+
+/* codigo area de cursos */
+
+#alinhamento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    justify-content: center;
+   /*  padding: 5em; */
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    gap: 1em;
+
+}
+
+.cards1{
+    background-color: white;
+    width: 23em;
+    height: 23em;
+    margin-top: 1.87em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titulos{
+    margin-bottom: 2.5em;
+    margin-top: 1.25em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#butao1 {
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 1em;
+    grid-column: 2/2;
+    width: 25em;
+    height: 4em;
+
+}
+
+#butao1:hover {
+    cursor: pointer;
+}
+
+.aln2 {
+    display: flex;
+    background-color: #FFFFFF;
+    height: 150px;
+    width: 50%;
+    margin-top: 30px;
+    gap: 100px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+
+#aln1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 50em;
+
+}
+
+.title1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+
+}
+
+
+/* codigo area de contato */
+
+#mencont {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#mensite {
+    background-color: white;
+    color: black;
+    height: 30vh;
+    width: 30vw;
+    border-radius: 15px;
+    display: flex;
+    height: 500px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 18px;
+    margin: 10px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 100px;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#faler {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+
+}
+
+#enviar1 {
+    border: none;
+    height: 30px;
+    width: 169px;
+    background-color: goldenrod;
+    color: black;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#escreva5 {
+    width: 165px;
+    height: 100px;
+
+}
+
+
+/* codigo area de area adm */
+
+
+.aline {
+    display: flex;
+    border: 2px solid black;
+    gap: 1em;
+
+}
+
+.alinelat {
+    color: white;
+    font-size: 20px;
+
+}
+
+.alinecolun {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* codigo turmas */
+
+#menuturm {
+    display: flex;
+    border: 2px solid black;
+    gap: 10px;
+    width: 30vw;
+    height: 110vh;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.menuasid {}
+
+#menudasparada {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+
+#buscturm {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 80vw;
+
+}
+
+.menlat {
+    background-color: black;
+    color: white;
+    height: 80vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    width: 18.75em;
+    height: 9em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+
+}
+
+#result1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+
+
+/* area de matriculas */
+
+
+#matricula {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sectionmatricula {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputmat {
+    width: 15em;
+    height: 1.5em;
+    border: none;
+    text-align: center;
+}
+
+#realizarMatricula {
+    border: none;
+    height: 1.75em;
+    color: white;
+    background-color: black;
+
+}
+
+#estiloaluno {
+    margin-bottom: 2em;
+    display: flex;
+
+}
+
+.imagemconfirme {
+    width: 2em;
+
+}
+
+/* area financeiro */
+
+#financeiro {
+    display: flex;
+    gap: 8em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 5em;
+    margin-top: 4em;
+    width: 30vw;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border: none;
+    height: 0.75em;
+    width: 10em;
+}
+
+#verValor {
+    border: none;
+    height: 2em;
+    background-color: black;
+    color: white;
+    font-size: 0.8em;
+}
+
+#cursoTela {
+    background-color: white;
+
+}
+
+#valor {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#relatorio-aluno {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+#formulario-aluno {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#buscarInputNome {
+    border: none;
+    width: 12em;
+    height: 1.5em;
+}
+
+#buscarBotao {
+    width: 7em;
+    height: 1.5em;
+    background-color: black;
+    color: white;
+}
+
+.cardAluno {
+    background-color: white;
+    padding: 20px;
+    width: 18.75em;
+    height: 9em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
