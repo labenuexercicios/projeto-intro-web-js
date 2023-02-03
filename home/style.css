@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background-color: black;
+}
+
+.fundotitulo {
+    width: 100%;
+    height: 75vh;
+    background-color: #F6C34A;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background-image: url(../imagens/background);
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titulo {
+    grid-column: 3/9;
+    grid-row: 4/4;
+    font-size: 32px;
+    text-align: center;
+}
+
+.aprenda {
+    grid-column: 3/9;
+    grid-row: 5;
+    font-size: 21px;
+    text-align: center;
+}
+
+.conheça {
+    grid-row: 7;
+    grid-column: 5/7;
+    background-color: black;
+    color: white;
+    text-decoration-line: none;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 4% 5%;
+    text-align: center;
+}
+
+.fundosobre {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20%
+}
+
+.sobre {
+    padding: 8% 0;
+    text-align: center;
+    color: white;
+}
+
+.textosobre {
+    text-align: start;
+    line-height: 150%;
+    color: white;
+}
+
+
+
+.depo {
+    display: flex;
+    padding: 1% 15%;
+    gap: 2%;
+}
+
+.titulo-depo {
+    color: white;
+    text-align: center;
+    padding: 2% 0;
+}
+
+.dep1 {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2% 2%;
+    width: 20vw;
+    list-style: none;
+}
+
+.dep1 img {
+    width: 7vw;
+    padding-bottom: 20%;
+}
+
+.dep1 p {
+    text-align: left;
+    line-height: 120%;
+    font-size: 70%;
+}
+
+.dep2 {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2% 2%;
+    width: 20vw;
+    list-style: none;
+}
+
+.dep2 img {
+    width: 7vw;
+    padding-bottom: 20%;
+}
+
+.dep2 p {
+    text-align: left;
+    line-height: 120%;
+    font-size: 70%;
+}
+
+.dep3 {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2% 2%;
+    width: 20vw;
+    list-style: none;
+}
+
+.dep3 img {
+    width: 7vw;
+    padding-bottom: 20%;
+}
+
+.dep3 p {
+    text-align: left;
+    line-height: 120%;
+    font-size: 70%;
+}
+
+.dep4 {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2% 2%;
+    width: 20vw;
+    list-style: none;
+}
+
+.dep4 img {
+    width: 7vw;
+    padding-bottom: 20%;
+}
+
+.dep4 p {
+    text-align: left;
+    line-height: 120%;
+    font-size: 70%;
+}
+
+
+@media screen and (max-device-width : 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+    .conheça{
+        height: 3vh;
+        padding:1%;
+    } 
+
+    .section{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;       
+        align-items: center;        
+    }
+
+    .depo{
+        flex-direction: column;         
+         row-gap: 22%;
+    }
+
+    
+    .depo p{
+        text-align: start;
+        justify-content: center;
+        font-size: 20rem;
+        padding: 0 5% 5% 5%;
+    }
+
+    .depo img{
+        width: 55%;
+    }
+
+
+
+}
+

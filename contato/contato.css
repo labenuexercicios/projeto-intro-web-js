@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+main{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5% 0;    
+}
+
+.contat{
+    justify-content: center;
+    align-items: center;    
+    padding: 3%;    
+    background-color: white;    
+    width: 30vw;
+}
+
+.enviar{    
+    background-color: #F6C34A;
+    padding: 3% 44%;
+}
+
+/* footer {
+    display: grid;
+    height: 65vh;
+    background-color: #F6C34A;
+    padding: 2% 0;    
+}
+
+.logo-footer img {
+    width: 35%;
+    padding: 0 10%;
+}
+
+.footer1 {
+    display: flex;
+    gap: 11%;
+    padding: 0 10%;
+    font-size: 80%;
+}
+
+.map {
+    list-style: none;
+}
+
+iframe{
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 23vw;
+    height: 30vh;
+}
+
+.links {
+    list-style: none;      
+}
+
+#titulo-footer{
+    font-size: 1.2rem;
+}
+
+.links-footer{
+    text-decoration-line: none;
+    color: black;
+    font-size: 0.9rem;   
+}
+
+.sociais {
+    list-style: none;    
+}
+
+.twiter img {
+    width: 23%;
+}
+
+.linkedin img {
+    width: 23%;
+    
+}
+
+.face img {
+    width: 23%
+}
+
+.insta img {
+    width: 23%
+}
+
+.restrita {
+    list-style: none;
+} */
