@@ -28,23 +28,23 @@
         <section class="section-adm">
             <nav class="nav-adm">
                 <li class="coluna-adm">
-                    <a class="pagina" href="">
+                    <a class="pagina" href="adm.html">
                         <h3>Turmas</h3>
                     </a>
-                    <a class="pagina" href="">
+                    <a class="pagina" href="matricula.html">
                         <h3>Matriculas</h3>
                     </a>
-                    <a class="pagina" href="">
+                    <a class="pagina" href="financeiro.html">
                         <h3>Financeiro Alunos</h3>
                     </a>
                 </li>
-
             </nav>
+            
             <div class="div-adm">
-                <div class="div-buscar">
-                    <input id="buscarCurso" type="search" name="" id="">
-                    <a id="botao"><b>Buscar</b></a>
-                </div>
+                <form class="div-buscar">
+                    <input id="buscarCurso" type="search" name="" placeholder="Digite o nome da turma" >
+                    <button id="botao" onclick="buscarTurma(event)"><b>Buscar</b></button>
+                </form>
                 <div class="div-cursos">
                     <div class="div-grid">
                         <div class="quadrado-curso">
@@ -139,7 +139,7 @@
 
 
                 </div>
-            </article>
+            </div>
         </section>
 
     </main>
@@ -175,10 +175,10 @@
             <ul class="redes-sociais">
                 <h3 id="gap-palavra">Redes sociais</h3>
                 <li>
-                    <a id="redes" href="https://twitter.com/"><img src="./asset/icon-twitter 1.svg" alt=""></a>
-                    <a id="redes" href=""><img src="./asset/icon-linkedin 1.svg" alt=""></a>
-                    <a id="redes" href=""><img src="./asset/icon-fb 1.svg" alt=""></a>
-                    <a id="redes" href=""><img src="./asset/icon-ig 1.svg" alt=""></a>
+                    <a id="redes" target="_blank" href="https://twitter.com/"><img src="./asset/icon-twitter 1.svg" alt=""></a>
+                    <a id="redes" target="_blank" href="https://www.linkedin.com/"><img src="./asset/icon-linkedin 1.svg" alt=""></a>
+                    <a id="redes" target="_blank" href="https://www.facebook.com/"><img src="./asset/icon-fb 1.svg" alt=""></a>
+                    <a id="redes" target="_blank" href="https://www.instagram.com/"><img src="./asset/icon-ig 1.svg" alt=""></a>
                 </li>
 
             </ul>

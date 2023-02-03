@@ -114,7 +114,7 @@ const estudantes = [
         valor: "900",
         nParcelas: 9,
         desconto: false,
-        parcelas: 100
+        valorParcelas: 100
     },
 
     {
@@ -124,7 +124,7 @@ const estudantes = [
         valor: "2000",
         nParcelas: 4,
         desconto: false,
-        parcelas: 500
+        valorParcelas: 500
     },
 
     {
@@ -134,7 +134,7 @@ const estudantes = [
         valor: "500",
         nParcelas: 1,
         desconto: true,
-        parcelas: 500
+        valorParcelas: 500
     },
 ];
 
@@ -156,47 +156,143 @@ const estudantes = [
     }
 };
 console.log(parcelarCurso(4)); */
+const carrinhoCursos = [500, 900, 400]
+const parcelarCurso = (carrinhoCursos, parcela) => {
+    let valorTotal = 0
+    let valorParcela = 0
+    let desconto = 0
+    if (carrinhoCursos.length > 1) {
+        switch (carrinhoCursos.length) {
+            case 3:
+                desconto = 0.15
+                break;
+            case 2:
+                desconto = 0.10
+                break;
+            default:
+                desconto = 0
+                break;
+        }
 
-const parcelarCurso = (parcela) => {
-    let valorTotal
-    let valorParcela
+        for (let valor of carrinhoCursos) {
+            valorTotal = valorTotal + valor
 
-    if (parcela <= 2 &&  parcela >= 1) {
+        }
 
-        valorTotal = cursos[0].valor - (cursos[0].valor * 0.2)
+        valorTotal = valorTotal - (valorTotal * desconto)
+    } else {
+        valorTotal = carrinhoCursos[0]
+    }
+
+
+
+    if (parcela <= 2 && parcela >= 1) {
+
+        valorTotal = valorTotal - (valorTotal * 0.2)
         valorTotal = valorTotal / valorParcela
 
-        console.log(`O curso ${cursos[0].curso} ficou no valor total de R$ ${valorTotal} em ${parcela}x de ${valorParcela} reais. Foi concedido desconto de 20%.`);
+        console.log(`O curso ficou no valor total de R$ ${valorTotal} em ${parcela}x de ${valorParcela} reais. Foi concedido desconto de 20%.`);
 
-    } else if (parcela > 2 && parcela <= 12){
-        valorTotal = cursos[0].valor
+    } else if (parcela > 2 && parcela <= 12) {
+        valorTotal = valorTotal
         valorParcela = valorTotal / valorParcela
 
-        console.log(`O curso ${cursos[0].curso} ficou no valor total de R$ ${valorTotal} em ${parcela}x de ${valorParcela} reais.`)
+        console.log(`O curso ficou no valor total de R$ ${valorTotal} em ${parcela}x de ${valorParcela} reais.`)
     } else {
         console.log("Número inválido! Por favor digite um número válido.")
     }
 
 }
 
-const buscarCurso = (nomeCurso) => {
-     for(cadaCurso of cursos){
-        if(cadaCurso.curso === nomeCurso)
-        return cadaCurso
-     }
+parcelarCurso(carrinhoCursos, 2)
+
+const buscarCurso = () => {
+    const inputCurso = document.getElementById('curso').value.toLowerCase()
+    
+    const curso = cursos.find(cadaCurso => {
+        if(cadaCurso.curso.toLowerCase().includes(inputCurso.toLowerCase())){
+            return cadaCurso
+        }
+    })
+    return curso
 }
 
-const buscarTurma = (nomeTurma) => {
-    for(cadaTurma of turmas){
-       if(cadaTurma.turma === nomeTurma)
-       return cadaTurma
+const buscarTurma = (event) => {
+    const inputTurma = document.getElementById('input-buscar-turma').value.toLowerCase()
+
+    const turmaFiltrada = turmas.filter(cadaTurma => {
+        if(cadaTurma.turma.toLowerCase().includes(inputTurma.toLowerCase())){
+            return cadaTurma
+        }
+    })
+    return turmaFiltrada.length > 0 ? gerarCard(turmaFiltrada) : gerarCard(turmas)
+    
+}
+
+const buscarEstudante = () => {
+    const inputEstudante = document.getElementById('aluno').value.toLowerCase()
+
+    for (cadaEstudante of estudantes) {
+        if (cadaEstudante.estudantes === nomeEstudante)
+            return cadaEstudante
     }
 }
 
-const buscarEstudante = (nomeEstudante) => {
-    for(cadaEstudante of 
-        estudantes){
-       if(cadaEstudante.estudantes === nomeEstudante)
-       return cadaEstudante
+const matricular = (nome, nomeCurso, turma, nParcelas) => {
+    
+    let valorCurso = buscarCurso(nomeCurso)
+    let valorTotal = 0
+    let valorPorParcela = 0
+    let desconto = false
+
+    if (nParcelas > 0 && nParcelas <= 2) {
+        valorTotal = valorCurso.valor - (valorCurso.valor * 0.2)
+        valorPorParcela = valorTotal / nParcelas
+        desconto = true
+    } else {
+        valorTotal = valorCurso.valor
+        valorPorParcela = valorTotal / nParcelas
     }
+
+    const novoAluno = {
+        estudante: nome,
+        turma: turma,
+        curso: nomeCurso,
+        valor: valorCurso.valor,
+        nParcelas: nParcelas,
+        desconto: desconto,
+        valorParcelas: valorPorParcela,
+    }
+
+    estudante.push(novoAluno)
+
+    console.log(`Aluno Matriculado \n Nome:${nome} \n Curso:${curso} \n Turma:${turma}`)
+}
+
+
+
+const gerarCard = (imprimirCard) => {
+    let turmaBuscada = document.getElementById('div-grid')
+
+    const cards = imprimirCard.map(objeto  => {
+        const novoCard =document.createElement('div')
+        novoCard.setAttribute('class', 'quadrado-curso')
+
+        novoCard.innerHTML = `
+            <h3>${objeto.turma}</h3>
+            <li>
+                <p><b>Curso:</b>${objeto.curso} </p>
+                <p><b>Início:</b> ${objeto.inicio}</p>
+                <p><b>Término:</b> ${objeto.termino}</p>
+                <p><b>Número de alunos:</b> ${objeto.numeroDeAlunos}</p>
+                <p><b>Período:</b> ${objeto.periodo}</p>
+                <p><b>Concluída:</b>${objeto.concluida} </p>
+             </li>
+         ` 
+         
+        turmaBuscada.insertAdjacentElement('beforeend', cards)
+        
+    })
+    console.log(cards)
+    return cards
 }
