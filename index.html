@@ -4,10 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Web</title>
-    <script src="./index.js"></script>
+    <title>Turmas</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
 </head>
 <body>
     
+    <header>
+        <div id="logo">
+            <a href="./home.html">
+                <img src="./Assets/images/logo 1.svg" alt="logo LabEscola">
+            </a>
+        </div>
+        
+        <div>
+            <ul class="list">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./courses.html">Cursos</a></li>
+                <li><a href="./contact.html">Contato</a></li>
+                <li><a href="./adm.html">Área ADM</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <a href="./adm.html">Turmas</a><br>
+            <a href="./matriculas.html">Matriculas</a><br>
+            <a href="./financeiro.html">Financeiro Alunos</a><br>
+        </nav>
+        <section>
+            <div id="search">
+                <input id="input-search-turma" type="text" placeholder="Digite o nome da turma"> 
+                <button  onclick="buscarTurma()">Buscar</button>
+            </div>
+            <p class="paragrafo"></p>
+            <div  id="allBoxes" class="allBoxes">
+               
+            </div>            
+        </section>
+    </main>
+
+    <footer>
+        <div class="box1">
+            <img src="./Assets/images/vector.svg"></img>
+
+            <h3>Endereço</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.996414200126!2d-46.70069088538366!3d-23.568572267742898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x7f2195a9ff50559e!2sR.%20Pais%20Leme%2C%20215%20-%20820%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1673572779479!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+            <p>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>          
+        </div>
+
+        <div class="box2">
+            <h3>Links</h3>
+            <ul>
+                <a href="./home.html"><li>Home</li></a>
+                <a href="./courses.html"><li>Cursos</li></a>
+                <a href="##"><li>Blog</li></a>
+                <a href="./contact.html"><li>Fale conosco</li></a>
+                <a href="##"><li>Termos e condições</li></a>
+                <a href="##"><li>Política de privacidade</li></a> 
+                <a href="##"><li>FAQ</li></a>
+            </ul>
+        </div>
+        
+        <div class="box3">
+            <h3>Redes Sociais</h3>
+            <ul id="redes">
+                <li><a href="https://twitter.com/Labenu_" target="_blank"><img src="./Assets/images/icon-twitter.svg" alt=""></a></li>
+                <li><a href="https://www.linkedin.com/school/labenu/" target="_blank"><img src="./Assets/images/icon-linkedin.svg" alt=""></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100063626798454" target="_blank"><img src="./Assets/images/icon-facebook.svg" alt=""></a></li>
+                <li><a href="https://www.instagram.com/labenu_/" target="_blank"><img src="./Assets/images/icon-instagram.svg" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="box4">
+            <h3>Área restrita</h3>
+            <ul>
+                <a href="./adm.html"><li>Área administrativa</li></a>
+                <a href=""><li>Espaço do aluno</li></a>
+            </ul>
+        </div>              
+    </footer>
 </body>
 </html>
