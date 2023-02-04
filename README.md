@@ -1,5 +1,7 @@
 # Projeto de Introdução Web - JavaScript
 
+deploy: https://godly-lawyer.surge.sh/index.html
+
 ## Enunciado
 
 Vamos começar nossa jornada no desenvolvimento web criando um sistema de escola de programação, porque aqui gostamos de metalinguagem!
