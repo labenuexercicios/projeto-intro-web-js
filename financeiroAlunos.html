@@ -20,53 +20,93 @@
       </nav>
     </header>
     <main id="main">
-      <aside class="menu-esquerda">
-        <ul>
-          <li><a href="./areaADM.html">Turmas</a></li>
-          <li><a href="./matriculas.html">Matriculas</a></li>
-          <li><a href="./financeiroAlunos.html">Financeiro Alunos</a></li>
-        </ul>
-      </aside>
+     <div class="organizar-menu">
+        <aside class="menu-esquerda">
+          <ul>
+            <li><a href="./areaADM.html">Turmas</a></li>
+            <li><a href="./matriculas.html">Matriculas</a></li>
+            <li><a href="./financeiroAlunos.html">Financeiro Alunos</a></li>
+          </ul>
+        </aside>
+      </div>
+<div class="organizar-pag">
+      <section class="matriculas">
+        <div class="formMatricula">
+          <div class="h3Grid">
+            <h2>Financeiro</h2>
+          </div>
+          <form onsubmit="event.preventDefault()" >
+            <label for="curso">Curso</label>
+            <input type="text" name="curso" id="curso-financeiro" list="curso" />
+
+            <datalist id="curso">
+              <option value="">cursos:</option>
+              <option value="HTML e CSS">500</option>
+              <option value="JavaScript">900</option>
+              <option value="APIs REST">2000</option>
+            </datalist>
+            <p id="botao-add-curso"><u> Adicionar curso</u></p>
+            
+            <label for="curso">Número de parcelas</label>
+
+            <input
+              
+              type="number"
+              name="nParcelas"
+              id="nParcelas"
+              
+              min="1"
+              max="12"
+            required
+            />
+
+            <button
+              type="submit"
+              onclick="parcelarCurso()"
+              id="submitMatricula"
+            >
+              Ver valor
+            </button>
+            <div id="carrinho-de-compras"></div>
+          </form>
+
+          <div id="relatorio-parcela"></div>
+        </div>
+      </section> 
 
       <section class="matriculas">
-        
-        <div class="h3Grid">
-          <h2>Financeiro</h2>
-        </div>
         <div class="formMatricula">
-        <form action="#">
-          
-          <label for="curso">Curso</label>
-         
-          <input type="text" name="curso" id="curso">
-          <br />
-         
-          <label for="nParcelas">Número de parcelas</label>
-         
-        
-          <input type="text" name="nParcelas" id="nParcelas">
-         
-          <button type="submit" class="submitMatricula">Ver valor</button>
-          <br />
-        </form>
-      </div>
-    </section>
-    <section>
-      <div class="h3Grid">
-        <h2>Relatório Aluno</h2>
-      </div>
-      <div class="formMatricula">
+          <div class="h3Grid">
+            <h2>Relatório Aluno</h2>
+          </div>
 
-        <form class="formMatricula" action="#">
-          <label for="nome">Nome</label>
-          
-          <input type="text" name="nome" id="nome" required/>
-          
-          <button type="submit" class="submitMatricula">Buscar</button>
+          <form onsubmit="event.preventDefault()">
+            <label for="nome">Nome</label>
+
+            <input
+              type="text"
+              name="nome"
+              id="nome-relatorio"
+              onchange="enter"
+            />
+
+            <button
+              type="submit"
+              id="submitMatricula"
+              onclick="relatorioEstudante()"
+            >
+              Buscar
+            </button>
+          </form>
         </div>
-        </form>
-        </section>
-        <aside class="whatsapp"><a href="./contato.html"><img src="./midia/home/logos_whatsapp-icon.png" alt=""></a></aside>
+        <aside id="relatorio" class="relatorioS"></aside>
+      </section>
+    </div>
+      <aside class="whatsapp">
+        <a href="./contato.html"
+          ><img src="./midia/home/logos_whatsapp-icon.png" alt=""
+        /></a>
+      </aside>
     </main>
     <footer>
       <a href="./home.html"
@@ -79,7 +119,15 @@
             <h2 class="h2Footer">Endereço</h2>
             <ul>
               <li>
-                <img class="mapa" src="./midia/home/Rectangle 4.png" alt="" />
+                <!-- <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.996414200069!2d-46.70069088447562!3d-23.568572267744944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1sen!2sbr!4v1674775812687!5m2!1sen!2sbr"
+                  width="470"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>   -->
               </li>
               <li>
                 <p class="pEndereço">
@@ -109,15 +157,23 @@
           <h2 class="h2Footer"><b>Redes Sociais</b></h2>
           <ol>
             <ul class="redes">
+              <li>
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (1).png" alt=""
+                /></a>
 
-              <li><a class="aFooter" href=""><img src="./midia/home/Vector (1).png" alt="" /></a>
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (2).png" alt=""
+                /></a>
 
-              <a class="aFooter" href=""><img src="./midia/home/Vector (2).png" alt="" /></a>
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (3).png" alt=""
+                /></a>
 
-              <a class="aFooter" href=""><img src="./midia/home/Vector (3).png" alt="" /></a>
-
-              <a class="aFooter" href=""><img src="./midia/home/Vector (4).png" alt="" /></a></li>
-
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (4).png" alt=""
+                /></a>
+              </li>
             </ul>
           </ol>
         </div>
