@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <link rel="stylesheet" href="./LabEscola.css">
+</head>
+<body>
+    <header>
+        <a href="./home.html" id="logoLabescola">
+            <img src="./Imagens/logo 1.png" alt="LabEscola Logo" id="logo">
+        </a>
+        <nav>
+                <a id="menu" href="./home.html">Home</a>
+                <a id="menu" href="./cursos.html">Cursos</a>
+                <a id="menu" href="./contato.html">Contato</a>
+                <a id="menu" href="./areaAdm.html">Área ADM</a>
+        </nav>
+    </header>
+    <main  class="mainADM">
+        <aside class="menuADM">
+            <a id="areaADMmenu" href="./areaADM.html">Turmas</a>
+            <a id="areaADMmenu" href="./matricula.html">Matricula</a>
+            <a id="areaADMmenu"href="./financeiroAlunos.html">Financeiro Alunos</a>
+        </aside>
+        <section class="menuFinanceiro">
+            <h3 id="financeiro">Financeiro</h3>
+
+            <form id="cursoFinanceiro">
+                <label for="curso"><b>Curso</b></label>
+                <input type="text" name="curso" id="curso">
+
+                <a>Adicione outro curso</a>
+            </form>
+            
+            <form id="parcelasFinanceiro">
+                <label for="numParcelas"><b>Número de parcelas</b></label>
+                <input type="text" name="numParcelas" id="numParcelas">
+            </form>
+
+            <button id="botaoFinanceiro">Ver Valor</button>
+
+            <section id="valorFinanceiro">
+                <h3>Valor</h3>
+                <p>Descoto de 20%.Parcelas de 2x de R$1880.00</p>
+            </section>
+
+            <h3 id="relatorio">Relatório Aluno</h3>
+
+            <form id="nomeFinanceiro">
+                <label for="nomeAluno"><b>Nome</b></label>
+                <input type="text" name="nomeAluno" id="nomeAluno">
+            </form>
+
+            <button id="buscarFinanceiro">Buscar</button>
+
+            <section id="dadosFinanceiro">
+                <p>Aluno: Chris Evans</p>
+                <p>Turma: Hipátia</p>
+                <p>Curso: JavaScript</p>
+                <p>Valor total: R$900.00</p>
+                <p>Valor Parcela: R$100.00</p>
+                <p>Nº parcelas: 9</p>
+            </section>
+        </section>
+    </main>
+    
+    <footer>
+        <section>
+            <img src="./Imagens/logo 1.png" id="logo">
+            <h3>Endereço</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9962772954627!2d-46.700690885022055!3d-23.568577184679345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1673996566009!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  id="mapa"></iframe>
+            <p>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+        </section>
+        <section class="links">
+            <h3>Links</h3>
+            <ul>
+                <li id="menuLista"><a href="./home.html">Home</a></li>
+                <li id="menuLista"><a href="./cursos.html">Cursos</a></li>
+                <li >Blog</li>
+                <li >Fale Conosco</li>
+                <li >Termos e condições</li>
+                <li >Política de privacidade</li>
+                <li >FAQ</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Redes Sociais</h3>
+            <img src="./Imagens/Twitter.png" alt="Twitter Logo" id="twitter">
+            <img src="./Imagens/LinkedIn.png" alt="LinkedIn Logo" id="linkedIn">
+            <img src="./Imagens/Facebook.png" alt="Facebook Logo" id="facebook">
+            <img src="./Imagens/Instagram.png" alt="Instagram Logo" id="instagram">
+        </section>
+        <section>
+            <h3>Área restrita</h3>
+            <a id="menu" href="./areaADM.html">Área administrativa</a>
+            <p>Espaço do Aluno</p>
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,413 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: white;
+    color: black;
+    height:10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+#logo{
+    height: 6vh;
+}
+
+#menu{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    padding: 2vh;
+    display: flex;
+    gap: 50px
+}
+
+main{
+    height: 150vh;
+}
+
+.descubra{
+    background-image: url(./Imagens/background-hero.png);
+    background-color: orange;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#novoEnsino{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#botaoCursos{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration:none;
+}
+
+.sobreNos{
+    background-color: black;
+    color: white;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    padding: 2rem
+}
+
+#sobre{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.depoismentos{
+    flex: 1
+}
+
+.cardsHome{
+    flex: 2;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 40%;
+    width: 70%;
+}
+
+#cardHome{
+    height: 42vh;
+    width: 20vw;
+    border: 0.5rem solid black;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.2rem;
+}
+
+.cursos{
+    background-color: #F6C34A ;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.cardsCursos{
+    flex:3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 1rem 8rem;
+}
+
+#cardCursos{
+    background-color: white;
+    border-radius: 1rem;
+    height: 100%;
+    width: 25%;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.fazerParte{
+    flex:1;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botãoFazerParte{
+    text-decoration: none;
+    color: white;
+}
+
+.modulosCursos{
+    background-color: black;
+    color: white;
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.modulos{
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    height: 15vh;
+    width: 65vw;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+#tituloModulos{
+    flex: 1;
+    align-items: flex-start;
+}
+
+#subtituloModulos{
+    flex: 2;
+    align-items: flex-end;
+}
+
+.mainContato{
+    background-color: black;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato{
+    background-color: white;
+    color: black;
+    height: 36vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: .5rem;
+}
+
+#contatoEnviar{
+    background-color:#F6C34A;
+    padding: 1vh;
+    width: 13vw;
+    border: 2px solid #F6C34A;
+    border-radius: .3rem;
+}
+
+
+.mainADM{
+    height: 50vh;
+    display: flex;
+}
+
+.menuADM{
+    background-color: black;
+    color:white;
+    width: 10vw;
+    padding: 3rem 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#areaADMmenu{
+    text-decoration: none;
+}
+
+.menuTurmas{
+    background-color: #F6C34A;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 90vw;
+}
+
+#buscarTurmas{
+    height: 3vh;
+    padding: 3vh 32vw;
+}
+
+#buscarTurma{
+    background-color: black;
+    color: white;
+}
+
+.turmasADM{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: 14rem;
+    margin-right: 14rem;
+}
+
+#turmas{
+    background-color: white;
+    border-radius: 1rem;
+    width: 10vw;
+    font-size: .7em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#turmas > h3{
+    align-items: center;
+}
+
+#titulo{
+    text-align: center;
+}
+
+.menuMatricula{
+    background-color: #F6C34A;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr .5fr 1.5fr .1fr 2fr;
+    grid-template-rows: .5fr 1fr .5fr 1fr 1fr;
+}
+
+#tituloMatricula{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#dadosAluno{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#alunoMatricula{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    display: flex;
+    gap: 1vw;
+}
+
+#visto{
+    height: 4vh;
+}
+
+#dadosMatricula{
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+
+#matricularAluno{
+    background-color: black;
+    color: white;
+    border-radius: .5rem;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    margin: 2vh 15vh 1.5vh 0vh;
+}
+
+.menuFinanceiro{
+    width: 90vw;
+    background-color: #F6C34A;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr 1fr 1fr 1fr 1fr 5fr 3fr;
+}
+
+#financeiro{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#cursoFinanceiro{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    display: flex;
+    flex-direction: column;
+}
+
+#parcelasFinanceiro{
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+#botaoFinanceiro{
+    grid-column: 2/3;
+    grid-row: 8/9;
+    background-color: black;
+    color: white;
+    border-radius: .5rem;
+}
+
+#valorFinanceiro{
+    grid-column: 2/3;
+    grid-row: 9/10;
+    padding: 2vh 0;
+}
+
+#relatorio{
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+#nomeFinanceiro{
+    grid-column: 4/5;
+    grid-row: 4/5;
+    display: flex;
+    flex-direction: column;
+}
+
+#buscarFinanceiro{
+    grid-column: 4/5;
+    grid-row: 5/6;
+    background-color: black;
+    color: white;
+    border-radius: .5rem;
+}
+
+#dadosFinanceiro{
+    grid-column: 4/5;
+    grid-row: 9/10;
+}
+
+footer{
+    background-color: orange;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: flex;
+    align-items: baseline;
+    padding: 1rem;
+}
+
+#mapa{
+    height: 20vh;
+    width: 20vw;
+}
+
+.links{
+    list-style: none;
+}
+
+#menuLista{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
