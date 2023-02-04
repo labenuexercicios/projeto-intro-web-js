@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E9BB4E;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 20vh;
+}
+
+nav {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
+    color: #0E0E0E;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 1em;
+
+}
+
+ li {
+    list-style: none;
+}
+
+.menu-li{
+    color: #0E0E0E;
+    transition: all .4s;
+}
+
+.menu-li:hover{
+    border-bottom:10px solid orange;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #0E0E0E;
+}
+
+.logo{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+}
+
+#wpp {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    right: 20px;
+    top: 85vh;
+
+}
+
+main{
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+}
+
+#first-section{
+    height: 100%;
+    width: 80vw;
+    background-color: #F6C34A;
+    border-bottom: 2px solid black;
+}
+
+aside{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 20vw;
+    height: 100%;
+}
+
+.menu-lateral{
+    display: flex;
+    align-items: center;
+    padding-left: 4%;
+    padding-top: 2%;
+    line-height: 4rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-lateral a{
+    text-decoration: none;
+    color: grey;
+}
+
+.menu-lateral a:hover{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color:#0E0E0E
+}
+
+#first-section{
+    display: flex;
+    height: 100%;
+    width: 80vw;
+    background-color: #E9BB4E;
+    border-bottom: 2px solid black;
+}
+
+#container1{
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    width: 40%;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.content-container p{
+    padding: 20% 0 10% 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+.content-container form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+}
+
+form input{
+    border-radius: 5px;
+    border: none;
+    height: 6%;
+}
+
+form select{
+    border-radius: 5px;
+    border: none;
+    height: 6%;
+    appearance: none;
+    font-weight: 500;
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form input[type=button]{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10%;
+    height: 10%;
+    border-radius: 5px;
+    background-color: #0E0E0E;
+    color: #FFFFFF;
+}
+
+
+form input[type=button]:hover{
+    cursor:pointer;
+}
+
+
+#container2{
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    width: 50%;
+}
+
+.container2-title{
+    display: flex;
+    align-items: baseline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+.container2-title img{
+    align-self: center;
+    margin-top: 15px;
+    height: 3vw;
+    width: 4vw;
+    padding-left: 10px;
+}
+.container2-item p{
+    padding: 15% 0 10% 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+.container2-item ul{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+
+}
+
+.container2-item ul li{
+    margin-bottom: 1%;
+}
+
+#botao-matricular{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+
+/* footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
+}
+
+.logo-footer{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    padding: 2%;
+}
+
+#container-footer{
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+    width: 100vw;
+    padding: 0 2.5%;
+}
+
+#endereco-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0E0E0E;
+    margin-bottom: 5vh;
+    
+}
+
+.endereco{
+    width: 30%;
+}
+
+iframe{
+    height: 85%;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.endereco-mapa{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: 450;
+}
+
+#links{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title-links{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0E0E0E;
+    margin-bottom: 5%;
+    line-height: 2em;
+}
+
+footer ul{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2em;
+    color: #0E0E0E;
+
+}
+
+#medias-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 10%;
+    line-height: 2em;
+}
+
+.social-medias{
+    display: flex;
+    flex-direction: column;
+}
+
+.social-medias section{
+    width: 100%;
+}
+
+.social-medias ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+#title-restrict-area{
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2em;
+}
+
+.area-restrita ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 2em;
+}
+
+#links, .social-medias, .area-restrita{
+    width: 20%;
+    padding-left: 5%;
+}
+
