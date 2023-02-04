@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  display: grid;
+  height: 6em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+header a img {
+  margin-left: 13em;
+}
+li {
+  list-style: none;
+}
+nav {
+  padding-left: 7em;
+}
+.nav li {
+  font-size: 1.2em;
+  font-family: "Poppins";
+  font-weight: bold;
+  display: inline;
+  padding-right: 5em;
+  display: inline;
+  order: -1;
+}
+
+.whatsapp {
+  height: 4em;
+  width: 6em;
+  position: fixed;
+  bottom: 3em;
+  right: 3em;
+  border-radius: 100em;
+}
+
+.descubra {
+  margin: 2.5em 0 0 0;
+  font-family: "Poppins";
+  font-size: 2.5rem;
+  font-weight: bolder;
+  display: grid;
+  justify-content: center;
+}
+.descubraP {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7em;
+}
+#buttonHome {
+  background-color: #0e0e0e;
+  color: #fbfbfb;
+  font-size: 100%;
+  margin: 6em 0 40em 6em;
+  height: 3.5em;
+  width: 20em;
+  border-radius: 0.5rem;
+}
+#a {
+  color: #fbfbfb;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+mouse over link a:hover {
+  color: #ddd;
+}
+
+a:active {
+  color: blue;
+}
+.sectionUm {
+  background-image: url(./midia/home/background-hero.png);
+  background-color: #f6c34a;
+  background-size: 100%;
+
+  display: grid;
+  justify-content: center;
+  height: 30em;
+}
+.sectionDois {
+  background-color: #0e0e0e;
+  color: #fbfbfb;
+  height: 25em;
+  display: grid;
+  justify-content: center;
+}
+.descubra {
+  display: grid;
+  justify-content: center;
+}
+
+.sobre {
+  display: flex;
+  justify-content: center;
+  margin: 2.5em;
+  font-family: "Poppins";
+  font-size: 1.3rem
+}
+.sobreNos{
+margin: -8em 34.5em 0 34.5em;
+font-size: 1.1rem;
+
+}
+.sectionTres {
+  background-color: #0e0e0e;
+  color: #fbfbfb;
+  height: 40em;
+  display: grid;
+  justify-content: center;
+}
+.depoCenter{
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  font-size: 1.8rem
+}
+.divDepo {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+align-items: center;
+  justify-content: center;
+}
+figure {
+  background-color: #fbfbfb;
+  color: black;
+  width: 16.9em;
+  height: 20em;
+  border-radius: 6%;
+  padding: 0 2rem 0em 2.6rem;
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 13em;
+}
+#imgDepo {
+  height: 8em;
+  width: 7em;
+  margin:0.5rem 0 1rem 2.2rem;
+  display: flex;
+  padding-top: 1rem;
+}
+
+footer {
+  background-color: #f6c34a;
+  display: grid;
+  align-items: center;
+
+}
+.logoFooter{
+margin: 1rem 0 1rem 16rem;
+}
+.links{
+  display: grid;
+ 
+align-items: center;
+}
