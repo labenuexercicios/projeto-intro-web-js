@@ -145,7 +145,7 @@ const estudantes = [
 // ====================================================================================
 
 // 1) Funções buscar
-console.log("BUSCAR CURSOS: ")
+// console.log("BUSCAR CURSOS: ")
 const buscarCurso = (nomeCurso) => {
 
     const buscarNovoCurso = document.getElementById("curso").value.toLowerCase()
@@ -161,7 +161,7 @@ const buscarCurso = (nomeCurso) => {
 // ====================================================================================
 
 //b) Crie também uma função buscarTurma e buscarEstudante
-console.log("\nBUSCAR TURMA: ")
+// console.log("\nBUSCAR TURMA: ")
 
 const buscarTurma = (event) => {
 
@@ -224,24 +224,24 @@ const gerarCard = (retornoTurma) => {
 
 // 2)Função Matricular
 
-console.log("\nLISTA ATUALIZADA DE ALUNOS COM NOVOS MATRICULADOS: ")
+// console.log("\nLISTA ATUALIZADA DE ALUNOS COM NOVOS MATRICULADOS: ")
 const matricular = (nome, nomeCurso, turma, nParcelas) => {
 
     novoAluno = document.getElementById("nome").value
     nome = novoAluno
-    console.log(nome)
+    
 
     novoAlunoCurso = document.getElementById("curso").value
     nomeCurso = novoAlunoCurso
-    console.log(nomeCurso)
+    
 
     novoAlunoTurma = document.getElementById("turma").value
     turma = novoAlunoTurma
-    console.log(turma)
+    
 
     novoAlunoParcelas = document.getElementById("parcelas").value
     nParcelas = novoAlunoParcelas
-    console.log(nParcelas)
+    
 
 
     let valorCurso = buscarCurso(nomeCurso);
@@ -318,7 +318,7 @@ const matricular = (nome, nomeCurso, turma, nParcelas) => {
 // ====================================================================================
 
 // 3 -Função parcelarCurso
-console.log(`CARRINHO DE COMPRAS E FORMAS DE PAGAMENTOS`);
+// console.log(`CARRINHO DE COMPRAS E FORMAS DE PAGAMENTOS`);
 
 //UTILIZANDO CALLBACK DA FUNCAO BUSCARCURSO
 const carrinhoCursos = [];
@@ -373,19 +373,16 @@ const parcelarCurso = () => {
             case 3:
                 desconto = 0.15
                 obs = " plus 15% desconto."
-                console.log("case 3", carrinhoCursos)
                 break;
 
             case 2:
                 desconto = 0.10
                 obs = "plus 10% desconto."
-                console.log("case 2", carrinhoCursos)
                 break;
 
             default:
                 desconto: 0
                 obs = " "
-                console.log("case 1", carrinhoCursos)
                 break;
         };
 
@@ -432,7 +429,6 @@ const parcelarCurso = () => {
                     <li><b>Valor total com desconto:</b> R$ ${valorTotal.toFixed(2)} ${obs}</li>
                     <li><b>Parcelado em ${parcela}x de </b>R$ ${valorParcela.toFixed(2)} plus 20% desconto.</li>
                 <ul>`;
-            document.getElementById("parcelas").value = " "
             containerCalculo.insertAdjacentElement("beforeend", itemCalculo)
 
         } else {
@@ -461,7 +457,7 @@ const parcelarCurso = () => {
 
 // ====================================================================================
 
-console.log("\nBUSCAR ESTUDANTE: ")
+// console.log("\nBUSCAR ESTUDANTE: ")
 
 const buscarEstudante = (event) => {
 
@@ -470,8 +466,6 @@ const buscarEstudante = (event) => {
     getAluno = document.getElementById("inputRelatorioAluno").value.toLowerCase();
 
     if (getAluno.length === 0) {
-
-        console.log(getAluno)
         return alert("DIGITE O NOME DO ALUNO"), window.location.reload(true);
     };
 
@@ -493,7 +487,7 @@ const buscarEstudante = (event) => {
 
 // ====================================================================================
 
-console.log(`\nRELATORIO ESTUDANTES`);
+// console.log(`\nRELATORIO ESTUDANTES`);
 
 const relatorioEstudante = (retornaAluno) => {
 
@@ -525,7 +519,6 @@ const relatorioEstudante = (retornaAluno) => {
         addAluno.setAttribute("id", "relatorio");
         addAluno.setAttribute("class", "relatorio");
         containerBuscarAluno.insertAdjacentElement(`beforeend`, addAluno);
-        console.log(addAluno.value)
 
     });
 
