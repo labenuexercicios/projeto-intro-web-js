@@ -10,88 +10,146 @@
   </head>
   <body>
     <header>
-      <a class="logo" href="./home.html"
-      ><img src="./midia/home/logo.png"></a>
+      <a class="logo" href="./home.html"><img src="./midia/home/logo.png" /></a>
 
       <nav class="nav">
-        
-        <li><a href="./areaADM.html">Área ADM</a></li>
+        <li><a href="./home.html">Home</a></li>
         <li><a href="./cursos.html">Cursos</a></li>
         <li><a href="./contato.html">Contato</a></li>
-        <li><a href="./home.html">Home</a></li>
-        
+        <li><a href="./areaADM.html">Área ADM</a></li>
       </nav>
     </header>
-    <main>
-      <nav>
-        <ul>
-          <li><a href="./areaADM.html">Turmas</a></li>
-          <li><a href="./matriculas.html">Matriculas</a></li>
-          <li><a href="./financeiroAlunos.html">Financeiro Alunos</a></li>
-        </ul>
-      </nav>
+    <main id="main">
+      <div class="organizar-menu">
+        <aside class="menu-esquerda">
+          <ul>
+            <li><a href="./areaADM.html">Turmas</a></li>
+            <li><a href="./matriculas.html">Matriculas</a></li>
+            <li><a href="./financeiroAlunos.html">Financeiro Alunos</a></li>
+          </ul>
+        </aside>
+      </div>
 
-      <section>
-        <h3>Matrícula</h3>
-        <form action="#">
-          <label for="nome">Nome</label>
-          <br>
-          <input type="text" name="nome" id="nome" required/>
-          <br>
-          <label for="curso">Curso</label>
-          <br>
-          <input type="text" name="curso" id="curso">
-          <br />
-          <label for="turma">Turma</label>
-          <br>
-          <input type="text" name="turma" id="turma">
-          <br>
-          <label for="nParcelas">Número de parcelas</label>
-          <br>
-        
-          <input type="text" name="nParcelas" id="nParcelas">
-          <br>
-          <button type="submit">Matricular aluno</button>
-          <br />
-        </form>
+      <div class="organizar-pag">
+      <section id="matriculas">
+        <div class="formMatricula">
+          <div class="h3Grid">
+            <h2>Matrícula</h2>
+          </div>
+          <form class="" onsubmit="event.preventDefault()" id="form-matricula">
+            <label for="nome">Nome</label>
+            <input type="text" id="nomeMatricula" required/>
+
+            <label for="curso">Curso</label>
+            <input type="text" name="curso" id="cursoMatricula" list="curso" />
+            <datalist id="curso">
+              <option value="">cursos:</option>
+              <option value="HTML e CSS"></option>
+              <option value="JavaScript"></option>
+              <option value="APIs REST"></option>
+            </datalist>
+
+            <label for="turma">Turma</label>
+            <input type="text" id="turmaMatricula"  />
+
+            <label for="nparcelas">Numero de parcelas</label>
+            <input type="number" max="12" min="1" id="nParcelasMatricula">
+            <button type="submit" id="submitMatricula" onclick="matricula()">
+              Matricular aluno
+            </button>
+          </form>
+        </div>
+        <div id="matricula"></div>
       </section>
-      <aside class="whatsapp"><a href="./contato.html"><img src="./midia/home/logos_whatsapp-icon.png" alt=""></a></aside>
+    </div>
+      <aside class="whatsapp">
+        <a href="./contato.html"
+          ><img src="./midia/home/logos_whatsapp-icon.png" alt=""
+        /></a>
+      </aside>
     </main>
+
     <footer>
-      <a  href="./home.html"
-      ><img class="logoFooter" src="./midia/home/logo.png"></a>
+      <a href="./home.html"
+        ><img class="logoFooter" src="./midia/home/logo.png"
+      /></a>
 
-      <div class="links"><a href="">Endereço</a></div>
-      <div class="links"><a href="">Links</a></div>
-      <div class="linksUm"><a href="">Redes sociais</a></div>
-      <div class="linksUm"><a href="">Área restrita</a></div>
+      <div class="endereco">
+        <div class="links">
+          <ol>
+            <h2 class="h2Footer">Endereço</h2>
+            <ul>
+              <li>
+                
+                 <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.996414200069!2d-46.70069088447562!3d-23.568572267744944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1sen!2sbr!4v1674775812687!5m2!1sen!2sbr"
+                  width="470"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe> 
+              </li>
+              <li>
+                <p class="pEndereço">
+                  R. Pais Leme, 215. CEP 05424-150 - Pinheiros
+                </p>
+              </li>
+            </ul>
+          </ol>
+        </div>
 
-      <a href="">
-      <img class="mapa" src="./midia/home/Rectangle 4.png" alt="" />
-      <p class="pEndereço">R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
-      <ul class="
-      linksMenu">
-        <li class="linksLI"><a href="./home.html">Home</a></li>
-        <li class="linksLI"><a href="./cursos.html">Cursos</a></li>
-        <li class="linksLI"><a href="">Blog</a></li>
-        <li class="linksLI"><a href="./contato.html">Fale conosco</a></li>
-        <li class="linksLI"><a href="">Termos e condições</a></li>
-        <li class="linksLI"><a href="">Política de privacidade</a></li>
-        <li class="linksLI"><a href="">FAQ</a></li>
-      </ul>
-      <ul class="redes">
-      <a href=""><img src="./midia/home/Vector (1).png" alt=""></a>
-      <a href=""><img src="./midia/home/Vector (2).png" alt=""></a>
-      <a href=""><img src="./midia/home/Vector (3).png" alt=""></a>
-      <a href=""><img src="./midia/home/Vector (4).png" alt=""></a>
-    </ul>
+        <div class="links">
+          <ol>
+            <h2 class="h2Footer">Links</h2>
+            <ul class="linksMenu">
+              <li class="linksLI"><a href="./home.html">Home</a></li>
+              <li class="linksLI"><a href="./cursos.html">Cursos</a></li>
+              <li class="linksLI"><a href="">Blog</a></li>
+              <li class="linksLI"><a href="./contato.html">Fale conosco</a></li>
+              <li class="linksLI"><a href="">Termos e condições</a></li>
+              <li class="linksLI"><a href="">Política de privacidade</a></li>
+              <li class="linksLI"><a href="">FAQ</a></li>
+            </ul>
+          </ol>
+        </div>
 
-      <ul class="area">
-        <li>Área Administrativa </li>
-        <li>Espaço do aluno</li>
-      </ul>
+        <div class="links">
+          <h2 class="h2Footer"><b>Redes Sociais</b></h2>
+          <ol>
+            <ul class="redes">
+              <li>
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (1).png" alt=""
+                /></a>
 
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (2).png" alt=""
+                /></a>
 
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (3).png" alt=""
+                /></a>
+
+                <a class="aFooter" href=""
+                  ><img src="./midia/home/Vector (4).png" alt=""
+                /></a>
+              </li>
+            </ul>
+          </ol>
+        </div>
+
+        <div class="links">
+          <ol>
+            <h2 class="h2Footer">área Restrita</h2>
+            <ul class="area">
+              <li>Área Administrativa</li>
+              <li>Espaço do aluno</li>
+            </ul>
+          </ol>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
