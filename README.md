@@ -1,6 +1,8 @@
 # Projeto de Introdução Web - JavaScript
 
 ## Enunciado
+link do site:
+https://snotty-bed.surge.sh/
 
 Vamos começar nossa jornada no desenvolvimento web criando um sistema de escola de programação, porque aqui gostamos de metalinguagem!
 Este projeto será dividido em duas partes: JavaScript, e HTML+CSS. Por enquanto, vamos focar na parte de JavaScript, e em breve veremos HTML e CSS.
