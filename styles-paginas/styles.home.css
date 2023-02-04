@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+  
+ 	
+
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+header{ font-family: "poppins", sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    align-items: center;
+}
+
+
+.menupaginas{
+display: flex;
+gap: 50px;
+color: black;
+font-family: 'Titillium Web', sans-serif;
+
+}
+
+.menupaginas a:hover{
+    color: #ffb700;
+    padding-left: 10px;
+}
+
+.menupaginas a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* ul{
+    display: flex; 
+}
+li{
+    padding: 2em;
+    list-style: none;
+    text-decoration: none;
+    
+}
+li:hover{
+    border-bottom: 2px solid black;
+    width: 2em;
+} */
+
+.section-1{
+    background:#F6C34A url("./assets/background-hero.png");
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', normal;
+}
+
+ 
+.section-1 h1{
+    
+    font-size: 30px;
+    font-family: "poppins", sans-serif;
+
+}
+
+.section-1 p b{
+    
+    font-size: 30px;
+    font-family: "poppins", sans-serif;
+
+}
+.btn {
+    padding: 10px 30px;
+    font-family: "poppins", sans-serif;
+    font-size: 15;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    transition: 1s;
+    background-color: #0a0300;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .btn:hover {
+    transition: 1s;
+    background-color: #ffffff;
+    color: black;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+ 
+.section-2{
+    font-family: "poppins", sans-serif;
+    background-color: black;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 120px;
+}
+
+
+.section-2 h2{
+    font-family: "poppins", sans-serif;
+    color: #FBFBFB;
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 1vh;
+
+}
+
+
+.paragrafoh2{
+    font-family: "poppins", sans-serif;
+    text-align: justify;
+    color:#FBFBFB;
+    margin: 0 10vw;
+    
+}
+
+.section-2 h1{
+    color: #FBFBFB;
+    padding: 10vh;
+    
+}
+
+.divsobrenos{
+display: flex;
+flex-direction: column;
+ 
+
+
+}
+#conteiner-cards {
+    font-family: "poppins", sans-serif;
+    display: flex;
+   justify-content: flex-start;
+    background-color: black;
+    align-items: center;
+    grid-gap: 30px;
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+} 
+
+ 
+ 
+
+
+
+
+
+
+.item1{
+    font-family: "poppins", sans-serif;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    width: 200px;
+  
+   display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.item2{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.item3{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.item4{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    width: 200px;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+  
+footer{
+    background-color: #F6C34A;
+    padding: 50px 0;
+}
+.container-footer{
+    max-width: 1400px;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+     
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 px;
+}
+
+.footer-col h4{
+    font-size: 22px;
+    color: rgb(10, 0, 0);
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    
+ 
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(8, 0, 0);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+
+
+
+
+/* Responsivo 
+@media (max-width: 800px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:600px) {
+    .footer-col{
+        width: 100%;
+    }
+} */
