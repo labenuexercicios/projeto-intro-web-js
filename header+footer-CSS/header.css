@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wats {
+    position: fixed;
+    bottom: 4px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    padding: 2%;
+}
+
+.wats img {
+    width: 5vw;
+}
+
+.logo img{
+    width: 120%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#header {    
+    width: 100%;
+    padding: 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);   
+    list-style: none;
+    gap: 15%;
+    background-color: white;
+}
+
+#btn-menu {
+    display: none;
+}
+
+
+@media screen and (max-device-width : 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+
+    .conheça {
+        height: 3vh;
+        padding: 1%;
+    }
+
+    .section {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .depo {
+        flex-direction: column;
+    }
+
+    .depo p {
+        text-align: start;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 0 5% 5% 5%;
+    }
+
+    .depo img {
+        width: 55%;
+    }
+
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 40%;
+        top: 69px;
+        font-size: 20px;
+        right: 0;
+        display: block;
+        height: 0;
+        transition: .6s;
+        background-color: white;
+        border-radius: 5px;
+        visibility: hidden;
+        overflow-y: hidden;
+
+    }
+
+    #nav.active #menu {
+        height: 19vh;
+        display: block;
+        visibility: visible;
+
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 1px solid black;
+    }
+
+    #btn-menu {
+        display: flex;
+        padding: .5rem 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer {
+        border-top: 2px solid;
+        width: 20px;
+
+    }
+
+    #hamburguer::after,
+    #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+}

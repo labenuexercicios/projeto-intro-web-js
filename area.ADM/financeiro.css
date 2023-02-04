@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+}
+.menu-direto {
+    background-color: black;
+    padding: 1% 5% 0% 5%;
+}
+.menu-adm {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 50% 0;
+    gap: 50px;
+}
+.turma {
+    color: white;
+    text-decoration-line: none;
+}
+.matricula {
+    color: white;
+    text-decoration-line: none;
+}
+.finan {
+    display: flex;
+    color: white;
+    text-decoration-line: none;
+          
+}
+.area-financeiro{
+    background-color: #F6C34A;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-bottom: 1px solid black;
+    height: 90vh;
+    padding: 3% 10%;     
+}
+.finace{    
+    list-style: none;      
+}
+.add-curso{   
+    text-decoration-line:underline;          
+}
+.curso-financ{
+    padding: 5% 0 0% 0; 
+}
+
+#numero{
+    padding: 5% 0;
+}
+
+.finace button{    
+    padding: .7rem 6.8rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    
+}
+
+.area-digitavel{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 5px;
+    border: none; 
+    display: flex;
+    gap: 5%;
+}
+#valores{
+    grid-column: 1;
+    grid-row: 2;
+    list-style: none;
+    line-height: 250%;
+    padding: 5% 0;     
+}
+
+#valore p{
+    font-weight: bold;
+}
+
+.relatorio button{
+    padding: .7rem 7.3rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+.nome-relatorio{
+    padding: 10% 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+.dados-aluno{
+    grid-column: 2;
+    grid-row: 2;
+    list-style: none;
+    line-height: 150%;    
+}
+
+.Input-aluno{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 5px;
+    border: none;   
+}
+
+.btn-buscar{
+    margin-top: 8%;
+}
+
+#cursos-input{
+    margin-top: 5%;
+}
+

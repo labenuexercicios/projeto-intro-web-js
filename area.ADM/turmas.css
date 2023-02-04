@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+main {
+    display: flex;
+}
+
+.menu-direto {
+    background-color: black;
+    padding: 1% 5% 0% 5%;
+}
+
+.menu-adm {
+    display: flex;
+    flex-direction: column;   
+    list-style: none;
+    padding: 50% 0;
+    gap: 50px;
+}
+
+.turmas {
+    color: white;
+    text-decoration-line: none;
+}
+
+.matricula {
+    color: white;
+    text-decoration-line: none;
+}
+
+.finan {
+    color: white;
+    text-decoration-line: none;
+    
+}
+
+.area-turmas {
+    background-color: #F6C34A;
+    width: 100%;
+    display: flex;    
+    border-bottom: 1px solid black;
+     
+}
+
+.area-busca{   
+    padding: 5%;     
+    display: flex;
+    justify-content: center;   
+}
+
+ .botao-buscar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;       
+}
+
+#btn-buscar{
+    background-color:black;
+    color: white;
+    padding:0% 5%;
+    border-radius: 5px;      
+}
+
+#input-turmas{
+    border-radius: 5px;
+    border: none;
+    padding: 1% 5%;        
+}
+
+.conteinerCards{
+    background-color: white;
+    border-radius: 10px;   
+    line-height: 150%;
+    padding: 10%;       
+}
+
+#conteinerCards{   
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+    row-gap: 6%;
+    padding: 5%    
+      
+}
+.tituloTurma{
+    text-align: center;
+    font-weight: bold;
+    padding: 0 0 5% 0;
+}
+

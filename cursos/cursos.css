@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.principal-cursos{ 
+    background-color:#F6C34A;
+    text-align: center;
+    padding: 8% 12% 0 12%;
+}
+
+.cursos {
+    display: grid;    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);   
+    gap: 7%;  
+    row-gap: 1%;
+    justify-content: center; 
+}
+
+.html {  
+    grid-column: 1;
+    grid-row: 1;     
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 5%;   
+}
+
+.titulo-html{
+    padding: 5% 0 15% 0
+}
+
+.text-html{
+    text-align: left;
+    padding: 5%;
+    font-size: 1rem;
+    
+}
+
+.js {
+    grid-column: 2;
+    grid-row: 1;   
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 2%;
+}
+
+.titulo-js{
+    padding: 5% 0 13% 0
+}
+
+.text-js{
+    text-align: left;
+    padding: 7%;
+    font-size: 1rem;
+}
+
+.api {
+    grid-column: 3;
+    grid-row: 1;    
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 2%;
+}
+
+.titulo-api{
+    padding: 5% 0 13% 0
+}
+
+.text-api{
+    text-align: left;
+    padding: 7%;
+    font-size: 1rem;
+}
+
+.quero { 
+    text-decoration-line: none;
+    grid-column: 1/4;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;     
+    background-color: black;    
+    padding: 2%;
+    border-radius: 10px;
+    list-style: none;
+    width: 25vw;
+    font-size: 1.2rem;    
+}
+
+#quero{
+    text-decoration-line: none;
+    color: white;
+}
+
+.descricao-cursos{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    padding: 10% 5%; 
+    gap: 5%;
+}
+
+.descricao-html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 2.4% ;
+    width: 55vw;
+}
+
+.descricao-js{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 2.4%;
+    width: 55vw;
+}
+
+.descricao-api{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    background-color: white;
+    border-radius: 10px;
+    list-style: none;
+    padding: 2.4%;
+    width: 55vw;
+}
+
+.descricao-cursos h2{
+    padding: 1% 0 5% 0;
+    font-size: 1.4rem;
+
+}
+.descricao-cursos h1{
+    padding: 1% 0% 5% 0;
+    font-size: 1.6rem;    
+}
+
+
+.descricao-cursos p{
+    padding: 1% 0 3% 0;
+}
+
+footer {
+    display: grid;
+    height: 65vh;
+    background-color: #F6C34A;
+    padding: 2% 0;
+}
+
+.logo-footer img {
+    width: 35%;
+    padding: 0 10%;
+}
+
+.footer1 {
+    display: flex;
+    gap: 11%;
+    padding: 0 10%;
+    font-size: 80%;
+}
+
+.map {
+    list-style: none;
+}
+
+iframe {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 23vw;
+    height: 30vh;
+}
+
+.links {
+    list-style: none;
+}
+
+#titulo-footer {
+    font-size: 1.2rem;
+}
+
+.links-footer {
+    text-decoration-line: none;
+    color: black;
+    font-size: 0.9rem;
+}
+
+.sociais {
+    list-style: none;
+    
+}
+
+.twiter img {
+    width: 23%;
+    text-decoration: none;
+}
+
+.linkedin img {
+    width: 23%;
+    text-decoration: none;
+}
+
+.face img {
+    width: 23%;
+    text-decoration: none;
+}
+
+.insta img {
+    width: 23%;
+    text-decoration: none;
+}
+
+.restrita {
+    list-style: none;
+}

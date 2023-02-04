@@ -1,0 +1,37 @@
+mas vou deixar uma dicas pra ver se te ajuda.
+
+vc tem uma função com vário parametros, certo?
+```function martricular(nome, nomeCurso, curso, turma, parcelas){
+
+  
+}```
+
+Dentro dessa função, vc vai criar uma nova variável para pegar o curso
+
+```const curso = buscarCurso(nomeCurso)
+  let valorTotal = 0
+  let ValorParcela = 0```
+
+Faz o if  pra saber se a pessoa tem desconto ou não.
+
+Depois vc vai pegar as tags via dom
+
+````const newStudent = document.getElementById("nome").value
+   nome = newStudent
+``
+
+vai pegando cada parte do fomulário com o dom.
+
+Esse nome por exemplo, vai no seu objeto que vc vai dar o push pra fazer a matricula. 
+
+``` const novoAluno = {
+        estudante: nome,
+        turma: turma,
+        curso: nomeCurso,
+        valor: curso.valor,
+        numeroDeParcelas: nParcelas,
+        desconto: desconto,
+        valorDaParcela: valorParcela
+    }```
+
+estudante.push(novoAluno)
