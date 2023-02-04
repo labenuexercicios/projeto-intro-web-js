@@ -114,8 +114,29 @@ main {
 /* BLOCO2--------------------------------------- */
 #bloco2{
     display: flex;
-    width: 80%;
+    width: 100%;
     height: 100%;
+}
+
+#carrinho{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+
+}
+
+.itensCarrinho{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    padding-left: 10%;
+    gap: 5%;
+    
 }
 
 /* BLOCO2------container1--------------------------------- */
@@ -134,14 +155,6 @@ main {
 
 }
 
-.container1-item p{
-    padding: 20% 0 10% 0;
-    font-family: 'Poppins';
-    font-size: 1.5rem;
-    font-weight: 700;
-    width: 100%;
-}
-
 .container1-item form{
     display: flex;
     flex-direction: column;
@@ -152,29 +165,80 @@ main {
     height: 100%;
 }
 
-form input{
+.container1-item-inpt{
     border-radius: 5px;
     border: none;
-    height: 6%;
+    height: 2rem;
     margin-top: 2%;
     padding-left: 5%;
+
 }
 
-#inputRelatorioAluno{
-    height: 10%;
+#tituloFinanc{
+    padding: 20% 0 10% 0;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
 }
 
-form input[type=submit]{
+#addCarrinho {
+    margin: 3%;
+    font-size: 0.8em;
+    text-decoration: underline;
+    text-align: start;
+    cursor: pointer;
+}
+
+#addCarrinho:hover{
+    color: blue;
+}
+
+form input[type=button]{
     font-family: 'Poppins';
     font-size: 1rem;
     font-weight: 700;
     margin-top: 10%;
-    height: 10%;
+    height: 3rem;
     border-radius: 5px;
     cursor: pointer;
     background-color: #0E0E0E;
     color: #FFFFFF;
 }
+
+#calcCurso {
+    display: flex;
+    width: 200%;
+    height: 100%;
+}
+
+.inforCalCurso{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#tituloRelatorio{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    height: 15%;
+    margin: 5% 0 2% 0;
+    font-family: 'Poppins';
+    font-weight: 700;
+   
+    
+}
+
+.inforCalCurso ul{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    gap: 0.4rem;
+} 
+
 
 /* BLOCO2------container2--------------------------------- */
 #bloco2-container2{
@@ -188,12 +252,29 @@ form input[type=submit]{
 .container2-item{
     display: flex;
     width: 50%;
+    margin-right: 25%;
     flex-direction: column;
 
 }
 
+form input{
+    border-radius: 5px;
+    border: none;
+    height: 3rem;
+    margin-top: 2%;
+    padding-left: 5%;
+}
+
 .container2-item input[type=submit]{
-    height: 13%;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10%;
+    height: 4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0E0E0E;
+    color: #FFFFFF;
 }
 
 

@@ -51,11 +51,11 @@
                         <p>Matriculas</p>
                         <form>
                             <label for="nome">Nome</label>
-                            <input type="text" name="nome" id="nome">
+                            <input type="text" name="nome" id="nome" placeholder="Nome do novo Aluno" required>
 
                             <label for="curso">Curso</label>
                             <!-- <input type="text" name="curso" id="curso"> -->
-                            <input list="all-courses" id="curso" name="lista-de-cursos">
+                            <input list="all-courses" id="curso" name="lista-de-cursos" placeholder="Selecione o curso" >
                             <datalist id="all-courses">
                             <option value="HTML E CSS"></option>
                             <option value="JavaScript"></option>
@@ -64,10 +64,10 @@
 
 
                             <label for="turma">Turma</label>
-                            <input type="text" name="turma" id="turma">
+                            <input type="text" name="turma" id="turma" placeholder="Insira o nome da turma" required>
 
                             <label for="parcelas">Numero de Parcelas</label>
-                            <input type="text" name="parcelas" id="parcelas">
+                            <input type="text" name="parcelas" id="parcelas" required>
                             
                             <input type="button" value="Matricular Aluno " id="btn-matricular" onclick= "matricular()">
 

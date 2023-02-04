@@ -125,6 +125,7 @@ form input, form textarea{
     width: 100%;
     border-radius: 9px;
     border: 2px solid black;
+    padding-left: 5%;
 }
 
 form input[type=text]{

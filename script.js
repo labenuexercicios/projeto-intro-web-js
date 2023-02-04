@@ -1,4 +1,4 @@
-const turmas = [ //"HC1", "JS1", "REST1", "REST2",
+const turmas = [
     {
         turma: "Hipatia",
         curso: "JavaScript",
@@ -99,7 +99,7 @@ const cursos = [
     },
 
     {
-        curso: "APIs REST",
+        curso: "API's REST",
         descricao: "Aprofunde ainda mais seus conhecimentos e conheca os principios do estilo arquitetonico REST e construa APIs de forma profissional",
         duracao: "6 Meses",
         valor: 2000
@@ -145,21 +145,18 @@ const estudantes = [
 // ====================================================================================
 
 // 1) Funções buscar
-// a) Crie uma função que faça uma busca pelo array de cursos, de forma a passar o nome do curso por parâmetro. A função deve ser capaz de retornar o objeto referente ao curso solicitado. Essa função deve se chamar buscarCurso.
 console.log("BUSCAR CURSOS: ")
 const buscarCurso = (nomeCurso) => {
 
     const buscarNovoCurso = document.getElementById("curso").value.toLowerCase()
 
-    nomeCurso = buscarNovoCurso
+    nomeCurso = buscarNovoCurso;
 
     const findCurso = cursos.find((element) => element.curso.toLowerCase().includes(nomeCurso.toLowerCase()));
 
     return !findCurso ? "Curso nao encontrado" : findCurso;
 
 };
-
-// console.log(buscarCurso());
 
 // ====================================================================================
 
@@ -168,20 +165,17 @@ console.log("\nBUSCAR TURMA: ")
 
 const buscarTurma = (event) => {
 
-    event.preventDefault()
+    event.preventDefault();
 
     inputTurma = document.getElementById("buscar-turma").value.toLowerCase();
 
-    // usando FILTER 
     const findTurma = turmas.filter(cadaTurma => {
         if (cadaTurma.turma.toLowerCase().includes(inputTurma)) {
-            return cadaTurma
+            return cadaTurma;
         }
     });
 
-    // ARRUMAR .VALUE E BOTAO PARA APARECER APENAS UMA VEZ OS CARDS
-    document.getElementById("buscar-turma").value = " "
-    console.log(inputTurma)
+    document.getElementById("buscar-turma").value = " ";
 
     return findTurma.length > 0 ? gerarCard(findTurma) : gerarCard(turmas);
 
@@ -192,12 +186,20 @@ const buscarTurma = (event) => {
 
 const gerarCard = (retornoTurma) => {
 
+    if (document.getElementsByClassName('classes').length > 0) {
+        while (document.getElementsByClassName('classes').length > 0) {
+            const cards = document.querySelector('#bloco2-container2-cards')
+            cards.parentNode.removeChild(cards)
+            window.location.reload(true);
+        };
+    };
+
     const containerBuscarTurma = document.getElementById("bloco2-container2-cards");
 
     const geradorDeCards = retornoTurma.map((turmaMap) => {
-         const addItem = document.createElement("article");
+        const addItem = document.createElement("article");
 
-         addItem.innerHTML =   `<div class="bloco2-item-card">
+        addItem.innerHTML = `<div class="bloco2-item-card">
             <p class="bloco2-titulo">${turmaMap.turma}</p>
                 <ul>
                     <li><b> Curso:</b>${turmaMap.curso}</li>
@@ -210,31 +212,20 @@ const gerarCard = (retornoTurma) => {
         </div>`;
 
         containerBuscarTurma.insertAdjacentElement(`beforeend`, addItem);
-    })
+        addItem.setAttribute("class", "classes")
+
+    });
 
     return geradorDeCards
-    
-};
 
-
-// ====================================================================================
-
-removeItem = (event) => {
-    event.target.remove();
 };
 
 // ====================================================================================
 
 // 2)Função Matricular
-// a) Crie uma função chamada matricular, essa função deve ser capaz de inserir um aluno no array de estudantes. 
-//b) A função deve receber por parâmetro, as seguintes informações: nome, curso, turma e numero de parcelas
-// c) Ao final a função deve mostrar:
-//   i. O array de estudantes no console contendo o novo aluno matriculado
-//     ii. E ainda no console emitir uma mensagem confirmação, informando que o aluno foi matriculado, essa mensagem deve conter o nome do aluno, o curso e a turma.
 
 console.log("\nLISTA ATUALIZADA DE ALUNOS COM NOVOS MATRICULADOS: ")
 const matricular = (nome, nomeCurso, turma, nParcelas) => {
-
 
     novoAluno = document.getElementById("nome").value
     nome = novoAluno
@@ -254,20 +245,20 @@ const matricular = (nome, nomeCurso, turma, nParcelas) => {
 
 
     let valorCurso = buscarCurso(nomeCurso);
-    console.log(valorCurso.valor)
     let valorTotal = 0;
     let valorParcela = 0;
-    let desconto = false;
 
     if (nParcelas > 0 && nParcelas <= 2) {
         valorTotal = valorCurso.valor - (valorCurso.valor * 0.2)
         valorParcela = valorTotal / nParcelas
-        desconto = true
+        valorParcela.toFixed(2)
+        desconto = "Sim"
     } else {
         valorTotal = valorCurso.valor
         valorParcela = valorTotal / nParcelas
+        valorParcela.toFixed(2)
+        desconto = "Nao"
     };
-
 
     novaMatricula =
     {
@@ -277,154 +268,227 @@ const matricular = (nome, nomeCurso, turma, nParcelas) => {
         valor: valorCurso.valor,
         nParcelas: nParcelas,
         desconto: desconto,
-        valorParcela: valorParcela
+        valorParcela: valorParcela.toFixed(2)
     };
-
 
     estudantes.push(novaMatricula);
 
-    // const containerTitulo = document.getElementById("container2-item");
-
-    // const addTituloMatricula = document.createElement(`div`);
-    // addTituloMatricula.setAttribute("class", "container2-titulo")
-    // addTituloMatricula.innerHTML=`
-    // <p>Aluno Matriculado</p>
-    // <img src="./assets/check.png" alt="aluno martriculado">`
-
-    // containerTitulo.insertAdjacentElement(`afterbegin`, addTituloMatricula);
+    // ====================================================================================
 
     const containerMatricula = document.getElementById("bloco2-container2");
 
     const addNovoAluno = document.createElement("div");
-    addNovoAluno.setAttribute("class", "container2-item")
-
+    addNovoAluno.setAttribute("class", "container2-item");
     addNovoAluno.innerHTML = `
-    <div class="container2-titulo">
-    <p>Aluno Matriculado</p>
-    <img src="./assets/check.png" alt="aluno martriculado">
-    </div>
+                <div class="container2-titulo">
+                <p>Aluno Matriculado</p>
+                <img src="./assets/check.png" alt="aluno martriculado">
+                </div>
 
-    <div id="dados-nova-matricula">
-    <ul>
-    <li>Estudante:${nome}</li>
-    <li>Turma:${turma}</li>
-    <li>Curso:${nomeCurso}</li>
-    <li>Valor:R$${valorCurso.valor}</li>
-    <li>nParcelas:${nParcelas}</li>
-    <li>Desconto:${desconto}</li>
-    <li>ValorParcelas:${valorParcela}</li>
-    </ul>
-    </div>
-          `
+                <div id="dados-nova-matricula">
+                <ul>
+                <li><b>Estudante:</b> ${nome}</li>
+                <li><b>Turma:</b> ${turma}</li>
+                <li><b>Curso:</b> ${nomeCurso}</li>
+                <li><b>Valor: R$</b>${valorCurso.valor}</li>
+                <li><b>nParcelas:</b>${nParcelas}X</li>
+                <li><b>Desconto:</b> ${desconto}</li>
+                <li><b>ValorParcelas: R$</b>${valorParcela.toFixed(2)}</li>
+                </ul>
+                </div>
+                `;
 
-    
+    if (document.getElementsByClassName('container2-item').length > 0) {
+        while (document.getElementsByClassName('container2-item').length > 0) {
+            const novoMatriculado = document.querySelector('#bloco2-container2');
+            novoMatriculado.parentNode.removeChild(novoMatriculado);
+            window.location.reload(true);
+        };
 
-    containerMatricula.insertAdjacentElement(`beforeend`, addNovoAluno);
+    } else if (nome.length && nomeCurso.length && turma.length && nParcelas.length > 0) {
+        containerMatricula.insertAdjacentElement(`beforeend`, addNovoAluno);
+        document.getElementById("btn-matricular").value = " Nova Matricula";
+    } else {
+        alert("CONFIRME OS DADOS");
+    };
+
 
 };
-
-
-
 
 // ====================================================================================
 
 // 3 -Função parcelarCurso
-// A escola fornece 3 tipos de desconto:
-/* * Na compra de 3 cursos: 15% de desconto
-* Na compra de 2 cursos: 10% de desconto
-* Para pagamentos a vista e parcelado em 2x, é concedido mais 20% de desconto. */
-
-/* Altere a função parcelarCurso para que ela receba um array e o número de parcelas.
-
-O array deve se chamar carrinhoCursos e receber apenas os valores dos cursos adquiridos. Neste ponto do projeto o array ainda não é incrementado automaticamente, por isso esse passo pode ser feito manualmente. */
-
 console.log(`CARRINHO DE COMPRAS E FORMAS DE PAGAMENTOS`);
 
 //UTILIZANDO CALLBACK DA FUNCAO BUSCARCURSO
 const carrinhoCursos = [];
-const parcelarCurso = (buscarCurso, parcela) => {
-    let valorTotal = 0
-    let valorParcela = 0
-    let desconto = 0
+const nomesCursos = [];
+const arrayVerificador = [];
+const valorCurso = () => {
 
-    const valorCurso = buscarCurso.valor
-    carrinhoCursos.push(valorCurso)
-    //return carrinhoCursos  
+    infoCurso = document.getElementById("curso").value
+
+    const carrinho = document.querySelector(".itensCarrinho");
+
+    if (infoCurso.length === 0) {
+
+        window.alert("Por favor escolha um curso valido");
+
+    }else{
+
+            let dataCurso = buscarCurso();
+            carrinhoCursos.push(dataCurso.valor);
+            document.getElementById("curso").value = " "
+            nomesCursos.push(dataCurso.curso);
+
+        if(arrayVerificador.length <= 2){
+
+            const mostrarCursos = document.createElement("p")
+            mostrarCursos.innerHTML = `
+            <p><b>Curso adicionado:</b> ${nomesCursos}</p>`
+            nomesCursos.shift()
+            carrinho.insertAdjacentElement("afterbegin", mostrarCursos);
+            arrayVerificador.push("0");
+        
+        }else{
+
+            window.alert("Numero de maximo de cursos escolhidos")
+        };
+
+    };
+        return carrinhoCursos;
+};
+
+const parcelarCurso = () => {
+
+    parcela = Number(document.getElementById("parcelas").value);
+
+    let valorTotal = 0;
+    let valorParcela;
+    let desconto = 0;
+    let obs = " "
+
     if (carrinhoCursos.length > 1) {
         switch (carrinhoCursos.length) {
             case 3:
                 desconto = 0.15
+                obs = " plus 15% desconto."
+                console.log("case 3", carrinhoCursos)
                 break;
 
             case 2:
                 desconto = 0.10
+                obs = "plus 10% desconto."
+                console.log("case 2", carrinhoCursos)
                 break;
 
             default:
                 desconto: 0
+                obs = " "
+                console.log("case 1", carrinhoCursos)
                 break;
-        }
+        };
 
         for (let valor of carrinhoCursos) {
             valorTotal = valorTotal + valor
-        }
+        };
 
         valorTotal = valorTotal - (valorTotal * desconto)
+
     } else {
         valorTotal = carrinhoCursos[0]
-    }
+    };
 
-    if (parcela <= 2) {
+    infParcela = document.getElementById("parcelas").value;
 
-        valorTotal = valorTotal - (valorTotal * 0.2);
-        valorParcela = valorTotal / parcela
-        return `O valor do pagamento é de R$${valorTotal}.Em ${parcela} X de ${valorParcela} reais. Foi concedido desconto de 20%.`
+    if (infParcela.length === 0) {
+        window.alert("Numero de parcelas invalido")
+        window.location.reload(true);
     } else {
-        valorTotal = valorTotal
-        valorParcela = valorTotal / parcela
 
-        /* return `O curso ${buscarCurso.curso} ficou no valor de R$ ${valorTotal}. Em ${parcela} X de ${valorParcela.toFixed(2)} reais.` */
-        return `O valor do pagamento é de R$ ${valorTotal}. Em ${parcela} X de ${valorParcela.toFixed(2)} reais.`
-    }
-}
-//console.log(parcelarCurso(buscarCurso("javascript",), 2))
-// parcelarCurso(buscarCurso("html e css"))
-// parcelarCurso(buscarCurso("javascript"))
-// console.log(parcelarCurso(buscarCurso("APIs REST"), 1))
-// console.log(`Valores individuais de cada curso adicionados no carrinho sem desconto: ${carrinhoCursos}`);
+        if (document.getElementsByClassName('inforCalCurso').length > 0) {
+            while (document.getElementsByClassName('inforCalCurso').length > 0) {
+                const relatorioValores = document.querySelector('#calcCurso');
+                relatorioValores.parentNode.removeChild(relatorioValores);
+                window.location.reload(true);
+            };
+        }; 
+
+        if (parcela <= 2) {
+
+            valorTotal = valorTotal - (valorTotal * 0.2);
+
+            valorParcela = valorTotal / parcela;
+
+            const containerCalculo = document.getElementById("calcCurso");
+
+            const itemCalculo = document.createElement("div");
+            itemCalculo.setAttribute("class", "inforCalCurso")
+
+            itemCalculo.innerHTML = `
+                <p id="tituloRelatorio">Relatorio Valores</p>
+                <ul>
+                    <li><b>Valor(es) do(s) Curso(s):</b>R$ ${carrinhoCursos}</li>
+                    <li><b>Valor total com desconto:</b> R$ ${valorTotal.toFixed(2)} ${obs}</li>
+                    <li><b>Parcelado em ${parcela}x de </b>R$ ${valorParcela.toFixed(2)} plus 20% desconto.</li>
+                <ul>`;
+            document.getElementById("parcelas").value = " "
+            containerCalculo.insertAdjacentElement("beforeend", itemCalculo)
+
+        } else {
+
+            valorParcela = +valorTotal / parcela
+
+            const containerCalculo = document.getElementById("calcCurso");
+
+            const itemCalculo = document.createElement("div");
+            itemCalculo.setAttribute("class", "inforCalCurso")
+
+            itemCalculo.innerHTML = `
+            <p id="tituloRelatorio">Relatorio Valores</p>
+            <ul>
+                <li><b>Valor(es) do(s) Curso(s):</b>R$ ${carrinhoCursos}</li>
+                <li><b>Valor total:</b> R$${valorTotal} ${obs}</li>
+                <li><b>Parcelado em ${parcela}x de </b>R$ ${valorParcela.toFixed(2)}</li>
+            <ul>`;
+
+            containerCalculo.insertAdjacentElement("beforeend", itemCalculo);
+
+        };
+    };
+    
+};
 
 // ====================================================================================
 
 console.log("\nBUSCAR ESTUDANTE: ")
 
-
 const buscarEstudante = (event) => {
 
     event.preventDefault()
 
-     getAluno = document.getElementById("inputRelatorioAluno").value.toLowerCase()
-
-    // limpaDados = document.getElementById("inputRelatorioAluno").value = " "
-
+    getAluno = document.getElementById("inputRelatorioAluno").value.toLowerCase();
 
     if (getAluno.length === 0) {
-        
+
         console.log(getAluno)
-        return alert("ALUNO NAO ENCONTRADO");
-    }
+        return alert("DIGITE O NOME DO ALUNO"), window.location.reload(true);
+    };
 
     const findAluno = estudantes.filter(aluno => {
         if (aluno.estudante.toLowerCase().includes(getAluno)) {
-            getAluno.value = " "
+            document.getElementById("inputRelatorioAluno").value = " "
             return aluno
-        }else{
-            
         };
     });
-    console.log(getAluno)
-    console.log(findAluno.length)
 
-    return findAluno.length > 0 ? relatorioEstudante(findAluno) : alert("ALUNO NAO ENCONTRADO");
+    if (findAluno.length === 0) {
+        return alert("ALUNO NÃO ENCONTRADO"), window.location.reload(true);
+
+    } else {
+        return relatorioEstudante(findAluno);
+    };
+
 };
 
 // ====================================================================================
@@ -434,6 +498,14 @@ console.log(`\nRELATORIO ESTUDANTES`);
 const relatorioEstudante = (retornaAluno) => {
 
     const containerBuscarAluno = document.getElementById("container2-item-relatorio");
+
+    if (document.getElementsByClassName('relatorio').length > 0) {
+        while (document.getElementsByClassName('relatorio').length > 0) {
+            const novaBusca = document.querySelector('#container2-item-relatorio');
+            novaBusca.parentNode.removeChild(novaBusca);
+            window.location.reload(true);
+        };
+    };
 
     const gerarRelatorio = retornaAluno.map((alunoBuscado) => {
         const addAluno = document.createElement("div");
@@ -449,17 +521,13 @@ const relatorioEstudante = (retornaAluno) => {
             <li><b>Valor parcelas:</b>R$${alunoBuscado.parcelas}</li>
          </ul>`;
 
+        document.getElementById("btn-relatorio").value = "Nova Busca"
         addAluno.setAttribute("id", "relatorio");
+        addAluno.setAttribute("class", "relatorio");
         containerBuscarAluno.insertAdjacentElement(`beforeend`, addAluno);
+        console.log(addAluno.value)
 
     });
 
-    return gerarRelatorio
-
+    return gerarRelatorio;
 };
-
-
-
-
-
-
