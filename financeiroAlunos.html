@@ -37,20 +37,20 @@
           </div>
           <form onsubmit="event.preventDefault()" >
             <label for="curso">Curso</label>
-            <input type="text" name="curso" id="curso-financeiro" list="curso" />
+            <input type="text" name="curso" id="curso-financeiro" list="curso" placeholder="Depois de escolher clique em adicionar curso" />
 
             <datalist id="curso">
               <option value="">cursos:</option>
-              <option value="HTML e CSS">500</option>
-              <option value="JavaScript">900</option>
-              <option value="APIs REST">2000</option>
+              <option onchange="adicionarCarrinho()" value="HTML e CSS">500</option>
+              <option onchange="adicionarCarrinho()" value="JavaScript">900</option>
+              <option onchange="adicionarCarrinho()" value="APIs REST">2000</option>
             </datalist>
             <p id="botao-add-curso"><u> Adicionar curso</u></p>
             
             <label for="curso">Número de parcelas</label>
 
             <input
-              
+            placeholder="Escolha o numero de parcelas"
               type="number"
               name="nParcelas"
               id="nParcelas"
@@ -88,6 +88,7 @@
               name="nome"
               id="nome-relatorio"
               onchange="enter"
+              placeholder="Digite o nome do (a) aluno (a)"
             />
 
             <button

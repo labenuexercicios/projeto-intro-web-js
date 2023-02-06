@@ -221,112 +221,15 @@ const turma2 = [
   },
 ];
 
-/* let carrinhoCursos = []; */
-
-/* let nnParcelas = document.getElementById("nParcelas").value; */
-
 const parcelaDiv = document.getElementById("relatorio-parcela");
-
-/* const parcelarCurso = () => {
-  let valorTotal = 0;
-  let desconto = 0;
-  
-  if (carrinhoCursos.length == valorCurso) {
-    switch (carrinhoCursos.length) {
-      case 3:
-        desconto = 0.85;
-
-        break;
-
-      case 2:
-        desconto = 0.9;
-
-        break;
-      default:
-        break;
-    }
-
-    for (i of carrinhoCursos) {
-      valorTotal = valorTotal + i;
-    }
-
-    valorTotal = valorTotal * desconto;
-  } else {
-    valorTotal = carrinhoCursos[0];
-  }
-
-  if (nnParcelas <= 2) {
-    valorTotal = valorTotal * 0.8;
-
-    parcelaDiv.innerHTML = `O valor do pagamento é de R$ ${valorTotal} com 20% de desconto, parcelado em ${nnParcelas} de R$ ${
-      valorTotal / nnParcelas
-    }`;
-  } else {
-    parcelaDiv.innerHTML = `O valor do pagamento é de R$ ${valorTotal}, parcelado em ${nnParcelas} de R$ ${(
-      valorTotal / nnParcelas
-    ).toFixed(2)}`;
-  }
-}; */
-/* const parcelarCurso = () => {
-  const nnParcelas = document.getElementById("nParcelas").value
-  console.log(nnParcelas)
-  
-  
-  let valorTotal = 0;
-  let desconto = 0;
-
-  if (carrinhoCursos.length > 0) {
-    switch (carrinhoCursos.length) {
-      case 3:
-        desconto = 0.85;
-        
-        break;
-        
-        case 2:
-          desconto = 0.9;
-          
-          break;
-          default:
-            break;
-          }
-          
-          for (let i of carrinhoCursos) {
-            valorTotal = valorTotal + i;
-          }
-          
-          valorTotal = valorTotal * desconto;
-  } else {
-    valorTotal = carrinhoCursos[0];
-  }
-  
-  if (nnParcelas <= 2) {
-    valorTotal = valorTotal * 0.8;
-    
-    console.log(
-      `O valor do pagamento é de R$ ${valorTotal} com 20% de desconto, parcelado em ${nnParcelas} de R$ ${
-        valorTotal / nnParcelas
-      }`
-      );
-    } else {
-      console.log(
-        `O valor do pagamento é de R$ ${valorTotal}, parcelado em ${nnParcelas} de R$ ${(
-          valorTotal / nnParcelas
-          ).toFixed(2)}`
-          );
-        }
-      };  */
 
 function buscarCurso(nomeCurso) {
   const resultado = curso.find(
     (i) => i.curso.toLowerCase() === nomeCurso.toLowerCase()
   );
-
   return resultado ? resultado : "Turma não encontrada";
 }
 
-console.log(buscarCurso("HTML e CSS"));
-
-/* console.log(buscarCurso("JavaScript")) */
 const adicionaDiv = document.getElementById("organizar1");
 
 function adicionaNaoEncontrado() {
@@ -344,7 +247,6 @@ const adicionaCurso = document.getElementById("organizar1");
 
 const buscarTurma = () => {
   const inputTurma = document.getElementById("input-buscar-curso");
-
   if (inputTurma.value === "") {
     adicionaItem();
     return;
@@ -352,7 +254,7 @@ const buscarTurma = () => {
   const turmasResultado = turma.filter((i) =>
     i.turma.toLowerCase().includes(inputTurma.value.toLowerCase())
   );
-  console.log(turmasResultado);
+
   inputTurma.value = "";
   adicionaCurso.innerHTML = "";
   if (turmasResultado.length > 0) {
@@ -377,12 +279,11 @@ const buscarTurma = () => {
 
 const adicionaDiv2 = document.getElementById("cursoMatricula");
 
- function adicionaItem() {
-          
-          adicionaDiv.innerHTML = "";
-          
-          for (i = 0; i < turma.length; i++) {
-            adicionaDiv.innerHTML += `<div class="figTurmas">
+function adicionaItem() {
+  adicionaDiv.innerHTML = "";
+
+  for (i = 0; i < turma.length; i++) {
+    adicionaDiv.innerHTML += `<div class="figTurmas">
             <h2>${turma[i].turma}</h2>
             <p><b>Curso:</b> ${turma[i].curso}</p>
             <p><b>Inicio: </b>${turma[i].inicio}</p>
@@ -392,11 +293,9 @@ const adicionaDiv2 = document.getElementById("cursoMatricula");
             <p><b>Concluido:</b> ${turma[i].concluido ? "Sim" : "Não"}</p>
             </div>
             `;
-          }
-        }  
+  }
+}
 
-        
-  
 const adicionaMatricula = document.getElementById("matricula");
 const inputNome = document.getElementById("nomeMatricula");
 
@@ -415,14 +314,10 @@ const matricula = () => {
   ) {
     adicionaMatricula.innerHTML = `<h2>Preencha todas as informações do formulario </h2>`;
   } else {
-    adicionaMatricula.innerHTML =
-      inputNParcelas.innerHTML = `<div class="confirmaMatricula">
-    
-
-
-<h2>
+    adicionaMatricula.innerHTML = `<div class="confirmaMatricula">
+    <h2>
   <b> Aluno matriculado </b
-><img src="./midia/area adm/Vector.png" alt="" />
+><img  class="img-matricula" src="./midia/area adm/Vector.png" alt="" />
 </h2></div>
 <div class="confirmaMatricula">
 <p>Aluno Matriculado</p>
@@ -439,19 +334,15 @@ const zerarMatricula = () => {
   inputNParcelas.value = "";
   inputNome.value = "";
   inputTurma.value = "";
-  
+
 };
-
-
 
 const buscarEstudante = (buscaEstudante) => {
   const resultado = estudantes.find(
     (i) => i.estudante.toLowerCase() === buscaEstudante.toLowerCase()
   );
-
   return resultado ? resultado : "estudante não encontrada";
 };
-
 
 const relatorioDiv = document.getElementById("relatorio");
 
@@ -465,15 +356,12 @@ const relatorioEstudante = () => {
 
   const resultadoRelatorio = estudantes.filter((i) =>
     i.estudante.toLowerCase().includes(inputRelatorio.value.toLowerCase())
-  );
-
-  inputRelatorio.value = "";
-  relatorioDiv.innerHTML = "";
-
+    );
+    inputRelatorio.value = "";
+    relatorioDiv.innerHTML = "";
   if (resultadoRelatorio.length > 0) {
     relatorioDiv.innerHTML = `<div id="relatorio "classe="relatorioS">
-
-  <p><b>Aluno:</b> ${resultadoRelatorio[0].estudante}</p>
+<p><b>Aluno:</b> ${resultadoRelatorio[0].estudante}</p>
   <p><b>Turma: </b>${resultadoRelatorio[0].turma}</p>
   <p><b>Curso:</b> ${resultadoRelatorio[0].curso}</p>
   <p><b>Valor total: </b>${resultadoRelatorio[0].valor} </p>
@@ -489,11 +377,9 @@ let carrinhoCursos = [];
 
 const adicionarCarrinho = (nomeCurso) => {
   const curso = buscarCurso(nomeCurso);
-  console.log(nomeCurso);
   curso.carrinhoCursos = true;
   carrinhoCursos.push(curso.valor);
-  console.log(carrinhoCursos);
-  return;
+  
 };
 
 const addButao = document.getElementById("botao-add-curso");
@@ -505,16 +391,15 @@ addButao.addEventListener("click", function () {
   for (let i of curso) {
     if (inputFinanceiro.value.includes(i.curso)) {
       for (let i of carrinhoCursos) {
-       /*  if (i.valor.includes(buscarCurso(inputFinanceiro.value).valor)) {
-          return (inputFinanceiro.value = "");
-        } */
+        if (carrinhoCursos.includes(buscarCurso(inputFinanceiro.value).valor)) {
+         inputFinanceiro.value = ""
+       } 
       }
       const itemCarrinho = document.createElement("p");
       itemCarrinho.setAttribute("onclick", "excluirCurso(this)");
       adicionarCarrinho(inputFinanceiro.value);
-      itemCarrinho.innerHTML = ` ${i.curso} <img src="./midia/area adm/Vector (2).png" alt=""> Clique para remover o curso`;
+      itemCarrinho.innerHTML = ` ${i.curso} <img src="./midia/area adm/Vector (2).png" alt=""> Clique para remover este curso`;
       carrinhoDeCompras.appendChild(itemCarrinho);
-      console.log(carrinhoCursos);
     }
   }
   inputFinanceiro.value = "";
@@ -530,13 +415,9 @@ const shopCartRemove = (courseName) => {
 
 const excluirCurso = (curso) => {
   for (let i of carrinhoCursos) {
-    console.log(curso.outerHTML);
-    console.log(i.curso);
-    console.log(i.carrinhoCursos);
     if (curso.outerHTML.includes(i.curso)) {
       i.carrinhoCursos = false;
       shopCartRemove(i.curso);
-      console.log(i.carrinhoCursos);
     }
   }
   curso.remove();
@@ -551,7 +432,6 @@ const valor = () => {
 };
 
 const parcelarCurso = () => {
-  console.log(carrinhoCursos);
   const nnParcelas = document.getElementById("nParcelas").value * 1;
 
   let valorTotal = 0;
@@ -571,7 +451,6 @@ const parcelarCurso = () => {
     }
     for (let i of carrinhoCursos) {
       valorTotal = valorTotal + i;
-      
     }
 
     valorTotal = valorTotal * desconto;
@@ -591,4 +470,3 @@ const parcelarCurso = () => {
     ).toFixed(2)}`;
   }
 };
-
