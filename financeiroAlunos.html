@@ -20,7 +20,7 @@
       </nav>
     </header>
     <main id="main">
-     <div class="organizar-menu">
+      <div class="organizar-menu">
         <aside class="menu-esquerda">
           <ul>
             <li><a href="./areaADM.html">Turmas</a></li>
@@ -29,80 +29,91 @@
           </ul>
         </aside>
       </div>
-<div class="organizar-pag">
-      <section class="matriculas">
-        <div class="formMatricula">
-          <div class="h3Grid">
-            <h2>Financeiro</h2>
+      <div class="organizar-pag">
+        <section class="matriculas">
+          <div class="formMatricula">
+            <div class="h3Grid">
+              <h2>Financeiro</h2>
+            </div>
+            <form onsubmit="event.preventDefault()">
+              <label for="curso">Curso</label>
+              <input
+                type="text"
+                name="curso"
+                id="curso-financeiro"
+                list="curso"
+                placeholder="Depois de escolher clique em adicionar curso"
+              />
+
+              <datalist id="curso">
+                <option value="">cursos:</option>
+                <option onchange="adicionarCarrinho()" value="HTML e CSS">
+                  500
+                </option>
+                <option onchange="adicionarCarrinho()" value="JavaScript">
+                  900
+                </option>
+                <option onchange="adicionarCarrinho()" value="APIs REST">
+                  2000
+                </option>
+              </datalist>
+              <p id="botao-add-curso"><u> Adicionar curso</u></p>
+
+              <label for="curso">Número de parcelas</label>
+
+              <input
+                placeholder="Escolha o numero de parcelas"
+                type="number"
+                name="nParcelas"
+                id="nParcelas"
+                min="1"
+                max="12"
+                required
+              />
+
+              <button
+                type="submit"
+                onclick="parcelarCurso()"
+                id="submitMatricula"
+              >
+                Ver valor
+              </button>
+              <div id="carrinho-de-compras"></div>
+            </form>
+
+            <div id="relatorio-parcela"></div>
           </div>
-          <form onsubmit="event.preventDefault()" >
-            <label for="curso">Curso</label>
-            <input type="text" name="curso" id="curso-financeiro" list="curso" placeholder="Depois de escolher clique em adicionar curso" />
+        </section>
 
-            <datalist id="curso">
-              <option value="">cursos:</option>
-              <option onchange="adicionarCarrinho()" value="HTML e CSS">500</option>
-              <option onchange="adicionarCarrinho()" value="JavaScript">900</option>
-              <option onchange="adicionarCarrinho()" value="APIs REST">2000</option>
-            </datalist>
-            <p id="botao-add-curso"><u> Adicionar curso</u></p>
-            
-            <label for="curso">Número de parcelas</label>
+        <section class="matriculas">
+          <div class="formMatricula">
+            <div class="h3Grid">
+              <h2>Relatório Aluno</h2>
+            </div>
 
-            <input
-            placeholder="Escolha o numero de parcelas"
-              type="number"
-              name="nParcelas"
-              id="nParcelas"
-              
-              min="1"
-              max="12"
-            required
-            />
+            <form onsubmit="event.preventDefault()">
+              <label for="nome">Nome</label>
 
-            <button
-              type="submit"
-              onclick="parcelarCurso()"
-              id="submitMatricula"
-            >
-              Ver valor
-            </button>
-            <div id="carrinho-de-compras"></div>
-          </form>
+              <input
+                type="text"
+                name="nome"
+                id="nome-relatorio"
+                onchange="enter"
+                placeholder="Digite o nome do (a) aluno (a)"
+              />
 
-          <div id="relatorio-parcela"></div>
-        </div>
-      </section> 
-
-      <section class="matriculas">
-        <div class="formMatricula">
-          <div class="h3Grid">
-            <h2>Relatório Aluno</h2>
+              <button
+                type="submit"
+                id="submitMatricula"
+                onclick="relatorioEstudante()"
+              >
+                Buscar
+              </button>
+            </form>
           </div>
-
-          <form onsubmit="event.preventDefault()">
-            <label for="nome">Nome</label>
-
-            <input
-              type="text"
-              name="nome"
-              id="nome-relatorio"
-              onchange="enter"
-              placeholder="Digite o nome do (a) aluno (a)"
-            />
-
-            <button
-              type="submit"
-              id="submitMatricula"
-              onclick="relatorioEstudante()"
-            >
-              Buscar
-            </button>
-          </form>
-        </div>
-        <aside id="relatorio" class="relatorioS"></aside>
-      </section>
-    </div>
+          <aside id="relatorio" class="relatorioS"></aside>
+        </section>
+      </div>
       <aside class="whatsapp">
         <a href="./contato.html"
           ><img src="./midia/home/logos_whatsapp-icon.png" alt=""

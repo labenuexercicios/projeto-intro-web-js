@@ -32,6 +32,45 @@ p {
   font-family: Open Sans;
 }
 
+aside ul li :hover{
+  border-radius:10rem;
+  font-size: 18px;
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(255, 255, 255, 0.24);
+  background-color: rgba(145, 142, 142, 0.24);;
+}
+aside ul li :visited{
+  background-color: #f6c34a;
+  
+}
+nav li :hover{
+  border-radius:0.6rem;
+  font-size: 21px;
+  transform: scale(0.98);
+  background-color: rgba(145, 142, 142, 0.24);;
+  box-shadow: 3px 2px 40px 1px rgba(0, 0, 0, 0.24);
+}
+
+
+a :active{
+transform: scale(0.98);
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+button:active {
+
+  
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+button :hover{
+border-radius:10rem;
+
+transform: scale(0.98);
+box-shadow: 3px 2px 22px 1px rgba(255, 255, 255, 0.24);
+background-color: rgba(145, 142, 142, 0.24);;
+}
+
 header {
   display: flex;
   height: 6em;
@@ -374,6 +413,7 @@ textarea {
   font-weight: bolder;
 }
 
+
 .nEcontrada{
 margin-top: 1rem;
 
@@ -535,25 +575,13 @@ margin: 300px;
 
  
 
-  nav li a :active{
-    transform: scale(0.98);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
-  
- 
-a :active{
-  transform: scale(0.98);
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 
-}
- button:active {
-    transform: scale(0.98);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
+
 
 #carrinho-de-compras{
 width: 30rem;
 margin: 3rem 0 0 0;
 
 }
+
 

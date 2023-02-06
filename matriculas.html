@@ -38,10 +38,10 @@
           </div>
           <form class="" onsubmit="event.preventDefault()" id="form-matricula">
             <label for="nome">Nome</label>
-            <input type="text" id="nomeMatricula" required/>
+            <input type="text" id="nomeMatricula" placeholder="Digite o nome do (a) aluno (a)" required/>
 
             <label for="curso">Curso</label>
-            <input type="text" name="curso" id="cursoMatricula" list="curso" />
+            <input type="text" name="curso" id="cursoMatricula" list="curso" placeholder="Selecione um curso" />
             <datalist id="curso">
               <option value="">cursos:</option>
               <option value="HTML e CSS"></option>
@@ -49,11 +49,11 @@
               <option value="APIs REST"></option>
             </datalist>
 
-            <label for="turma">Turma</label>
-            <input type="text" id="turmaMatricula"  />
+            <label for="turma" >Turma</label>
+            <input type="text" placeholder="Digite o nome de uma turma" id="turmaMatricula"  />
 
-            <label for="nparcelas">Numero de parcelas</label>
-            <input type="number" max="12" min="1" id="nParcelasMatricula">
+            <label for="nparcelas" >Numero de parcelas</label>
+            <input type="number" placeholder="Escolha o numero de parcelas" max="12" min="1" id="nParcelasMatricula">
             <button type="submit" id="submitMatricula" onclick="matricula()">
               Matricular aluno
             </button>
