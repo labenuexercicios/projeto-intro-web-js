@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../../script.js" defer></script>
+    <title>Lab Escola Area ADM Matriculas</title>
+</head>
+<body>
+    <header>
+        <div class="container-logo-header">
+            <a href="../../index.html">
+                <img src="./assets/logo 1.png" alt="Logo LabEscola" id="logo">
+            </a>
+        </div>
+        <nav>
+            <ul id="lista">
+                <li><a href="../../index.html" class="txt-li">Home</a></li>
+
+                <li><a href="../../cursos/cursos.html" class="txt-li">Cursos</a></li>
+
+                <li><a href="../../contato/contato.html" class="txt-li">Contato</a></li>
+
+                <li><a href="../../adm/adm.html" class="txt-li">Area ADM</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+
+        <a href="../../contato/contato.html"><img src="./assets/logos_whatsapp-icon.png" id="whats"target="_blank"></a>
+
+        <section id="container">
+            <section id="bloco1">
+                <div class="bloco1-menu">
+                    <ul>
+                        <li><a href="../adm.html">Turmas</a></li>
+                        <li><a href="./matriculas.html" >Matriculas</a></li>
+                        <li><a href="../financeiro/financeiro.html" >Financeiro Alunos</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="bloco2">
+
+                <div id="bloco2-container1">
+
+                   <div class="container1-item">
+                        <p>Matriculas</p>
+                        <form>
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" placeholder="Nome do novo Aluno" required>
+
+                            <label for="curso">Curso</label>
+                            <!-- <input type="text" name="curso" id="curso"> -->
+                            <input list="all-courses" id="curso" name="lista-de-cursos" placeholder="Selecione o curso" >
+                            <datalist id="all-courses">
+                            <option value="HTML E CSS"></option>
+                            <option value="JavaScript"></option>
+                            <option value="APIs REST"></option>
+                            </datalist>
+
+
+                            <label for="turma">Turma</label>
+                            <input type="text" name="turma" id="turma" placeholder="Insira o nome da turma" required>
+
+                            <label for="parcelas">Numero de Parcelas</label>
+                            <input type="text" name="parcelas" id="parcelas" required>
+                            
+                            <input type="button" value="Matricular Aluno " id="btn-matricular" onclick= "matricular()">
+
+                        </form>  
+
+                   </div>
+            
+
+                </div>
+
+                <div id="bloco2-container2">
+
+                </div>
+
+
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <div>
+                <img src="./assets/lab-logo-footer.png" alt="lab-logo-foot">
+            </div>
+        </div>
+
+        <section id="bloco4-footer">
+
+            <div class="bloco4-endereco">
+
+                <div id="bloco4-titulo4">
+                    <p>Endereco</p>
+                </div>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9962772954627!2d-46.70069088518842!3d-23.568577184679345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150%2C%20Brasil!5e0!3m2!1spt-BR!2sit!4v1673562529583!5m2!1spt-BR!2sit"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <p class="bloco4-map-end"> R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+
+            </div>
+
+            <div class="bloco4-links">
+                
+                <div id="bloco4-titulo4">
+                    <p>Links</p>
+                </div>
+
+                <ul>
+                    <li>Home</li>
+                    <li>Cursos</li>
+                    <li>Blog</li>
+                    <li>Fale conosco</li>
+                    <li>Termos e condicoes</li>
+                    <li>Politica de privacidade</li>
+                    <li>FAQ</li>
+                </ul>
+
+            </div>
+
+            <div class="bloco4-medias">
+
+                <div id="bloco4-titulo4">
+                    <p>Redes Sociais</p>
+                </div>
+
+                <section>
+                    <ul>
+                        <li><img src="./assets/icon-twitter 1.png" alt="icon-twitter"></li>
+                        <li><img src="./assets/icon-linkedin 1.png" alt="icon-linkedin"></li>
+                        <li><img src="./assets/icon-fb 1.png" alt="icon-fb"></li>
+                        <li><img src="./assets/icon-ig 1.png" alt="icon-ig"></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="bloco4-rest">
+
+                <div id="bloco4-titulo4">
+                    <p>Area Restrita</p>
+                </div>
+
+                <ul>
+                    <li>Area administrativa</li>
+                    <li>Espaco do aluno</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </footer>
+    
+</body>
+</html>
