@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E9BB4E;
+    width: 100%;
+    height: 100%;
+}
+
+/* HEADER ----------------------------------------------------- */
+
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 20vh;
+}
+
+nav {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-decoration-line: underline;
+    color: #0E0E0E;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2em;
+
+}
+
+li {
+    list-style: none;
+}
+
+.txt-li {
+    color: #0E0E0E;
+}
+
+#lista a:hover {
+    background: rgba(0, 0, 0, .05);
+}
+
+.container-logo-header {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+}
+
+/* MAIN--------------------------------------- */
+
+main {
+    width: 100%;
+    height: 80%;
+}
+
+#whatss {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    right: 20px;
+    top: 75vh;
+    z-index: 999;
+}
+
+/* * ------------------------------------ */
+
+h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    line-height: 3em;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    line-height: 3em;
+    text-align: center;
+
+}
+
+/* BLOCO1------------------------------------ */
+
+#bloco1 {
+    
+    display: grid;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 75% 25%;
+    padding: 4% 4%;
+}
+
+.bloco1-cards{
+    display: flex;
+    justify-content: center;
+}
+
+.bloco1-texto {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#bloco1 p {
+    width: 90%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5em;
+} 
+
+.bloco1-htmlcss {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 85%;
+    height: 45vh;
+    background-color: #fbfbfb;
+    border-radius: 10px;
+}
+
+.bloco1-js {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 85%;
+    height: 45vh;
+    background-color: #fbfbfb;
+    border-radius: 10px;
+}
+
+.bloco1-apis {
+    display: flex;
+    flex-direction: column;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    width: 85%;
+    height: 45vh;
+    background-color: #fbfbfb;
+    border-radius: 10px;
+
+}
+
+.bloco1-btn1 {
+    display: flex;
+    align-items: flex-end;
+    justify-self: center;
+    height: 100%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.bloco1-btn1 button {
+    width: 25vw;
+    height: 10vh;
+    background: #0E0E0E;
+    border-radius: 9px;
+
+}
+
+.bloco1-btn1 a {
+    align-self: center;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+
+/*  -------------MODULOS------ */
+#bloco2-modulos {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 9.3% 25% 25% 25% 9.3%;
+    background-color: #0E0E0E;
+    height: 100vh;
+    width: 100vw;
+    gap: 1.6%;
+}
+
+.bloco2-titulos {
+    display: flex;
+    justify-items: center;
+    width: 35%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bloco2-titulos h2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloco2-modulos-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bloco2-lista-modulos {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.bloco2-modulos-cards ul {
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.bloco2-modulo-htmlcss {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    background-color: #fbfbfb;
+    border-radius: 9px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.bloco2-modulo-js {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    background-color: #fbfbfb;
+    border-radius: 9px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+}
+
+.bloco2-modulo-apis {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    background-color: #fbfbfb;
+    border-radius: 9px;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+/* FOOTER----------------------------------------------------- */
+footer{
+    display: flex;
+    
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
+}
+
+footer ul{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2em;
+    color: #0E0E0E;
+
+}
+
+.footer-logo{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    padding: 2%;
+}
+
+#bloco4-footer{
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+    padding: 0 2.5%;
+}
+
+#bloco4-titulo4{
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #0E0E0E;
+    margin-bottom: 5%;
+
+}
+.bloco4-endereco{
+    width: 30%;
+}
+
+iframe{
+    height: 65%;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.bloco4-map-end{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #0E0E0E;  
+}
+
+.bloco4-links{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bloco4-medias{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%;    */
+}
+
+.bloco4-medias section{
+    width: 100%;
+}
+
+.bloco4-medias ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.bloco4-links, .bloco4-medias, .bloco4-rest{
+    width: 20%;
+    padding-left: 5%;
+}

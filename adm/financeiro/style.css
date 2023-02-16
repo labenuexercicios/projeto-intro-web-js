@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E9BB4E;
+    width: 100vw;
+    height: 100%;
+}
+
+/* HEADER ----------------------------------------------------- */
+
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 20vh;
+}
+
+nav {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-decoration-line: underline;
+    color: #0E0E0E;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2em;
+
+}
+
+li {
+    list-style: none;
+}
+
+.txt-li {
+    color: #0E0E0E;
+}
+
+#lista a:hover {
+    background: rgba(0, 0, 0, .05);
+}
+
+.container-logo-header {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+}
+
+/* MAIN--------------------------------------- */
+
+main {
+    width: 100vw;
+    height: 80vh;
+    border-bottom: 2px solid black;
+}
+
+#whats {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    right: 20px;
+    top: 75vh;
+    z-index: 999;
+}
+
+/* CONTAINER--------------------------------------- */
+#container{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    
+}
+
+/* BLOCO1--------------------------------------- */
+
+#bloco1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    background-color: #0E0E0E;
+}
+
+.bloco1-menu{
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+}
+
+#bloco1 ul a{
+    font-family: 'Poppins';
+    line-height: 5rem;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* BLOCO2--------------------------------------- */
+#bloco2{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#carrinho{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+
+}
+
+.itensCarrinho{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    padding-left: 10%;
+    gap: 5%;
+    
+}
+
+/* BLOCO2------container1--------------------------------- */
+#bloco2-container1{
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    width: 40%;
+
+}
+
+.container1-item{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+
+}
+
+.container1-item form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+}
+
+.container1-item-inpt{
+    border-radius: 5px;
+    border: none;
+    height: 2rem;
+    margin-top: 2%;
+    padding-left: 5%;
+
+}
+
+#tituloFinanc{
+    padding: 20% 0 10% 0;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+#addCarrinho {
+    margin: 3%;
+    font-size: 0.8em;
+    text-decoration: underline;
+    text-align: start;
+    cursor: pointer;
+}
+
+#addCarrinho:hover{
+    color: blue;
+}
+
+form input[type=button]{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10%;
+    height: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0E0E0E;
+    color: #FFFFFF;
+}
+
+#calcCurso {
+    display: flex;
+    width: 200%;
+    height: 100%;
+}
+
+.inforCalCurso{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#tituloRelatorio{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    height: 15%;
+    margin: 5% 0 2% 0;
+    font-family: 'Poppins';
+    font-weight: 700;
+   
+    
+}
+
+.inforCalCurso ul{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    gap: 0.4rem;
+} 
+
+
+/* BLOCO2------container2--------------------------------- */
+#bloco2-container2{
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    width: 40%;
+
+}
+
+.container2-item{
+    display: flex;
+    width: 50%;
+    margin-right: 25%;
+    flex-direction: column;
+
+}
+
+form input{
+    border-radius: 5px;
+    border: none;
+    height: 3rem;
+    margin-top: 2%;
+    padding-left: 5%;
+}
+
+.container2-item input[type=submit]{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10%;
+    height: 4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0E0E0E;
+    color: #FFFFFF;
+}
+
+
+.container2-item p{
+    padding: 20% 0 10% 0;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+.container2-item form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+}
+
+#container2-item-relatorio {
+    display: flex;
+    width: 150%;
+    height: 100%;
+
+}
+
+#relatorio{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100%;
+    width: 100%;
+}
+
+#relatorio ul li{
+   margin-top: 2%;
+}
+ 
+
+
+
+
+
+/* FOOTER----------------------------------------------------- */
+footer{
+    display: flex;
+    background-color: #E9BB4E;
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
+}
+
+footer ul{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2em;
+    color: #0E0E0E;
+
+}
+
+.footer-logo{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    padding: 2%;
+}
+
+#bloco4-footer{
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+    padding: 0 2.5%;
+}
+
+#bloco4-titulo4{
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #0E0E0E;
+    margin-bottom: 5%;
+
+}
+.bloco4-endereco{
+    width: 30%;
+}
+
+iframe{
+    height: 65%;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.bloco4-map-end{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #0E0E0E;  
+}
+
+.bloco4-links{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bloco4-medias{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%;    */
+}
+
+.bloco4-medias section{
+    width: 100%;
+}
+
+.bloco4-medias ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.bloco4-links, .bloco4-medias, .bloco4-rest{
+    width: 20%;
+    padding-left: 5%;
+}
