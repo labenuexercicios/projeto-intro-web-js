@@ -695,3 +695,5 @@ const relatorioEstudante = (estudante) =>{
 
 }
 console.log(relatorioEstudante(buscarEstudantes('lucas breia')))
+
+//INTERAÇÃO COM O DOM

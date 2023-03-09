@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>LabEscola</title>
+    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="/styles/adm.css">
+</head>
+<body>
+    <header> 
+
+        <div id="barra-menu" class="center">
+
+            <div class="logo">
+              <a href="./index.html"><img src="/LabEscola/Frame 2-7.png" alt="LabEscola"></a>               
+            </div>
+
+            <nav class="controles">
+              <a href="index.html">Home</a>
+              <a href="cursos.html">Cursos</a>
+              <a href="contato.html">Contato</a>
+              <a href="adm.html">Área ADM</a>
+            </nav>
+
+        </div>
+
+    </header>
+    <!-- Fim do Header -->
+
+    <main>
+      <div class="nav-main">
+          <nav class="controles-nav-main">
+            <a href="#">Turmas</a>
+            <a href="./matriculas-adm.html">Matrículas</a>
+            <a href="./financeiro.html">Financeiros Alunos</a>
+          </nav>
+      </div>
+
+      <section class="section-buscar">
+        <div class="divSearch">
+                
+          <input type="text" id="txtBusca" placeholder="Digite o nome da Turma"/>
+          <button id="btnBuscar" onclick="turmasFiltradas()">Buscar</button>
+                
+        </div>
+
+        <div id="container-cards">
+                
+
+        </div>
+      </section>
+
+      <div class="btn-wpp">
+        <a href="contato.html"><img src="/LabEscola/logos_whatsapp-icon.png" alt="logo-wpp"/></a>
+      </div>
+      <!-- Botão WPP -->
+
+    </main>
+
+    <footer>
+        <div class="center">
+          <img src="/LabEscola/Frame 2-7.png" alt="LabEscola logo" id="logo" />
+        </div>
+  
+        <div class="container-footer">
+          <div class="endereco">
+            <h2>Endereço</h2>
+  
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9964142001095!2d-46.700690885133845!3d-23.568572267743498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1671425227843!5m2!1spt-BR!2sbr"
+                width="295"
+                height="195"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <!-- Mapa -->
+              <p>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+              <!-- Endereço -->
+            </div>
+          </div>
+  
+          <div class="links">
+            <h2>Links</h2>
+  
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./cursos.html">Cursos</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="./contato.html">Fale conosco</a></li>
+              <li><a href="#">Termos e condições</a></li>
+              <li><a href="#">Política e privacidade</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+  
+          <div class="midias">
+            <h2>Redes Sociais</h2>
+  
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="/LabEscola/icon-twitter 1.svg" alt="" />
+                </a>
+              </li>
+  
+              <li>
+                <a href="#">
+                  <img src="/LabEscola/icon-linkedin 1.svg" alt="" />
+                </a>
+              </li>
+  
+              <li>
+                <a href="#"> <img src="/LabEscola/icon-fb 1.svg" alt="" /> </a>
+              </li>
+  
+              <li>
+                <a href="#"> <img src="/LabEscola/icon-ig 1.svg" alt="" /> </a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="area-restrita">
+            <h2>Área Restrita</h2>
+  
+            <ul>
+              <li><a href="./adm.html">Área administrativa</a></li>
+              <li><a href="#">Espaço do aluno</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- Fim do footer -->
+    
+</body>
+</html>

@@ -118,7 +118,7 @@ main{
 }
 
 .card:hover{
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(101, 100, 173, 0.5);
 }
 
 /* Trabalhando noo botao central */
@@ -268,14 +268,14 @@ footer{
 .container-footer{
     display: flex;
     justify-content: center;
-    gap: 55px;
+    gap: 3rem;
     margin-top: 4em;
     
 }
 
 .container-footer h2{
-    font-size: 15px;
-    margin-bottom: 25px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
 .mapa{
@@ -283,22 +283,22 @@ footer{
     width: 300px;
     height: 200px;
     background-color: #fff;
-    margin: 0 0 12px 0;
+    margin: 0 0 0.7rem 0;
 }
 
 .links li, .midias li, .area-restrita li{
-    margin: 5px;
+    margin: 0.2rem;
     list-style-type: none;
 }
 
 .links{
-    margin-left: 50px;
+    margin-left: 3rem;
     
 }
 
 .links a, .area-restrita a{
     color: #000;
-    font-size: 18px;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 
@@ -311,18 +311,18 @@ footer{
 
 .midias ul{
     display: flex;
-    margin-top: -30px;
+    margin-top: -2rem;
 }
 
 .midias a{
-    font-size: 40px;
+    font-size: 2.2rem;
     color: #000;
 }
 
 .midias h2{
-    margin-left: -48px;
+    margin-left: -3rem;
 }
 
 .area-restrita{
-    margin-left: 50px;
+    margin-left: 3rem;
 }
