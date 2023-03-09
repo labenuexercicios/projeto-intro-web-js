@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+:root{
+    --corDestaque: #F6C34A;
+}
+
+/* Trabalhando no header com flexbox */
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBFBFB;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+.controles{
+    display: flex;
+    gap: 1em;
+    margin-left: 20em;
+    font-weight: 600;
+    
+}
+
+.logo{
+    max-width: 100%;
+    margin-left: 1em;
+}
+
+.controles a{
+    text-decoration: none;
+    color: #0E0E0E;
+    width: 7vw;
+}
+
+.controles a::after{
+    content: '';
+    display: block;
+    height: 0.55vh;
+    width: 0;
+    background: #00949C;
+    transition: all .5s;
+
+}
+
+.controles a:hover::after{
+    width: 100%;
+}
+
+/* Trabalhando na Main */
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0E0E0E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* TRABALHANDO NA SECTION E NO FORMULÁRIO */
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 45px;
+    background: #F0F0F0;
+    border-radius: 10px;
+    width: 30vw;
+    box-shadow: rgba(222, 219, 219, 0.15) 1.95px 1.95px 2.6px;
+}
+
+section h2{
+    color: #0E0E0E;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+section form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+}
+
+form label{
+    color: #0E0E0E;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+form input{
+    padding: 1rem;
+    outline: none;
+    border: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+form input:focus{
+    border-radius: 16px;
+}
+
+form textarea{
+    padding: 1rem;
+    outline: none;
+    border: 0;
+    margin-bottom: 30px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+form textarea:focus{
+    border-radius: 16px;
+}
+
+form button{
+    padding: 1rem;
+    background-color: var(--corDestaque);
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+
+form button:hover{
+    background-color: #e3b54b;
+}
+
+/* botão wpp */
+@keyframes btn-cta {
+    0%{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+
+    50%{
+        position: fixed;
+        bottom: 60px;
+        right: 50px;
+    }
+
+    100%{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+}
+
+.btn-wpp img{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    animation-name: btn-cta;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Footer */
+footer{
+    background-color: var(--corDestaque);
+    width: 100vw;
+    height: 80vh;
+}
+
+.center{
+    width: 85%;
+    margin: 0 auto;
+    padding: 3% 3%;
+}
+
+#logo{
+    margin-top: 1em;
+    margin-right: 57em;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4em;
+    
+}
+
+.container-footer h2{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mapa{
+    border: 2px solid black;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    margin: 0 0 0.7rem 0;
+}
+
+.links li, .midias li, .area-restrita li{
+    margin: 0.2rem;
+    list-style-type: none;
+}
+
+.links{
+    margin-left: 3rem;
+    
+}
+
+.links a, .area-restrita a{
+    color: #000;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+.midias{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.midias ul{
+    display: flex;
+    margin-top: -2rem;
+}
+
+.midias a{
+    font-size: 2.2rem;
+    color: #000;
+}
+
+.midias h2{
+    margin-left: -3rem;
+}
+
+.area-restrita{
+    margin-left: 3rem;
+}

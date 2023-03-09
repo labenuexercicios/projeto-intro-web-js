@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+:root{
+    --corDestaque: #F6C34A;
+}
+
+/* Trabalhando no header com flexbox */
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBFBFB;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+.controles{
+    display: flex;
+    gap: 1em;
+    margin-left: 20em;
+    font-weight: 600;
+    
+}
+
+.logo{
+    max-width: 100%;
+    margin-left: 1em;
+}
+
+.controles a{
+    text-decoration: none;
+    color: #0E0E0E;
+    width: 7vw;
+}
+
+.controles a::after{
+    content: '';
+    display: block;
+    height: 0.55vh;
+    width: 0;
+    background: #00949C;
+    transition: all .5s;
+
+}
+
+.controles a:hover::after{
+    width: 100%;
+}
+
+/* trabalhando na main */
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    
+}
+
+/* botão wpp */
+@keyframes btn-cta {
+    0%{
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+    }
+
+    50%{
+        position: fixed;
+        bottom: 3.4rem;
+        right: 3rem;
+    }
+
+    100%{
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+    }
+}
+
+.btn-wpp img{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 3rem;
+    height: 3rem;
+    animation-name: btn-cta;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Trabalhando na Section de Buscar Turmas */
+.nav-main{
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0E0E0E;
+}
+
+.controles-nav-main{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15rem;
+    margin-left: 2rem;
+}
+
+.controles-nav-main a{
+    display: flex;
+    flex-direction: column;
+    color: #707070;
+    text-decoration: none;
+    margin-bottom: 3rem;
+}
+
+.section-matricula{
+    background-color: #F6C34A;
+    width: 80vw;
+    border-bottom: 0.2rem solid #0E0E0E;
+    
+    
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 20vw;
+    margin-left: 10rem;
+    
+    
+}
+
+.ip-nome{
+    display: flex;
+    height: 4vh;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.ip-curso{
+    display: flex;
+    height: 4vh;
+    border: none;
+    border-radius: 0.3rem;
+    font-family: 'Poppins';
+}
+
+.ip-turma{
+    display: flex;
+    height: 4vh;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.ip-parcela{
+    display: flex;
+    height: 4vh;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.btn-matricular{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 0.3rem;
+
+    background-color: #0E0E0E;
+    color: #FBFBFB;
+    height: 5vh;
+    cursor: pointer;
+}
+
+.matriculas{
+    display: flex;
+    margin-left: 10rem;
+    margin-top: 5rem;
+}
+
+.aluno{
+    display: flex;
+    margin-left: 45rem;
+    margin-top: -19.5rem;
+}
+
+.joinha{
+    display: flex;
+    margin-left: 57rem;
+    margin-top: -2.2rem;
+}
+
+
+/* Footer */
+footer{
+    background-color: var(--corDestaque);
+    width: 100vw;
+    height: 90vh;
+}
+
+.center{
+    width: 85%;
+    margin: 0 auto;
+    padding: 3% 3%;
+}
+
+#logo{
+    margin-top: 1em;
+    margin-right: 57em;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4em;
+    
+}
+
+.container-footer h2{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mapa{
+    border: 2px solid black;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    margin: 0 0 0.7rem 0;
+}
+
+.links li, .midias li, .area-restrita li{
+    margin: 0.2rem;
+    list-style-type: none;
+}
+
+.links{
+    margin-left: 3rem;
+    
+}
+
+.links a, .area-restrita a{
+    color: #000;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+.midias{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.midias ul{
+    display: flex;
+    margin-top: -2rem;
+}
+
+.midias a{
+    font-size: 2.2rem;
+    color: #000;
+}
+
+.midias h2{
+    margin-left: -3rem;
+}
+
+.area-restrita{
+    margin-left: 3rem;
+}

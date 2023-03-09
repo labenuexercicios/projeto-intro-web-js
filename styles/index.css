@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+:root{
+    --corDestaque: #F6C34A;
+}
+
+/* Trabalhando no header com flexbox */
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBFBFB;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+.controles{
+    display: flex;
+    gap: 1em;
+    margin-left: 20em;
+    font-weight: 600;
+    
+}
+
+.logo{
+    max-width: 100%;
+    margin-left: 1em;
+}
+
+.controles a{
+    text-decoration: none;
+    color: #0E0E0E;
+    width: 7vw;
+}
+
+nav a::after{
+    content: '';
+    display: block;
+    height: 0.55vh;
+    width: 0;
+    background: #00949C;
+    transition: all .5s;
+
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+/* Main */
+main{
+    width: 100%;
+    background-image: url('/LabEscola/background-hero.png');
+    background-color: var(--corDestaque);
+}
+
+/* bloco 1 */
+.bloco1{
+    width: 100%;
+    height: calc(100vh - 4.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo-um{
+    font-size: 3em;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0.8rem;
+}
+
+.sub-titulo{
+    font-size: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 3rem;
+    font-weight: 3rem;
+}
+
+.botao-central{
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 0.8rem black;
+    position: relative;
+    top: 3rem;
+
+    text-decoration: none;
+}
+
+.botao-central:hover{
+    background-color: rgb(26, 25, 25);
+
+}
+
+/* botão wpp */
+@keyframes btn-cta {
+    0%{
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+    }
+
+    50%{
+        position: fixed;
+        bottom: 3.4rem;
+        right: 3rem;
+    }
+
+    100%{
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+    }
+}
+
+.btn-wpp img{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 3rem;
+    height: 3rem;
+    animation-name: btn-cta;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.bloco2{
+    background-color: #000;
+    width: 100%;
+    color: #fff;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.titulo-h2{
+    font-size: 2em;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.paragrafo2{
+   
+    width: 80%;
+    margin: 1.2rem auto;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+   
+}
+
+/* cards */
+.container-card{
+    width: 10vw;
+    margin: 0em 10rem 10rem 10rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+   
+
+}
+
+.card{
+    width: 80vw;
+    height: 50vh;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0 0.8rem 0;
+
+}
+
+.card p{
+    width: 20vw;
+    font-size: 0.9rem;
+    line-height: 25px;
+    font-weight: 1em;
+    text-align: center;
+}
+
+/* Footer */
+footer{
+    background-color: var(--corDestaque);
+    width: 100vw;
+    height: 80vh;
+}
+
+.center{
+    width: 85%;
+    margin: 0 auto;
+    padding: 3% 3%;
+}
+
+#logo{
+    margin-top: 1em;
+    margin-right: 57em;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4em;
+    
+}
+
+.container-footer h2{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mapa{
+    border: 2px solid black;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    margin: 0 0 0.7rem 0;
+}
+
+.links li, .midias li, .area-restrita li{
+    margin: 0.2rem;
+    list-style-type: none;
+}
+
+.links{
+    margin-left: 3rem;
+    
+}
+
+.links a, .area-restrita a{
+    color: #000;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+.midias{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.midias ul{
+    display: flex;
+    margin-top: -2rem;
+}
+
+.midias a{
+    font-size: 2.2rem;
+    color: #000;
+}
+
+.midias h2{
+    margin-left: -3rem;
+}
+
+.area-restrita{
+    margin-left: 3rem;
+}

@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+:root{
+    --corDestaque: #F6C34A;
+}
+
+/* Trabalhando no header com flexbox */
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBFBFB;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+.controles{
+    display: flex;
+    gap: 1em;
+    margin-left: 20em;
+    font-weight: 600;
+    
+}
+
+.logo{
+    max-width: 100%;
+    margin-left: 1em;
+}
+
+.controles a{
+    text-decoration: none;
+    color: #0E0E0E;
+    width: 7vw;
+}
+
+.controles a::after{
+    content: '';
+    display: block;
+    height: 0.55vh;
+    width: 0;
+    background: #00949C;
+    transition: all .5s;
+
+}
+
+.controles a:hover::after{
+    width: 100%;
+}
+
+/* Trabalhando na Main */
+main{
+    width: 100vw;
+    background-color: var(--corDestaque);
+}
+
+/* Trabalhando nos cards da Main */
+.bloco1{
+    width: 100vw;
+    height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+
+.container-card{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 0.438em;
+}
+
+.card{
+    width: 25vw;
+    height: 45vh;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 255);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    right: 25px;
+    
+}
+
+.card p{
+    width: 270px;
+    font-size: 13px;
+    line-height: 25px;
+    font-weight: 700px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.card:hover{
+    background: rgba(101, 100, 173, 0.5);
+}
+
+/* Trabalhando noo botao central */
+.botao-central{
+    background-color: #000;
+    color: #fff;
+    padding: 15px 75px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    margin-top: 7rem;
+    text-decoration: none;
+}
+
+.botao-central:hover{
+    background-color: rgb(26, 25, 25);
+
+}
+
+/* botão wpp */
+@keyframes btn-cta {
+    0%{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+
+    50%{
+        position: fixed;
+        bottom: 60px;
+        right: 50px;
+    }
+
+    100%{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+}
+
+.btn-wpp img{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    animation-name: btn-cta;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Trabalhando na segunda parte - cards de modulos cursos */
+.bloco2{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0E0E0E;
+    color: #FBFBFB;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-card-modulos{
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.card-modulo{
+    width: 60vw;
+    height: 70vh;
+    margin-top: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 255);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    color: #0E0E0E;
+    
+}
+
+.card-modulo:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.titulo-modulos{
+    font-size: 20px;
+    margin-top: 2.5em;
+    margin-right: 30em;
+    display: flex;
+    flex-direction: row;
+}
+
+.modulo1{
+    margin-top: -5em;
+    font-size: 15px;
+    margin-right: 10em;
+}
+
+.h3-um{
+    margin-right: 7.2em;
+}
+
+.modulo2{
+    margin-top: -7.8em;
+    font-size: 15px;
+    margin-right: -30em;
+}
+
+.h3-dois{
+    margin-right: 7.2em;
+}
+
+/* Footer */
+footer{
+    background-color: var(--corDestaque);
+    width: 100vw;
+    height: 80vh;
+}
+
+.center{
+    width: 85%;
+    margin: 0 auto;
+    padding: 3% 3%;
+}
+
+#logo{
+    margin-top: 1em;
+    margin-right: 57em;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4em;
+    
+}
+
+.container-footer h2{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mapa{
+    border: 2px solid black;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    margin: 0 0 0.7rem 0;
+}
+
+.links li, .midias li, .area-restrita li{
+    margin: 0.2rem;
+    list-style-type: none;
+}
+
+.links{
+    margin-left: 3rem;
+    
+}
+
+.links a, .area-restrita a{
+    color: #000;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+.midias{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.midias ul{
+    display: flex;
+    margin-top: -2rem;
+}
+
+.midias a{
+    font-size: 2.2rem;
+    color: #000;
+}
+
+.midias h2{
+    margin-left: -3rem;
+}
+
+.area-restrita{
+    margin-left: 3rem;
+}
