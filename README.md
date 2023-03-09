@@ -1,6 +1,6 @@
 # Projeto de Introdução Web - JavaScript
 
-- Link deploy: https://ultra-pain.surge.sh
+- Link surge: https://ultra-pain.surge.sh
 - Link github: https://github.com/Julia-slvbrg/projeto-intro-web-js/pull/1
 
 ## Javascript
