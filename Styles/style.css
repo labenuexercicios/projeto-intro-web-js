@@ -1,0 +1,1087 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --color-bg-footer: #F6C34A;
+    --color-text-footer: #0E0E0E;
+    --transition: all 400ms ease-in-out;
+    --container-width-lg: 90vw;
+    --container-width-md: 95vw;
+    --container-width-sm: 90vw;
+}
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    max-width: 100vw;
+    font-family: 'Poppins';
+}
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*-------------------------------------------GERAL------------------------------------------- */
+figure,
+figure img {
+    width: 100%;
+}
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+.container .title {
+    text-align: center;
+    font-weight: 700;
+}
+/* --------------------------------------Botões pretos---------------------------------- */
+.cta_btn {
+    background-color: var(--color-text-footer);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    color: #fbfbfb;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    transition: var(--transition);
+}
+.cta_btn:hover {
+    transform: scale(1.2);
+}
+/* --------------------------------------Botão Whats----------------------------------------- */
+#cta_wpp {
+    position: fixed;
+    width: 3%;
+    right: 4.5%;
+    top: 70vh;
+    transition: var(--transition);
+}
+#cta_wpp:hover {
+    transform: scale(1.2);
+}
+/* -----------------------------------------------MENU------------------------------------------------------ */
+#header {
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    z-index: 1;
+}
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 8vh;
+}
+#header .container figure {
+    width: 15%;
+}
+#header .container ul {
+    height: 8vh;
+    display: flex;
+    gap: .1rem;
+}
+#header .container ul li {
+    transition: var(--transition);
+    height: 100%;
+}
+#header .container ul li:hover {
+    background-color: #F6C34A;
+}
+#header .container ul li a {
+    font-family: 'Poppins';
+    font-weight: 700;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+#header .container ul li a:hover {
+    color: white;
+}
+/* --------------------------------------------MENU ON--------------------------------------------- */
+.active_header {
+    background-color: #F6C34A;
+    color: white !important;
+}
+/* ----------------------------------------------------EFEITOS DOS CARTOES------------------------------- */
+.galeria .card {
+    border: 1px solid transparent;
+    transition: var(--transition);
+    cursor: default;
+}
+.galeria .card:hover {
+    border-color: black;
+    background-color: #f8efe0 !important;
+}
+/* --------------------------------------------FOOTER---------------------------------------------- */
+#footer {
+    background-color: var(--color-bg-footer);
+}
+#footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#footer .container figure {
+    width: 15%;
+}
+#footer .container .menu {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+#footer .container .menu a {
+    color: black;
+    transition: var(--transition);
+}
+#footer .container .menu a:hover {
+    color: gray;
+}
+#footer .container .menu .text-color-weak {
+    color: var(--color-text-footer);
+    font-weight: 400;
+}
+#footer .container .menu .endereco,
+#footer .container .menu .links,
+#footer .container .menu .redes-sociais,
+#footer .container .menu .area-restrita {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#footer .container .menu .redes-sociais {
+    text-align: center;
+}
+#footer .container .menu .redes-sociais div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+#footer .container .menu .redes-sociais div figure {
+    text-align: center;
+}
+#footer .container .menu .redes-sociais div figure a img {
+    transition: var(--transition);
+}
+#footer .container .menu .redes-sociais div figure a img:hover {
+    filter: invert(55%) sepia(0%) saturate(1367%) hue-rotate(171deg) brightness(92%) contrast(77%);
+}
+#footer .container .menu .endereco .mapouter .gmap_canvas {
+    transform: translateY(0px);
+    border-radius: 10px;
+}
+/*--------------------------------------------HOME----------------------------------------------------*/
+#home .top {
+    background: url('../assets/background-hero.png'), #F6C34A no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+}
+#home .top .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+#home .top .container div .title {
+    font-size: 2.5rem;
+}
+#home .container div .subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+}
+#home .top #cta_wpp {
+    top: 80vh;
+}
+#home .middle,
+#home .bottom {
+    background-color: #0E0E0E;
+    color: white;
+}
+#home .middle .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#home .middle .container p {
+    font-family: 'Open Sans';
+    font-size: .9rem;
+    text-align: justify;
+    width: 60%;
+    margin: 0 auto;
+}
+#home .bottom .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#home .bottom .container .galeria {
+    display: flex;
+    gap: 2rem;
+}
+#home .bottom .container .galeria .card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: white;
+    padding: 2rem 1rem;
+    border-radius: 7px;
+}
+#home .bottom .container .galeria .card figure {
+    text-align: center;
+}
+#home .bottom .container .galeria .card figure img {
+    width: 40%;
+}
+#home .bottom .container .galeria .card p {
+    color: #0E0E0E;
+    margin: 0 auto;
+}
+/*-------------------------------------------------CURSOS------------------------------------------------- */
+#cursos .top {
+    background: #F6C34A no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+}
+#cursos .top .container {
+    padding-top: 4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+#cursos .top .container .galeria {
+    display: flex;
+    gap: 5rem;
+    margin-top: 7rem;
+}
+#cursos .top .container .galeria .card {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    box-shadow: 0 0 5px black;
+}
+#cursos .top .container .galeria .card .title {
+    font-weight: 700;
+}
+#cursos .top .container .galeria .card p {
+    font-weight: 400;
+}
+#cursos .top .container figure {
+    position: fixed;
+    width: 3%;
+    right: 3%;
+    top: 80vh;
+}
+#cursos .bottom {
+    background-color: #0E0E0E;
+}
+#cursos .bottom .container {
+    padding: 10rem 0;
+}
+#cursos .bottom .container .galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+#cursos .bottom .container .galeria .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    padding: 2rem 2rem;
+    border-radius: 7px;
+    width: 70%;
+}
+#cursos .bottom .container .galeria .card .title {
+    color: black;
+    font-size: 34px;
+}
+#cursos .bottom .container .galeria .card .center,
+#cursos .bottom .container .galeria .card .right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#cursos .bottom .container .galeria .card .center h5,
+#cursos .bottom .container .galeria .card .right h5 {
+    font-size: 24px;
+    font-weight: 700;
+}
+/*======================================CONTATO============================================== */
+#id-CONTATO {
+    background-color: #0E0E0E;
+}
+#id-CONTATO .container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+#id-CONTATO .container form {
+    background-color: white;
+    border-radius: 10px;
+    width: 30%;
+    padding: 2rem;
+}
+#id-CONTATO .container form .title {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+#id-CONTATO .container form label {
+    font-weight: 700;
+}
+#id-CONTATO .container form label span {
+    color: red;
+}
+#id-CONTATO .container form input,
+#id-CONTATO .container form textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: .4rem .2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+#id-CONTATO .container form button {
+    width: 100%;
+    text-align: center;
+    background-color: #F6C34A;
+    border-radius: 7px;
+    padding: 1rem 0;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+#id-CONTATO .container form button:hover {
+    border-color: #F6C34A;
+    background-color: #f8ce6a;
+}
+#id-CONTATO #cta_wpp {
+    top: 80vh;
+}
+/*----------------------------------------------ADM--------------------------------------------- */
+.active {
+    color: white !important;
+}
+#id-ADM {
+    display: flex;
+    padding-top: 3rem;
+}
+#id-ADM section #matricula,
+#id-ADM section #financeiroalunos {
+    display: none;
+}
+#id-ADM nav {
+    background-color: #0E0E0E;
+    font-weight: 700;
+    font-size: 20px;
+    width: 20vw;
+}
+#id-ADM nav .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+#id-ADM nav .container li {
+    text-align: left;
+}
+#id-ADM nav .container li button {
+    color: #707070;
+    background-color: transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+#id-ADM section {
+    border-bottom: 1px solid black;
+    background-color: #F6C34A;
+    width: 100%;
+}
+#id-ADM #botao {
+    background-color: black;
+    color: white;
+    padding: .5rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+#id-ADM #botao:hover {
+    border-color: black;
+    background-color: #4a4a4a;
+}
+/* -----------------------------------------------TURMAS---------------------------------------------- */
+#id-ADM section #turmas .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    padding: 3rem 2rem;
+}
+#id-ADM section #turmas .container .top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#id-ADM section #turmas .container .top input {
+    padding: .5rem 1rem;
+    width: 20%;
+    margin-right: -.2rem;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+#id-ADM section #turmas .container .top input:focus {
+    border-color: black;
+    width: 30%;
+}
+#id-ADM section #turmas .container .galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+#id-ADM section #turmas .container .galeria .card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+}
+#id-ADM section #turmas .container .galeria .card .body {
+    font-family: 'Open Sans';
+}
+#id-ADM section #turmas .container .galeria .card .body p {
+    text-align: left;
+}
+#id-ADM section #turmas .container .galeria .card .body p span {
+    font-weight: bold;
+}
+/* --------------------------------------------MATRICULA------------------------------------------------ */
+#id-ADM section #matricula .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 90%;
+}
+#id-ADM section #matricula .container .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#id-ADM section #matricula .container .left .title {
+    text-align: left;
+}
+#id-ADM section #matricula .container .left form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#id-ADM section #matricula .container .left form label {
+    font-weight: bold;
+    margin-bottom: -1rem;
+    text-transform: capitalize;
+}
+#id-ADM section #matricula .container .left form label span {
+    color: red;
+}
+#id-ADM section #matricula .container .left form input {
+    width: 60%;
+    border-radius: 3px;
+    padding: .3rem .2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+#id-ADM section #matricula .container .left input:focus {
+    border-color: black;
+}
+#id-ADM section #matricula .container .left form #botao {
+    border-radius: 3px;
+    width: 60%;
+}
+#id-ADM section #matricula .container .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    visibility: hidden;
+}
+#id-ADM section #matricula .container .right .top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#id-ADM section #matricula .container .right .top figure {
+    width: 10%;
+}
+#id-ADM section #matricula .container .right .bottom p {
+    text-transform: capitalize;
+}
+#id-ADM section #matricula .container .right .bottom p span {
+    font-weight: bold;
+}
+/* -------------------------------------FINANCEIRO------------------------------------------ */
+#id-ADM section #financeiroalunos #lista_cursos {
+    position: absolute;
+    width: 40vw;
+    background-color: #0E0E0E;
+    border-radius: 10px;
+    left: 43%;
+    top: 15%;
+    transition: var(--transition);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+    gap: 1rem;
+}
+#id-ADM section #financeiroalunos #lista_cursos .close {
+    font-size: 1.5rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
+    text-align: right;
+}
+#id-ADM section #financeiroalunos #lista_cursos .close img {
+    cursor: pointer;
+    width: 6%;
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(136deg) brightness(103%) contrast(103%);
+}
+#id-ADM section #financeiroalunos #lista_cursos .title {
+    margin-bottom: 1rem;
+    color: #F6C34A;
+}
+#id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body {
+    padding: 0 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+#id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body .top {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #F6C34A;
+}
+#id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body .top p {
+    width: 40%;
+    text-align: left;
+}
+#id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body .body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 300;
+}
+#id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body .body p {
+    width: 40%;
+    text-align: left;
+}
+#id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body .body button {
+    background-color: green;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: .2rem 1rem;
+    border-radius: 5px;
+    transition: var(--transition);
+    font-size: 1.1rem;
+    color: white;
+}
+#id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body .body button:hover {
+    background-color: transparent;
+    border-color: lightgreen;
+}
+#id-ADM section #financeiroalunos .container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+#id-ADM section #financeiroalunos .container .title {
+    text-align: left;
+}
+#id-ADM section #financeiroalunos .container .left,
+#id-ADM section #financeiroalunos .container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#id-ADM section #financeiroalunos .container .left label,
+#id-ADM section #financeiroalunos .container .right label {
+    font-weight: 700;
+}
+#id-ADM section #financeiroalunos .container .left input,
+#id-ADM section #financeiroalunos .container .right input {
+    width: 50%;
+    border-radius: 3px;
+    padding: .3rem .2rem;
+    margin-top: -.8rem;
+}
+#id-ADM section #financeiroalunos .container .left #botao,
+#id-ADM section #financeiroalunos .container .right #botao {
+    width: 50%;
+    padding: .7rem 0;
+    border-radius: 3px;
+}
+#id-ADM section #financeiroalunos .container .left {
+    width: 70%;
+}
+#id-ADM section #financeiroalunos .container .left p {
+    font-weight: 700;
+}
+#id-ADM section #financeiroalunos .container .left #procurarCurso {
+    width: 50%;
+    background-color: white;
+    height: 4vh;
+    margin-top: -.8rem;
+    border-radius: 3px;
+    padding: 0 .3rem;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+#id-ADM section #financeiroalunos .container .left #procurarCurso:hover {
+    border-color: black;
+}
+#id-ADM section #financeiroalunos .container .left #procurarCurso .show_curso {
+    padding: 0 .3rem;
+    border-radius: 5px;
+    border: 1px dashed black;
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+#id-ADM section #financeiroalunos .container .left #procurarCurso .show_curso p {
+    font-weight: 400;
+}
+#id-ADM section #financeiroalunos .container .left #procurarCurso .show_curso img {
+    cursor: pointer;
+}
+#id-ADM section #financeiroalunos .container .left .addCurso {
+    width: 50%;
+    background-color: transparent;
+    margin-top: -.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: left;
+}
+#id-ADM section #financeiroalunos .container .left input {
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+#id-ADM section #financeiroalunos .container .left input:focus {
+    border-color: black;
+}
+#id-ADM section #financeiroalunos .container .left #curso_valor {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 70%;
+}
+#id-ADM section #financeiroalunos .container .left #curso_valor .text {
+    font-weight: 400;
+}
+#id-ADM section #financeiroalunos .container .right {
+    width: 60%;
+}
+#id-ADM section #financeiroalunos .container .right input {
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+#id-ADM section #financeiroalunos .container .right input:focus {
+    border-color: black;
+}
+#id-ADM section #financeiroalunos .container .right #relatorio-msg {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    margin-top: 3rem;
+}
+#id-ADM section #financeiroalunos .container .right #relatorio-msg p span {
+    font-weight: bold;
+}
+/* ------------------------------------------------ MEDIA QUERIES (MD) ------------------------------------------------ */
+@media screen and (max-width: 1024px) {
+    /* -----------------------------------------------General Styles-------------------------------------------- */
+    .container {
+        width: var(--container-width-md);
+        padding: 2rem 0;
+    }
+    .container .title {
+        font-size: 1.7rem;
+    }
+    #cta_wpp {
+        width: 8%;
+    }
+    /*-------------------------------------------- Botões pretos------------------------------------------------- */
+    .cta_btn {
+        font-size: 1.6rem;
+    }
+    /* -------------------------------------------------header------------------------------------------------ */
+    #header .container {
+        height: 6vh;
+    }
+    #header .container figure {
+        width: 25%;
+    }
+    #header .container ul {
+        height: 6.1vh;
+        font-size: 1.2rem;
+    }
+    /* ----------------------------------------FOOTER----------------------------------------------- */
+    #footer .container figure {
+        width: 100%;
+        text-align: center;
+    }
+    #footer .container figure img {
+        width: 30%;
+    }
+    #footer .container .menu {
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    #footer .container .menu h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    #footer .container .menu .endereco,
+    #footer .container .menu .links,
+    #footer .container .menu .redes-sociais,
+    #footer .container .menu .area-restrita {
+        width: 45%;
+        text-align: center;
+    }
+    #footer .container .menu .redes-sociais div {
+        gap: .5rem;
+    }
+    #footer .container .menu .redes-sociais div figure {
+        width: 10%;
+    }
+    #footer .container .menu .redes-sociais div figure a img {
+        width: 100%;
+    }
+    /*---------------------------------------------HOME---------------------------------------------*/    
+    #home .top .container div .title {
+        font-size: 3rem;
+    }
+    #home .container div .subtitle {
+        font-size: 1.4rem;
+    }
+    #home .top #cta_wpp {
+        top: 80vh;
+    }
+    #home .middle .container p {
+        font-size: 1rem;
+        width: 80%;
+    }
+    #home .bottom .container .galeria {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #home .bottom .container .galeria .card {
+        width: 45%;
+    }
+    #home .bottom .container .galeria .card figure img {
+        width: 50%;
+    }
+    /*-------------------------------------------CURSOS----------------------------------------------- */
+    #cursos .top .container .galeria {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    #cursos .top .container .galeria .card {
+        gap: 2rem;
+    }
+    #cursos .top .container .galeria .card .title {
+        font-weight: 700;
+    }
+    #cursos .top .container .galeria .card p {
+        font-weight: 400;
+    }
+    #cursos .top .container figure {
+        width: 9%;
+    }
+    #cursos .bottom .container {
+        padding: 5rem 0;
+    }
+    #cursos .bottom .container .galeria .card {
+        width: 100%;
+    }
+    /*------------------------------------------CONTAT------------------------------------------*/  
+    #id-CONTATO .container {
+        padding-top: 7rem;
+    }
+    #id-CONTATO .container form {
+        width: 50%;
+    }
+    #id-CONTATO #cta_wpp {
+        top: 45vh;
+    }
+    /*------------------------------------------id-ADM------------------------------------------ */
+    #id-ADM nav {
+        width: 30vw;
+    }
+    #id-ADM nav .container {
+        width: 70vw;
+    }
+    /* ------------------------------------------TURMAS---------------------------------------------*/
+    #id-ADM section #turmas .container .top input {
+        width: 25%;
+    }
+    #id-ADM section #turmas .container .top input:focus {
+        width: 40%;
+    }
+    #id-ADM section #turmas .container .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    #id-ADM section #turmas .container .galeria .card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: white;
+        padding: 1rem 3rem;
+        border-radius: 10px;
+    }
+    #id-ADM section #turmas .container .galeria .card .body {
+        font-family: 'Open Sans';
+    }
+    #id-ADM section #turmas .container .galeria .card .body p {
+        text-align: left;
+    }
+    #id-ADM section #turmas .container .galeria .card .body p span {
+        font-weight: bold;
+    }
+    /* --------------------------------------MATRICULA-------------------------------- */
+    #id-ADM section #matricula .container {
+        width: 90%;
+        margin-top: 2rem;
+    }
+    #id-ADM section #matricula .container .left {
+        width: 60%;
+    }
+    #id-ADM section #matricula .container .left form input {
+        width: 70%;
+    }
+    #id-ADM section #matricula .container .left form #btn {
+        width: 70%;
+    }
+    #id-ADM section #matricula .container .right .top figure {
+        width: 15%;
+    }
+    /* -----------------------------------FINANCEIRO-------------------------------------------------- */
+    #id-ADM section #financeiroalunos .container {
+        margin-top: 2rem;
+    }
+    #id-ADM section #financeiroalunos #lista_cursos {
+        width: 60vw;
+        left: 35%;
+        top: 10%;
+    }
+    #id-ADM section #financeiroalunos .container .left input,
+    #id-ADM section #financeiroalunos .container .right input {
+        width: 60%;
+    }
+    #id-ADM section #financeiroalunos .container .left #btn,
+    #id-ADM section #financeiroalunos .container .right #btn {
+        width: 60%;
+    }
+    #id-ADM section #financeiroalunos .container .left #procurarCurso {
+        width: 60%;
+        height: 2.5vh;
+    }
+    #id-ADM section #financeiroalunos .container .left #curso_valor {
+        width: 75%;
+    }
+}
+/* ---------------------------------- MEDIA QUERIES (SM) ---------------------------------- */
+@media screen and (max-width: 768px) {
+    .container {
+        width: var(--container-width-sm);
+        padding: 1rem 0;
+    }
+    .container .title {
+        font-size: 1.4rem;
+    }
+    #cta_wpp {
+        width: 11%;
+        z-index: 1;
+    }
+    
+    /* --------------------------------------header---------------------------------- */
+    #header .container figure {
+        display: none;
+    }
+    #header .container nav {
+        width: 100%;
+    }
+    /* -------------------------------------FOOTER------------------------------------ */
+    #footer .container figure img {
+        width: 60%;
+    }
+    #footer .container .menu .endereco,
+    #footer .container .menu .links,
+    #footer .container .menu .redes-sociais,
+    #footer .container .menu .area-restrita {
+        width: 100%;
+    }
+    /*-----------------------------------------HOME-----------------------------------------*/
+    #home .middle .container p {
+        width: 100%;
+    }
+    #home .bottom .container .galeria .card {
+        width: 100%;
+    }
+    /*-------------------------------------------CURSOS------------------------------------------- */
+    #cursos .top {
+        height: 100%;
+    }
+    #cursos .top .container {
+        padding: 0;
+    }
+    #cursos .bottom .container {
+        padding: 5rem 0;
+    }
+    #cursos .bottom .container .galeria .card {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    /*---------------------------------------------CONTATO--------------------------------------------- */
+    #id-CONTATO .container {
+        padding-top: 6rem;
+    }
+    #id-CONTATO .container form {
+        width: 90%;
+    }
+    /*---------------------------------------------id-ADM--------------------------------------------- */
+    #id-ADM nav {
+        width: 40vw;
+    }
+    #id-ADM nav .container {
+        width: 60vw;
+    }
+    #id-ADM nav .container li button {
+        word-wrap: break-word;
+        width: 60%;
+    }
+    /* -----------------------------------------TURMAS-------------------------------------------------- */
+    #id-ADM section #turmas .container {
+        padding: 2rem 1rem;
+    }
+    #id-ADM section #turmas .container .top {
+        width: 100%;
+    }
+    #id-ADM section #turmas .container .top input {
+        width: 40%;
+    }
+    #id-ADM section #turmas .container .top input:focus {
+        width: 80%;
+    }
+    #id-ADM section #turmas .container .galeria {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+    #id-ADM section #turmas .container .galeria .card {
+        padding: 1rem;
+    }
+    /* -------------------------MATRICULA ------------------------------------*/
+    #id-ADM section #matricula .container {
+        flex-wrap: wrap;
+    }
+    #id-ADM section #matricula .container .left,
+    #id-ADM section #matricula .container .right {
+        width: 100%;
+    }
+    #id-ADM section #matricula .container .left .title {
+        text-align: center;
+    }
+    #id-ADM section #matricula .container .left form input,
+    #id-ADM section #matricula .container .left form #btn {
+        width: 100%;
+    }
+    #id-ADM section #matricula .container .right {
+        gap: 1rem;
+    }
+    /* -----------------------------------------FINANCEIRO ------------------------------------- */
+    #id-ADM section #financeiroalunos .container {
+        flex-wrap: wrap;
+    }
+    #id-ADM section #financeiroalunos #lista_cursos {
+        width: 98vw;
+        left: 1%;
+    }
+    #id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body .body p,
+    #id-ADM section #financeiroalunos #lista_cursos #lista_cursos_body .top p {
+        text-align: center;
+    }
+    #id-ADM section #financeiroalunos .container .left,
+    #id-ADM section #financeiroalunos .container .right {
+        width: 100%;
+    }
+    #id-ADM section #financeiroalunos .container .left input,
+    #id-ADM section #financeiroalunos .container .right input {
+        width: 100%;
+    }
+    #id-ADM section #financeiroalunos .container .left #btn,
+    #id-ADM section #financeiroalunos .container .right #btn {
+        width: 100%;
+    }
+    #id-ADM section #financeiroalunos .container .left #procurarCurso {
+        width: 100%;
+        height: 3vh;
+    }
+    #id-ADM section #financeiroalunos .container .right #relatorio-msg {
+        margin: 2rem auto 0;
+    }
+}
