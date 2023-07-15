@@ -1,7 +1,7 @@
-# Projeto de Introdução Web - JavaScript
+# PROJETO INTRO-WEB - LABESCOLA
 
-- Link surge: https://ultra-pain.surge.sh
-- Link github: https://github.com/Julia-slvbrg/projeto-intro-web-js/pull/1
+- Link deploy: ultra-pain.surge.sh
+
 
 ## Javascript
 
@@ -38,30 +38,3 @@
 - Cada arquivo HTML tem um respectivo arquivo de estilização CSS com o mesmo nome.
 
 - Foi feito media query para telas entre 481px e 800px.
-
-
-## Enunciado
-
-Vamos começar nossa jornada no desenvolvimento web criando um sistema de escola de programação, porque aqui gostamos de metalinguagem!
-Este projeto será dividido em duas partes: JavaScript, e HTML+CSS. Por enquanto, vamos focar na parte de JavaScript, e em breve veremos HTML e CSS.
-
-## Requisitos
-
-- [ ]  Possui array de estudantes
-- [ ]  Possui array de cursos
-- [ ]  Possui array de turmas
-- [ ]  Todos os arrays são arrays de objeto
-- [ ]  Possui função de parcelamento de curso
-- [ ]  Função de parcelamento de curso valida desconto para múltiplos cursos
-- [ ]  Possui função de reajuste de valores dos cursos
-- [ ]  Possui busca de cursos
-- [ ]  Possui busca de turmas
-- [ ]  Possui busca de estudantes
-
-### Extra:
-
-- [ ]  Possui função de matrícula
-- [ ]  Função de matrícula aceita múltiplos cursos
-
-
-

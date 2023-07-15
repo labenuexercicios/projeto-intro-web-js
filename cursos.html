@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./cursos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+          <img src="./midias/logo.svg" alt="LabEscola logo" id="logo" />
+      </a>
+
+      <nav id="nav">
+        <span id="btn-burger" class="material-symbols-outlined" onclick="toggleMenu(event)">
+          menu
+        </span>
+        <ul id="menu">
+          <li class="links-header"><a href="./index.html">Home</a></li>
+          <li class="links-header"><a href="./cursos.html">Cursos</a></li>
+          <li class="links-header"><a href="./contato.html">Contato</a></li>
+          <li class="links-header"><a href="./adm-turmas.html">Área ADM</a></li>
+        </ul>
+      </nav>
+  </header>
+
+    <main>
+        <section>
+            <article class="about-course"  id="html-css">
+                <h1>HTML e CSS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, impedit cumque? Laborum nihil recusandae temporibus provident neque quod, dicta exercitationem, cumque dolores voluptas sequi corporis nam quas tempora rerum eius?</p>
+            </article>
+
+            <article class="about-course" id="javascript">
+                <h1>JavaScript</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, quibusdam. Aspernatur esse soluta libero eaque exercitationem impedit explicabo, reiciendis expedita delectus error dicta minus sunt consequatur blanditiis corrupti voluptas fugit?</p>
+            </article>
+
+            <article class="about-course" id="api-rest">
+                <h1>APIs e REST</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum itaque tempora perspiciatis quis placeat recusandae non quaerat dolorem? Rerum optio suscipit, facilis autem dolorum repellendus explicabo unde aspernatur quae laudantium!</p>
+            </article>
+            
+            <div id="button-div">
+              <a href="mailto:webmaster@gmail.com" id="button"><button type="button">Quero fazer parte!</button></a>
+            </div>
+        </section>
+
+        <section>
+            <article class="cursos" id="mod-html-css">
+                <h1>HTML e CSS</h1>
+                <div class="ementas">
+                  <h2>Módulo 1</h2>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                </div>
+                
+                <div class="ementas">               
+                   <h2>Módulo 2</h2>
+                    <p>Lorem, ipsum.</p>
+                    <p>Lorem, ipsum.</p>
+                    <p>Lorem, ipsum.</p>
+                   <p>Lorem, ipsum.</p>
+                </div>
+            </article>
+
+            <article class="cursos" id="mod-javascript">
+                <h1>JavaScript</h1>
+                <div class="ementas">
+                  <h2>Módulo 1</h2>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                </div>
+                
+                <div class="ementas">
+                  <h2>Módulo 2</h2>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                </div>
+            </article>
+
+            <article class="cursos" id="mod-api-rest">
+                <h1>APIs e Rest</h1>
+                <div class="ementas">
+                  <h2>Módulo 1</h2>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                </div>
+                
+                <div class="ementas">
+                  <h2>Módulo 2</h2>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                  <p>Lorem, ipsum.</p>
+                </div>
+            </article>
+        </section>
+        
+        <div class="whatsapp">
+          <a target="_blank" href="https://web.whatsapp.com/" alt="whatsapp-link">
+            <figure><img src="./midias/logos_whatsapp-icon.svg" alt="whatsapp-icon"></figure>
+          </a>
+        </div>
+    </main>
+
+    <footer>
+      <div class="logo-footer">
+          <a href="./index.html">
+            <img
+              src="./midias/logo-footer.svg"
+              alt="LabEscola logo"
+              id="logo-in-footer"/>
+          </a>
+        </div>
+  
+        <div id="adress">
+          <h3 class="titles">Endereço</h3>
+          <a
+            id="map"
+            target="_blank"
+            href="https://www.google.com.br/maps/place/R.+Pais+Leme,+215+-+Pinheiros,+S%C3%A3o+Paulo+-+SP,+05424-150/@-23.5685757,-46.6991529,18z/data=!3m1!4b1!4m5!3m4!1s0x94ce57a7c7ace4c3:0x586759cab9b5c95a!8m2!3d-23.5685772!4d-46.6985022?hl=pt-BR">
+            <img src="./midias/mapa.svg" alt="map-adress" id="map-adress"/>
+          </a>
+          <p class="text-footer">R. Pais Leme, 215. CEP 05.424-150 - Pinheiros</p>
+        </div>
+  
+        <div id="footer-menu">
+          <h3 class="titles">Links</h3>
+          <div id="list-links-footer">
+            <a class="text-footer" href="./index.html">Home</a>
+            <a href="./cursos.html" class="text-footer">Cursos</a>
+            <a href="#" class="text-footer">Blog</a>
+            <a href="./contato.html" class="text-footer">Fale Conosco</a>
+            <a href="#" class="text-footer">Termos e condições</a>
+            <a href="#" class="text-footer">Política de privacidade</a>
+            <a href="#" class="text-footer">FAQ</a>
+          </div>
+        </div>
+  
+        <div id="redes-sociais">
+          <h3 class="titles">Redes sociais</h3>
+          <div class="icons">
+            <a target="_blank" class="links-redes" href="https://twitter.com/">
+              <img src="./midias/icones/icon-twitter.svg" alt="twitter"/>
+            </a>
+  
+            <a target="_blank" class="links-redes" href="https://linkedin.com">
+              <img src="./midias/icones/icon-linkedin.svg" alt="linkedin"/>
+            </a>
+  
+            <a target="_blank" class="links-redes" href="https://facebook.com">
+              <img src="./midias/icones/icon-fb.svg" alt="facebook"/>
+            </a>
+  
+            <a target="_blank" class="links-redes" href="https://intagram.com">
+              <img src="./midias/icones/icon-ig.svg" alt="instagram"/>
+            </a>
+          </div>
+        </div>
+  
+        <div id="adm-links">
+          <h3 class="titles">Área restrita</h3>
+          <div id="areas-internas">
+            <a href="./adm-turmas.html" class="text-footer">Área administrativa</a>
+            <a href="#" class="text-footer">Espaço do aluno</a>
+          </div>
+        </div>
+  </footer>
+</body>
+</html>

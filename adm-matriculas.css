@@ -1,0 +1,342 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #FBFBFB;
+    min-height: 10vh;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo{
+    height: 4em;
+}
+
+#btn-burger{
+    display: none;
+} 
+
+.links-header{
+    list-style: none;
+    display: inline-block;
+    margin: 0 3.2em;
+    font-size: 1.2em;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3em;
+}
+
+.links-header > a{
+    color: #0E0E0E;
+    text-decoration: none;
+}
+
+.links-header > a:active{
+    text-decoration: underline;
+}
+
+main{
+    min-height: 87vh;
+    max-height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: .1em solid #0E0E0E;
+    background-color: #F6C34A;
+}
+
+#menu-adm{
+    background-color: #0E0E0E;
+    order: 1;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0 0 1em;
+}
+
+.aside-links, .aside-links > a{
+    color: #707070;
+    text-decoration: none;
+    text-align: left;
+    list-style: none;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 5em;
+}
+
+#selected-aside > a{
+    color: #FFFFFF;
+}
+
+#confirm-report{
+    order: 3;
+    flex-grow: 2;
+    padding: 2.5em 0 2.5em 0em;
+}
+
+.confirm-student{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+#confirm-check{
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.studant-info{
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-size: .78em;
+    font-weight: 400;    ;
+    line-height: 1.5em;
+}
+
+section{
+    order: 2;
+    flex-grow: 1.8;
+    padding: 2.5em 0 2.5em 10em;
+}
+
+h1{
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: .1em;
+    color: #000000;
+    margin: 2.5em 0 3em 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input{
+    width: 25em;
+    height: 2em;
+    border-radius: .3em;
+    border: #F6C34A;
+    margin-bottom: 1em;
+}
+
+#submti-button{
+    width: 26em;
+    height: 3em;
+    border-radius: .3em;
+    border-color: #0E0E0E;
+    margin-top: 1em; 
+    background-color: #0E0E0E;
+    color: #FBFBFB;
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+label{
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-size: .9em;
+    font-weight: 700;
+    line-height: 1em;
+    color: #000000; 
+    margin: 0em 0 .2em 0;
+}
+
+footer{
+    height: auto;
+    background-color: #F6C34A;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em 9em;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo-footer{
+    width: 100%;
+}
+
+.titles{
+    color: #0E0E0E;
+    margin: 1.5em 0;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1em;
+    line-height: 1em;
+}
+
+#map-adress{
+    margin-bottom: -.4em;
+}
+
+#list-links-footer, #areas-internas{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-footer{
+    text-decoration: none;
+    color: #0E0E0E;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: .87em;
+    line-height: 2.7em;
+    text-decoration: none;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 1.4em;
+}
+
+@media screen and (min-width : 481px) and (max-width : 800px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    header{
+        height: 16vh;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5em;
+    }
+
+    #logo{
+        display: block;
+        width: 10em;
+        height: 8em;
+        position: absolute;
+        top: -2em;
+        left: 1em;
+    }
+
+    #menu{
+        display: none;
+        height: 10em;
+        margin: 0;
+    }
+
+    #btn-burger{
+        display: block;
+        position: absolute;
+        top: 1em;
+        left: 70%;
+    } 
+
+    #nav.active #menu{
+        height: 7em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 4em;
+        left: 10em;
+    }   
+
+    .links-header > a{
+       margin: -11em;
+    } 
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }    
+
+    #menu-adm{
+        width: 100%;
+        height: 12vh;
+    }
+
+    #aside-list{
+        display: inline-block;
+    }
+
+    .aside-links{
+        line-height: 1em;
+        display: inline-block;
+        padding: 0 1em 0 1em;
+        margin-top: -2em;
+    }
+
+    #confirm-report, .confirm-student{
+        margin-top: -1em
+    }
+
+    section{
+        padding-left: 0;
+    }
+
+    footer{
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        display: grid;
+        grid-template-rows: 2.5em 1fr .5fr .5fr;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3em;
+        justify-items: center ;
+    }
+
+    .logo-footer{
+        grid-row: 1/2;
+        grid-column: 1/3;
+        
+    }
+
+    #adress{
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    
+    #map-adress{
+        width: 25em;
+    }
+
+    #footer-menu{
+        grid-row: 3/5;
+        grid-column: 1/2;   
+        justify-self: end;
+    }
+
+    #redes-sociais{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        justify-self: start;
+    }
+
+    #adm-links{
+        grid-row: 4/5;
+        grid-column: 2/3;
+        justify-self: start;
+    }
+}
