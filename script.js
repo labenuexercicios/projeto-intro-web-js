@@ -1,13 +1,3 @@
-//PRIMEIRA SEMANA
-
-//const turmas = ["HC1", "JS1", "JS2", "REST1", "REST2"]  //criado um array turmas
-//const estudantes = ["Gabo", "Maurício", "Leonildo", "Anna Catarina"]  //criado um array estudantes
-//const cursos = ["HTML e CSS", "JavaScript", "APIs REST" ]  //criado um array para os cursos
-
-
-//------------------------//
-
-
 const turmas = [
 {
     turma: "Hipátia",
@@ -152,16 +142,6 @@ const buscarCurso=()=>{
         icon: "error",
     }), document.getElementById('course').value = ""
 
-    /*//Primeira opção:
-    const index = cursos.findIndex(element=> element.curso.toLowerCase().indexOf(inputCurso.toLowerCase())>-1) 
-
-    //console.log(cursos[index]) 
-    console.log(index)
-
-   return carrinhoCursosValores.push(cursos[index].valor), carrinhoCursosNomes.push(cursos[index].curso), console.log(carrinhoCursosValores), console.log(carrinhoCursosNomes)*/
-    
-    //Segunda opção:
-
     const retornaCurso = cursos.filter(element=>{
         if(element.curso.toLowerCase().includes(inputCurso))
         return element
@@ -176,7 +156,7 @@ const buscarCurso=()=>{
     document.getElementById('course').value=""
     
     
-    return carrinhoCursosNomes.push(retornaCurso[0].curso), carrinhoCursosValores.push(retornaCurso[0].valor), console.log(carrinhoCursosNomes), console.log(carrinhoCursosValores)
+    return carrinhoCursosNomes.push(retornaCurso[0].curso), carrinhoCursosValores.push(retornaCurso[0].valor)
 }
 
 
@@ -230,10 +210,8 @@ const parcelarCurso=()=>{
                 valorComDesconto = (valorTotal - valorDesconto).toFixed(2);
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
                 porcentagemDesconto = '20%'
-               
-                console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20%.`);
 
-                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
+                return gerarCardValor(porcentagemDesconto, nParcelas, valorParcelasComDesconto, removerCardValor)
 
                 break
 
@@ -247,9 +225,8 @@ const parcelarCurso=()=>{
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
                 porcentagemDesconto = '20% e 10%'
                 
-                console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
 
-                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
+                return gerarCardValor(porcentagemDesconto, nParcelas, valorParcelasComDesconto, removerCardValor)
 
                 break
 
@@ -262,14 +239,11 @@ const parcelarCurso=()=>{
                 valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
                 porcentagemDesconto = '20% e 10%'
 
-                console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% e 10% sobre o valor total.`);
-
-                return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
+                return gerarCardValor(porcentagemDesconto, nParcelas, valorParcelasComDesconto, removerCardValor)
 
                 break
 
             default:
-                console.log('Confira os cursos solicitados.');
                 break           
         }
     }else if (nParcelas == 3){
@@ -280,9 +254,7 @@ const parcelarCurso=()=>{
                 };
                 valorParcelas = (valorTotal / nParcelas).toFixed(2)
 
-                console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Não há desconto para ser aplicado.`);
-
-                return gerarCardValorSemDesconto(valorParcelas, removerCardValor)
+                return gerarCardValorSemDesconto(valorParcelas, nParcelas, removerCardValor)
 
                 break
                 
@@ -295,9 +267,7 @@ const parcelarCurso=()=>{
             valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
             porcentagemDesconto = '10%'
 
-            console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 10% sobre o valor total.`);
-
-            return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
+            return gerarCardValor(porcentagemDesconto, nParcelas,valorParcelasComDesconto, removerCardValor)
             
             break
                 
@@ -310,14 +280,11 @@ const parcelarCurso=()=>{
             valorParcelasComDesconto = (valorComDesconto / nParcelas).toFixed(2);
             porcentagemDesconto = '20%'
 
-            console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorComDesconto}. Em ${nParcelas}x de R$${valorParcelasComDesconto}. Foi concedido um desconto de 20% sobre o valor total.`);
-
-            return gerarCardValor(porcentagemDesconto, valorParcelasComDesconto, removerCardValor)
+            return gerarCardValor(porcentagemDesconto, nParcelas, valorParcelasComDesconto, removerCardValor)
 
             break
 
             default:
-                console.log('Confira os cursos solicitados.');
                 break 
         }
     }else if(nParcelas>3){
@@ -328,9 +295,7 @@ const parcelarCurso=()=>{
                 };
                 valorParcelas = (valorTotal / nParcelas).toFixed(2);
 
-                console.log(`O curso de ${carrinhoCursosNomes} ficou no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`);
-
-                return gerarCardValorSemDesconto(valorParcelas, removerCardValor)
+                return gerarCardValorSemDesconto(valorParcelas, nParcelas, removerCardValor)
 
                 break
             
@@ -340,9 +305,7 @@ const parcelarCurso=()=>{
                 };
                 valorParcelas = (valorTotal / nParcelas).toFixed(2);
 
-                console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`);
-
-                return gerarCardValorSemDesconto(valorParcelas, removerCardValor)
+                return gerarCardValorSemDesconto(valorParcelas, nParcelas, removerCardValor)
 
                 break
             
@@ -352,9 +315,7 @@ const parcelarCurso=()=>{
                     };
                     valorParcelas = (valorTotal / nParcelas).toFixed(2);
     
-                    console.log(`Os cursos de ${carrinhoCursosNomes} ficaram no valor total de R$${valorTotal}. Em ${nParcelas}x de R$${valorParcelas}.`)
-
-                    return gerarCardValorSemDesconto(valorParcelas, removerCardValor)
+                    return gerarCardValorSemDesconto(valorParcelas, nParcelas, removerCardValor)
 
                     break
         } 
@@ -362,14 +323,13 @@ const parcelarCurso=()=>{
 } 
 
 const removerCardValor =()=>{
-    //console.log(document.getElementsByClassName('payment-container'))
     if(document.getElementsByClassName('payment-container').length>0){
         const card = document.querySelector('.payment-container')
         card.parentNode.removeChild(card)
     }
 }
 
-const gerarCardValor = (porcentagemDesconto, valorParcelasComDesconto, callback) =>{
+const gerarCardValor = (porcentagemDesconto, numParcelas, valorParcelasComDesconto, callback) =>{
     const paymentContainer = document.getElementById('search')
 
     callback()
@@ -380,12 +340,15 @@ const gerarCardValor = (porcentagemDesconto, valorParcelasComDesconto, callback)
 
     newCard.innerHTML = `
         <h1 class='payment-title'>Valor</h1>
-        <p class="paragraph" >Desconto de ${porcentagemDesconto}. Parcelas de R${valorParcelasComDesconto}</p>
+        <p class="paragraph" >${carrinhoCursosNomes.length === 1? 'Curso' : 'Cursos'}: ${carrinhoCursosNomes.join(", ")}.</p>
+        <p class="paragraph" >Desconto: ${porcentagemDesconto}</p>
+        <p class="paragraph" >Nº parcelas: ${numParcelas}</p>
+        <p class="paragraph" >Parcelas: R$${valorParcelasComDesconto}</p>
     `
     return paymentContainer.insertAdjacentElement('beforeend', newCard)
 }
 
-const gerarCardValorSemDesconto = (valorParcelas, callback) =>{
+const gerarCardValorSemDesconto = (valorParcelas, numParcelas, callback) =>{
     const paymentContainer = document.getElementById('search')
 
     callback() 
@@ -396,7 +359,10 @@ const gerarCardValorSemDesconto = (valorParcelas, callback) =>{
 
     newCard.innerHTML = `
         <h1 class='payment-title'>Valor</h1>
-        <p class="paragraph" >Não há desconto. Parcelas de R${valorParcelas}</p>
+        <p class="paragraph" >${carrinhoCursosNomes.length === 1? 'Curso' : 'Cursos'}: ${carrinhoCursosNomes.join(", ")}.</p>
+        <p class="paragraph" >Desconto: Não há desconto.</p>
+        <p class="paragraph" >Nº parcelas: ${numParcelas}</p>
+        <p class="paragraph" >Parcelas: R$${valorParcelas}</p>
     `
     return paymentContainer.insertAdjacentElement('beforeend', newCard)
 }
@@ -413,7 +379,6 @@ const buscarTurma = (event)=>{
     })
 
     document.getElementById('input-search-class').value = ""
-    console.log(retornaTurma)
     
     return retornaTurma.length > 0? gerarCardTurmas(retornaTurma) : gerarCardTurmas(turmas) 
 }
@@ -426,8 +391,6 @@ const gerarCardTurmas = (cardTurmas) =>{
         while(document.getElementsByClassName('classes').length > 0){
             
             const cards = document.querySelector('.classes')
-        
-            console.log(document.querySelector('.classes'))
             cards.parentNode.removeChild(cards)
         }
     } 
@@ -455,25 +418,24 @@ const gerarCardTurmas = (cardTurmas) =>{
 const buscarEstudante=(nomeEstudante)=>{
 
     const retornoEstudante = estudantes.filter(element =>
-        element.estudante.toLowerCase().indexOf(nomeEstudante.toLowerCase())> -1)
+        element.estudante.toLowerCase().indexOf(nomeEstudante.toLowerCase())> -1
+    )
 
-        if(!retornoEstudante.length>0) return swal({
-            title: "Aluno não encontrado.",            
-            icon: "error",
-        }),  console.log('Aluno não encontrado')
-
-        console.log(retornoEstudante), console.log(retornoEstudante[0])
+        if(!retornoEstudante.length>0) {
+            return swal({
+                title: "Aluno não encontrado.",            
+                icon: "error",
+            })
+        }
 
         return retornoEstudante[0]
-         
 }
 
 const relatorioEstudante=()=>{
     event.preventDefault()
     const nomeInput = document.getElementById('name').value
     const dadosEstudantes = buscarEstudante(nomeInput)
-    console.log(dadosEstudantes)
-    
+   
     if(!dadosEstudantes) return
 
     const relatorio = {
@@ -486,8 +448,6 @@ const relatorioEstudante=()=>{
     }
 
     document.getElementById('name').value = ""
-
-    console.log(`Aluno: ${relatorio.aluno}\nTurma: ${relatorio.turma}\nCurso: ${relatorio.curso}\nValor Toral: ${relatorio.valorTotal}\nValor Parcelas: ${relatorio.valorParcelas}\nNº Parcelas: ${relatorio.nParcelas}`)
 
     return relatorio, gerarCardRelatorio(relatorio)
 } 
@@ -525,10 +485,8 @@ const matricular = () =>{
     const parcelasInput = Number(document.getElementById('payment').value);
 
     const confereTurma = turmas.filter(element=> element.turma.toLowerCase().includes(turmaInput));
-    console.log(confereTurma);
 
     const confereAluno = estudantes.filter(element=> element.estudante.toLowerCase() === nomeInput.toLowerCase());
-    console.log(confereAluno); 
 
 
     if(confereAluno.length>0){
@@ -586,7 +544,7 @@ const matricular = () =>{
     document.getElementById('classes').value = ""
     document.getElementById('payment').value = ""
     
-    console.log(`Aluno Matriculado\nNome: ${nomeInput}\nCurso: ${cursoInput}\nTurma: ${turmaInput}`);
+    
     return estudantes.push(novoAluno), gerarCardMatricula(novoAluno, confereTurma, removerCardMatricula)
 }
 

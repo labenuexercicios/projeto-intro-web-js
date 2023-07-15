@@ -1,40 +1,63 @@
-# PROJETO INTRO-WEB - LABESCOLA
+# Projeto Escola de Programação
 
-- Link deploy: ultra-pain.surge.sh
+![Labescola](./midias/image-readme.png)
 
+O projeto frontend que consiste em um site para uma escola de programação, possuindo seis páginas distintass, no qual é possível visualizar os cursos disponíveis, fazer matrículas e consultas financeiras. 
 
-## Javascript
+## Índice
+- <a href="#funcionalidades">Funcionalidades do projeto</a>
+- <a href="#layout">Layout</a>
+- <a href="#demonstração">Demonstração</a>
+- <a href="#rodar">Como rodar o projeto</a>
+- <a href="#tecnologias-utilizadas"> Tecnologias utilizadas</a>
+- <a href="#autora">Pessoa autora</a>
+- <a href="#proximos-passos">Próximos passos</a>
 
-- A parte de Javascript possui um array de objetos com as turmas oferecidas, um com os cursos e um com os estudantes.
+## Funcionalidades do projeto
+ - [x] Página principal
+ - [x] Página de cursos
+ - [x] Página de contato
+ - [x] Página de turmas da área administrativa
+ - [x] Página de matrículas da área administrativa
+ - [x] Página da parte financeira da área administrativa
+ - [x] Pesquisar por uma turma ou visualizar todas as turmas
+ - [x] Entrar em contato com a escola
+ - [x] Matricular aluno
+ - [x] Gerar relatório do aluno
 
-- A função buscarCurso está linkada a adm-financeiro.html, ela busca o curso adicionado pelo input e devolve o nome do curso e o seu valor em dois arrays separados, carrinhoCursosNome e carrinhoCursosValor respectivamente. Foram também criadas condições para que o usuário não entre com um valor vazio ou com um curso repetido no input. Para que seja ativada é necessário clicar no link "Adicionar outro curso".
+## Layout
+![Home](./midias/readme/home.svg)
+![Página de cursos](./midias/readme/cursos.svg)
+![Contato](./midias/readme/contato.svg)
+![Turmas](./midias/readme/turmas.svg)
+![Matrícula](./midias/readme/matricula.svg)
+![Financeiro](./midias/readme/relatorio.png)
 
-- A função parcelarCurso está linkada a adm-financeiro.html, ela faz o cálculo dos descontos oferecidos para a quantidade de cursos e o número de parcelas escolhido pelo usuário, assim como o valor das parcelas. Foram implementadas algumas condições iniciais, para que o usuário não entre com um valor vazio ou inválido para a quantidade de parcelas, foi também determinado que a função aceitaria no máximo 5 parcelas. Com essa função é possível acrescentar um curso, calcular o seu desconto e o valor de parcelas, acrescentar outro e recalcular os valores para a nova quantidade de cursos. No console é possível ver quais foram os cursos selecinados, a quntidade de parcelas, o desconto e o valor de cada parcela.
+## Demonstração
 
-- As funções gerarCardValor e gerarCardValorSemDesconto geram os cards conforme o resultado da função parcelarCurso. A função removerCardValor remove o card da tela toda vez que o alert é ativado (quando o input é preenchido com algum valor inválido) e quando a função parcelarCurso é chamada, isso para que não haja acumulo de cards na tela.
+[Link Demonstração (deploy)] (https://wakeful-substance.surge.sh/)
 
-- A função buscarTurma está linkada a adm-turmas.html, ela busca a turma que foi digitada no input no array turmas. Se apenas uma letra ou uma parte do nome da turma for escrita, a função vai retornar as turmas que tenham em seu nome o que foi digitado. Também, se nada for digitado no input o retorno será todas as turmas oferecidas pela escola. No console é impresso um array de objetos com o retorno da função.
+## Como rodar o projeto
+```bash
+# Clone este repositório
+$ git clone linkrepo
 
-- A função gerarCardTurmas  na tela o retorno da função buscarTurma, ela também confere se existem cards impressos e os deleta antes de retornar os resultados da nova busca. 
+# Acesse a pasta do projeto no seu terminal
+$ cd projeto-intro-web-js
 
-- A função buscarEstudante é callback da relatorioEstudante, ela recebe o input do nome do aluno como parâmetro. Se o estudante não estiver matriculado, a função buscarEstudante retorna uma mensagem de erro. Se o aluno estiver matriculado, a função retornará um array com os dados do estudante. Essa função busca a primeira vez que o parâmetro fornecido aparece no array de objetos com os estudantes, por exemplo, se o parâmetro fornecido for "c", ela mostrará no console todos os nomes que possuem a letra c e retornará o primeiro nome que aparecer.
+# Abra a aplicação usando o navegador de sua preferência
+```
 
-- A função relatorioEstudante está linkada a adm-financeiro.html, ela chama a função buscarEstudante como callback sendo que o parâmetro é o input do nome. No console ela imprime os dados do estudante, ela também irá chamar a função gerarCardRelatorio.
+## Tecnologias utilizadas
+1. HTML
+2. CSS
+3. DOM
+4. Sweet Alert
+5. Figma
 
-- A função gerarCardRelatorio avalia se já foi impresso algum card, se sim ela irá apagar esse card e imprimirá o novo resultado, se não ela imprimirá o novo resultado de uma vez.
+## Pessoa autora 
+[LinkedIn](https://www.linkedin.com/in/julia-silva-borges/)
 
-- A função matricular está linkada a adm-matriculas.html, ela primeiro faz uma série de conferências para determinar se o aluno já está matriculado na turma e curso que escolheu, se os dados inseridos são válidos e se a turma já foi concluída, se alguma dessas condições for verdadeira a matrícula não é efetuada e aparecerá uma mensagem de erro na tela do usuário.
-
-- A função gerarCardMatricula gera um imprime na tela do usuário o retorno da função matricular. Já a função removerCardMatricula apaga o card já impresso na tela do usuário, se tiver algum.
-
-- A função toggleMenu é referente ao menu hamburger que aparece quando o tamanho da tela está entre 481px e 800px.
-
-## HTML
-
-- Foi feito um arquivo HTML para cada página.
-
-## CSS
-
-- Cada arquivo HTML tem um respectivo arquivo de estilização CSS com o mesmo nome.
-
-- Foi feito media query para telas entre 481px e 800px.
+## Próximos passos
+ - [ ] Implementar responsividade do layout para vizualição em celulares
+ - [ ] Melhorar a responsividade já existente para telas menores
