@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    height: 15vh;
+    padding: 20px;
+
+
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.logo {
+    width: 250px;
+    padding: 0 22vh;
+
+}
+
+
+.menu {
+    padding: 20px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: black;
+
+}
+
+.menu:hover {
+    padding: 20px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: orange;
+
+}
+
+footer {
+    background-color: rgb(253, 192, 79);
+    height: 55vh;
+    padding: 4vh 20vh;
+
+}
+
+.containerFooter {
+    display: flex;
+    padding-top: 30px;
+
+}
+
+.containerFooter2 {
+    width: 190vh;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+
+
+tr {
+    text-align: left;
+
+}
+
+td {
+    vertical-align: top;
+    padding-top: 27px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+iframe {
+    padding-bottom: 10px;
+}
+
+.whatsapp {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    padding-top: 10px;
+    font-family: "Open Sans";
+    list-style: none;
+}
+
+th {
+    font-family: "Poppins";
+    font-size: 20px;
+}
+
+.imgcomunicacoes {
+    padding-right: 10px;
+}
+
+
+main {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    background-color: rgb(253, 192, 79);
+    border-bottom: 1px solid black;
+
+
+}
+
+.navMain {
+
+    padding-top: 5vh;
+    background-color: white;
+    height: 100;
+    font-size: 12px;
+    padding-right: 5vh;
+    padding-left: 9vh;
+    background-color: black;
+    width: 30vh;
+
+
+
+}
+
+#menuMain {
+    padding-top: 5vh;
+    color: #707070;
+    font-family: "Poppins";
+    text-align: left;
+    width: 30vh;
+    padding-bottom: 10px;
+}
+
+#menuMainFin{
+    padding-top: 5vh;
+    color: white;
+    font-family: "Poppins";
+    text-align: left;
+    width: 30vh;
+    padding-bottom: 10px;
+
+}
+
+#menuMain:hover {
+    padding-top: 5vh;
+    color: white;
+}
+
+.h1Nav {
+    padding-bottom: 5vh;
+    font-family: "Poppins";
+}
+
+
+
+
+input{
+    height: 3.5vh;
+    border: 0px solid white;
+    border-radius: 2px;
+    width: 21vw;
+    padding-left: 1vh;
+ }
+
+ label{
+    padding-top: 2vh;
+    font-family: "Poppins";
+    font-size: 15px;
+ }
+
+ h1{font-family: "Poppins";}
+
+ .botao{
+    color: white;
+    background-color: black;
+    font-family: "Poppins";
+    height: 5vh;
+    text-align: center;
+    border-radius: 6px;
+    align-items: center;
+    padding-top: 1vh;
+    font-size: 15px;
+    
+ }
+
+
+ .sectionContainer {
+    display: grid;
+    width: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+ }
+ .financeiroMat{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding-left: 12vw;
+    font-family: "Poppins";
+    
+ }
+
+ .formMain {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12vw;
+    padding-top: 6vh;
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+}
+
+ .formMain2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12vw;
+    padding-top: 6vh;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    
+
+
+}
+
+.financeiroMat2{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding-left: 12vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    width: 50vh;
+    
+    
+    
+   
+    
+    
+ }
+
+ .alunoEncontrado{
+   width: 100vh;
+   
+
+ }
+
+
+ #buscaDeEstudantes{
+    width: 50vh;
+ }
+
+
+ select{
+    height: 3.5vh;
+    border: 0px solid white;
+    border-radius: 2px;
+    width: 21vw;
+    padding-left: 1vh;
+ }
+

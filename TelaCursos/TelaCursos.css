@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+header {
+    background-color: white;
+    height: 15vh;
+    padding: 20px;
+
+
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.logo {
+    width: 250px;
+    padding: 0 22vh;
+
+}
+
+
+.menu {
+    padding: 20px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: black;
+    
+}
+
+.menu:hover{
+    padding: 20px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: orange;
+    
+}
+
+footer {
+    background-color: rgb(253, 192, 79);
+    height: 55vh;
+    padding: 4vh 20vh;
+
+}
+
+.containerFooter {
+    display: flex;
+    padding-top: 30px;
+
+}
+
+.containerFooter2 {
+    width: 190vh;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+tr {
+    text-align: left;
+
+}
+
+td {
+    vertical-align: top;
+    padding-top: 27px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+iframe {
+    padding-bottom: 10px;
+}
+
+.whatsapp {
+    position: fixed;
+    
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    padding-top: 10px;
+    font-family: "Open Sans";
+    list-style: none;
+}
+
+th{
+    font-family: "Poppins";
+    font-size: 20px;
+}
+
+.imgcomunicacoes {
+    padding-right: 10px;
+}
+
+main {
+    height: 210vh;
+
+}
+
+.containerMain {
+   
+    background-color: rgb(253, 192, 79);
+    height: 80vh;
+   flex-direction: column;
+    
+    
+    }
+.containerMaterias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 55px;
+   
+}
+
+
+.materias1{
+    
+    padding-top: 20px;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Poppins";
+
+    
+}
+
+.materias2{
+    padding-top: 20px;
+    width: 250px;
+    height: 250px;    
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Poppins";
+
+}
+
+.materias3{
+
+    padding-top: 20px;
+    width: 250px;
+    height: 250px;    
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Poppins";
+}
+
+.materiasp{
+    text-align: left;
+    padding-top: 5vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "Open Sans";
+    font-size: 14px;
+    padding-bottom: 2vh;
+}
+
+.h2Materias{
+    padding-top: 2vh;
+}
+
+
+
+.containerMain2 {
+    background-color: black;
+    color: white;
+    height: 130vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.botaoMain1{
+    background-color: black;
+    width: 300px;
+    height: 50px;
+    border-radius: 9px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 85vh;
+    font-size: 15px;
+    font-family: "Poppins";
+   
+}
+
+
+.htmlinf, .javascriptinf-2, .apiinf-3{
+    background-color: white;
+    align-items: center;
+    color: black;
+    border-radius: 10px;
+    width: 120vh;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.h1main2, .h1main2-2, .h1main2-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    font-size: 27px;
+    padding-right: 5vh;
+    font-family: "Poppins";
+    font-style: "Bold";
+}
+.p1main2, .p1main2-2, .p1main2-3{ 
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    padding-top:3vh;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-style: "Bold";
+   
+}
+.p2main2, .p2main2-2, .p2main2-3{ 
+    grid-column: 3/4;
+    grid-row: 1/2;
+    font-size: 20px;
+    display: flex;
+    padding-top:3vh;
+    font-family: "Poppins";
+    font-style: "Bold";
+}
+.p3main2, .p3main2-2, .p3main2-3{ 
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    padding-bottom: 5vh;
+    font-family: "Open Sans";
+    
+}
+
+.p4main2, .p4main2-2, .p4main2-3{ 
+    grid-column: 3/4;
+    grid-row: 2/4;
+    padding-bottom: 5vh;
+    font-family: "Open Sans";
+}
+
+
+
+
+    

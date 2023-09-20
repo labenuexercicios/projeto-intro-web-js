@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    height: 15vh;
+    padding: 20px;
+
+
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.logo {
+    width: 250px;
+    padding: 0 22vh;
+
+}
+
+
+.menu {
+    padding: 20px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: black;
+    
+}
+
+.menu:hover{
+    padding: 20px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: orange;
+    
+}
+
+footer {
+    background-color: rgb(253, 192, 79);
+    height: 55vh;
+    padding: 4vh 20vh;
+
+}
+
+.containerFooter {
+    display: flex;
+    padding-top: 30px;
+
+}
+
+.containerFooter2 {
+    width: 190vh;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+tr {
+    text-align: left;
+
+}
+
+td {
+    vertical-align: top;
+    padding-top: 27px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+iframe {
+    padding-bottom: 10px;
+}
+
+.whatsapp {
+    position: fixed;
+    
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    padding-top: 10px;
+    font-family: "Open Sans";
+    list-style: none;
+}
+
+th{
+    font-family: "Poppins";
+    font-size: 20px;
+   
+    
+}
+
+.imgcomunicacoes {
+    padding-right: 10px;
+}
+
+
+main{
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerMain{
+    background-color: white;
+    height: 70vh;
+    width:  57vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6vh;
+    
+   
+    }
+
+.textoMain{
+   font-family: "Poppins";
+   font-style: normal;
+}
+
+input{
+    width: 41.3vh;
+    height: 5vh;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 0.5vw;
+     
+}
+
+
+#faleConosco{
+    padding-bottom: 15px;
+    
+}
+
+#mensagem{
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 23vh;
+    
+   
+}
+
+.botaoMain{
+    background-color: #F6C34A;
+    border-radius: 5px;
+    height:6vh;
+    text-align: center;
+    padding-top: 9px;
+}
+
+#mensagemTexto{
+    height: 22vh;
+    width: 20.3vw;
+}
+
